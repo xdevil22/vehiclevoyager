@@ -1,0 +1,107 @@
+[
+  {
+    "type": "Boat",
+    "brand": "SAMBOAT France",
+    "name": "Boat Rentals in France - SamBoat",
+    "image": "https://example.com/images/samboat.jpg",
+    "url": "https://www.samboat.co.uk/boat-hire?order=nested_promotions.discount.desc&prices%5Bgte%5D=49000&distance_city=50&destination_id="
+  },
+  {
+    "type": "Car",
+    "brand": "Hertz MX (GLOBAL)",
+    "name": "Rent with Hertz Mexico",
+    "image": "https://example.com/images/hertz.jpg",
+    "url": "https://hertzmexico.pxf.io/c/6269754/2163103/23996"
+  },
+  {
+    "type": "Car",
+    "brand": "Firefly Car Rental MX",
+    "name": "Firefly Car Rentals \u2013 Mexico",
+    "image": "https://example.com/images/firefly.jpg",
+    "url": "https://fireflycarrentalmx.pxf.io/c/6269754/2059932/25799"
+  },
+  {
+    "type": "Car",
+    "brand": "Dollar Car Rental MX",
+    "name": "Dollar Car Rentals \u2013 Summer Sale",
+    "image": "https://example.com/images/dollar.jpg",
+    "url": "https://dollarcarrentalmx.sjv.io/c/6269754/2059948/25800"
+  },
+  {
+    "type": "Car",
+    "brand": "Thrifty Car Rental MX",
+    "name": "Thrifty Car Rentals \u2013 Mexico",
+    "image": "https://example.com/images/thrifty.jpg",
+    "url": "https://thriftycarrentalmxusa.pxf.io/c/6269754/2013116/25995"
+  },
+  {
+    "type": "Boat",
+    "brand": "Click&Boat France",
+    "name": "Find Boats in France with Click&Boat",
+    "image": "https://example.com/images/clickandboat.jpg",
+    "url": "https://click-and-boat.pxf.io/c/6269754/1722734/19914"
+  },
+  {
+    "type": "RV",
+    "brand": "Cruise America",
+    "name": "Cruise America \u2013 Book an RV Rental",
+    "image": "https://example.com/images/cruiseamerica.jpg",
+    "url": "https://cruiseamerica.pxf.io/c/6269754/2028706/29922"
+  },
+  {
+    "type": "RV",
+    "brand": "Outdoorsy",
+    "name": "Rent RVs from Real People \u2013 Outdoorsy",
+    "image": "https://example.com/images/outdoorsy.jpg",
+    "url": "https://outdoorsync.go2cloud.org/aff_c?offer_id=28&aff_id=269"
+  },
+  {
+    "type": "RV",
+    "brand": "RVezy",
+    "name": "Explore Canada & US in an RV \u2013 RVezy",
+    "image": "https://example.com/images/rvezy.jpg",
+    "url": "https://rvezypartnershipprogram.sjv.io/c/6269754/1868722/19494?subid1=text1"
+  },
+  {
+    "type": "Boat",
+    "brand": "GetMyBoat",
+    "name": "Find Jet Skis and Boat Rentals \u2013 GetMyBoat",
+    "image": "https://example.com/images/getmyboat.jpg",
+    "url": "https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106.3&type=3&subid=0"
+  },
+  {
+    "type": "Car",
+    "brand": "Fox Rent a Car",
+    "name": "Fox Rent a Car \u2013 Nationwide Deals",
+    "image": "https://example.com/images/fox.jpg",
+    "url": "https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1810073.21&type=3&subid=0&LSNSUBSITE=LSNS"
+  },
+  {
+    "type": "Motorcycle",
+    "brand": "EagleRider",
+    "name": "Motorcycle Rentals \u2013 EagleRider",
+    "image": "https://example.com/images/eaglerider.jpg",
+    "url": "https://www.eaglerider.com?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f"
+  },
+  {
+    "type": "Motorcycle",
+    "brand": "RIDES SHARE",
+    "name": "Rider-to-Rider Motorcycle Rentals",
+    "image": "https://example.com/images/ridersshare.jpg",
+    "url": "https://www.riders-share.com/welcome/vehiclevoyager"
+  },
+  {
+    "type": "Car",
+    "brand": "Turo \u2013 Tesla Model S",
+    "name": "Rent a Tesla Model S in Las Vegas",
+    "image": "https://example.com/images/tesla.jpg",
+    "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/tesla/model-s/2679292"
+  },
+  {
+    "type": "Car",
+    "brand": "Turo \u2013 Hyundai Genesis",
+    "name": "Rent a Hyundai Genesis in Las Vegas",
+    "image": "https://example.com/images/genesis.jpg",
+    "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/hyundai/genesis/2462922"
+  }
+]
