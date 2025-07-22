@@ -1,11 +1,12 @@
-import React from "react";
-// import defaultImage from "../assets/default-vehicle.png"; // Replace with your actual path
+import React, {useState} from "react";
+import fallback from "../assets/default-vehicle.png"; // with extension
 
 type VehicleCardProps = {
   brand: string;
   name: string;
   image: string;
   url: string;
+  fallBackSrc?: string;
 };
 
 const VehicleCard: React.FC<VehicleCardProps> = ({
@@ -13,30 +14,30 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
   name,
   image,
   url,
+  fallBackSrc = fallback,
 }) => {
-  //   const handleImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-  //     e.currentTarget.src = defaultImage;
-  //   };
+  const [imgSrc, setImgSrc] = useState(image);
 
   return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block border rounded-lg shadow hover:shadow-lg transition p-4 bg-white"
-    >
+    <div className="border rounded-lg shadow hover:shadow-lg transition bg-white flex flex-col">
       <img
-        src={image}
+        src={imgSrc}
         alt={brand}
-        className="w-full h-48 object-cover rounded"
-        onError={(e) =>
-          (e.currentTarget.src =
-            "https://via.placeholder.com/400x300.png?text=No+Image")
-        }
+        className="w-full h-48 object-cover rounded-t"
+        onError={(e) => setImgSrc(fallBackSrc)}
       />
-      <h3 className="mt-2 text-lg font-semibold">{name}</h3>
-      <p className="text-sm text-gray-600">{brand}</p>
-    </a>
+      <div className="p-4 flex flex-col flex-grow">
+        <h3 className="text-lg font-semibold mb-1">{brand}</h3>
+        <p className="text-sm text-gray-600 mb-4 flex-grow">{name}</p>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-auto bg-blue-600 text-white text-sm text-center font-medium px-4 py-2 rounded hover:bg-blue-700 transition">
+          View Deals
+        </a>
+      </div>
+    </div>
   );
 };
 

@@ -13,7 +13,7 @@ const groupByType = (type: string) => {
 };
 
 const Home = () => {
-  const categories = ["Boat", "Car", "RV", "Jet"];
+  const categories = ["Car", "Boat", "RV", "Motorcycle"];
 
   return (
     <div className="p-6">
@@ -32,13 +32,16 @@ const Home = () => {
           </section>
         );
       })}
-      {/* other sections */}
-      <OutdoorsyListings />
-      {/* other sections */}
       {/* Affiliate Widget */}
       <ClickAndBoatWidget />
       {/* Affiliate Widget EagleRiderWidget */}
-      <EagleRiderWidget />
+      <EagleRiderWidget width={750} height={280} />
+      {/* other sections */}
+
+      <OutdoorsyListings />
+      {/* other sections */}
+      {/* Vertical on motorcycles page */}
+      {/* Vertical on boats page */}
     </div>
   );
 };
