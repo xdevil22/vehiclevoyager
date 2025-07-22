@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import fallback from "../assets/default-vehicle.png"; // with extension
 import RoamlyBanner from "./RoamlyBanner";
 type RV = {
@@ -78,19 +78,26 @@ const OutdoorsyListings = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {rvs.map((rv) => (
-        <div key={rv.id} className="border rounded-xl p-4 shadow-sm bg-white">
+        <div
+          key={rv.id}
+          className="border rounded-xl shadow-md bg-white transition-all duration-300 hover:shadow-xl p-4"
+        >
           <img
             src={rv.image}
             alt={rv.name}
             className="h-40 object-cover rounded-lg w-full"
           />
-          <h4 className="text-lg font-semibold mt-2">{rv.name}</h4>
+
+          <h4 className="text-lg bg-gray-100 py-1 rounded font-semibold mt-2">
+            {rv.name}
+          </h4>
 
           <a
             href={rv.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-4 w-full bg-blue-600 text-white text-sm text-center font-medium px-4 py-2 rounded hover:bg-blue-700 transition">
+            className="block mt-4 w-full bg-blue-600 text-white text-sm text-center font-medium px-4 py-2 rounded hover:bg-blue-700 transition"
+          >
             View Listing
           </a>
         </div>
