@@ -1,0 +1,29 @@
+<!-- public/eagle-rider-widget.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>EagleRider Widget</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="divWidget" style="min-height: 280px"></div>
+    <script src="https://www.eaglerider.com/reservation_widget/load_white_label.js"></script>
+    <script>
+      loadReservationWidget(
+        "fdc2ea5c-8d86-4558-887d-45675d1e910f",
+        "divWidget",
+        750.0,
+        280.0,
+        "en",
+        true,
+        true,
+        "v2"
+      );
+    </script>
+  </body>
+</html>
