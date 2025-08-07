@@ -1,6 +1,6 @@
 const ClickBoatWidget = () => {
   return (
-    <div className="my-6-">
+    <div className="my-6">
       <p className="font-semibold text-lg mb-3">
         ⛵ Find Boat Rentals on Click&Boat
       </p>

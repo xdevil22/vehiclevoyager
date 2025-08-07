@@ -1,4 +1,4 @@
-import React, {JSX, useEffect, useState} from "react";
+import React, { JSX, useEffect, useState } from "react";
 import vehicles from "../../../utils/vehicles.json";
 import VehicleCard from "./VehicleCard";
 
@@ -6,6 +6,7 @@ import ClickAndBoatWidget from "./ClickAndBoatWidget";
 import EagleRiderWidget from "./EagleRiderWidget";
 import fallback from "../../../assets/default-vehicle2.jpg";
 import RoamlyBanner from "./RoamlyBanner";
+import AmazonBanner from "../../../components/AmazonBanner";
 
 type RV = {
   type: string;
@@ -80,14 +81,19 @@ const mockData: RV[] = [
 const groupByType = (type: string) => {
   return vehicles.filter((v) => v.type === type);
 };
-
 const HomeCategories = () => {
-  const categories = ["Car", "Boat", "RV", "Motorcycle", "Private Jets"];
+  const categories = [
+    "Cars",
+    "Boats",
+    "RVs and Motorhomes",
+    "Motorcycles",
+    "Private Jets",
+  ];
   const categoryIcons: Record<string, string> = {
-    Car: "ri-car-line",
-    Boat: "ri-ship-line",
-    RV: "ri-bus-line",
-    Motorcycle: "ri-motorbike-line",
+    Cars: "ri-car-line",
+    Boats: "ri-ship-line",
+    "RVs and Motorhomes": "ri-bus-line",
+    Motorcycles: "ri-motorbike-line",
     "Private Jets": "ri-plane-line",
   };
 
@@ -134,13 +140,15 @@ const HomeCategories = () => {
 
     fetchRVs();
   }, []);
-
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+  }, []);
   return (
     <div className="p-6">
       {categories.map((category) => {
         let items = groupByType(category);
 
-        if (category === "RV") {
+        if (category === "RVs and Motorhomes") {
           // Combine vehicles.json RVs with fetched RVs
           items = [...items, ...rvs];
         }
@@ -148,18 +156,19 @@ const HomeCategories = () => {
         if (items.length === 0) return null;
 
         return (
-          <section key={category} className="mb-10">
+          <section
+            key={category}
+            id={category.replace(/\s+/g, "-")}
+            className="mb-10 scroll-mt-36"
+          >
             <div className="container mx-auto px-4">
               <div className="flex justify-between items-center mb-8">
-                <h2 className="text-3xl font-bold font-heading text-neutral-900">
+                <h2 className="text-3xl font-bold font-heading text-neutral-900 ">
                   <i
-                    className={`${categoryIcons[category]} text-2xl text-black-500 mr-2`}></i>
+                    className={`${categoryIcons[category]} text-2xl text-black-500 mr-2`}
+                  ></i>
                   {category}
                 </h2>
-                {/* <h2 className="text-3xl font-bold font-heading text-neutral-900 flex items-center gap-2">
-                  {categoryIcons[category]}
-                  {category}
-                </h2> */}
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {items.map((vehicle, idx) => (
@@ -167,28 +176,39 @@ const HomeCategories = () => {
                 ))}
               </div>
             </div>
+            {category === "Boats" && (
+              <div className="container mx-auto px-4">
+                <div className="my-4">
+                  <ClickAndBoatWidget />
+                </div>
+              </div>
+            )}
+
+            {category === "Motorcycles" && (
+              <div className="container mx-auto px-4">
+                <div className="my-4">
+                  <EagleRiderWidget />
+                </div>
+              </div>
+            )}
           </section>
         );
       })}
+
       <div className="container mx-auto px-4">
-        <ClickAndBoatWidget />
-        <EagleRiderWidget />
-        <RoamlyBanner />
+        {/* <ClickAndBoatWidget />
+        <EagleRiderWidget /> */}
+
+        <div className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-3">
+          <div className="col-span-1 lg:col-span-2 bg-yellow-50 shadow-md rounded-lg border border-yellow-200 rounded-xl w-full overflow-x-auto">
+            <AmazonBanner />
+          </div>
+
+          <div className="col-span-1 bg-white shadow-md rounded-lg flex items-center justify-center border border-gray-300 w-full p-4-">
+            <RoamlyBanner />
+          </div>
+        </div>
       </div>
-      {/* </div> */}
-      {/* <div className="flex flex-wrap gap-6 items-start">
-        <div className="flex-1 min-w-[280px] max-w-[400px]">
-          <ClickAndBoatWidget />
-        </div>
-
-        <div className="flex-1 min-w-[280px] max-w-[750px]">
-          <EagleRiderWidget />
-        </div>
-
-        <div className="flex-1 min-w-[280px] max-w-[320px]">
-          <RoamlyBanner />
-        </div>
-      </div> */}
     </div>
   );
 };

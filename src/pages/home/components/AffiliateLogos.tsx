@@ -37,13 +37,14 @@ const providers: Provider[] = [
     alt: "Fox Rent A Car logo",
   },
 ];
-
+{
+}
 const AffiliateLogos = () => {
   return (
     <section className="py-8 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-center text-xl md:text-2xl font-semibold text-gray-700 mb-6">
-          Affiliate
+          Our Trusted Affiliates
         </h2>
         <div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
           {providers.map((provider, index) => (

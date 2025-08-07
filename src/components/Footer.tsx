@@ -51,10 +51,7 @@ const Footer = () => {
               {[
                 { label: "Home", to: "/" },
                 { label: "Cars", to: "/cars" },
-                // { label: "Boat Rentals", to: "/category/boats" },
-                // { label: "RV Rentals", to: "/category/rvs" },
-                // { label: "Motorcycles", to: "/category/motorcycles" },
-                // { label: "Private Jets", to: "/category/jets" },
+
                 { label: "About", to: "/about" },
               ].map(({ label, to }) => (
                 <li key={to}>

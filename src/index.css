@@ -9,3 +9,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* Header padding */
+header {
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.brevo-newsletter iframe {
+  min-height: 556px !important;
+  /* width: 100%;
+  max-width: 100%; */
+  /* max-height: 100vh; */
+}
+@media (max-width: 1024px) {
+  .grid-cols-ipad {
+    grid-template-columns: 1fr !important;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}

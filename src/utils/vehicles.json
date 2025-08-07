@@ -1,194 +1,209 @@
 [
   {
-    "type": "Boat",
+    "type": "Boats",
     "brand": "SAMBOAT France",
     "name": "Boat Rentals in France - SamBoat",
     "image": "https://example.com/images/samboat.jpg",
     "url": "https://www.samboat.co.uk/boat-hire?order=nested.promotions.discount.desc&prices%5Bgte%5D=49000&distance_city=50&destination_id=6548625",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "price": null
   },
 
   {
-    "type": "Boat",
+    "type": "Boats",
     "brand": "Click&Boat France",
     "name": "Find Boats in France with Click&Boat",
     "image": "https://example.com/images/clickandboat.jpg",
     "url": "https://click-and-boat.pxf.io/c/6269754/1727243/19914",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "price": null
   },
   {
-    "type": "Boat",
+    "type": "Boats",
     "brand": "GetMyBoat",
     "name": "Find Jet Skis and Boat Rentals \u2013 GetMyBoat",
     "image": "https://example.com/images/getmyboat.jpg",
     "url": "https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106.3&type=3&subid=0",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "price": null
+  },
+
+  {
+    "type": "Boats",
+    "brand": "Click&Boat",
+    "name": "Click&Boat Rentals-Fairline Targa",
+    "image": "assets/custom-images/click-boat-Fairline.jpg",
+    "url": "https://click-and-boat.pxf.io/GKdVx2",
+    "price": null
   },
   {
-    "type": "RV",
+    "type": "Boats",
+    "brand": "Click&Boat",
+    "name": "Samboat Rentals-Bali Catamaran",
+    "image": "assets/custom-images/samboat-catamaran.jpg",
+    "url": "https://samboat.pxf.io/RGdmPa",
+    "price": null
+  },
+  {
+    "type": "Boats",
+    "brand": "Getmyboat",
+    "name": "Getmyboat",
+    "image": "assets/custom-images/getmyboat-leopard.jpg",
+    "url": "https://click.linksynergy.com/deeplink?id=tM2c46u*sYY&mid=52690&murl=https%3A%2F%2Fwww.getmyboat.com%2Ftrips%2FMYLAgMvK%2F&u1=leopard-jacuzzi-miami",
+    "price": null
+  },
+
+  {
+    "type": "RVs and Motorhomes",
     "brand": "Cruise America",
     "name": "Cruise America \u2013 Book an RV Rental",
-    "image": "https://example.com/images/cruiseamerica.jpg",
+    "image": "assets/custom-images/cruiseam-deal-image.jpg",
     "url": "https://cruiseamerica.pxf.io/c/6269754/2807206/29922",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "price": null
   },
   {
-    "type": "RV",
+    "type": "RVs and Motorhomes",
     "brand": "Outdoorsy",
     "name": "Rent RVs from Real People \u2013 Outdoorsy",
     "image": "https://example.com/images/outdoorsy.jpg",
     "url": "https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "price": null
   },
   {
-    "type": "RV",
+    "type": "RVs and Motorhomes",
     "brand": "RVezy",
     "name": "Explore Canada & US in an RV \u2013 RVezy",
     "image": "https://example.com/images/rvezy.jpg",
     "url": "https://rvezypartnershipprogram.sjv.io/c/6269754/1686722/19443?subId1=text1",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "price": null
   },
   {
-    "type": "Car",
-    "brand": "Hertz MX (GLOBAL)",
-    "name": "Rent with Hertz Mexico",
-    "image": "https://example.com/images/hertz.jpg",
-    "url": "https://hertzmx.pxf.io/c/6269754/2068206/23996",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "type": "RVs and Motorhomes",
+    "brand": "RVezy",
+    "name": "2024 Conquest",
+    "image": "assets/custom-images/rvezy-conquest.jpg",
+    "url": "https://rvezypartnershipprogram.sjv.io/POdV2X",
+    "price": null
   },
   {
-    "type": "Car",
-    "brand": "Firefly Car Rental MX",
-    "name": "Firefly Car Rentals \u2013 Mexico",
-    "image": "https://example.com/images/firefly.jpg",
-    "url": "https://fireflycarrentalmx.pxf.io/c/6269754/2071148/25799",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
-  },
-  {
-    "type": "Car",
-    "brand": "Dollar Car Rental MX",
-    "name": "Dollar Car Rentals \u2013 Summer Sale",
-    "image": "https://example.com/images/dollar.jpg",
-    "url": "https://dollarcarrentalmx.sjv.io/c/6269754/2059948/25800",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
-  },
-  {
-    "type": "Car",
-    "brand": "Thrifty Car Rental MX",
-    "name": "Thrifty Car Rentals \u2013 Mexico",
-    "image": "https://example.com/images/thrifty.jpg",
-    "url": "https://thriftycarrentalmxmxusca.pxf.io/c/6269754/2071316/25949",
-
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "type": "RVs and Motorhomes",
+    "brand": "Cruise America",
+    "name": "Rental Deals",
+    "image": "https://example.com/images/rvezy.jpg",
+    "url": "/",
+    "price": null
   },
 
   {
-    "type": "Car",
+    "type": "Cars",
     "brand": "Fox Rent a Car",
     "name": "Fox Rent a Car \u2013 Nationwide Deals",
-    "image": "https://example.com/images/fox.jpg",
+    "image": "assets/custom-images/fox-jeep.png",
     "url": "https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1810073.21&type=3&subid=0&LSNSUBSITE=LSNS",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "price": null
   },
   {
-    "type": "Car",
+    "type": "Cars",
     "brand": "Turo \u2013 Tesla Model S",
     "name": "Rent a Tesla Model S in Las Vegas",
-    "image": "https://example.com/images/tesla.jpg",
+    "image": "assets/turo-list/img_4848.jpg",
     "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/tesla/model-s/2679292",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "price": null
   },
   {
-    "type": "Car",
+    "type": "Cars",
+    "brand": "Honda",
+    "name": "Rent a Honda Accord in Las Vegas",
+    "image": "assets/turo-list/img_9943.jpg",
+    "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/honda/accord/1946062?endDate=08%2F10%2F2025&endTime=14%3A00&startDate=08%2F07%2F2025&startTime=10%3A00",
+    "price": "$320/day"
+  },
+  {
+    "type": "Cars",
     "brand": "Turo \u2013 Hyundai Genesis",
     "name": "Rent a Hyundai Genesis in Las Vegas",
-    "image": "../src/assets/turo-list/turo-vehicle2.jpg",
+    "image": "assets/turo-list/genesis.jpg",
     "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/hyundai/genesis/2462922",
-    "price": "$320/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "price": "$320/day"
+  },
+  {
+    "type": "Cars",
+    "brand": "Dollar Car Rental MX",
+    "name": "Dollar Car Rentals \u2013 Summer Sale",
+    "image": "assets/custom-images/dollar-vw-taos.jpg",
+    "url": "https://dollarcarrentalmx.sjv.io/c/6269754/2059948/25800",
+    "price": null
+  },
+  {
+    "type": "Cars",
+    "brand": "Dollar rental cars",
+    "name": "Current Deals",
+    "image": "assets/turo-list/img_9943.jpg",
+    "url": "/",
+    "price": "$320/day"
   },
 
   {
-    "type": "Car",
-    "brand": "Tesla Model Y - Los Angeles",
-    "name": "Tesla Model Y - Los Angeles",
-    "image": "../src/assets/turo-list/turo-vehicle1.jpg",
-    "url": "https://turo.com/us/en/suv-rental/united-states/tesla-model-y/12345",
-    "price": "$320/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "type": "Cars",
+    "brand": "Hertz MX (GLOBAL)",
+    "name": "Rent with Hertz Mexico",
+    "image": "assets/custom-images/hertz-chevy-cavalier.jpg",
+    "url": "https://hertzmx.pxf.io/c/6269754/2068206/23996",
+    "price": null
   },
   {
-    "type": "Motorcycle",
+    "type": "Cars",
+    "brand": "Firefly Car Rental MX",
+    "name": "Firefly Car Rentals \u2013 Mexico",
+    "image": "assets/custom-images/firefly-vs-jetta.jpg",
+    "url": "https://fireflycarrentalmx.pxf.io/c/6269754/2071148/25799",
+    "price": null
+  },
+
+  {
+    "type": "Cars",
+    "brand": "Thrifty Car Rental MX",
+    "name": "Thrifty Car Rentals \u2013 Mexico",
+    "image": "assets/custom-images/thrify-chevy-aveo.jpg",
+    "url": "https://thriftycarrentalmxmxusca.pxf.io/c/6269754/2071316/25949",
+    "price": null
+  },
+
+  {
+    "type": "Motorcycles",
     "brand": "EagleRider",
     "name": "Motorcycle Rentals \u2013 EagleRider",
-    "image": "https://example.com/images/eaglerider.jpg",
+    "image": "assets/custom-images/eaglerider-yamaha.jpg",
     "url": "https://www.eaglerider.com?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "price": null
   },
   {
-    "type": "Motorcycle",
+    "type": "Motorcycles",
+    "brand": "EagleRider",
+    "name": "Eagle Rider-Motorcycle Rentals",
+    "image": "https://example.com/images/eaglerider.jpg",
+    "url": "/",
+    "price": null
+  },
+  {
+    "type": "Motorcycles",
     "brand": "RIDES SHARE",
     "name": "Rider-to-Rider Motorcycle Rentals",
     "image": "https://example.com/images/ridersshare.jpg",
     "url": "https://www.riders-share.com/welcome/vehiclevoyager",
-    "price": "$350/day",
-    "people": 15,
-    "features": ["Spacious Deck", "Swim Platform"],
-    "location": "location loading..."
+    "price": null
   },
-
+  {
+    "type": "Motorcycles",
+    "brand": "RIDES SHARE",
+    "name": "Riders-Share HARLEY-DAVIDSON",
+    "image": "assets/custom-images/ridersshare-harley.jpg",
+    "url": "/",
+    "price": null
+  },
   {
     "type": "Private Jets",
     "brand": "Villiers Private Jet Charter",
     "name": "Villiers Private Jet Charter",
     "image": "https://assets.villiersjets.com/banners/300X250-1.jpg",
     "url": "https://www.villiersjets.com/?id=10228",
-    "price": null,
-    "people": null,
-    "features": [],
-    "location": "location loading..."
+    "price": null
   }
 ]

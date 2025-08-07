@@ -16,7 +16,13 @@ const HeroBanner = () => {
 
     return () => clearInterval(interval);
   }, []);
-
+  const categories = [
+    { icon: "ri-car-line", label: "Cars" },
+    { icon: "ri-ship-line", label: "Boats" },
+    { icon: "ri-bus-line", label: "RVs and Motorhomes" },
+    { icon: "ri-motorbike-line", label: "Motorcycles" },
+    { icon: "ri-plane-line", label: "Private Jets" },
+  ];
   return (
     <div className="relative">
       {backgroundImages.map((url, i) => (
@@ -47,19 +53,15 @@ const HeroBanner = () => {
 
         {/* Category Icons */}
         <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-8 items-center z-30">
-          {[
-            { icon: "ri-car-line", label: "Cars" },
-            { icon: "ri-ship-line", label: "Boats" },
-            { icon: "ri-motorbike-line", label: "Motorcycles" },
-            { icon: "ri-plane-line", label: "Private Jets" },
-          ].map((item, idx) => (
-            <div
+          {categories.map((cat, idx) => (
+            <a
               key={idx}
+              href={`#${cat.label.replace(/\s+/g, "-")}`}
               className={`flex flex-col items-center text-white transition-all cursor-pointer opacity-80 hover:opacity-100`}
             >
-              <i className={`${item.icon} text-2xl`} />
-              <span className="text-sm mt-1">{item.label}</span>
-            </div>
+              <i className={`${cat.icon} text-2xl`} />
+              <span className="text-sm mt-1">{cat.label}</span>
+            </a>
           ))}
         </div>
       </section>

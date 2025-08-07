@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 const EagleRiderIframeWidget = () => {
   const [loading, setLoading] = useState(true);
 
   return (
     <div className="my-6 relative min-h-[300px]">
-      <p className="font-semibold text-lg mb-3">
+      <p className="font-semibold text-lg pl-4 pr-4 mb-3">
         🏍️ Browse Live Motorcycle Rentals
       </p>
 
@@ -20,7 +20,7 @@ const EagleRiderIframeWidget = () => {
         title="EagleRider Motorcycle Widget"
         width="100%"
         height="300"
-        style={{ border: "none", overflow: "hidden" }}
+        style={{border: "none", overflow: "hidden"}}
         loading="lazy"
         onLoad={() => setLoading(false)}
       />

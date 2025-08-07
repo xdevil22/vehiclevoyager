@@ -1,11 +1,12 @@
 const RoamlyBanner = () => {
   return (
-    <div className="flex justify-center items-center mb-8 relative">
+    <div className="flex justify-center items-center relative">
       <a
         href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=28&aff_id=2660&file_id=4968"
         target="_blank"
         rel="noopener noreferrer"
-        className="block">
+        className="block"
+      >
         <img
           src="https://media.go2speed.org/brand/files/outdoorsyinc/28/Roamly-Digital-Display-300x250-1.jpg"
           width="300"
