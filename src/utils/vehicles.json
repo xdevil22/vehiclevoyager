@@ -113,7 +113,7 @@
     "name": "Rent a Honda Accord in Las Vegas",
     "image": "assets/turo-list/img_9943.jpg",
     "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/honda/accord/1946062?endDate=08%2F10%2F2025&endTime=14%3A00&startDate=08%2F07%2F2025&startTime=10%3A00",
-    "price": "$320/day"
+    "price": null
   },
   {
     "type": "Cars",
@@ -121,7 +121,7 @@
     "name": "Rent a Hyundai Genesis in Las Vegas",
     "image": "assets/turo-list/genesis.jpg",
     "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/hyundai/genesis/2462922",
-    "price": "$320/day"
+    "price": null
   },
   {
     "type": "Cars",
@@ -137,7 +137,7 @@
     "name": "Current Deals",
     "image": "assets/turo-list/img_9943.jpg",
     "url": "/",
-    "price": "$320/day"
+    "price": null
   },
 
   {
