@@ -3,7 +3,7 @@
     "type": "Boats",
     "brand": "SAMBOAT France",
     "name": "Boat Rentals in France - SamBoat",
-    "image": "https://example.com/images/samboat.jpg",
+    "image": "assets/custom-images/samboat-catamaran.jpg",
     "url": "https://www.samboat.co.uk/boat-hire?order=nested.promotions.discount.desc&prices%5Bgte%5D=49000&distance_city=50&destination_id=6548625",
     "price": null
   },
@@ -12,7 +12,7 @@
     "type": "Boats",
     "brand": "Click&Boat France",
     "name": "Find Boats in France with Click&Boat",
-    "image": "https://example.com/images/clickandboat.jpg",
+    "image": "assets/custom-images/click-boat-Fairline.jpg",
     "url": "https://click-and-boat.pxf.io/c/6269754/1727243/19914",
     "price": null
   },
@@ -20,7 +20,7 @@
     "type": "Boats",
     "brand": "GetMyBoat",
     "name": "Find Jet Skis and Boat Rentals \u2013 GetMyBoat",
-    "image": "https://example.com/images/getmyboat.jpg",
+    "image": "assets/custom-images/getmyboat-leopard.jpg",
     "url": "https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106.3&type=3&subid=0",
     "price": null
   },
@@ -44,7 +44,7 @@
   {
     "type": "Boats",
     "brand": "Getmyboat",
-    "name": "Getmyboat",
+    "name": "Getmyboat-105' Leopard Jacuzzi",
     "image": "assets/custom-images/getmyboat-leopard.jpg",
     "url": "https://click.linksynergy.com/deeplink?id=tM2c46u*sYY&mid=52690&murl=https%3A%2F%2Fwww.getmyboat.com%2Ftrips%2FMYLAgMvK%2F&u1=leopard-jacuzzi-miami",
     "price": null
@@ -62,7 +62,7 @@
     "type": "RVs and Motorhomes",
     "brand": "Outdoorsy",
     "name": "Rent RVs from Real People \u2013 Outdoorsy",
-    "image": "https://example.com/images/outdoorsy.jpg",
+    "image": "assets/custom-images/cruiseam-deal-image.jpg",
     "url": "https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660",
     "price": null
   },
@@ -70,14 +70,14 @@
     "type": "RVs and Motorhomes",
     "brand": "RVezy",
     "name": "Explore Canada & US in an RV \u2013 RVezy",
-    "image": "https://example.com/images/rvezy.jpg",
+    "image": "assets/custom-images/rvezy-conquest.jpg",
     "url": "https://rvezypartnershipprogram.sjv.io/c/6269754/1686722/19443?subId1=text1",
     "price": null
   },
   {
     "type": "RVs and Motorhomes",
     "brand": "RVezy",
-    "name": "2024 Conquest",
+    "name": "RVezy Rentals- 2024 Conquest -Peoria, AZ",
     "image": "assets/custom-images/rvezy-conquest.jpg",
     "url": "https://rvezypartnershipprogram.sjv.io/POdV2X",
     "price": null
@@ -86,7 +86,7 @@
     "type": "RVs and Motorhomes",
     "brand": "Cruise America",
     "name": "Rental Deals",
-    "image": "https://example.com/images/rvezy.jpg",
+    "image": "assets/custom-images/cruiseam-deal-image.jpg",
     "url": "/",
     "price": null
   },
@@ -131,14 +131,6 @@
     "url": "https://dollarcarrentalmx.sjv.io/c/6269754/2059948/25800",
     "price": null
   },
-  {
-    "type": "Cars",
-    "brand": "Dollar rental cars",
-    "name": "Current Deals",
-    "image": "assets/turo-list/img_9943.jpg",
-    "url": "/",
-    "price": null
-  },
 
   {
     "type": "Cars",
@@ -178,7 +170,7 @@
     "type": "Motorcycles",
     "brand": "EagleRider",
     "name": "Eagle Rider-Motorcycle Rentals",
-    "image": "https://example.com/images/eaglerider.jpg",
+    "image": "assets/custom-images/eaglerider-yamaha.jpg",
     "url": "/",
     "price": null
   },
@@ -186,7 +178,7 @@
     "type": "Motorcycles",
     "brand": "RIDES SHARE",
     "name": "Rider-to-Rider Motorcycle Rentals",
-    "image": "https://example.com/images/ridersshare.jpg",
+    "image": "assets/custom-images/eaglerider-yamaha.jpg",
     "url": "https://www.riders-share.com/welcome/vehiclevoyager",
     "price": null
   },

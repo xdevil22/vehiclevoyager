@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import fallback from "../../../assets/default-vehicle2.jpg";
-import {BASE_URL} from "../../../utils/constants";
+import { BASE_URL } from "../../../utils/constants";
 type VehicleCardProps = {
   type: string;
   brand: string;
@@ -8,8 +8,7 @@ type VehicleCardProps = {
   image: string;
   url: string;
   price?: string | null;
-
-  fallBackSrc?: string;
+  // fallBackSrc?: string;
 };
 
 const VehicleCard: React.FC<VehicleCardProps> = ({
@@ -19,8 +18,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
   image,
   url,
   price,
-
-  fallBackSrc = fallback,
+  // fallBackSrc = fallback,
 }) => {
   const [imgSrc, setImgSrc] = useState(image);
   const handleAffiliateClick = () => {
@@ -43,13 +41,13 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
                 target="_blank"
                 onClick={handleAffiliateClick}
                 rel="noopener noreferrer"
-                className="block w-full rounded-md overflow-hidden">
+                className="block w-full rounded-md overflow-hidden"
+              >
                 <img
-                  src={BASE_URL + imgSrc}
-                  // src="https://cloudinary-marketing-res.cloudinary.com/images/w_1000,c_scale/v1699909962/fallback_image_header/fallback_image_header-png?_i=AA"
+                  src={imgSrc}
                   alt={`${brand} rental`}
                   loading="lazy"
-                  onError={() => setImgSrc(fallBackSrc)}
+                  onError={() => setImgSrc(fallback)}
                   className="w-full h-48- object-cover-"
                 />
               </a>
@@ -61,10 +59,9 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
           <div className="relative">
             <img
               src={BASE_URL + imgSrc}
-              // src="https://cloudinary-marketing-res.cloudinary.com/images/w_1000,c_scale/v1699909962/fallback_image_header/fallback_image_header-png?_i=AA"
               alt={`${brand} rental`}
               loading="lazy"
-              onError={() => setImgSrc(fallBackSrc)}
+              onError={() => setImgSrc(fallback)}
               className="w-full h-48 object-cover-"
             />
             {price && (
@@ -81,7 +78,8 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-white hover:bg-primary/90 h-10 px-4 py-2 flex-1">
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-white hover:bg-primary/90 h-10 px-4 py-2 flex-1"
+              >
                 View Deals
               </a>
             </div>

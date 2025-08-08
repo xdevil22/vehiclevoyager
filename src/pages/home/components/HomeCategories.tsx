@@ -1,10 +1,10 @@
-import React, {JSX, useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import vehicles from "../../../utils/vehicles.json";
 import VehicleCard from "./VehicleCard";
 
 import ClickAndBoatWidget from "./ClickAndBoatWidget";
 import EagleRiderWidget from "./EagleRiderWidget";
-import fallback from "../../../assets/default-vehicle2.jpg";
+
 import RoamlyBanner from "./RoamlyBanner";
 import AmazonBanner from "../../../components/AmazonBanner";
 
@@ -14,10 +14,7 @@ type RV = {
   name: string;
   image: string;
   url: string;
-  price: string | null;
-  people: number;
-  location: string;
-  features: string[];
+  price?: string | null;
 };
 
 const mockData: RV[] = [
@@ -25,62 +22,32 @@ const mockData: RV[] = [
     type: "RV",
     brand: "Outdoorsy",
     name: "Cozy Camper Van",
-    image: fallback,
+    image: "assets/custom-images/rvezy-conquest.jpg",
     url: "https://www.outdoorsy.com",
     price: null,
-    people: 4,
-    location: "",
-    features: ["Kitchen", "Shower", "Comfortable Beds"],
   },
   {
     type: "RV",
     brand: "Outdoorsy",
     name: "Luxury RV Adventure",
-    image: fallback,
+    image: "assets/custom-images/rvezy-conquest.jpg",
     url: "https://www.outdoorsy.com",
     price: null,
-    people: 6,
-    location: "",
-    features: ["TV", "Luxury Interior", "Slide Out"],
   },
   {
     type: "RV",
     brand: "Outdoorsy",
     name: "Family Travel Trailer",
-    image: fallback,
+    image: "assets/custom-images/rvezy-conquest.jpg",
     url: "https://www.outdoorsy.com",
     price: null,
-    people: 5,
-    location: "",
-    features: ["Bunk Beds", "Bathroom", "Dining Area"],
-  },
-  {
-    type: "RV",
-    brand: "Outdoorsy",
-    name: "Cozy Camper Van",
-    image: fallback,
-    url: "https://www.outdoorsy.com",
-    price: null,
-    people: 4,
-    location: "",
-    features: ["Portable Toilet", "Kitchenette", "Heater"],
-  },
-  {
-    type: "RV",
-    brand: "Outdoorsy",
-    name: "Luxury RV Adventure",
-    image: fallback,
-    url: "https://www.outdoorsy.com",
-    price: null,
-    people: 6,
-    location: "",
-    features: ["Bluetooth Audio", "Outdoor Shower", "Solar Panels"],
   },
 ];
 
 const groupByType = (type: string) => {
-  return vehicles.filter((v) => v.type === type);
+  return (vehicles as RV[]).filter((v) => v.type === type);
 };
+
 const HomeCategories = () => {
   const categories = [
     "Cars",
@@ -89,6 +56,7 @@ const HomeCategories = () => {
     "Motorcycles",
     "Private Jets",
   ];
+
   const categoryIcons: Record<string, string> = {
     Cars: "ri-car-line",
     Boats: "ri-ship-line",
@@ -118,13 +86,15 @@ const HomeCategories = () => {
 
         const data = await res.json();
 
-        const listings = data?.data?.map((item: any) => ({
-          id: item.id,
+        const listings: RV[] = data?.data?.map((item: any) => ({
+          type: "RV",
+          brand: "Outdoorsy",
           name: item.attributes?.name || "No Name",
           image:
             item.attributes?.primary_image_url ||
             "https://via.placeholder.com/400x250.png?text=No+Image",
           url: `https://www.outdoorsy.com/rv/${item.id}`,
+          price: null, // keeping null for consistency
         }));
 
         if (Array.isArray(listings) && listings.length > 0) {
@@ -140,16 +110,18 @@ const HomeCategories = () => {
 
     fetchRVs();
   }, []);
+
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
   }, []);
+
   return (
     <div className="p-6">
       {categories.map((category) => {
-        let items = groupByType(category);
+        let items: RV[] = groupByType(category);
 
         if (category === "RVs and Motorhomes") {
-          // Combine vehicles.json RVs with fetched RVs
+          // Merge vehicles.json RVs with fetched RVs
           items = [...items, ...rvs];
         }
 
@@ -159,12 +131,14 @@ const HomeCategories = () => {
           <section
             key={category}
             id={category.replace(/\s+/g, "-")}
-            className="mb-10 scroll-mt-36">
+            className="mb-10 scroll-mt-36"
+          >
             <div className="container mx-auto px-4">
               <div className="flex justify-between items-center mb-8">
-                <h2 className="text-3xl font-bold font-heading text-neutral-900 ">
+                <h2 className="text-3xl font-bold font-heading text-neutral-900">
                   <i
-                    className={`${categoryIcons[category]} text-2xl text-black-500 mr-2`}></i>
+                    className={`${categoryIcons[category]} text-2xl text-black-500 mr-2`}
+                  ></i>
                   {category}
                 </h2>
               </div>
@@ -174,6 +148,7 @@ const HomeCategories = () => {
                 ))}
               </div>
             </div>
+
             {category === "Boats" && (
               <div className="container mx-auto px-4">
                 <div className="my-4">
@@ -194,15 +169,12 @@ const HomeCategories = () => {
       })}
 
       <div className="container mx-auto px-4">
-        {/* <ClickAndBoatWidget />
-        <EagleRiderWidget /> */}
-
         <div className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-3">
           <div className="col-span-1 lg:col-span-2 bg-yellow-50 shadow-md rounded-lg border border-yellow-200 rounded-xl w-full overflow-x-auto">
             <AmazonBanner />
           </div>
 
-          <div className="col-span-1 bg-white shadow-md rounded-lg flex items-center justify-center border border-gray-300 w-full p-4-">
+          <div className="col-span-1 bg-white shadow-md rounded-lg flex items-center justify-center border border-gray-300 w-full">
             <RoamlyBanner />
           </div>
         </div>

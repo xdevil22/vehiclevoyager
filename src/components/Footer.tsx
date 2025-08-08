@@ -1,6 +1,6 @@
 import React from "react";
-import { RiSteering2Fill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import {RiSteering2Fill} from "react-icons/ri";
+import {Link} from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,8 +14,7 @@ const Footer = () => {
           padding: 0,
           height: "0px",
           overflow: "hidden",
-        }}
-      >
+        }}>
         Impact-Site-Verification: 54deb5d6-162c-4ff1-b44c-96f31b50fc38
       </p>
 
@@ -37,8 +36,7 @@ const Footer = () => {
               <h4 className="text-lg font-bold mb-2">Contact Us</h4>
               <a
                 href="mailto:info@vehiclevoyager.net"
-                className="text-neutral-200 hover:text-primary transition-colors"
-              >
+                className="text-neutral-200 hover:text-primary transition-colors">
                 info@vehiclevoyager.net
               </a>
             </div>
@@ -49,16 +47,14 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {[
-                { label: "Home", to: "/" },
-                { label: "Cars", to: "/cars" },
-
-                { label: "About", to: "/about" },
-              ].map(({ label, to }) => (
+                {label: "Home", to: "/"},
+                {label: "About", to: "/about"},
+                {label: "Blog", to: "/blog"},
+              ].map(({label, to}) => (
                 <li key={to}>
                   <Link
                     to={to}
-                    className="text-neutral-200 hover:text-primary transition-colors"
-                  >
+                    className="text-neutral-200 hover:text-primary transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -80,6 +76,21 @@ const Footer = () => {
                 "Phoenix, AZ",
               ].map((city) => (
                 <li key={city}>
+                  <span className="text-neutral-200">{city}</span>
+                </li>
+              ))}
+            </ul>
+            {/* <ul className="space-y-2">
+              {[
+                "Miami, FL",
+                "Los Angeles, CA",
+                "Las Vegas, NV",
+                "New York, NY",
+                "Orlando, FL",
+                "San Diego, CA",
+                "Phoenix, AZ",
+              ].map((city) => (
+                <li key={city}>
                   <Link
                     to={`/category/cars?location=${encodeURIComponent(
                       city.split(",")[0]
@@ -90,7 +101,7 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
         </div>
 
@@ -102,20 +113,17 @@ const Footer = () => {
           <div className="flex space-x-6">
             <Link
               to="/privacy-policy"
-              className="text-neutral-400 hover:text-primary text-sm transition-colors"
-            >
+              className="text-neutral-400 hover:text-primary text-sm transition-colors">
               Privacy Policy
             </Link>
             <Link
               to="/terms-of-service"
-              className="text-neutral-400 hover:text-primary text-sm transition-colors"
-            >
+              className="text-neutral-400 hover:text-primary text-sm transition-colors">
               Terms of Service
             </Link>
             <Link
               to="/cookie-policy"
-              className="text-neutral-400 hover:text-primary text-sm transition-colors"
-            >
+              className="text-neutral-400 hover:text-primary text-sm transition-colors">
               Cookie Policy
             </Link>
           </div>
