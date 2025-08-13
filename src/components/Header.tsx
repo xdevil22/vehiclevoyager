@@ -1,5 +1,5 @@
-import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {NavLink, useNavigate, useLocation} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -36,13 +36,13 @@ export default function Header() {
   };
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Blog", path: "/blog" },
+    {name: "Home", path: "/"},
+    {name: "About", path: "/about"},
+    {name: "Blog", path: "/blog"},
   ];
 
   return (
-    <header className="w-full border-b sticky top-0 z-50 bg-white shadow-md">
+    <header className="w-full border-b sticky top-0 z-40 bg-white shadow-md">
       <div className="container mx-auto px-4">
         <div>
           <div className="flex justify-between items-center py-4">
@@ -60,12 +60,11 @@ export default function Header() {
                 <NavLink
                   key={link.name}
                   to={link.path}
-                  className={({ isActive }) =>
-                    `text-sm font-medium hover:text-blue-600 ${
+                  className={({isActive}) =>
+                    `text-lg font-medium hover:text-blue-600 ${
                       isActive ? "text-blue-600" : "text-gray-800"
                     }`
-                  }
-                >
+                  }>
                   {link.name}
                 </NavLink>
               ))}
@@ -76,15 +75,13 @@ export default function Header() {
               {isLoggedIn ? (
                 <button
                   onClick={handleLogout}
-                  className="border border-gray-300 rounded px-4 py-1 text-sm hover:bg-gray-100"
-                >
+                  className="border border-gray-300 rounded px-4 py-1 text-lg hover:bg-gray-100">
                   Logout
                 </button>
               ) : (
                 <button
                   onClick={handleLogin}
-                  className="border border-gray-300 rounded px-4 py-1 text-sm hover:bg-gray-100"
-                >
+                  className="border border-gray-300 rounded px-4 py-1 text-lg hover:bg-gray-100">
                   Login
                 </button>
               )}
@@ -94,8 +91,7 @@ export default function Header() {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-800 text-2xl focus:outline-none"
-              >
+                className="text-gray-800 text-2xl focus:outline-none">
                 <i className={`ri-${isMenuOpen ? "close" : "menu"}-line`}></i>
               </button>
             </div>
@@ -109,12 +105,11 @@ export default function Header() {
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={({ isActive }) =>
+                  className={({isActive}) =>
                     `block px-4 py-2 text-sm font-medium ${
                       isActive ? "text-blue-600" : "text-gray-800"
                     }`
-                  }
-                >
+                  }>
                   {link.name}
                 </NavLink>
               ))}
@@ -125,8 +120,7 @@ export default function Header() {
                     setIsMenuOpen(false);
                     handleLogout();
                   }}
-                  className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800"
-                >
+                  className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800">
                   Logout
                 </button>
               ) : (
@@ -135,8 +129,7 @@ export default function Header() {
                     setIsMenuOpen(false);
                     handleLogin();
                   }}
-                  className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800"
-                >
+                  className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800">
                   Login
                 </button>
               )}
@@ -150,8 +143,7 @@ export default function Header() {
                 <a
                   key={cat}
                   href={`#${cat.replace(/\s+/g, "-")}`}
-                  className="text-sm font-semibold text-blue-600 hover:underline whitespace-nowrap"
-                >
+                  className="text-sm font-semibold text-blue-600 hover:underline whitespace-nowrap">
                   <i className={`${categoryIcons[cat]} mr-1`} />
                   {cat}
                 </a>

@@ -13,6 +13,7 @@ import Layout from "./layouts/Layouts";
 import { HelmetProvider } from "react-helmet-async";
 import AdminLogin from "./pages/admin/adminLogin";
 import Blog from "./pages/Blog";
+import BlogPostPage from "./pages/Blog/BlogPost";
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const isAdmin = sessionStorage.getItem("adminAccess") === "granted";
@@ -28,7 +29,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route index element={<Home />} />
 
             <Route path="About" element={<About />} />
-            <Route path="Blog" element={<Blog />} />
+            {/* <Route path="Blog" element={<Blog />} /> */}
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route
               path="admin"
               element={

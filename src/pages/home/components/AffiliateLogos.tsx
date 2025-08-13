@@ -10,6 +10,7 @@ import riderslogo from "../../../assets/logos/riderslogo.svg";
 import outdoorsylogo from "../../../assets/logos/outdoorsy.png";
 import getmyboatlog from "../../../assets/logos/gmyb.png";
 import fox from "../../../assets/logos/fox.png";
+import sailo from "../../../assets/logos/sailo.png";
 const providers: Provider[] = [
   {
     href: "https://www.villiersjets.com/",
@@ -36,6 +37,11 @@ const providers: Provider[] = [
     imgSrc: fox,
     alt: "Fox Rent A Car logo",
   },
+  // {
+  //   href: "https://www.foxrentacar.com/",
+  //   imgSrc: sailo,
+  //   alt: "Fox Rent A Car logo",
+  // },
 ];
 {
 }

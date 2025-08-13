@@ -1,23 +1,6 @@
 [
   {
     "type": "Boats",
-    "brand": "SAMBOAT France",
-    "name": "Boat Rentals in France - SamBoat",
-    "image": "assets/custom-images/samboat-catamaran.jpg",
-    "url": "https://www.samboat.co.uk/boat-hire?order=nested.promotions.discount.desc&prices%5Bgte%5D=49000&distance_city=50&destination_id=6548625",
-    "price": null
-  },
-
-  {
-    "type": "Boats",
-    "brand": "Click&Boat France",
-    "name": "Find Boats in France with Click&Boat",
-    "image": "assets/custom-images/click-boat-Fairline.jpg",
-    "url": "https://click-and-boat.pxf.io/c/6269754/1727243/19914",
-    "price": null
-  },
-  {
-    "type": "Boats",
     "brand": "GetMyBoat",
     "name": "Find Jet Skis and Boat Rentals \u2013 GetMyBoat",
     "image": "assets/custom-images/getmyboat-leopard.jpg",
@@ -28,11 +11,20 @@
   {
     "type": "Boats",
     "brand": "Click&Boat",
-    "name": "Click&Boat Rentals-Fairline Targa",
+    "name": "Fairline Targa-Click&Boat Rentals",
     "image": "assets/custom-images/click-boat-Fairline.jpg",
     "url": "https://click-and-boat.pxf.io/GKdVx2",
     "price": null
   },
+  {
+    "type": "Boats",
+    "brand": "Click&Boat",
+    "name": "Sailboat Jeanneau-Click&Boat Rentals",
+    "image": "assets/custom-images/sailboat-jeanclick1.jpeg",
+    "url": "https://click-and-boat.pxf.io/JKdN1E",
+    "price": null
+  },
+
   {
     "type": "Boats",
     "brand": "Click&Boat",
@@ -43,13 +35,47 @@
   },
   {
     "type": "Boats",
+    "brand": "Click&Boat",
+    "name": "Jetcar Watercraft-Samboat Rentals",
+    "image": "assets/custom-images/jetcarsamboat.jpg",
+    "url": "https://samboat.pxf.io/POdDJQ",
+    "price": null
+  },
+
+  {
+    "type": "Boats",
     "brand": "Getmyboat",
-    "name": "Getmyboat-105' Leopard Jacuzzi",
+    "name": "105' Leopard Jacuzzi-Getmyboat",
     "image": "assets/custom-images/getmyboat-leopard.jpg",
     "url": "https://click.linksynergy.com/deeplink?id=tM2c46u*sYY&mid=52690&murl=https%3A%2F%2Fwww.getmyboat.com%2Ftrips%2FMYLAgMvK%2F&u1=leopard-jacuzzi-miami",
     "price": null
   },
+  {
+    "type": "Boats",
+    "brand": "Getmyboat",
+    "name": "Yamaha Waverunners-Getmyboat",
+    "image": "assets/custom-images/jetskisgetmyboat.jpeg",
+    "url": "https://click.linksynergy.com/deeplink?id=tM2c46u*sYY&mid=52690&murl=https%3A%2F%2Fwww.getmyboat.com%2Ftrips%2FMNxg1GMK%2F",
+    "price": null
+  },
 
+  {
+    "type": "Boats",
+    "brand": "Getmyboat",
+    "name": "San Diego Charter Yacht-Sailo",
+    "image": "assets/custom-images/sandiegochartersailo.jpeg",
+    "url": "https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com%2Fboats%2FSan_Diego_CA%2FMotor%2Frental_boat_7686%2F%3Fduration%3DquarterDay",
+    "price": null
+  },
+
+  {
+    "type": "Boats",
+    "brand": "Getmyboat",
+    "name": "Power Boat Tour in Miami-Sailo",
+    "image": "assets/custom-images/sailboat-jeanclick.jpeg",
+    "url": "https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com%2Fboats%2FMiami_FL%2FMotor%2Frental_boat_7514%2F%3Fduration%3DquarterDay",
+    "price": null
+  },
   {
     "type": "RVs and Motorhomes",
     "brand": "Cruise America",
@@ -66,14 +92,7 @@
     "url": "https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660",
     "price": null
   },
-  {
-    "type": "RVs and Motorhomes",
-    "brand": "RVezy",
-    "name": "Explore Canada & US in an RV \u2013 RVezy",
-    "image": "assets/custom-images/rvezy-conquest.jpg",
-    "url": "https://rvezypartnershipprogram.sjv.io/c/6269754/1686722/19443?subId1=text1",
-    "price": null
-  },
+
   {
     "type": "RVs and Motorhomes",
     "brand": "RVezy",
@@ -84,10 +103,10 @@
   },
   {
     "type": "RVs and Motorhomes",
-    "brand": "Cruise America",
-    "name": "Rental Deals",
-    "image": "assets/custom-images/cruiseam-deal-image.jpg",
-    "url": "/",
+    "brand": "RVezy",
+    "name": "2024 Thor Motor Coach-Rvezy",
+    "image": "assets/custom-images/thor-motor-coachrvezy2024.jpg",
+    "url": "https://rvezypartnershipprogram.sjv.io/vP6dzA",
     "price": null
   },
 
@@ -161,7 +180,7 @@
   {
     "type": "Motorcycles",
     "brand": "EagleRider",
-    "name": "Motorcycle Rentals \u2013 EagleRider",
+    "name": "Yamaha YZF-Eagle Rider Rentals",
     "image": "assets/custom-images/eaglerider-yamaha.jpg",
     "url": "https://www.eaglerider.com?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f",
     "price": null
@@ -169,27 +188,29 @@
   {
     "type": "Motorcycles",
     "brand": "EagleRider",
-    "name": "Eagle Rider-Motorcycle Rentals",
-    "image": "assets/custom-images/eaglerider-yamaha.jpg",
-    "url": "/",
+    "name": "BMW R 1250 GS-Eagle Rider Rentals",
+    "image": "assets/custom-images/bmweaglerider.jpeg",
+    "url": "https://www.eaglerider.com?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f",
     "price": null
   },
+
   {
     "type": "Motorcycles",
     "brand": "RIDES SHARE",
-    "name": "Rider-to-Rider Motorcycle Rentals",
-    "image": "assets/custom-images/eaglerider-yamaha.jpg",
+    "name": "HARLEY-DAVIDSON-Riders-Share",
+    "image": "assets/custom-images/ridersshare-harley.jpg",
     "url": "https://www.riders-share.com/welcome/vehiclevoyager",
     "price": null
   },
   {
     "type": "Motorcycles",
     "brand": "RIDES SHARE",
-    "name": "Riders-Share HARLEY-DAVIDSON",
-    "image": "assets/custom-images/ridersshare-harley.jpg",
-    "url": "/",
+    "name": " HARLEY-DAVIDSON ROAD KING-Riders-Share",
+    "image": "assets/custom-images/ridersshareroadking.jpg",
+    "url": "https://www.riders-share.com/welcome/vehiclevoyager",
     "price": null
   },
+
   {
     "type": "Private Jets",
     "brand": "Villiers Private Jet Charter",

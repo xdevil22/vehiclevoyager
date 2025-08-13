@@ -10,6 +10,7 @@ export default function Home() {
     <>
       <HeroBanner />
       <AffiliateLogos />
+
       <HomeCategories />
       <BrevoNewsletter />
       <CookieConsent />

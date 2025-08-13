@@ -1,26 +1,46 @@
+
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>Brevo</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="brevo-integration" content="frame,popup">
-  <script id="brevo-sdk" src="https://cdn.brevo.com/js/sdk-loader.js"></script>
-  <style>
-    .default-style {
-      font-family: sans-serif;
-    }
-  </style>
-</head>
-
-<body>
-  <div id="whole-content">
-    <div id="main-content">
-      <p id="text-content" class="default-style">Please wait...</p>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Brevo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="brevo-integration" content="frame,popup" />
+    <script
+      id="brevo-sdk"
+      src="https://cdn.brevo.com/js/sdk-loader.js"></script>
+    <style>
+      .default-style {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      window.Brevo = window.Brevo || [];
+      Brevo.push([
+        "init",
+        {
+          client_key: "YOUR_BREVO_CLIENT_KEY",
+        },
+      ]);
+    </script>
+    <script src="https://cdn.brevo.com/js/form.js"></script>
+    <div id="whole-content">
+      <div id="main-content">
+        <!-- <p id="text-content" class="default-style">Please wait...</p> -->
+              <iframe
+        width="540"
+        height="580"
+        src="https://261870c5.sibforms.com/serve/MUIFACCctyWI6vF6K6ZcFbuFvQmq6Wvw3NyfPmCBowdLZfXvjUKwvchEam8ABy8xNyrUz_KdVN6gQ-Tuuu-V1i6hjr2qOLeRZ5HnErAbRaKohVV4lVArrN0KE-XM2B18IaS3rTHxo_6TunmxaHJkHcufK4j1EN4H-RY4DpJ6vZAXMH7HmTiWwGk65QFmVtgTaIkUaPuV8IVE2ren"
+        frameBorder="0"
+        scrolling="auto"
+        allowFullScreen
+    
+        title="Brevo Newsletter Signup"
+      >
+      </div>
     </div>
-  </div>
-</body>
-
+  
+  </body>
 </html>
