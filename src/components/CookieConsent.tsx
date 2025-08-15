@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 
 const CookieConsent = () => {
   const [visible, setVisible] = useState(false);
@@ -36,11 +36,11 @@ const CookieConsent = () => {
             <p className="mt-4">
               By clicking <strong>"Accept All"</strong>, you consent to our use
               of cookies. You can manage your preferences or learn more in our{" "}
-              <a href="/" className="text-blue-400 underline">
+              <a href="/cookiepolicy" className="text-blue-400 underline">
                 Cookie Policy
               </a>{" "}
               and{" "}
-              <a href="/" className="text-blue-400 underline">
+              <a href="/privacypolicy" className="text-blue-400 underline">
                 Privacy Policy
               </a>
               .
@@ -50,14 +50,12 @@ const CookieConsent = () => {
           <div className="flex space-x-3 shrink-0">
             <button
               onClick={declineCookies}
-              className="px-4 py-2 border border-gray-400 text-white rounded hover:bg-gray-800 transition"
-            >
+              className="px-4 py-2 border border-gray-400 text-white rounded hover:bg-gray-800 transition">
               Decline Optional
             </button>
             <button
               onClick={acceptCookies}
-              className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded transition"
-            >
+              className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded transition">
               Accept All
             </button>
           </div>

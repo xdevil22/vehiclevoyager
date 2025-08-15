@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import vehicles from "../../../utils/vehicles.json";
 import VehicleCard from "./VehicleCard";
 
@@ -118,9 +118,9 @@ const HomeCategories = () => {
 
   return (
     <div className="p-6">
-      <div className="container mx-auto px-4">
+      {/* <div className="container mx-auto px-4">
         <SailoBanner />
-      </div>
+      </div> */}
       {categories.map((category) => {
         let items: RV[] = groupByType(category);
 
@@ -135,12 +135,14 @@ const HomeCategories = () => {
           <section
             key={category}
             id={category.replace(/\s+/g, "-")}
-            className="mb-10 scroll-mt-36">
+            className="mb-10 scroll-mt-36"
+          >
             <div className="container mx-auto px-4">
               <div className="flex justify-between items-center mb-8">
                 <h2 className="text-3xl font-bold font-heading text-neutral-900">
                   <i
-                    className={`${categoryIcons[category]} text-2xl text-black-500 mr-2`}></i>
+                    className={`${categoryIcons[category]} text-2xl text-black-500 mr-2`}
+                  ></i>
                   {category}
                 </h2>
               </div>

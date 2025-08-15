@@ -1,15 +1,6 @@
 [
   {
     "type": "Boats",
-    "brand": "GetMyBoat",
-    "name": "Find Jet Skis and Boat Rentals \u2013 GetMyBoat",
-    "image": "assets/custom-images/getmyboat-leopard.jpg",
-    "url": "https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106.3&type=3&subid=0",
-    "price": null
-  },
-
-  {
-    "type": "Boats",
     "brand": "Click&Boat",
     "name": "Fairline Targa-Click&Boat Rentals",
     "image": "assets/custom-images/click-boat-Fairline.jpg",

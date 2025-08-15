@@ -37,11 +37,11 @@ const providers: Provider[] = [
     imgSrc: fox,
     alt: "Fox Rent A Car logo",
   },
-  // {
-  //   href: "https://www.foxrentacar.com/",
-  //   imgSrc: sailo,
-  //   alt: "Fox Rent A Car logo",
-  // },
+  {
+    href: "https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com",
+    imgSrc: sailo,
+    alt: "Fox Rent A Car logo",
+  },
 ];
 {
 }

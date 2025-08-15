@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 
 import Home from "./pages/home";
 import Cars from "./pages/cars";
@@ -10,12 +10,14 @@ import Admin from "./pages/admin/admin";
 import "./index.css";
 import "./indexpegy.css";
 import Layout from "./layouts/Layouts";
-import { HelmetProvider } from "react-helmet-async";
+import {HelmetProvider} from "react-helmet-async";
 import AdminLogin from "./pages/admin/adminLogin";
 import Blog from "./pages/Blog";
 import BlogPostPage from "./pages/Blog/BlogPost";
+import CookiePolicy from "./pages/cookie-policy";
+import PrivacyPolicy from "./pages/privacypolicy";
 
-function ProtectedRoute({ children }: { children: React.ReactNode }) {
+function ProtectedRoute({children}: {children: React.ReactNode}) {
   const isAdmin = sessionStorage.getItem("adminAccess") === "granted";
   return isAdmin ? children : <Navigate to="/admin/login" replace />;
 }
@@ -29,8 +31,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route index element={<Home />} />
 
             <Route path="About" element={<About />} />
-            {/* <Route path="Blog" element={<Blog />} /> */}
+
             <Route path="/blog" element={<Blog />} />
+            <Route path="/cookiepolicy" element={<CookiePolicy />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route
               path="admin"
