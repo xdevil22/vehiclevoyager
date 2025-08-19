@@ -7,14 +7,12 @@
     <title>Rent Affordable Cars, Boats, RVs | Affiliate Rentals</title>
     <meta
       name="description"
-      content="Find and book vehicles across cars, bikes, RVs, and boats in one place. Trusted listings, seamless booking."
-    />
+      content="Find and book vehicles across cars, bikes, RVs, and boats in one place. Trusted listings, seamless booking." />
 
     <meta property="og:title" content="VehicleVoyager" />
     <meta
       property="og:description"
-      content="Find and book your next ride — from cars to boats — all in one platform."
-    />
+      content="Find and book your next ride — from cars to boats — all in one platform." />
     <meta property="og:image" content="/og-image.jpg" />
     <meta property="og:url" content="https://vehiclevoyager.com/" />
     <meta property="og:type" content="website" />
@@ -23,37 +21,30 @@
     <meta name="twitter:title" content="VehicleVoyager" />
     <meta
       name="twitter:description"
-      content="Rent cars, bikes, and boats — all in one place."
-    />
+      content="Rent cars, bikes, and boats — all in one place." />
     <meta name="twitter:image" content="/og-image.jpg" />
     <meta
       name="description"
-      content="Compare prices and rent cars, boats, RVs, and motorcycles via top platforms like Turo, Outdoorsy, Click&Boat."
-    />
+      content="Compare prices and rent cars, boats, RVs, and motorcycles via top platforms like Turo, Outdoorsy, Click&Boat." />
 
     <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
 
     <!-- Google Analytics 4 -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-11675326772"
-    ></script>
+      src="https://www.googletagmanager.com/gtag/js?id=G-11675326772"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -61,6 +52,47 @@
       }
       gtag("js", new Date());
       gtag("config", "G-11675326772");
+    </script>
+    <script>
+      const observer = new MutationObserver(() => {
+        document.querySelectorAll("div, p, span").forEach((el) => {
+          if (el.innerText?.includes("Cookies are disabled")) {
+            el.style.display = "none"; // hide it
+          }
+        });
+      });
+
+      observer.observe(document.body, {childList: true, subtree: true});
+      // Suppress third-party cookie warnings
+      (function () {
+        const blockList = ["Cookies are disabled", "Please enable cookies"];
+
+        // Override alert
+        const originalAlert = window.alert;
+        window.alert = function (msg) {
+          if (
+            typeof msg === "string" &&
+            blockList.some((t) => msg.includes(t))
+          ) {
+            console.log("Suppressed popup:", msg);
+            return;
+          }
+          return originalAlert(msg);
+        };
+
+        // Auto-hide injected DOM modals
+        const observer = new MutationObserver(() => {
+          document.querySelectorAll("div, p, span").forEach((el) => {
+            if (
+              el.innerText &&
+              blockList.some((t) => el.innerText.includes(t))
+            ) {
+              el.remove(); // or el.style.display = "none";
+            }
+          });
+        });
+        observer.observe(document.body, {childList: true, subtree: true});
+      })();
     </script>
   </head>
   <body>
