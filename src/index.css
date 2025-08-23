@@ -22,9 +22,6 @@ header {
 }
 .brevo-newsletter iframe {
   min-height: 630px !important;
-  /* width: 100%;
-  max-width: 100%; */
-  /* max-height: 100vh; */
 }
 @media (max-width: 1024px) {
   .grid-cols-ipad {
@@ -33,4 +30,7 @@ header {
 }
 html {
   scroll-behavior: smooth;
+}
+.prose a {
+  @apply no-underline text-blue-600 hover:underline;
 }

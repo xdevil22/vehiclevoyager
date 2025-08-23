@@ -15,7 +15,7 @@ const Sidebar: React.FC = () => {
         <SailoBanner />
       </div>
 
-      <div className="bg-gray-100 p-4 rounded-lg shadow">
+      {/* <div className="bg-gray-100 p-4 rounded-lg shadow">
         <h4 className="font-bold mb-2">Popular Topics</h4>
         <ul className="space-y-2 text-blue-600">
           <li>
@@ -28,7 +28,7 @@ const Sidebar: React.FC = () => {
             <a href="#">Eagle Rider Rentals</a>
           </li>
         </ul>
-      </div>
+      </div> */}
     </aside>
   );
 };
