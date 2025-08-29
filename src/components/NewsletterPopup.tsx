@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
 export default function NewsletterPopup() {
   const [show, setShow] = useState(false);
@@ -12,16 +12,18 @@ export default function NewsletterPopup() {
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg  w-[570px] h-[600px] shadow-lg relative">
+      <div className="bg-white rounded-lg  w-[570px] h-[600px] shadow-lg relative brevo-frame-popup">
         <button
           onClick={() => setShow(false)}
-          className="absolute top-2 right-2 text-gray-600 hover:text-black">
+          className="absolute top-2 right-2 text-gray-600 hover:text-black"
+        >
           ✕
         </button>
         <iframe
           src="/brevo-frame.html"
           className="w-full h-[605px] border-none"
-          title="Newsletter Signup"></iframe>
+          title="Newsletter Signup"
+        ></iframe>
       </div>
     </div>
   );

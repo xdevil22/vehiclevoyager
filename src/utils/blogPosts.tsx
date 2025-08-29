@@ -1,6 +1,6 @@
 // src/utils/blogPosts.ts
-import {JSX} from "react";
-import {BASE_URL} from "./constants";
+import { JSX } from "react";
+import { BASE_URL } from "./constants";
 
 import Blog2 from "./blogpostdata/blog2";
 import Blog1 from "./blogpostdata/blog1";
@@ -19,28 +19,6 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
-  {
-    slug: "top-7-luxury-yacht-rentals-in-miami",
-    mainTitle:
-      "Top 7 Luxury Yacht Rentals in Miami for an Unforgettable Getaway",
-
-    title: "Top 7 Luxury Yacht Rentals in Miami - Luxury Getaways by Sea",
-    excerpt:
-      "Discover 7 of the best luxury yachts to rent in Miami. See stunning photos, key features, and how to book your dream yacht through trusted partners.",
-    date: "Published on: February 3, 2025",
-    image: "assets/custom-images/getmyboat-leopard.jpg",
-    seoTitle: "Top 7 Luxury Yacht Rentals in Miami - Luxury Getaways by Sea",
-    seoDescription:
-      "Discover 7 of the best luxury yachts to rent in Miami. See stunning photos, key features, and how to book your dream yacht through trusted partners.",
-    keywords:
-      "road trip essentials, travel accessories for cars, best gear for car travel, road trip safety kits, travel gadgets, long drive must-haves, family car trip checklist",
-
-    content: (
-      <>
-        <Blog1 />
-      </>
-    ),
-  },
   {
     slug: "road-trip-ready-15-must-have-items-for-your-next-adventure",
     mainTitle: "Road Trip Ready - 15 Must-Have Items for Your Next Adventure",
@@ -79,6 +57,28 @@ export const blogPosts: BlogPost[] = [
     content: (
       <>
         <Blog3 />
+      </>
+    ),
+  },
+  {
+    slug: "top-7-luxury-yacht-rentals-in-miami",
+    mainTitle:
+      "Top 7 Luxury Yacht Rentals in Miami for an Unforgettable Getaway",
+
+    title: "Top 7 Luxury Yacht Rentals in Miami - Luxury Getaways by Sea",
+    excerpt:
+      "Discover 7 of the best luxury yachts to rent in Miami. See stunning photos, key features, and how to book your dream yacht through trusted partners.",
+    date: "Published on: February 3, 2025",
+    image: "assets/custom-images/getmyboat-leopard.jpg",
+    seoTitle: "Top 7 Luxury Yacht Rentals in Miami - Luxury Getaways by Sea",
+    seoDescription:
+      "Discover 7 of the best luxury yachts to rent in Miami. See stunning photos, key features, and how to book your dream yacht through trusted partners.",
+    keywords:
+      "road trip essentials, travel accessories for cars, best gear for car travel, road trip safety kits, travel gadgets, long drive must-haves, family car trip checklist",
+
+    content: (
+      <>
+        <Blog1 />
       </>
     ),
   },
