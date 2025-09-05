@@ -64,6 +64,7 @@ const OutdoorsyListings = () => {
         }
 
         const data = await res.json();
+        console.log(data, "dat------------------------");
 
         const listings = data?.data?.map((item: any) => ({
           id: item.id,
