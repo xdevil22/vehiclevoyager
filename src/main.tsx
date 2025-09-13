@@ -16,7 +16,7 @@ import Blog from "./pages/Blog";
 import BlogPostPage from "./pages/Blog/BlogPost";
 import CookiePolicy from "./pages/cookie-policy";
 import PrivacyPolicy from "./pages/privacypolicy";
-
+import BookingTools from "./pages/booking-tools";
 function ProtectedRoute({children}: {children: React.ReactNode}) {
   const isAdmin = sessionStorage.getItem("adminAccess") === "granted";
   return isAdmin ? children : <Navigate to="/admin/login" replace />;
@@ -29,6 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
+            <Route path="/booking-tools" element={<BookingTools />} />
 
             <Route path="About" element={<About />} />
 

@@ -8,6 +8,17 @@
       body {
         margin: 0;
       }
+      #divWidgetMobile {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        #divWidget {
+          display: none;
+        }
+        #divWidgetMobile {
+          display: block;
+        }
+      }
     </style>
   </head>
   <body>
@@ -21,6 +32,20 @@
         280.0,
         "en",
         true,
+        true,
+        "v2"
+      );
+    </script>
+    <div id="divWidgetMobile"></div>
+
+    <script>
+      loadReservationWidget(
+        "fdc2ea5c-8d86-4558-887d-45675d1e910f",
+        "divWidgetMobile",
+        320.0,
+        475.0,
+        "en",
+        false,
         true,
         "v2"
       );

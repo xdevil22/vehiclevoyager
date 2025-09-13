@@ -37,6 +37,7 @@ export default function Header() {
 
   const navLinks = [
     {name: "Home", path: "/"},
+    {name: "Booking Tools", path: "/booking-tools"},
     {name: "About", path: "/about"},
     {name: "Blog", path: "/blog"},
   ];

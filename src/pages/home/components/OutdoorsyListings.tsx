@@ -1,42 +1,101 @@
 import { useEffect, useState } from "react";
 import fallback from "../../../assets/default-vehicle3.jpg"; // with extension
 import RoamlyBanner from "./RoamlyBanner";
-// import RoamlyBanner from "../../../components/RoamlyBanner";
+
 type RV = {
   id: string;
   name: string;
   image: string;
   url: string;
 };
+// "
+
+//
+
+//
+
+//
+
+//
+
+//6
+
+//7
+
+//8
+
+//9
 
 const mockData: RV[] = [
   {
     id: "1",
-    name: "Cozy Camper Van",
+    name: '"Pop-up Pioneer" Freedom 2280 FREE DELIVERY TO MYRTLE BEACH CAMPGROUNDS"',
     image: fallback,
     url: "https://www.outdoorsy.com/rv/1",
   },
   {
     id: "2",
-    name: "Luxury RV Adventure",
+    name: "Baby Rio | 5x8 Squaredrop Camper Trailer",
     image: fallback,
     url: "https://www.outdoorsy.com/rv/2",
   },
   {
     id: "3",
-    name: "Family Travel Trailer",
+    name: "Waymaker Adventures - Coleman Rubicon 1400bh",
     image: fallback,
     url: "https://www.outdoorsy.com/rv/3",
   },
   {
     id: "4",
-    name: "Cozy Camper Van",
+    name: "The Roaming Rockwood!",
     image: fallback,
     url: "https://www.outdoorsy.com/rv/4",
   },
   {
     id: "5",
-    name: "Luxury RV Adventure",
+    name: 'The "OG"',
+    image: fallback,
+    url: "https://www.outdoorsy.com/rv/5",
+  },
+  {
+    id: "6",
+    name: '2022 Mallard T180BH "Sprout"',
+    image: fallback,
+    url: "https://www.outdoorsy.com/rv/4",
+  },
+  {
+    id: "7",
+    name: "2018 Keystone Bullet",
+    image: fallback,
+    url: "https://www.outdoorsy.com/rv/5",
+  },
+  {
+    id: "8",
+    name: "Boondoggle",
+    image: fallback,
+    url: "https://www.outdoorsy.com/rv/4",
+  },
+  {
+    id: "9",
+    name: "Pioneer Bunkhouse 30S",
+    image: fallback,
+    url: "https://www.outdoorsy.com/rv/5",
+  },
+  {
+    id: "10",
+    name: "The Wandering Wildwood",
+    image: fallback,
+    url: "https://www.outdoorsy.com/rv/4",
+  },
+  {
+    id: "11",
+    name: "2018 Keystone Bullet",
+    image: fallback,
+    url: "https://www.outdoorsy.com/rv/5",
+  },
+  {
+    id: "12",
+    name: "2014 Keystone Hornet Hideout",
     image: fallback,
     url: "https://www.outdoorsy.com/rv/5",
   },

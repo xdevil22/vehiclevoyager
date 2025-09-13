@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import vehicles from "../../../utils/vehicles.json";
 import VehicleCard from "./VehicleCard";
 
-import ClickAndBoatWidget from "./ClickAndBoatWidget";
-import EagleRiderWidget from "./EagleRiderWidget";
+import ClickAndBoatWidget from "../../../components/ClickAndBoatWidget";
+import EagleRiderWidget from "../../../components/EagleRiderWidget";
 
 import RoamlyBanner from "./RoamlyBanner";
 import AmazonBanner from "../../../components/AmazonBanner";
@@ -22,7 +22,49 @@ const mockData: RV[] = [
   {
     type: "RV",
     brand: "Outdoorsy",
-    name: "Cozy Camper Van",
+    name: "2014 Airstream International Onyx",
+    image: "assets/custom-images/2014-airstream-onyx.webp",
+    url: "https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=https://www.outdoorsy.com/rv-rental/phoenix_az/2014_airstream_international_205577-listing?address=Peoria%2C%20AZ&filter%5Btype%5D=trailer&price%5Bmin%5D=1100&result_number=2",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: "2018 Fleetwood Discovery",
+    image: "assets/custom-images/2018-fleetwood-discovery.webp",
+    url: "https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=https://www.outdoorsy.com/rv-rental/phoenix_az/2018_fleetwood_discovery_358466-listing?address=Peoria%2C%20AZ&price%5Bmin%5D=30000&result_number=14    ",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: "2022 Entegra Coach Accolade XL",
+    image: "assets/custom-images/2022-entegra-coach-accolade-xl.webp",
+    url: "https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=https://www.outdoorsy.com/rv-rental/phoenix_az/2022_entegra-coach_accolade-xl_462995-listing",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: "2021 Entegra Coach Qwest ",
+    image: "assets/custom-images/2021-entegra-coach-qwest.webp",
+    url: "https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=https://www.outdoorsy.com/rv-rental/glendale_az/2021_entegra-coach_qwest_370708-listing?address=Peoria%2C%20AZ&result_number=17",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: "2024 Ram Entegra Ethos ",
+    image: "assets/custom-images/2024-ram-entegra-ethos.webp",
+    url: "https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=https://www.outdoorsy.com/rv-rental/phoenix_az/2024_ram_entegra-ethos-20t_411657-listing?address=Peoria%2C%20AZ&result_number=6",
+    price: null,
+  },
+];
+const mockData2: RV[] = [
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: '"Pop-up Pioneer" Freedom 2280 FREE DELIVERY TO MYRTLE BEACH CAMPGROUNDS"',
     image: "assets/custom-images/rvezy-conquest.jpg",
     url: "https://www.outdoorsy.com",
     price: null,
@@ -30,7 +72,7 @@ const mockData: RV[] = [
   {
     type: "RV",
     brand: "Outdoorsy",
-    name: "Luxury RV Adventure",
+    name: "Baby Rio | 5x8 Squaredrop Camper Trailer",
     image: "assets/custom-images/rvezy-conquest.jpg",
     url: "https://www.outdoorsy.com",
     price: null,
@@ -38,7 +80,79 @@ const mockData: RV[] = [
   {
     type: "RV",
     brand: "Outdoorsy",
-    name: "Family Travel Trailer",
+    name: "Waymaker Adventures - Coleman Rubicon 1400bh",
+    image: "assets/custom-images/rvezy-conquest.jpg",
+    url: "https://www.outdoorsy.com",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: "The Roaming Rockwood!",
+    image: "assets/custom-images/rvezy-conquest.jpg",
+    url: "https://www.outdoorsy.com",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: 'The "OG"',
+    image: "assets/custom-images/rvezy-conquest.jpg",
+    url: "https://www.outdoorsy.com",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: '2022 Mallard T180BH "Sprout"',
+    image: "assets/custom-images/rvezy-conquest.jpg",
+    url: "https://www.outdoorsy.com",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: "2018 Keystone Bullet",
+    image: "assets/custom-images/rvezy-conquest.jpg",
+    url: "https://www.outdoorsy.com",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: "Boondoggle",
+    image: "assets/custom-images/rvezy-conquest.jpg",
+    url: "https://www.outdoorsy.com",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: "Pioneer Bunkhouse 30S",
+    image: "assets/custom-images/rvezy-conquest.jpg",
+    url: "https://www.outdoorsy.com",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: "The Wandering Wildwood",
+    image: "assets/custom-images/rvezy-conquest.jpg",
+    url: "https://www.outdoorsy.com",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: "2018 Keystone Bullet",
+    image: "assets/custom-images/rvezy-conquest.jpg",
+    url: "https://www.outdoorsy.com",
+    price: null,
+  },
+  {
+    type: "RV",
+    brand: "Outdoorsy",
+    name: "2014 Keystone Hornet Hideout",
     image: "assets/custom-images/rvezy-conquest.jpg",
     url: "https://www.outdoorsy.com",
     price: null,
@@ -135,14 +249,12 @@ const HomeCategories = () => {
           <section
             key={category}
             id={category.replace(/\s+/g, "-")}
-            className="mb-10 scroll-mt-36"
-          >
+            className="mb-10 scroll-mt-36">
             <div className="container mx-auto px-4">
               <div className="flex justify-between items-center mb-8">
                 <h2 className="text-3xl font-bold font-heading text-neutral-900">
                   <i
-                    className={`${categoryIcons[category]} text-2xl text-black-500 mr-2`}
-                  ></i>
+                    className={`${categoryIcons[category]} text-2xl text-black-500 mr-2`}></i>
                   {category}
                 </h2>
               </div>
@@ -153,21 +265,21 @@ const HomeCategories = () => {
               </div>
             </div>
 
-            {category === "Boats" && (
+            {/* {category === "Boats" && (
               <div className="container mx-auto px-4">
                 <div className="my-4">
                   <ClickAndBoatWidget />
                 </div>
               </div>
-            )}
+            )} */}
 
-            {category === "Motorcycles" && (
+            {/* {category === "Motorcycles" && (
               <div className="container mx-auto px-4">
                 <div className="my-4">
                   <EagleRiderWidget />
                 </div>
               </div>
-            )}
+            )} */}
           </section>
         );
       })}
