@@ -9,9 +9,10 @@ const ClickBoatWidget = () => {
           id="iframe_698"
           src="//a.impactradius-go.com/gen-ad-code/6269754/2795716/19914/"
           width="100%"
-          height="446"
+          height="600"
           title="Click&Boat Widget"
-          className="w-full"></iframe>
+          className="w-full click-boat-iframe"
+        ></iframe>
       </div>
     </div>
   );

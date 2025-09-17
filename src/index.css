@@ -37,3 +37,26 @@ html {
 .brevo-frame-popup {
   max-width: 90%;
 }
+.click-boat-iframe {
+  height: 620px !important;
+}
+.eaglerider {
+  height: 300px !important;
+}
+
+@media (max-width: 979px) {
+  .eaglerider {
+    height: 530px !important;
+  }
+}
+@media all and (min-width: 1025px) and (max-height: 1199px) {
+  .eaglerider {
+    height: 430px !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .eaglerider {
+    height: 530px !important;
+    /* border: 2px solid red !important; */
+  }
+}

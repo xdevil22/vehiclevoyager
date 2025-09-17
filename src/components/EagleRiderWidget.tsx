@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const EagleRiderIframeWidget = () => {
   const [loading, setLoading] = useState(true);
@@ -20,9 +20,10 @@ const EagleRiderIframeWidget = () => {
         title="EagleRider Motorcycle Widget"
         width="100%"
         height="300"
-        style={{border: "none", overflow: "hidden"}}
+        style={{ border: "none", overflow: "hidden" }}
         loading="lazy"
         onLoad={() => setLoading(false)}
+        className="eaglerider"
       />
     </div>
   );

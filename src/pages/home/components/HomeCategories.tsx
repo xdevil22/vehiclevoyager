@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import vehicles from "../../../utils/vehicles.json";
 import VehicleCard from "./VehicleCard";
 
