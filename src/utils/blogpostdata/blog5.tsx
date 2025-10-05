@@ -19,7 +19,6 @@ export default function Blog5() {
       </p>
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
-        {/* 1 */}
         <h2 className="text-xl font-bold mt-6">
           1. Winnebago Minnie Winnie Class C (Sleeps 6)
         </h2>
@@ -43,7 +42,6 @@ export default function Blog5() {
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
 
-        {/* 2 */}
         <h2 className="text-xl font-bold mt-6">
           2. Thor Chateau Class C with Slide-Out (Sleeps 8)
         </h2>
@@ -67,7 +65,6 @@ export default function Blog5() {
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
 
-        {/* 3 */}
         <h2 className="text-xl font-bold mt-6">
           3. Mercedes-Benz Sprinter Camper Van (Sleeps 2)
         </h2>
@@ -91,7 +88,6 @@ export default function Blog5() {
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
 
-        {/* 4 */}
         <h2 className="text-xl font-bold mt-6">
           4. Forest River Wildwood Travel Trailer (Sleeps 7)
         </h2>
@@ -114,7 +110,6 @@ export default function Blog5() {
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
 
-        {/* 5 */}
         <h2 className="text-xl font-bold mt-6">
           5. Fleetwood Bounder Class A Motorhome (Sleeps 6)
         </h2>
@@ -139,7 +134,6 @@ export default function Blog5() {
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
 
-        {/* 6 */}
         <h2 className="text-xl font-bold mt-6">
           6. Coachmen Freelander with Bunkhouse (Sleeps 9)
         </h2>
@@ -163,7 +157,6 @@ export default function Blog5() {
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
 
-        {/* 7 */}
         <h2 className="text-xl font-bold mt-6">
           7. Off-Grid Adventure Teardrop Trailer
         </h2>
