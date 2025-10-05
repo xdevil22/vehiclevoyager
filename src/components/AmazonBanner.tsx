@@ -17,6 +17,7 @@ const AmazonBookBanner = () => {
         src="https://m.media-amazon.com/images/I/71qd4twY-1L._SY385_.jpg"
         alt="Road Trip Ready Book Cover"
         className="w-32 h-auto md:w-40 rounded-md shadow"
+        loading="lazy"
       />
       <div className="text-left md:text-left">
         <h2 className="text-xl font-bold text-yellow-900 mb-2">
@@ -27,13 +28,20 @@ const AmazonBookBanner = () => {
           with Puzzles, Games & Coloring Fun for Ages 5-10 | Perfect for Car
           Rides, Vacations, & Screen-Free Entertainment
         </p>
+        {/* <a
+          href="https://amzn.to/4ojIV3j"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleAffiliateClick}
+          className="inline-block bg-yellow-600 text-white px-6 py-2 rounded hover:bg-yellow-700 transition">
+          View on Amazon
+        </a> */}
         <a
           href="https://amzn.to/4ojIV3j"
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleAffiliateClick}
-          className="inline-block bg-yellow-600 text-white px-6 py-2 rounded hover:bg-yellow-700 transition"
-        >
+          className="inline-block bg-yellow-700 text-white px-6 py-2 rounded hover:bg-yellow-800 transition">
           View on Amazon
         </a>
       </div>

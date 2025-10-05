@@ -5,7 +5,7 @@ Brevo.push([
     client_key: (location.search.match(/[?&]key=([^&]*)/) || [])[1],
   },
 ]);
-// Service worker for Brevo
+
 self.addEventListener("install", () => {
   console.log("Brevo service worker installed.");
 });

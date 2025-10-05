@@ -1,5 +1,5 @@
 import React from "react";
-import miamidream from "../../../public/assets/custom-images/miami-dream-cruise.jpg";
+import miamidream from "../../../public/assets/blogs/miami-dream-cruise.webp";
 import {BASE_URL} from "../constants";
 export default function Blog1() {
   return (
@@ -324,8 +324,9 @@ export default function Blog1() {
       </div>
       <img
         src={BASE_URL + miamidream}
-        alt="cruiseam"
+        alt="Cruise am"
         className="w-full  object-cover"
+        loading="lazy"
       />
     </>
   );

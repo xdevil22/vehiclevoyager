@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 
 const Admin = () => {
   const [access, setAccess] = useState(false);
   const [input, setInput] = useState("");
 
   useEffect(() => {
-    // Check sessionStorage (auto-reset on browser close)
     if (sessionStorage.getItem("adminAccess") === "granted") {
       setAccess(true);
     }
@@ -34,8 +33,7 @@ const Admin = () => {
           />
           <button
             onClick={handleLogin}
-            className="w-full bg-black text-white px-6 py-2 rounded hover:bg-gray-800"
-          >
+            className="w-full bg-black text-white px-6 py-2 rounded hover:bg-gray-800">
             Login
           </button>
         </div>
@@ -54,7 +52,7 @@ const Admin = () => {
           src="https://datastudio.google.com/embed/reporting/your-report-id/page/your-page-id"
           width="100%"
           height="400"
-          style={{ border: 0 }}
+          style={{border: 0}}
           allowFullScreen
           title="GA4 Report"
         />

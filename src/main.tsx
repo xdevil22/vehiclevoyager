@@ -30,9 +30,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/booking-tools" element={<BookingTools />} />
-
             <Route path="About" element={<About />} />
-
             <Route path="/blog" element={<Blog />} />
             <Route path="/cookiepolicy" element={<CookiePolicy />} />
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />

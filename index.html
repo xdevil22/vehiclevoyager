@@ -23,51 +23,104 @@
       name="twitter:description"
       content="Rent cars, bikes, and boats — all in one place." />
     <meta name="twitter:image" content="/og-image.jpg" />
-    <meta
-      name="description"
-      content="Compare prices and rent cars, boats, RVs, and motorcycles via top platforms like Turo, Outdoorsy, Click&Boat." />
 
     <!-- Fonts -->
+
+    <!-- Preconnect for faster DNS & TLS handshakes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+    <!-- Montserrat (preload + async load) -->
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet" />
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" />
     <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet" />
+      media="print"
+      onload="this.media='all'" />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" />
+    </noscript>
+
+    <!-- Lato (preload + async load) -->
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" />
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet" />
+      media="print"
+      onload="this.media='all'" />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" />
+    </noscript>
+
+    <!-- Material Icons (preload + async load) -->
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      media="print"
+      onload="this.media='all'" />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    </noscript>
+
+    <!-- Remixicon (preload + async load) -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet" />
+      media="print"
+      onload="this.media='all'" />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
+    </noscript>
 
     <!-- Google Analytics 4 -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-11675326772"></script>
+      src="https://www.googletagmanager.com/gtag/js?id=G-3EQ5WQKVLP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-11675326772");
+      gtag("config", "G-3EQ5WQKVLP");
     </script>
+
+    <!-- Cookie Suppression Scripts -->
     <script>
       const observer = new MutationObserver(() => {
         document.querySelectorAll("div, p, span").forEach((el) => {
           if (el.innerText?.includes("Cookies are disabled")) {
-            el.style.display = "none"; // hide it
+            el.style.display = "none";
           }
         });
       });
-
       observer.observe(document.body, {childList: true, subtree: true});
-      // Suppress third-party cookie warnings
+
       (function () {
         const blockList = ["Cookies are disabled", "Please enable cookies"];
-
-        // Override alert
         const originalAlert = window.alert;
         window.alert = function (msg) {
           if (
@@ -79,24 +132,41 @@
           }
           return originalAlert(msg);
         };
-
-        // Auto-hide injected DOM modals
-        const observer = new MutationObserver(() => {
+        const observer2 = new MutationObserver(() => {
           document.querySelectorAll("div, p, span").forEach((el) => {
             if (
               el.innerText &&
               blockList.some((t) => el.innerText.includes(t))
             ) {
-              el.remove(); // or el.style.display = "none";
+              el.remove();
             }
           });
         });
-        observer.observe(document.body, {childList: true, subtree: true});
+        observer2.observe(document.body, {childList: true, subtree: true});
       })();
     </script>
   </head>
+
   <body>
     <div id="root"></div>
+
+    <!-- GA4 Event Tracking Script -->
+    <script>
+      document.querySelectorAll('a[href*="affiliate"]').forEach((link) => {
+        link.addEventListener("click", () => {
+          gtag("event", "affiliate_click", {link: link.href});
+        });
+      });
+
+      // Track email signup button by ID
+      const signupBtn = document.getElementById("email-signup-btn");
+      if (signupBtn) {
+        signupBtn.addEventListener("click", () => {
+          gtag("event", "email_signup");
+        });
+      }
+    </script>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

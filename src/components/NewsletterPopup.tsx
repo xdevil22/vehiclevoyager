@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 
 export default function NewsletterPopup() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 5000); // Show after 5 sec
+    const timer = setTimeout(() => setShow(true), 5000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -15,15 +15,13 @@ export default function NewsletterPopup() {
       <div className="bg-white rounded-lg  w-[570px] h-[600px] shadow-lg relative brevo-frame-popup">
         <button
           onClick={() => setShow(false)}
-          className="absolute top-2 right-2 text-gray-600 hover:text-black"
-        >
+          className="absolute top-2 right-2 text-gray-600 hover:text-black">
           ✕
         </button>
         <iframe
           src="/brevo-frame.html"
           className="w-full h-[605px] border-none"
-          title="Newsletter Signup"
-        ></iframe>
+          title="Newsletter Signup"></iframe>
       </div>
     </div>
   );

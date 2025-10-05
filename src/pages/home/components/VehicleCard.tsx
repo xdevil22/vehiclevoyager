@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import fallback from "../../../assets/default-vehicle2.jpg";
-import { BASE_URL } from "../../../utils/constants";
+import React, {useState} from "react";
+
+import {BASE_URL} from "../../../utils/constants";
+import {defaultImages} from "../../../assets";
+
 type VehicleCardProps = {
   type: string;
   brand: string;
@@ -8,7 +10,6 @@ type VehicleCardProps = {
   image: string;
   url: string;
   price?: string | null;
-  // fallBackSrc?: string;
 };
 
 const VehicleCard: React.FC<VehicleCardProps> = ({
@@ -18,14 +19,14 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
   image,
   url,
   price,
-  // fallBackSrc = fallback,
 }) => {
   const [imgSrc, setImgSrc] = useState(image);
+
   const handleAffiliateClick = () => {
     if (typeof window.gtag === "function") {
       window.gtag("event", "affiliate_click", {
         event_category: "affiliate",
-        event_label: "Amazon Travel Gear",
+        event_label: `${brand} ${name}`,
         value: 1,
       });
     }
@@ -41,14 +42,15 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
                 target="_blank"
                 onClick={handleAffiliateClick}
                 rel="noopener noreferrer"
-                className="block w-full rounded-md overflow-hidden"
-              >
+                className="block w-full rounded-md overflow-hidden">
                 <img
                   src={imgSrc}
                   alt={`${brand} rental`}
                   loading="lazy"
-                  onError={() => setImgSrc(fallback)}
-                  className="w-full h-48- object-cover-"
+                  fetchPriority="low"
+                  decoding="async"
+                  onError={() => setImgSrc(defaultImages.defaultVehicle2)}
+                  className="w-full  object-cover- "
                 />
               </a>
             </div>
@@ -61,8 +63,8 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
               src={BASE_URL + imgSrc}
               alt={`${brand} rental`}
               loading="lazy"
-              onError={() => setImgSrc(fallback)}
-              className="w-full h-48 object-cover-"
+              onError={() => setImgSrc(defaultImages.defaultVehicle2)}
+              className="w-full h-48- "
             />
             {price && (
               <div className="absolute top-4 right-4 bg-accent text-neutral-900 font-medium text-sm px-2 py-1 rounded">
@@ -74,12 +76,25 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
             <h3 className="text-xl font-bold text-neutral-900 mb-2">{name}</h3>
 
             <div className="flex flex-col sm:flex-row gap-2">
+              {/* <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm 
+                font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 
+                focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50
+                bg-primary text-white hover:bg-primary/90 h-10 px-4 py-2 flex-1">
+                View Deals
+              </a> */}
               <a
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-white hover:bg-primary/90 h-10 px-4 py-2 flex-1"
-              >
+                onClick={handleAffiliateClick}
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm 
+             font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 
+             focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 
+             bg-blue-600 text-white hover:bg-blue-700 h-10 px-4 py-2 flex-1">
                 View Deals
               </a>
             </div>

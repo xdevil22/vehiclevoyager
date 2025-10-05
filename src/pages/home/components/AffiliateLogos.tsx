@@ -1,45 +1,40 @@
 import React from "react";
-
+import {logosImages} from "../../../assets";
 type Provider = {
   href: string;
   imgSrc: string;
   alt: string;
 };
-import Jetslogo from "../../../assets/logos/turo.jpg";
-import riderslogo from "../../../assets/logos/riderslogo.svg";
-import outdoorsylogo from "../../../assets/logos/outdoorsy.png";
-import getmyboatlog from "../../../assets/logos/gmyb.png";
-import fox from "../../../assets/logos/fox.png";
-import sailo from "../../../assets/logos/sailo.png";
+
 const providers: Provider[] = [
   {
     href: "https://www.villiersjets.com/",
-    imgSrc: Jetslogo,
+    imgSrc: logosImages.Jetslogo,
     alt: "Villiers Jets logo",
   },
   {
     href: "https://www.riders-share.com/",
-    imgSrc: riderslogo,
+    imgSrc: logosImages.riderslogo,
     alt: "Riders Share logo",
   },
   {
     href: "https://www.outdoorsy.com/",
-    imgSrc: outdoorsylogo,
+    imgSrc: logosImages.outdoorsylogo,
     alt: "Outdoorsy logo",
   },
   {
     href: "https://www.getmyboat.com/",
-    imgSrc: getmyboatlog,
+    imgSrc: logosImages.getmyboatlogo,
     alt: "Getmyboat logo",
   },
   {
     href: "https://www.foxrentacar.com/",
-    imgSrc: fox,
+    imgSrc: logosImages.fox,
     alt: "Fox Rent A Car logo",
   },
   {
     href: "https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com",
-    imgSrc: sailo,
+    imgSrc: logosImages.sailo,
     alt: "Fox Rent A Car logo",
   },
 ];
@@ -60,12 +55,12 @@ const AffiliateLogos = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visit ${provider.alt}`}
-              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200"
-            >
+              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200">
               <img
                 src={provider.imgSrc}
                 alt={provider.alt}
                 className="h-8 md:h-10 max-w-[120px] md:max-w-[150px] object-contain"
+                loading="lazy"
               />
             </a>
           ))}

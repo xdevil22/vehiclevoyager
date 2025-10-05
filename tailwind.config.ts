@@ -7,7 +7,7 @@ export default {
         body: ["Lato", "sans-serif"],
       },
       colors: {
-        primary: "#2563EB", // adjust if custom
+        primary: "#2563EB",
       },
     },
   },

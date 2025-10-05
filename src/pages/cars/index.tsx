@@ -7,7 +7,7 @@ export default function Cars() {
         <h1 className="text-3xl md:text-4xl font-bold font-heading text-neutral-900  p-6">
           Cars
         </h1>
-        <div className=" p-6">
+        <div className="p-6">
           <SearchFilters />
         </div>
 

@@ -4,7 +4,7 @@ export default function CookiePolicy() {
   return (
     <div className="container mx-auto px-4">
       <div className="py-8 text-gray-800">
-        <h1 className="text-3xl font-bold mb-6">Cookie Policy</h1>
+        <h2 className="text-3xl font-bold mb-6">Cookie Policy</h2>
         <p className="text-sm text-gray-500 mb-6">Last updated: 8/11/2025</p>
 
         <h2 className="text-xl font-semibold mt-6 mb-2">1. What Are Cookies</h2>

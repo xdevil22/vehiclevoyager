@@ -3,7 +3,7 @@
     "type": "Boats",
     "brand": "Click&Boat",
     "name": "Fairline Targa-Click&Boat Rentals",
-    "image": "assets/custom-images/click-boat-Fairline.jpg",
+    "image": "assets/custom-images/boats/click-boat-Fairline.webp",
     "url": "https://click-and-boat.pxf.io/GKdVx2",
     "price": null
   },
@@ -11,7 +11,7 @@
     "type": "Boats",
     "brand": "Click&Boat",
     "name": "Sailboat Jeanneau-Click&Boat Rentals",
-    "image": "assets/custom-images/sailboat-jeanclick1.jpeg",
+    "image": "assets/custom-images/boats/sailboat-jeanclick1.webp",
     "url": "https://click-and-boat.pxf.io/JKdN1E",
     "price": null
   },
@@ -20,7 +20,7 @@
     "type": "Boats",
     "brand": "Click&Boat",
     "name": "Samboat Rentals-Bali Catamaran",
-    "image": "assets/custom-images/samboat-catamaran.jpg",
+    "image": "assets/custom-images/boats/samboat-catamaran.webp",
     "url": "https://samboat.pxf.io/RGdmPa",
     "price": null
   },
@@ -28,7 +28,7 @@
     "type": "Boats",
     "brand": "Click&Boat",
     "name": "Jetcar Watercraft-Samboat Rentals",
-    "image": "assets/custom-images/jetcarsamboat.jpg",
+    "image": "assets/custom-images/boats/jetcarsamboat.webp",
     "url": "https://samboat.pxf.io/POdDJQ",
     "price": null
   },
@@ -37,7 +37,7 @@
     "type": "Boats",
     "brand": "Getmyboat",
     "name": "105' Leopard Jacuzzi-Getmyboat",
-    "image": "assets/custom-images/getmyboat-leopard.jpg",
+    "image": "assets/custom-images/boats/getmyboat-leopard.webp",
     "url": "https://click.linksynergy.com/deeplink?id=tM2c46u*sYY&mid=52690&murl=https%3A%2F%2Fwww.getmyboat.com%2Ftrips%2FMYLAgMvK%2F&u1=leopard-jacuzzi-miami",
     "price": null
   },
@@ -45,7 +45,7 @@
     "type": "Boats",
     "brand": "Getmyboat",
     "name": "Yamaha Waverunners-Getmyboat",
-    "image": "assets/custom-images/jetskisgetmyboat.jpeg",
+    "image": "assets/custom-images/boats/jetskisgetmyboat.webp",
     "url": "https://click.linksynergy.com/deeplink?id=tM2c46u*sYY&mid=52690&murl=https%3A%2F%2Fwww.getmyboat.com%2Ftrips%2FMNxg1GMK%2F",
     "price": null
   },
@@ -54,7 +54,7 @@
     "type": "Boats",
     "brand": "Getmyboat",
     "name": "San Diego Charter Yacht-Sailo",
-    "image": "assets/custom-images/sandiegochartersailo.jpeg",
+    "image": "assets/custom-images/boats/sandiegochartersailo.webp",
     "url": "https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com%2Fboats%2FSan_Diego_CA%2FMotor%2Frental_boat_7686%2F%3Fduration%3DquarterDay",
     "price": null
   },
@@ -63,7 +63,7 @@
     "type": "Boats",
     "brand": "Getmyboat",
     "name": "Power Boat Tour in Miami-Sailo",
-    "image": "assets/custom-images/sailboat-jeanclick.jpeg",
+    "image": "assets/custom-images/boats/sailboat-jeanclick.webp",
     "url": "https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com%2Fboats%2FMiami_FL%2FMotor%2Frental_boat_7514%2F%3Fduration%3DquarterDay",
     "price": null
   },
@@ -71,7 +71,7 @@
     "type": "RVs and Motorhomes",
     "brand": "Cruise America",
     "name": "Cruise America \u2013 Book an RV Rental",
-    "image": "assets/custom-images/cruiseam-deal-image.jpg",
+    "image": "assets/custom-images/rvs/cruiseam-deal-image.webp",
     "url": "https://cruiseamerica.pxf.io/c/6269754/2807206/29922",
     "price": null
   },
@@ -80,7 +80,7 @@
     "type": "RVs and Motorhomes",
     "brand": "RVezy",
     "name": "RVezy Rentals- 2024 Conquest -Peoria, AZ",
-    "image": "assets/custom-images/rvezy-conquest.jpg",
+    "image": "assets/custom-images/rvs/rvezy-conquest.webp",
     "url": "https://rvezypartnershipprogram.sjv.io/POdV2X",
     "price": null
   },
@@ -88,7 +88,7 @@
     "type": "RVs and Motorhomes",
     "brand": "RVezy",
     "name": "2024 Thor Motor Coach-Rvezy",
-    "image": "assets/custom-images/thor-motor-coachrvezy2024.jpg",
+    "image": "assets/custom-images/rvs/thor-motor-coachrvezy2024.webp",
     "url": "https://rvezypartnershipprogram.sjv.io/vP6dzA",
     "price": null
   },
@@ -97,7 +97,7 @@
     "type": "Cars",
     "brand": "Fox Rent a Car",
     "name": "Fox Rent a Car \u2013 Nationwide Deals",
-    "image": "assets/custom-images/fox-jeep.png",
+    "image": "assets/custom-images/cars/fox-jeep.webp",
     "url": "https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1810073.21&type=3&subid=0&LSNSUBSITE=LSNS",
     "price": null
   },
@@ -105,7 +105,7 @@
     "type": "Cars",
     "brand": "Turo \u2013 Tesla Model S",
     "name": "Rent a Tesla Model S in Las Vegas",
-    "image": "assets/turo-list/img_4848.jpg",
+    "image": "assets/custom-images/cars/img_4848.webp",
     "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/tesla/model-s/2679292",
     "price": null
   },
@@ -113,7 +113,7 @@
     "type": "Cars",
     "brand": "Honda",
     "name": "Rent a Honda Accord in Las Vegas",
-    "image": "assets/turo-list/img_9943.jpg",
+    "image": "assets/custom-images/cars/honda-9943.webp",
     "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/honda/accord/1946062?endDate=08%2F10%2F2025&endTime=14%3A00&startDate=08%2F07%2F2025&startTime=10%3A00",
     "price": null
   },
@@ -121,7 +121,7 @@
     "type": "Cars",
     "brand": "Turo \u2013 Hyundai Genesis",
     "name": "Rent a Hyundai Genesis in Las Vegas",
-    "image": "assets/turo-list/genesis.jpg",
+    "image": "assets/custom-images/cars/genesis.webp",
     "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/hyundai/genesis/2462922",
     "price": null
   },
@@ -129,7 +129,7 @@
     "type": "Cars",
     "brand": "Dollar Car Rental MX",
     "name": "Dollar Car Rentals \u2013 Summer Sale",
-    "image": "assets/custom-images/dollar-vw-taos.jpg",
+    "image": "assets/custom-images/cars/dollar-vw-taos.webp",
     "url": "https://dollarcarrentalmx.sjv.io/c/6269754/2059948/25800",
     "price": null
   },
@@ -138,7 +138,7 @@
     "type": "Cars",
     "brand": "Hertz MX (GLOBAL)",
     "name": "Rent with Hertz Mexico",
-    "image": "assets/custom-images/hertz-chevy-cavalier.jpg",
+    "image": "assets/custom-images/cars/hertz-chevy-cavalier.webp",
     "url": "https://hertzmx.pxf.io/c/6269754/2068206/23996",
     "price": null
   },
@@ -146,7 +146,7 @@
     "type": "Cars",
     "brand": "Firefly Car Rental MX",
     "name": "Firefly Car Rentals \u2013 Mexico",
-    "image": "assets/custom-images/firefly-vs-jetta.jpg",
+    "image": "assets/custom-images/cars/firefly-vs-jetta.webp",
     "url": "https://fireflycarrentalmx.pxf.io/c/6269754/2071148/25799",
     "price": null
   },
@@ -155,7 +155,7 @@
     "type": "Cars",
     "brand": "Thrifty Car Rental MX",
     "name": "Thrifty Car Rentals \u2013 Mexico",
-    "image": "assets/custom-images/thrify-chevy-aveo.jpg",
+    "image": "assets/custom-images/cars/thrify-chevy-aveo.webp",
     "url": "https://thriftycarrentalmxmxusca.pxf.io/c/6269754/2071316/25949",
     "price": null
   },
@@ -164,7 +164,7 @@
     "type": "Motorcycles",
     "brand": "EagleRider",
     "name": "Yamaha YZF-Eagle Rider Rentals",
-    "image": "assets/custom-images/eaglerider-yamaha.jpg",
+    "image": "assets/custom-images/motorcycles/eaglerider-yamaha.webp",
     "url": "https://www.eaglerider.com?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f",
     "price": null
   },
@@ -172,7 +172,7 @@
     "type": "Motorcycles",
     "brand": "EagleRider",
     "name": "BMW R 1250 GS-Eagle Rider Rentals",
-    "image": "assets/custom-images/bmweaglerider.jpeg",
+    "image": "assets/custom-images/motorcycles/bmweaglerider.webp",
     "url": "https://www.eaglerider.com?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f",
     "price": null
   },
@@ -181,7 +181,7 @@
     "type": "Motorcycles",
     "brand": "RIDES SHARE",
     "name": "HARLEY-DAVIDSON-Riders-Share",
-    "image": "assets/custom-images/ridersshare-harley.jpg",
+    "image": "assets/custom-images/motorcycles/ridersshare-harley.webp",
     "url": "https://www.riders-share.com/welcome/vehiclevoyager",
     "price": null
   },
@@ -189,7 +189,7 @@
     "type": "Motorcycles",
     "brand": "RIDES SHARE",
     "name": " HARLEY-DAVIDSON ROAD KING-Riders-Share",
-    "image": "assets/custom-images/ridersshareroadking.jpg",
+    "image": "assets/custom-images/motorcycles/ridersshareroadking.webp",
     "url": "https://www.riders-share.com/welcome/vehiclevoyager",
     "price": null
   },
@@ -198,7 +198,7 @@
     "type": "Private Jets",
     "brand": "Villiers Private Jet Charter",
     "name": "Villiers Private Jet Charter",
-    "image": "https://assets.villiersjets.com/banners/300X250-1.jpg",
+    "image": "assets/custom-images/300X250-1.webp",
     "url": "https://www.villiersjets.com/?id=10228",
     "price": null
   }
