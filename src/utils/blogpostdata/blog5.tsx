@@ -228,7 +228,7 @@ export default function Blog5() {
             1. Do I need a special license to rent an RV?
           </summary>
           <p className="mt-2">
-            No. A regular driver’s license is sufficient for most RVs under
+            No. A regular driver's license is sufficient for most RVs under
             26,000 lbs.
           </p>
         </details>
