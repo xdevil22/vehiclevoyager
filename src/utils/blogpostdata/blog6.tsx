@@ -53,8 +53,9 @@ export default function Blog6() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 Rent the Street Glide
+            Rent the Street Glide
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -76,8 +77,9 @@ export default function Blog6() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 Check Indian Scout listings
+            Check Indian Scout listings
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -100,8 +102,9 @@ export default function Blog6() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 Book your BMW ride
+            Book your BMW ride
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -123,8 +126,9 @@ export default function Blog6() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 Rent the Ducati Monster
+            Rent the Ducati Monster
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -147,8 +151,9 @@ export default function Blog6() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 Reserve a Ninja 650
+            Reserve a Ninja 650
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -273,6 +278,7 @@ export default function Blog6() {
         </a>{" "}
       </p>
       <div>
+        👉 &nbsp;
         <a href="#" className="text-blue-600 no-underline hover:underline">
           Your dream day (or weekend) on the water starts here.{" "}
         </a>

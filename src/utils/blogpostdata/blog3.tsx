@@ -18,22 +18,38 @@ export default function Blog3() {
         the water — no boating license required.
       </p>
       <div>
-        👉{" "}
+        👉 &nbsp;
         <strong>
           Compare family-friendly boats now{" "}
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760196413_8f74d4304dbc3d4b0698289a6bc39824&awc=92667_1760196413_8f74d4304dbc3d4b0698289a6bc39824"
+            className="text-blue-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer">
             Sailo
           </a>
           ,&nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://samboat.pxf.io/k03vjy"
+            className="text-blue-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer">
             Samboat
           </a>
           ,&nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.getmyboat.com/boat-rental/Fort-Lauderdale--FL--United-States/?filters=&page=1&ranEAID=tM2c46u*sYY&ranMID=52690&ranSiteID=tM2c46u.sYY-h12uM1CJz04OA1T419tFUg&ranMID=52690&ranEAID=tM2c46u*sYY&ranSiteID=tM2c46u.sYY-38aErc7p4z9Wgi7CXHrxmA"
+            className="text-blue-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer">
             GetMyBoat
           </a>
           &nbsp; and &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.clickandboat.com/uk/catamaran-charter?irclickid=XWQx3BWi7xycUy62I-yUlUTDUkpy2wQEvUofUQ0&utm_medium=affiliation&utm_campaign=VEHICLEVOYAGER&utm_source=impact&Promocode=&irgwc=1"
+            className="text-blue-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer">
             Click&Boat
           </a>
           .
@@ -55,8 +71,12 @@ export default function Blog3() {
             <strong>Kid-Safe:</strong> Padded seating and easy boarding
           </li>
         </ul>
-        👉
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        👉 &nbsp;
+        <a
+          href="https://www.getmyboat.com/boat-rental/Fort-Lauderdale--FL--United-States/?filters=&page=1&ranEAID=tM2c46u*sYY&ranMID=52690&ranSiteID=tM2c46u.sYY-h12uM1CJz04OA1T419tFUg&ranMID=52690&ranEAID=tM2c46u*sYY&ranSiteID=tM2c46u.sYY-GJmDvkslfFXqZglF65FKQA"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">
           Book on GetMyBoat
         </a>
       </div>
@@ -77,8 +97,12 @@ export default function Blog3() {
             area
           </li>
         </ul>
-        👉
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        👉 &nbsp;
+        <a
+          className="text-blue-600 hover:underline"
+          href="https://www.samboat.co.uk/boat-hire?order=nested.promotions.discount.desc&prices%5Bgte%5D=49000&distance_citynation_id=6548625"
+          target="_blank"
+          rel="noopener noreferrer">
           Reserve through Samboat
         </a>
       </div>
@@ -99,8 +123,12 @@ export default function Blog3() {
             inside
           </li>
         </ul>
-        👉
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        👉 &nbsp;
+        <a
+          href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760116386_6a1000566e1ffc3e86b05b97f2718c44&awc=92667_1760116386_6a1000566e1ffc3e86b05b97f2718c44#"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">
           View availability on Sailo
         </a>
       </div>
@@ -121,8 +149,12 @@ export default function Blog3() {
             supervised play
           </li>
         </ul>
-        👉
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        👉 &nbsp;
+        <a
+          href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760116456_a953927aab34728dd125f2a05b5cbdaa&awc=92667_1760116456_a953927aab34728dd125f2a05b5cbdaa"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">
           Check listings on Sailo
         </a>
       </div>
@@ -142,8 +174,12 @@ export default function Blog3() {
             <strong>Safety Tip:</strong> Best for short trips in calm water
           </li>
         </ul>
-        👉
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        👉 &nbsp;
+        <a
+          href="https://www.getmyboat.com/boat-rental/Fort-Lauderdale--FL--United-States/?filters=&page=1&ranEAID=tM2c46u*sYY&ranMID=52690&ranSiteID=tM2c46u.sYY-h12uM1CJz04OA1T419tFUg&ranMID=52690&ranEAID=tM2c46u*sYY&ranSiteID=tM2c46u.sYY-rxjX0pmu62AT28ex4QZ3YQ"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">
           Book now on GetMyBoat
         </a>
       </div>
@@ -163,8 +199,12 @@ export default function Blog3() {
             <strong>Versatile Use:</strong> Cruise + fish combo
           </li>
         </ul>
-        👉
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        👉 &nbsp;
+        <a
+          href="https://samboat.pxf.io/k03vjy"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">
           Reserve here on Samboat
         </a>
       </div>
@@ -184,8 +224,12 @@ export default function Blog3() {
             <strong>Safety:</strong> High rails and covered top
           </li>
         </ul>
-        👉
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        👉 &nbsp;
+        <a
+          href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760116595_739bcc004fc3e9b34b401e2b99367f03&awc=92667_1760116595_739bcc004fc3e9b34b401e2b99367f03"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">
           Check availability on Sailo
         </a>
       </div>
@@ -205,8 +249,12 @@ export default function Blog3() {
             <strong>Kid Note:</strong> Best for ages 8+ with water confidence
           </li>
         </ul>
-        👉
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        👉 &nbsp;
+        <a
+          href="https://www.getmyboat.com/boat-rental/Fort-Lauderdale--FL--United-States/?filters=&page=1&ranEAID=tM2c46u*sYY&ranMID=52690&ranSiteID=tM2c46u.sYY-h12uM1CJz04OA1T419tFUg&ranMID=52690&ranEAID=tM2c46u*sYY&ranSiteID=tM2c46u.sYY-cjy0UWGVn2kTii8dH67kig"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">
           View on GetMyBoat
         </a>
       </div>
@@ -227,8 +275,12 @@ export default function Blog3() {
             celebrations
           </li>
         </ul>
-        👉
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        👉 &nbsp;
+        <a
+          href="https://samboat.pxf.io/k03vjy"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">
           Book now on Samboat
         </a>
       </div>
@@ -248,8 +300,12 @@ export default function Blog3() {
             <strong>Smooth Ride:</strong> Great for toddlers and seniors
           </li>
         </ul>
-        👉
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        👉 &nbsp;
+        <a
+          href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760116706_e4f3c16e40add8c6bd7cfa1ed273c914&awc=92667_1760116706_e4f3c16e40add8c6bd7cfa1ed273c914"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">
           See options on Sailo
         </a>
       </div>
@@ -282,7 +338,7 @@ export default function Blog3() {
         </ul>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />
-      {/* =============================================== */}
+
       <div>
         <h2 className="text-2xl font-bold mt-10">
           FAQs About Family Boat Rentals in Fort Lauderdale
@@ -353,8 +409,12 @@ export default function Blog3() {
         it's a shaded pontoon or a spacious catamaran.
       </p>
       <div>
-        👉 <strong>Ready to book?</strong> &nbsp;
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        👉 &nbsp; <strong>Ready to book?</strong> &nbsp;
+        <a
+          href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760116738_5e446e3340e7fed43bd4aa9256f3f9d8&awc=92667_1760116738_5e446e3340e7fed43bd4aa9256f3f9d8"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">
           Browse all family-friendly boats in Fort Lauderdale here
         </a>
       </div>

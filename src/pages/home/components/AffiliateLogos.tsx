@@ -61,6 +61,8 @@ const AffiliateLogos = () => {
                 alt={provider.alt}
                 className="h-8 md:h-10 max-w-[120px] md:max-w-[150px] object-contain"
                 loading="lazy"
+                width={120}
+                height={50}
               />
             </a>
           ))}

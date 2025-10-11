@@ -1,5 +1,4 @@
 import React from "react";
-import { BASE_URL } from "../constants";
 
 export default function Blog2() {
   return (
@@ -30,8 +29,14 @@ export default function Blog2() {
           miles of engagement.
         </p>
         <div>
-          {" "}
-          👉 <a href="#"> Buy it on Amazon</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=kids+activity+book+road+trip&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Buy it on Amazon
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />
@@ -44,7 +49,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Shop Portable Coolers on Amazon</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=portable+car+cooler&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Shop Portable Coolers on Amazon
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -56,7 +68,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Explore Dash Cams</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=dash+cam&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Explore Dash Cams
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -68,7 +87,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> View Car Mounts</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=car+phone+mount&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            View Car Mounts
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -80,7 +106,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Buy an Emergency Kit</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=emergency+roadside+kit&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Buy an Emergency Kit
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -92,7 +125,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Shop First Aid Kits</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=first+aid+kit+travel&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Shop First Aid Kits
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -104,7 +144,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Find Travel Pillows</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=travel+pillow&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Find Travel Pillows
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -116,7 +163,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Shop Packing Cubes</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=packing+cubes&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Shop Packing Cubes
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -128,7 +182,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> View Bluetooth Speakers</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=portable+bluetooth+speaker&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            View Bluetooth Speakers
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -140,7 +201,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Buy Picnic Blankets</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=foldable+picnic+blanket&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Buy Picnic Blankets
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -152,7 +220,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Check Out Polarized Sunglasses</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=polarized+sunglasses&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Check Out Polarized Sunglasses
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -164,7 +239,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Shop Sanitizer Wipes</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=hand+sanitizer+wipes&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Shop Sanitizer Wipes
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -176,7 +258,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Reusable Water Bottles on Amazon</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=reusable+water+bottle&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Reusable Water Bottles on Amazon
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />{" "}
@@ -188,7 +277,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Buy a Power Bank</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=portable+power+bank&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Buy a Power Bank
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />
@@ -202,7 +298,14 @@ export default function Blog2() {
         </p>
         <div>
           {" "}
-          👉 <a href="#"> Shop LED Lanterns</a>
+          👉{" "}
+          <a
+            href="https://www.amazon.com/s?k=led+lantern&tag=yourtag-20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline">
+            Shop LED Lanterns
+          </a>
         </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />
@@ -303,8 +406,12 @@ export default function Blog2() {
       <div>
         ✨ <strong>Ready to pack?</strong>
         <br /> 👉{" "}
-        <a href="#" className="text-blue-600 no-underline hover:underline">
-          Explore all Amazon road trip gear now
+        <a
+          href="https://www.amazon.com/s?k=road+trip+gear&tag=yourtag-20"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline">
+          Explore all Amazon road trip gear
         </a>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />

@@ -36,8 +36,9 @@ export default function Blog5() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 Book yours now
+            Book yours now
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -59,8 +60,9 @@ export default function Blog5() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 Check availability
+            Check availability
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -82,8 +84,9 @@ export default function Blog5() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 Reserve your van
+            Reserve your van
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -104,8 +107,9 @@ export default function Blog5() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 View trailer rentals
+            View trailer rentals
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -128,8 +132,9 @@ export default function Blog5() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 Rent the Bounder
+            Rent the Bounder
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -151,8 +156,9 @@ export default function Blog5() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 Check this listing
+            Check this listing
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -174,8 +180,9 @@ export default function Blog5() {
           </li>
         </ul>
         <p className="mt-2">
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
-            👉 Book your off-grid trailer
+            Book your off-grid trailer
           </a>
         </p>
         <hr className="my-6 border-t-2 border-gray-400" />

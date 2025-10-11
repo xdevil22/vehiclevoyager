@@ -1,11 +1,13 @@
 import {NavLink, useNavigate, useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {Listbox} from "@headlessui/react";
 
 export default function Header() {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
   const isHomePage = location.pathname === "/";
   useEffect(() => {
     setIsLoggedIn(sessionStorage.getItem("adminAccess") === "granted");
@@ -41,7 +43,14 @@ export default function Header() {
     {name: "About", path: "/about"},
     {name: "Blog", path: "/blog"},
   ];
-
+  const [selected, setSelected] = useState(categories[0]);
+  const handleSelect = (cat: any) => {
+    setSelected(cat);
+    const target = document.getElementById(cat.replace(/\s+/g, "-"));
+    if (target) {
+      target.scrollIntoView({behavior: "smooth"});
+    }
+  };
   return (
     <header className="w-full border-b sticky top-0 z-40 bg-white shadow-md">
       <div className="container mx-auto px-4">
@@ -137,7 +146,7 @@ export default function Header() {
             </div>
           )}
         </div>
-        {isHomePage && (
+        {/* {isHomePage && (
           <nav className="pt-2">
             <div className="flex gap-4 overflow-x-auto">
               {categories.map((cat) => (
@@ -149,6 +158,76 @@ export default function Header() {
                   {cat}
                 </a>
               ))}
+            </div>
+          </nav>
+        )} */}
+        {isHomePage && (
+          <nav className="pt-2">
+            {/* Desktop / Tablet: horizontal scroll */}
+            <div className="hidden md:flex gap-4 overflow-x-auto">
+              {categories.map((cat) => (
+                <a
+                  key={cat}
+                  href={`#${cat.replace(/\s+/g, "-")}`}
+                  className="text-sm font-semibold text-blue-600 hover:underline whitespace-nowrap">
+                  <i className={`${categoryIcons[cat]} mr-1`} />
+                  {cat}
+                </a>
+              ))}
+            </div>
+
+            {/* Mobile: dropdown */}
+
+            <div className="w-full md:hidden relative">
+              <Listbox value={selected} onChange={handleSelect}>
+                <Listbox.Button className="w-full bg-white border border-gray-300 rounded-lg p-2 flex items-center justify-between shadow-sm hover:border-blue-400">
+                  <div className="flex items-center gap-2">
+                    <i className={`${categoryIcons[selected]} text-blue-600`} />
+                    <span>{selected}</span>
+                  </div>
+                  <svg
+                    className="w-4 h-4 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </Listbox.Button>
+
+                <Listbox.Options className="absolute z-10 mt-1 w-full max-h-60 overflow-auto rounded-lg bg-white border border-gray-300 shadow-lg">
+                  {categories.map((cat) => (
+                    <Listbox.Option
+                      key={cat}
+                      value={cat}
+                      className={({active}) =>
+                        `cursor-pointer select-none flex items-center gap-2 p-2 transition-colors duration-150 ${
+                          active ? "bg-blue-100 text-blue-700" : "text-gray-700"
+                        }`
+                      }>
+                      {({selected}) => (
+                        <>
+                          <i
+                            className={`${categoryIcons[cat]} ${
+                              selected ? "text-blue-700" : "text-gray-500"
+                            }`}
+                          />
+                          <span
+                            className={`${
+                              selected ? "font-semibold" : "font-normal"
+                            }`}>
+                            {cat}
+                          </span>
+                        </>
+                      )}
+                    </Listbox.Option>
+                  ))}
+                </Listbox.Options>
+              </Listbox>
             </div>
           </nav>
         )}

@@ -116,7 +116,7 @@ export const blogPosts: BlogPost[] = [
     mainTitle: "10 Best Family-Friendly Boat Rentals in Fort Lauderdale",
     title: "Why Fort Lauderdale is Perfect for a Family Boating Day",
     excerpt:
-      "Nicknamed the “Venice of America,” Fort Lauderdale offers an extensive network of scenic canals, calm coastal waters, and sandy beaches — all of which make it an ideal destination for a family boat rental. Whether you’re planning a birthday cruise, wildlife-watching trip, or just a relaxing day on the water, Fort Lauderdale has the right vessel for your crew.",
+      "Nicknamed the “Venice of America,” Fort Lauderdale offers an extensive network of scenic canals, calm coastal waters, and sandy beaches — all of which make it an ideal destination for a family boat rental. Whether you're planning a birthday cruise, wildlife-watching trip, or just a relaxing day on the water, Fort Lauderdale has the right vessel for your crew.",
     date: "Published on: March 1, 2025",
     image: "assets/custom-images/lauderdale.webp",
     seoTitle: "Best Family-Friendly Boat Rentals in Fort Lauderdale",

@@ -50,7 +50,9 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
                   fetchPriority="low"
                   decoding="async"
                   onError={() => setImgSrc(defaultImages.defaultVehicle2)}
-                  className="w-full  object-cover- "
+                  className="w-full"
+                  width={200}
+                  height={100}
                 />
               </a>
             </div>
@@ -64,7 +66,9 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
               alt={`${brand} rental`}
               loading="lazy"
               onError={() => setImgSrc(defaultImages.defaultVehicle2)}
-              className="w-full h-48- "
+              className="w-full"
+              width={200}
+              height={100}
             />
             {price && (
               <div className="absolute top-4 right-4 bg-accent text-neutral-900 font-medium text-sm px-2 py-1 rounded">

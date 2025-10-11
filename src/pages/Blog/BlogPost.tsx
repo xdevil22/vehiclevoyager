@@ -21,7 +21,7 @@ const BlogPost: React.FC = () => {
         <meta name="description" content={post.seoDescription} />
         <meta name="keywords" content={post.keywords} />
       </Helmet>
-      <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 blog-article">
         <article className="md:col-span-2">
           <h1 className="text-3xl font-bold mb-6">{post.mainTitle}</h1>
           <img

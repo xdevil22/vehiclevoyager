@@ -1,6 +1,7 @@
 import React from "react";
 import miamidream from "../../../public/assets/blogs/miami-dream-cruise.webp";
 import {BASE_URL} from "../constants";
+
 export default function Blog1() {
   return (
     <>
@@ -21,19 +22,31 @@ export default function Blog1() {
         {" "}
         Luxury yacht rental in Miami has become more accessible than ever,
         thanks to platforms like &nbsp;
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        <a
+          className="text-blue-600 hover:underline"
+          href="https://www.samboat.co.uk/boat-hire?order=nested.promotions.discount.desc&prices%5Bgte%5D=49000&distance_city=50&destination25Samboat"
+          target="_blank"
+          rel="noopener noreferrer">
           Samboat
         </a>
         , &nbsp;
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        <a
+          className="text-blue-600 hover:underline"
+          href="https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid3&type=3&subid=0"
+          target="_blank"
+          rel="noopener noreferrer">
           GetMyBoat
         </a>
-        , and &nbsp;
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        , and &nbsp;{" "}
+        <a
+          className="text-blue-600 hover:underline"
+          href="https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com"
+          target="_blank"
+          rel="noopener noreferrer">
           Sailo
         </a>{" "}
-        offering a wide range of charters from sleek sport yachts to opulent
-        floating mansions.
+        &nbsp; offering a wide range of charters from sleek sport yachts to
+        opulent floating mansions.
       </p>
       <p>
         {" "}
@@ -58,11 +71,18 @@ export default function Blog1() {
         <h3 className="text-lg font-bold mt-4">Booking Information</h3>
         <p>
           This versatile beauty is ideal for both short charters and overnight
-          stays. 👉 View at{" "}
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          stays.{" "}
+        </p>
+        <div>
+          👉 &nbsp; View at{" "}
+          <a
+            className="text-blue-600 hover:underline"
+            href="https://www.getmyboat.com/trips/MYLAgMvK/?ranMID=52690&ranEAID=tM2c46u*sYY&ranSiteID=tM2c46u.sYY-ozara3ezCbrVRXLd7rTXqg"
+            target="_blank"
+            rel="noopener noreferrer">
             GetMyBoat
           </a>
-        </p>
+        </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
@@ -79,11 +99,19 @@ export default function Blog1() {
         <h3 className="text-lg font-bold mt-4">Booking Information</h3>
         <p>
           This yacht is perfect for a stylish day trip to the Bahamas or Florida
-          Keys. 👉{" "}
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          Keys.
+        </p>{" "}
+        <div>
+          {" "}
+          👉 &nbsp;
+          <a
+            className="text-blue-600 hover:underline"
+            href="https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com"
+            target="_blank"
+            rel="noopener noreferrer">
             Check availability on Sailo
           </a>
-        </p>
+        </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
@@ -98,12 +126,18 @@ export default function Blog1() {
           </li>
         </ul>
         <h3 className="text-lg font-bold mt-4">Booking Information</h3>
-        <p>
-          Make a grand entrance with this Italian masterpiece. 👉{" "}
-          <a href="#" className="text-blue-600 no-underline hover:underline">
-            Reserve now on Samboat
+        <p>Make a grand entrance with this Italian masterpiece.</p>
+        <div>
+          {" "}
+          👉 &nbsp;
+          <a
+            className="text-blue-600 hover:underline"
+            href="https://samboat.pxf.io/poddjq"
+            target="_blank"
+            rel="noopener noreferrer">
+            Check availability on Sailo
           </a>
-        </p>
+        </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
@@ -119,12 +153,17 @@ export default function Blog1() {
           </li>
         </ul>
         <h3 className="text-lg font-bold mt-4">Booking Information</h3>
-        <p>
-          Impeccable for long-weekend charters or elite gatherings. 👉{" "}
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+        <p>Impeccable for long-weekend charters or elite gatherings.</p>
+        <div>
+          👉 &nbsp;
+          <a
+            className="text-blue-600 hover:underline"
+            href="https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106&subid=0"
+            target="_blank"
+            rel="noopener noreferrer">
             Book via GetMyBoat
           </a>
-        </p>
+        </div>{" "}
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
@@ -136,12 +175,17 @@ export default function Blog1() {
           <li>Built for speed and style lovers</li>
         </ul>
         <h3 className="text-lg font-bold mt-4">Booking Information</h3>
-        <p>
-          An ideal choice for high-adrenaline day charters. 👉
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+        <p>An ideal choice for high-adrenaline day charters.</p>
+        <div>
+          👉 &nbsp;
+          <a
+            className="text-blue-600 hover:underline"
+            href="https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com"
+            target="_blank"
+            rel="noopener noreferrer">
             Check pricing here
           </a>
-        </p>
+        </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
@@ -153,12 +197,17 @@ export default function Blog1() {
           <li>Alfresco dining area and flybridge lounge</li>
         </ul>
         <h3 className="text-lg font-bold mt-4">Booking Information</h3>
-        <p>
-          Enjoy a floating hotel experience with Princess luxury. 👉{" "}
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+        <p>Enjoy a floating hotel experience with Princess luxury.</p>{" "}
+        <div>
+          👉 &nbsp;
+          <a
+            className="text-blue-600 hover:underline"
+            href="https://www.samboat.co.uk/boat-hire?order=nested.promotions.discount.desc&prices%5Bgte%5D=49000&distance_citynation_id=6548625"
+            target="_blank"
+            rel="noopener noreferrer">
             Reserve through Samboat
           </a>
-        </p>
+        </div>
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
@@ -218,7 +267,11 @@ export default function Blog1() {
           Top Yacht Rental Platforms to Trust
         </h2>
         <h3 className="text-lg font-bold mt-4">
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            className="text-blue-600 hover:underline"
+            href="https://www.samboat.co.uk/boat-hire?order=nested.promotions.discount.desc&prices%5Bgte%5D=49000&distance_citynation_id=6548625"
+            target="_blank"
+            rel="noopener noreferrer">
             Samboat
           </a>
         </h3>
@@ -227,7 +280,11 @@ export default function Blog1() {
           superyachts with real-time booking options.
         </p>
         <h3 className="text-lg font-bold mt-4">
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            className="text-blue-600 hover:underline"
+            href="https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106&subid=0"
+            target="_blank"
+            rel="noopener noreferrer">
             GetMyBoat
           </a>
         </h3>
@@ -236,7 +293,11 @@ export default function Blog1() {
           verified hosts and insurance options.
         </p>
         <h3 className="text-lg font-bold mt-4">
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            className="text-blue-600 hover:underline"
+            href="https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com"
+            target="_blank"
+            rel="noopener noreferrer">
             Sailo
           </a>
         </h3>
@@ -318,7 +379,11 @@ export default function Blog1() {
         breathtaking experience.
       </p>
       <div>
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        <a
+          href="https://www.sailo.com/boats/Miami_FL/Motor/rental_boat_7514/?duration=quarterDay&sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760194884_760185bf7e90fde7b1ee50a5cc05a052&awc=92667_1760194884_760185bf7e90fde7b1ee50a5cc05a052"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">
           Your dream day (or weekend) on the water starts here.{" "}
         </a>
       </div>

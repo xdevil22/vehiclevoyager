@@ -46,6 +46,7 @@ export default function Blog4() {
           </li>
         </ul>
         <p>
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
             Reserve the Huracán EVO
           </a>
@@ -76,6 +77,7 @@ export default function Blog4() {
           </li>
         </ul>
         <p>
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
             Check Ferrari availabilitys
           </a>
@@ -103,6 +105,7 @@ export default function Blog4() {
           </li>
         </ul>
         <p>
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
             Book a McLaren
           </a>
@@ -135,6 +138,7 @@ export default function Blog4() {
           </li>
         </ul>
         <p>
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
             Reserve a Rolls-Royce
           </a>
@@ -163,6 +167,7 @@ export default function Blog4() {
           </li>
         </ul>
         <p>
+          👉 &nbsp;
           <a href="#" className="text-blue-600 no-underline hover:underline">
             Find Porsche rentals
           </a>
@@ -192,6 +197,7 @@ export default function Blog4() {
           </li>
         </ul>
         <p>
+          👉 &nbsp;{" "}
           <a href="#" className="text-blue-600 no-underline hover:underline">
             Rent the BMW i8
           </a>
