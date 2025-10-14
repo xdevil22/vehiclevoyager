@@ -1,6 +1,7 @@
 import React from "react";
 import feelfreedom from "../../../public/assets/blogs/feel-freedom.webp";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
+
 export default function Blog6() {
   return (
     <>
@@ -21,14 +22,20 @@ export default function Blog6() {
       <p className="font-bold">
         👉 Browse LA motorcycles now on{" "}
         <a
-          href="#"
-          className="text-blue-600 no-underline hover:underline font-bold">
+          href=" https://www.eaglerider.com/?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
           EagleRider
         </a>{" "}
         and{" "}
         <a
-          href="#"
-          className="text-blue-600 no-underline hover:underline font-bold">
+          href="https://www.riders-share.com/welcome/vehiclevoyager"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
           Riders-Share
         </a>{" "}
       </p>
@@ -54,7 +61,12 @@ export default function Blog6() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.eaglerider.com/?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Rent the Street Glide
           </a>
         </p>
@@ -78,7 +90,12 @@ export default function Blog6() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.riders-share.com/welcome/vehiclevoyager"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Check Indian Scout listings
           </a>
         </p>
@@ -103,7 +120,12 @@ export default function Blog6() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.eaglerider.com/?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Book your BMW ride
           </a>
         </p>
@@ -127,7 +149,12 @@ export default function Blog6() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.riders-share.com/welcome/vehiclevoyager"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Rent the Ducati Monster
           </a>
         </p>
@@ -152,7 +179,12 @@ export default function Blog6() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.riders-share.com/welcome/vehiclevoyager"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Reserve a Ninja 650
           </a>
         </p>
@@ -185,7 +217,6 @@ export default function Blog6() {
           </li>
         </ul>
       </div>
-
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
         <h2 className="text-2xl font-bold mt-10">
@@ -209,7 +240,16 @@ export default function Blog6() {
           <p className="mt-2">
             Yes, liability insurance is mandatory. If you don't have a policy
             that specifically covers it, your best option would be to use a
-            rental insurance provider like <strong>Roamly</strong>.
+            rental insurance provider like{" "}
+            <a
+              href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=28&aff_id=2660&source=vehiclevoyager&sub_id=rvinsurance"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              Roamly
+            </a>
+            .
           </p>
         </details>
 
@@ -252,7 +292,6 @@ export default function Blog6() {
           </p>
         </details>
       </div>
-
       <hr className="my-6 border-t-2 border-gray-400" />
       <h2 className="text-xl font-bold mt-6">
         Conclusion: Feel the Freedom on Two Wheels in LA
@@ -264,25 +303,32 @@ export default function Blog6() {
         motorcycle in LA is an experience worth every mile.
       </p>
       <p className="font-bold">
-        👉 Explore motorcycle rentals in Los Angeles now on
+        👉 Explore motorcycle rentals in Los Angeles now on &nbsp;
         <a
-          href="#"
-          className="text-blue-600 no-underline hover:underline font-bold">
+          href=" https://www.eaglerider.com/?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
           EagleRider
         </a>{" "}
         and{" "}
         <a
-          href="#"
-          className="text-blue-600 no-underline hover:underline font-bold">
+          href="https://www.riders-share.com/welcome/vehiclevoyager"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
           Riders-Share
-        </a>{" "}
+        </a>
       </p>
-      <div>
+
+      {/* <div>
         👉 &nbsp;
-        <a href="#" className="text-blue-600 no-underline hover:underline">
+        <a href="/" className="text-blue-600 no-underline hover:underline">
           Your dream day (or weekend) on the water starts here.{" "}
         </a>
-      </div>
+      </div> */}
       <img
         src={BASE_URL + feelfreedom}
         alt="Feel Freedom"

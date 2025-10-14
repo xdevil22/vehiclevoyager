@@ -5,7 +5,8 @@ import mclaren from "../../../public/assets/blogs/mclaren-720S.webp";
 import rollsroyceghost from "../../../public/assets/blogs/rolls-royce-ghost.webp";
 import porsche911 from "../../../public/assets/blogs/porsche-911.webp";
 import bmwi8roadster from "../../../public/assets/blogs/bmw-i8-roadster.webp";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
+
 export default function Blog4() {
   return (
     <>
@@ -47,7 +48,12 @@ export default function Blog4() {
         </ul>
         <p>
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://turo.com/us/en/search?makes=Lamborghini&models=Huracan&models=Huracan%20EVO&location=LAS%20-%20Harry%20Reid%20International%20Airport"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Reserve the Huracán EVO
           </a>
         </p>
@@ -78,8 +84,13 @@ export default function Blog4() {
         </ul>
         <p>
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
-            Check Ferrari availabilitys
+          <a
+            href="https://lvcexotics.com/product/ferrari-488-spider-rental/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            Check Ferrari availability
           </a>
         </p>
       </div>
@@ -106,7 +117,12 @@ export default function Blog4() {
         </ul>
         <p>
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://lvcexotics.com/product/2020-mclaren-720s-spider-rental/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Book a McLaren
           </a>
         </p>
@@ -139,7 +155,12 @@ export default function Blog4() {
         </ul>
         <p>
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://turo.com/us/en/search?country=US&defaultZoomLevel=13&endDate=&endTime=&flexibleType=NOT_FLEXIBLE&isMapSearch=false&itemsPerPage=200&latitude=36.08309070000001&location=LAS%20-%20Harry%20Reid%20International%20Airport&locationType=ADDRESS&longitude=-115.1482238&makes=Rolls-Royce&models=Corniche&models=Cullinan&models=Dawn&models=Ghost&models=Phantom&models=Silver%20Cloud&models=Wraith&monthlyEndDate=12%2F29%2F2025&monthlyStartDate=09%2F29%2F2025&pickupType=ALL&region=NV&searchDurationType=DAILY&sortType=RELEVANCE&startDate=&startTime=&useDefaultMaximumDistance=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Reserve a Rolls-Royce
           </a>
         </p>
@@ -168,7 +189,12 @@ export default function Blog4() {
         </ul>
         <p>
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.royaltyexoticcars.com/locations/las-vegas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Find Porsche rentals
           </a>
         </p>
@@ -198,7 +224,12 @@ export default function Blog4() {
         </ul>
         <p>
           👉 &nbsp;{" "}
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://turo.com/us/en/search?makes=BMW&models=i8&location=LAS%20-%20Harry%20Reid%20International%20Airport"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Rent the BMW i8
           </a>
         </p>

@@ -1,6 +1,7 @@
 import React from "react";
 import desertroads from "../../../public/assets/blogs/desert-roads.webp";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
+
 export default function Blog5() {
   return (
     <>
@@ -37,7 +38,13 @@ export default function Blog5() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://rvezypartnershipprogram.sjv.io/c/6269754/1686722/19443?subId1=text1&u=https://www.rvezy.com/rv-rental/arizona_phoenix_motorhome_classc_winnebago_navion_7d8396?Adults=6&SortOrder=PriceDESC&RvBrand=Winnebago&MinLength=20&MaxLength=30
+      "
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Book yours now
           </a>
         </p>
@@ -61,7 +68,13 @@ export default function Blog5() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://rvezypartnershipprogram.sjv.io/c/6269754/1686722/19443?subId1=text1&u=https://www.rvezy.com/rv-rental/arizona_phoenix_motorhome_classc_thor-motor-coach_chateau_59f8db?Adults=6&SearchAddress=Phoenix,+AZ,+USA&SortOrder=PriceDESC&RvBrand=Thor+Motor+Coach&MinLength=20&MaxLength=40
+      "
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Check availability
           </a>
         </p>
@@ -85,7 +98,12 @@ export default function Blog5() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.outdoorsy.com/rv-search?...&filter%5Bvehicle_make%5D=Mercedes-Benz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Reserve your van
           </a>
         </p>
@@ -108,7 +126,12 @@ export default function Blog5() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.outdoorsy.com/rv-search?...&filter%5Bvehicle_make%5D=Forest%20River"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             View trailer rentals
           </a>
         </p>
@@ -133,7 +156,12 @@ export default function Blog5() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.outdoorsy.com/rv-search?...&filter%5Bvehicle_make%5D=Fleetwood"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Rent the Bounder
           </a>
         </p>
@@ -157,7 +185,12 @@ export default function Blog5() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://www.outdoorsy.com/rv-search?...&filter%5Bvehicle_make%5D=Coachmen"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Check this listing
           </a>
         </p>
@@ -181,7 +214,12 @@ export default function Blog5() {
         </ul>
         <p className="mt-2">
           👉 &nbsp;
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+          <a
+            href="https://rvezypartnershipprogram.sjv.io/c/6269754/1686722/19443?subId1=text1&u=https://www.rvezy.com/rv-search?SearchAddress=Phoenix,+AZ,+USA&SortOrder=PriceDESC&RvBrand=Off+Grid+Trailers"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
             Book your off-grid trailer
           </a>
         </p>
@@ -299,8 +337,11 @@ export default function Blog5() {
             specifically covers it, your best option would be to use a rental
             insurance provider like{" "}
             <a
-              href="#"
-              className="text-blue-600 no-underline hover:underline font-bold">
+              href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=28&aff_id=2660&source=vehiclevoyager&sub_id=rvinsurance"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
               Roamly
             </a>
             .
@@ -317,13 +358,26 @@ export default function Blog5() {
         you experience Arizona on your terms — full of comfort, scenery, and
         unforgettable memories.
       </p>
-      <div>
-        👉 Ready to go? &nbsp;
-        <a href="#" className="text-blue-600 no-underline hover:underline">
-          Browse Phoenix RV rentals on Outdoorsy and RVEzy
+      <div className="text-blue-600 underlinelink">
+        👉 Ready to go? &nbsp; Browse Phoenix RV rentals on &nbsp;
+        <a
+          href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          Outdoorsy
+        </a>
+        &nbsp; and &nbsp;
+        <a
+          href="https://rvezypartnershipprogram.sjv.io/c/6269754/1686722/19443?subId1=text1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          RVEzy
         </a>
       </div>
-
       <img
         src={BASE_URL + desertroads}
         alt="Desert roads"

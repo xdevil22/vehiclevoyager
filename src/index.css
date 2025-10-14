@@ -6,3 +6,9 @@
 .blog-article a:hover {
   text-decoration: underline;
 }
+.blog-article .underlinelink a {
+  text-decoration: underline;
+}
+.blog-article .underlinelink a:hover {
+  text-decoration: none;
+}

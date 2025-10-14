@@ -221,12 +221,17 @@ export default function Blog1() {
           <li>Fully equipped galley and indoor lounge</li>
         </ul>
         <h3 className="text-lg font-bold mt-4">Booking Information</h3>
-        <p>
-          Host your next event with a scenic seafront backdrop. 👉{" "}
-          <a href="#" className="text-blue-600 no-underline hover:underline">
+        <p>Host your next event with a scenic seafront backdrop.</p>
+        <div>
+          👉 &nbsp;
+          <a
+            className="text-blue-600 hover:underline"
+            href="https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106&subid=0"
+            target="_blank"
+            rel="noopener noreferrer">
             View details here
           </a>
-        </p>
+        </div>{" "}
       </div>
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
