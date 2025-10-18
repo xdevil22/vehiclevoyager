@@ -1,6 +1,6 @@
 import React from "react";
 import miamidream from "../../../public/assets/blogs/miami-dream-cruise.webp";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 export default function Blog1() {
   return (
@@ -24,17 +24,19 @@ export default function Blog1() {
         thanks to platforms like &nbsp;
         <a
           className="text-blue-600 hover:underline"
-          href="https://www.samboat.co.uk/boat-hire?order=nested.promotions.discount.desc&prices%5Bgte%5D=49000&distance_city=50&destination25Samboat"
+          href="http://samboat.pxf.io/POMqaX"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Samboat
         </a>
         , &nbsp;
         <a
           className="text-blue-600 hover:underline"
-          href="https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid3&type=3&subid=0"
+          href="https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106.3&type=3&subid=0"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           GetMyBoat
         </a>
         , and &nbsp;{" "}
@@ -42,7 +44,8 @@ export default function Blog1() {
           className="text-blue-600 hover:underline"
           href="https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Sailo
         </a>{" "}
         &nbsp; offering a wide range of charters from sleek sport yachts to
@@ -79,7 +82,8 @@ export default function Blog1() {
             className="text-blue-600 hover:underline"
             href="https://www.getmyboat.com/trips/MYLAgMvK/?ranMID=52690&ranEAID=tM2c46u*sYY&ranSiteID=tM2c46u.sYY-ozara3ezCbrVRXLd7rTXqg"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             GetMyBoat
           </a>
         </div>
@@ -108,7 +112,8 @@ export default function Blog1() {
             className="text-blue-600 hover:underline"
             href="https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Check availability on Sailo
           </a>
         </div>
@@ -132,10 +137,11 @@ export default function Blog1() {
           👉 &nbsp;
           <a
             className="text-blue-600 hover:underline"
-            href="https://samboat.pxf.io/poddjq"
+            href="http://samboat.pxf.io/POMqaX"
             target="_blank"
-            rel="noopener noreferrer">
-            Check availability on Sailo
+            rel="noopener noreferrer"
+          >
+            Reserve now on Samboat
           </a>
         </div>
       </div>
@@ -158,9 +164,10 @@ export default function Blog1() {
           👉 &nbsp;
           <a
             className="text-blue-600 hover:underline"
-            href="https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106&subid=0"
+            href="https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106.3&type=3&subid=0"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Book via GetMyBoat
           </a>
         </div>{" "}
@@ -182,7 +189,8 @@ export default function Blog1() {
             className="text-blue-600 hover:underline"
             href="https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Check pricing here
           </a>
         </div>
@@ -202,9 +210,10 @@ export default function Blog1() {
           👉 &nbsp;
           <a
             className="text-blue-600 hover:underline"
-            href="https://www.samboat.co.uk/boat-hire?order=nested.promotions.discount.desc&prices%5Bgte%5D=49000&distance_citynation_id=6548625"
+            href="http://samboat.pxf.io/POMqaX"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Reserve through Samboat
           </a>
         </div>
@@ -226,9 +235,10 @@ export default function Blog1() {
           👉 &nbsp;
           <a
             className="text-blue-600 hover:underline"
-            href="https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106&subid=0"
+            href="https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106.3&type=3&subid=0"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             View details here
           </a>
         </div>{" "}
@@ -276,7 +286,8 @@ export default function Blog1() {
             className="text-blue-600 hover:underline"
             href="https://www.samboat.co.uk/boat-hire?order=nested.promotions.discount.desc&prices%5Bgte%5D=49000&distance_citynation_id=6548625"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Samboat
           </a>
         </h3>
@@ -289,7 +300,8 @@ export default function Blog1() {
             className="text-blue-600 hover:underline"
             href="https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1425106&subid=0"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             GetMyBoat
           </a>
         </h3>
@@ -302,7 +314,8 @@ export default function Blog1() {
             className="text-blue-600 hover:underline"
             href="https://www.awin1.com/cread.php?awinmid=92667&awinaffid=1967225&ued=https%3A%2F%2Fwww.sailo.com"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Sailo
           </a>
         </h3>
@@ -388,7 +401,8 @@ export default function Blog1() {
           href="https://www.sailo.com/boats/Miami_FL/Motor/rental_boat_7514/?duration=quarterDay&sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760194884_760185bf7e90fde7b1ee50a5cc05a052&awc=92667_1760194884_760185bf7e90fde7b1ee50a5cc05a052"
           className="text-blue-600 hover:underline"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Your dream day (or weekend) on the water starts here.{" "}
         </a>
       </div>

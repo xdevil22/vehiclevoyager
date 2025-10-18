@@ -25,15 +25,17 @@ export default function Blog3() {
             href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760196413_8f74d4304dbc3d4b0698289a6bc39824&awc=92667_1760196413_8f74d4304dbc3d4b0698289a6bc39824"
             className="text-blue-600 hover:underline"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Sailo
           </a>
           ,&nbsp;
           <a
-            href="https://samboat.pxf.io/k03vjy"
+            href="http://samboat.pxf.io/mOPk4a"
             className="text-blue-600 hover:underline"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Samboat
           </a>
           ,&nbsp;
@@ -41,7 +43,8 @@ export default function Blog3() {
             href="https://www.getmyboat.com/boat-rental/Fort-Lauderdale--FL--United-States/?filters=&page=1&ranEAID=tM2c46u*sYY&ranMID=52690&ranSiteID=tM2c46u.sYY-h12uM1CJz04OA1T419tFUg&ranMID=52690&ranEAID=tM2c46u*sYY&ranSiteID=tM2c46u.sYY-38aErc7p4z9Wgi7CXHrxmA"
             className="text-blue-600 hover:underline"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             GetMyBoat
           </a>
           &nbsp; and &nbsp;
@@ -49,7 +52,8 @@ export default function Blog3() {
             href="https://www.clickandboat.com/uk/catamaran-charter?irclickid=XWQx3BWi7xycUy62I-yUlUTDUkpy2wQEvUofUQ0&utm_medium=affiliation&utm_campaign=VEHICLEVOYAGER&utm_source=impact&Promocode=&irgwc=1"
             className="text-blue-600 hover:underline"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Click&Boat
           </a>
           .
@@ -76,7 +80,8 @@ export default function Blog3() {
           href="https://www.getmyboat.com/boat-rental/Fort-Lauderdale--FL--United-States/?filters=&page=1&ranEAID=tM2c46u*sYY&ranMID=52690&ranSiteID=tM2c46u.sYY-h12uM1CJz04OA1T419tFUg&ranMID=52690&ranEAID=tM2c46u*sYY&ranSiteID=tM2c46u.sYY-GJmDvkslfFXqZglF65FKQA"
           className="text-blue-600 hover:underline"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Book on GetMyBoat
         </a>
       </div>
@@ -102,7 +107,8 @@ export default function Blog3() {
           className="text-blue-600 hover:underline"
           href="https://www.samboat.co.uk/boat-hire?order=nested.promotions.discount.desc&prices%5Bgte%5D=49000&distance_citynation_id=6548625"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Reserve through Samboat
         </a>
       </div>
@@ -128,7 +134,8 @@ export default function Blog3() {
           href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760116386_6a1000566e1ffc3e86b05b97f2718c44&awc=92667_1760116386_6a1000566e1ffc3e86b05b97f2718c44#"
           className="text-blue-600 hover:underline"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           View availability on Sailo
         </a>
       </div>
@@ -154,7 +161,8 @@ export default function Blog3() {
           href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760116456_a953927aab34728dd125f2a05b5cbdaa&awc=92667_1760116456_a953927aab34728dd125f2a05b5cbdaa"
           className="text-blue-600 hover:underline"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Check listings on Sailo
         </a>
       </div>
@@ -179,7 +187,8 @@ export default function Blog3() {
           href="https://www.getmyboat.com/boat-rental/Fort-Lauderdale--FL--United-States/?filters=&page=1&ranEAID=tM2c46u*sYY&ranMID=52690&ranSiteID=tM2c46u.sYY-h12uM1CJz04OA1T419tFUg&ranMID=52690&ranEAID=tM2c46u*sYY&ranSiteID=tM2c46u.sYY-rxjX0pmu62AT28ex4QZ3YQ"
           className="text-blue-600 hover:underline"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Book now on GetMyBoat
         </a>
       </div>
@@ -201,10 +210,11 @@ export default function Blog3() {
         </ul>
         👉 &nbsp;
         <a
-          href="https://samboat.pxf.io/k03vjy"
+          href="http://samboat.pxf.io/mOPk4a"
           className="text-blue-600 hover:underline"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Reserve here on Samboat
         </a>
       </div>
@@ -229,7 +239,8 @@ export default function Blog3() {
           href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760116595_739bcc004fc3e9b34b401e2b99367f03&awc=92667_1760116595_739bcc004fc3e9b34b401e2b99367f03"
           className="text-blue-600 hover:underline"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Check availability on Sailo
         </a>
       </div>
@@ -254,7 +265,8 @@ export default function Blog3() {
           href="https://www.getmyboat.com/boat-rental/Fort-Lauderdale--FL--United-States/?filters=&page=1&ranEAID=tM2c46u*sYY&ranMID=52690&ranSiteID=tM2c46u.sYY-h12uM1CJz04OA1T419tFUg&ranMID=52690&ranEAID=tM2c46u*sYY&ranSiteID=tM2c46u.sYY-cjy0UWGVn2kTii8dH67kig"
           className="text-blue-600 hover:underline"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           View on GetMyBoat
         </a>
       </div>
@@ -277,10 +289,11 @@ export default function Blog3() {
         </ul>
         👉 &nbsp;
         <a
-          href="https://samboat.pxf.io/k03vjy"
+          href="http://samboat.pxf.io/mOPk4a"
           className="text-blue-600 hover:underline"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Book now on Samboat
         </a>
       </div>
@@ -305,7 +318,8 @@ export default function Blog3() {
           href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760116706_e4f3c16e40add8c6bd7cfa1ed273c914&awc=92667_1760116706_e4f3c16e40add8c6bd7cfa1ed273c914"
           className="text-blue-600 hover:underline"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           See options on Sailo
         </a>
       </div>
@@ -414,7 +428,8 @@ export default function Blog3() {
           href="https://www.sailo.com/boat-rentals/FL/Fort_Lauderdale?sv1=affiliate&sv_campaign_id=1967225&sscid=92667_1760116738_5e446e3340e7fed43bd4aa9256f3f9d8&awc=92667_1760116738_5e446e3340e7fed43bd4aa9256f3f9d8"
           className="text-blue-600 hover:underline"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Browse all family-friendly boats in Fort Lauderdale here
         </a>
       </div>

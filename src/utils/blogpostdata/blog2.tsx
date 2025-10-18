@@ -31,10 +31,11 @@ export default function Blog2() {
         <div>
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=kids+activity+book+road+trip&tag=yourtag-20"
+            href="https://www.amazon.com/dp/B0FK3R9GKZ?&linkCode=sl1&tag=vehiclevoyage-20&linkId=6c18b02d13e06829fddcb54f98f91f60&language=en_US&ref_=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Buy it on Amazon
           </a>
         </div>
@@ -54,7 +55,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=portable+car+cooler&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Shop Portable Coolers on Amazon
           </a>
         </div>
@@ -73,7 +75,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=dash+cam&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Explore Dash Cams
           </a>
         </div>
@@ -92,7 +95,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=car+phone+mount&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             View Car Mounts
           </a>
         </div>
@@ -111,7 +115,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=emergency+roadside+kit&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Buy an Emergency Kit
           </a>
         </div>
@@ -130,7 +135,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=first+aid+kit+travel&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Shop First Aid Kits
           </a>
         </div>
@@ -149,7 +155,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=travel+pillow&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Find Travel Pillows
           </a>
         </div>
@@ -168,7 +175,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=packing+cubes&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Shop Packing Cubes
           </a>
         </div>
@@ -187,7 +195,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=portable+bluetooth+speaker&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             View Bluetooth Speakers
           </a>
         </div>
@@ -206,7 +215,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=foldable+picnic+blanket&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Buy Picnic Blankets
           </a>
         </div>
@@ -225,7 +235,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=polarized+sunglasses&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Check Out Polarized Sunglasses
           </a>
         </div>
@@ -244,7 +255,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=hand+sanitizer+wipes&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Shop Sanitizer Wipes
           </a>
         </div>
@@ -263,7 +275,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=reusable+water+bottle&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Reusable Water Bottles on Amazon
           </a>
         </div>
@@ -282,7 +295,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=portable+power+bank&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Buy a Power Bank
           </a>
         </div>
@@ -303,7 +317,8 @@ export default function Blog2() {
             href="https://www.amazon.com/s?k=led+lantern&tag=yourtag-20"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Shop LED Lanterns
           </a>
         </div>
@@ -410,7 +425,8 @@ export default function Blog2() {
           href="https://www.amazon.com/s?k=road+trip+gear&tag=yourtag-20"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Explore all Amazon road trip gear
         </a>
       </div>

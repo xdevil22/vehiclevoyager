@@ -99,7 +99,7 @@ export default function Blog5() {
         <p className="mt-2">
           👉 &nbsp;
           <a
-            href="https://www.outdoorsy.com/rv-search?...&filter%5Bvehicle_make%5D=Mercedes-Benz"
+            href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=https://www.outdoorsy.com/rv-search?filter%5Bvehicle_make%5D=Mercedes-Benz"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -127,7 +127,7 @@ export default function Blog5() {
         <p className="mt-2">
           👉 &nbsp;
           <a
-            href="https://www.outdoorsy.com/rv-search?...&filter%5Bvehicle_make%5D=Forest%20River"
+            href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=https://www.outdoorsy.com/rv-search?filter%5Bvehicle_make%5D=Forest%20River"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -157,7 +157,7 @@ export default function Blog5() {
         <p className="mt-2">
           👉 &nbsp;
           <a
-            href="https://www.outdoorsy.com/rv-search?...&filter%5Bvehicle_make%5D=Fleetwood"
+            href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=https://www.outdoorsy.com/rv-search?filter%5Bvehicle_make%5D=Fleetwood"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -186,7 +186,7 @@ export default function Blog5() {
         <p className="mt-2">
           👉 &nbsp;
           <a
-            href="https://www.outdoorsy.com/rv-search?...&filter%5Bvehicle_make%5D=Coachmen"
+            href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=https://www.outdoorsy.com/rv-search?filter%5Bvehicle_make%5D=Coachmen"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
