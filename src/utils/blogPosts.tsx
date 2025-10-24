@@ -7,6 +7,10 @@ import Blog3 from "./blogpostdata/blog3";
 import Blog4 from "./blogpostdata/blog4";
 import Blog5 from "./blogpostdata/blog5";
 import Blog6 from "./blogpostdata/blog6";
+import Blog7 from "./blogpostdata/blog7";
+import Blog10 from "./blogpostdata/blog10";
+import Blog9 from "./blogpostdata/blog9";
+import Blog8 from "./blogpostdata/blog8";
 export interface BlogPost {
   slug: string;
   mainTitle: string;
@@ -21,6 +25,50 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "ferrari-sf90-stradale-las-vegas-rental",
+    mainTitle: "The Ferrari SF90 Stradale: When Engineering Becomes Art",
+
+    title: "The Ferrari SF90 Stradale: When Engineering Becomes Art",
+    excerpt:
+      "Some cars turn heads. The Ferrari SF90 Stradale stops time. It's the ultimate showcase of Ferrari's hybrid technology—where blistering performance meets elegant Italian design.",
+    date: "Published on: October 1, 2025",
+    image: "assets/blogs/ferrari-sf90.webp",
+    seoTitle:
+      "Ferrari SF90 Stradale - Hybrid Supercar Specs & Las Vegas Rental Experience",
+    seoDescription:
+      "Discover the Ferrari SF90 Stradale's hybrid power, specs, and design—and learn how to drive one yourself in Las Vegas through LVC Exotics.",
+    keywords:
+      "Ferrari SF90 Stradale, Ferrari SF90 rental Las Vegas, hybrid Ferrari supercar, LVC Exotics",
+
+    content: (
+      <>
+        <Blog7 />
+      </>
+    ),
+  },
+  {
+    slug: "unforgettable-views-from-above",
+    mainTitle:
+      "Unforgettable Views from Above: The Best Helicopter Tours in Vegas, Maui, Catalina & the Grand Canyon",
+
+    title: "Top 7 Luxury Yacht Rentals in Miami - Luxury Getaways by Sea",
+    excerpt:
+      "Some sights are too spectacular to experience from the ground. That's where a helicopter tour comes in — giving you front-row seats to landscapes most travelers only glimpse from postcards. From red rock canyons to turquoise coastlines, here are four destinations where a flight is the experience you'll talk about for years.",
+    date: "Published on: September 15, 2025",
+    image: "assets/blogs/grand-canyon.webp",
+    seoTitle: "Top 7 Luxury Yacht Rentals in Miami - Luxury Getaways by Sea",
+    seoDescription:
+      "Discover 7 of the best luxury yachts to rent in Miami. See stunning photos, key features, and how to book your dream yacht through trusted partners.",
+    keywords:
+      "road trip essentials, travel accessories for cars, best gear for car travel, road trip safety kits, travel gadgets, long drive must-haves, family car trip checklist",
+
+    content: (
+      <>
+        <Blog10 />
+      </>
+    ),
+  },
   {
     slug: "exotic-car-rentals-in-las-vegas",
     mainTitle: "Exotic Car Rentals in Las Vegas - Drive Your Dream Ride",
@@ -151,6 +199,51 @@ export const blogPosts: BlogPost[] = [
     content: (
       <>
         <Blog1 />
+      </>
+    ),
+  },
+
+  {
+    slug: "u-s-tourism-statistics-trends",
+    mainTitle:
+      "Travel in Full Swing: U.S. Tourism Statistics & Trends for 2024",
+
+    title: "U.S. Tourism 2024: Key Travel Statistics & Trends Meta",
+    excerpt:
+      "After years of disruption, the U.S. travel industry is fully back on track — and by some measures, stronger than ever. Recent research compiled by GoWithGuide highlights how domestic and international tourism in the U.S. is surging into 2024. Here's a snapshot of what's driving this momentum and how travelers can make the most of it.",
+    date: "Published on: October 9, 2024",
+    image: "assets/blogs/us-tourism.webp",
+    seoTitle: "U.S. Tourism 2024: Key Travel Statistics & Trends Meta",
+    seoDescription:
+      "Explore the top U.S. tourism trends and stats for 2024. See how travel is booming again with insights from GoWithGuide’s latest report.",
+    keywords:
+      "USA tourism 2024, U.S. travel statistics, American tourism trends, GoWithGuide tours",
+
+    content: (
+      <>
+        <Blog8 />
+      </>
+    ),
+  },
+  {
+    slug: "new-york-travel-by-the-numbers",
+    mainTitle:
+      "New York Travel by the Numbers: 2023 Tourism Insights & What's Ahead",
+
+    title: "New York Tourism 2023: Key Visitor Stats & Travel Insights",
+    excerpt:
+      "New York City is the ultimate traveler magnet — and according to data from GoWithGuide, tourism in the Big Apple continues to thrive. Here's what the numbers tell us about NYC travel in 2023 and what visitors can expect next.",
+    date: "Published on: June 25, 2024",
+    image: "assets/blogs/new-york-travel.webp",
+    seoTitle: "New York Tourism 2023: Key Visitor Stats & Travel Insights",
+    seoDescription:
+      "Discover the latest NYC tourism trends for 2023. See how Broadway, dining, and private tours are powering New York's visitor comeback.",
+    keywords:
+      "New York tourism statistics 2023, NYC travel data, GoWithGuide tours, New York visitor trends.",
+
+    content: (
+      <>
+        <Blog9 />
       </>
     ),
   },

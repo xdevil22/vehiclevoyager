@@ -1,7 +1,8 @@
 import React from "react";
-import {RiSteering2Fill} from "react-icons/ri";
-import {Link} from "react-router-dom";
 
+import {Link} from "react-router-dom";
+import vechuraLogo from "../../public/assets/vechura-logo.png";
+import {BASE_URL} from "../utils/constants";
 const Footer = () => {
   return (
     <footer className="bg-neutral-900 text-white py-12">
@@ -22,11 +23,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Contact */}
           <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <RiSteering2Fill className="text-primary text-3xl" />
+            <div className="flex items-center space-x-2 mb-6 vechuraLogo">
+              {/* <RiSteering2Fill className="text-primary text-3xl" />
               <span className="text-2xl font-bold font-heading">
                 VehicleVoyager
-              </span>
+              </span> */}
+              <img src={BASE_URL + vechuraLogo} alt="vechura" loading="lazy" />
+              <span className="text-2xl font-bold font-heading">Vechura</span>
             </div>
             <p className="text-neutral-200 mb-6">
               Finding the perfect vehicle for your next adventure has never been
@@ -48,6 +51,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {[
                 {label: "Home", to: "/"},
+                {label: "Booking Tools", to: "/booking-tools"},
                 {label: "About", to: "/about"},
                 {label: "Blog", to: "/blog"},
               ].map(({label, to}) => (
@@ -108,7 +112,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-neutral-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-neutral-400 text-sm mb-4 md:mb-0">
-            © 2025 VehicleVoyager. All rights reserved.
+            © 2025 Vechura. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link

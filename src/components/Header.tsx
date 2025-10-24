@@ -1,6 +1,8 @@
 import {NavLink, useNavigate, useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {Listbox} from "@headlessui/react";
+import vechuraLogo from "../../public/assets/vechura-logo.png";
+import {BASE_URL} from "../utils/constants";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -57,11 +59,15 @@ export default function Header() {
         <div>
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <i className="ri-steering-2-fill text-4xl text-blue-600"></i>
+            <div className="flex items-center space-x-2 vechuraLogo">
+              <img src={BASE_URL + vechuraLogo} alt="vechura" loading="lazy" />
+              <span className="text-3xl font-bold text-neutral-900">
+                Vechura
+              </span>
+              {/* <i className="ri-steering-2-fill text-4xl text-blue-600"></i>
               <span className="text-3xl font-bold text-neutral-900">
                 VehicleVoyager
-              </span>
+              </span> */}
             </div>
 
             {/* Desktop Navigation */}

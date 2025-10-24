@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from "react";
-import {heroImages} from "../../../assets";
+import React, { useEffect, useState } from "react";
+import { heroImages } from "../../../assets";
 
 const categories = [
-  {icon: "ri-car-line", label: "Cars"},
-  {icon: "ri-ship-line", label: "Boats"},
-  {icon: "ri-bus-line", label: "RVs and Motorhomes"},
-  {icon: "ri-motorbike-line", label: "Motorcycles"},
-  {icon: "ri-plane-line", label: "Private Jets"},
+  { icon: "ri-car-line", label: "Cars" },
+  { icon: "ri-ship-line", label: "Boats" },
+  { icon: "ri-bus-line", label: "RVs and Motorhomes" },
+  { icon: "ri-motorbike-line", label: "Motorcycles" },
+  { icon: "ri-plane-line", label: "Private Jets" },
 ];
 
 const HeroBanner: React.FC = () => {
@@ -46,11 +46,12 @@ const HeroBanner: React.FC = () => {
       {/* Content */}
       <div className="relative z-30 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-normal">
-          Premium Vehicle Rentals for Every Adventure
+          All Your Rides. One Site.
         </h1>
         <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl font-light leading-relaxed min-h-[100px]">
-          Find the perfect vehicle for your next journey. Compare prices from
-          top rental companies and choose the best deal for your adventure.
+          Compare cars, RVs, boats, planes, motorcycles, and more — all in one
+          place. Vechura helps you find, book, and save on every ride for your
+          next adventure.
         </p>
 
         {/* Categories */}
@@ -59,7 +60,8 @@ const HeroBanner: React.FC = () => {
             <a
               key={idx}
               href={`#${cat.label.replace(/\s+/g, "-")}`}
-              className="flex flex-col items-center text-white transition-all cursor-pointer opacity-80 hover:opacity-100">
+              className="flex flex-col items-center text-white transition-all cursor-pointer opacity-80 hover:opacity-100"
+            >
               <i className={`${cat.icon} text-2xl`} />
               <span className="text-sm mt-1">{cat.label}</span>
             </a>

@@ -22,7 +22,7 @@ export default function Blog6() {
       <p className="font-bold">
         👉 Browse LA motorcycles now on{" "}
         <a
-          href=" https://www.eaglerider.com/?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f"
+          href="https://www.eaglerider.com/?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline"
@@ -305,7 +305,7 @@ export default function Blog6() {
       <p className="font-bold">
         👉 Explore motorcycle rentals in Los Angeles now on &nbsp;
         <a
-          href=" https://www.eaglerider.com/?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f"
+          href="https://www.eaglerider.com/?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline"
