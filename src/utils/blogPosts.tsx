@@ -52,12 +52,14 @@ export const blogPosts: BlogPost[] = [
     mainTitle:
       "Unforgettable Views from Above: The Best Helicopter Tours in Vegas, Maui, Catalina & the Grand Canyon",
 
-    title: "Top 7 Luxury Yacht Rentals in Miami - Luxury Getaways by Sea",
+    title:
+      "Unforgettable Views from Above: The Best Helicopter Tours in Vegas, Maui, Catalina & the Grand Canyon",
     excerpt:
       "Some sights are too spectacular to experience from the ground. That's where a helicopter tour comes in — giving you front-row seats to landscapes most travelers only glimpse from postcards. From red rock canyons to turquoise coastlines, here are four destinations where a flight is the experience you'll talk about for years.",
     date: "Published on: September 15, 2025",
     image: "assets/blogs/grand-canyon.webp",
-    seoTitle: "Top 7 Luxury Yacht Rentals in Miami - Luxury Getaways by Sea",
+    seoTitle:
+      "Unforgettable Views from Above: The Best Helicopter Tours in Vegas, Maui, Catalina & the Grand Canyon",
     seoDescription:
       "Discover 7 of the best luxury yachts to rent in Miami. See stunning photos, key features, and how to book your dream yacht through trusted partners.",
     keywords:
