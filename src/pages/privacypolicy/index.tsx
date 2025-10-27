@@ -9,10 +9,10 @@ export default function PrivacyPolicy() {
 
         <section className="space-y-4">
           <p>
-            VehicleVoyager ("we," "our," or "us") collects information you
-            provide directly to us, such as when you create an account, search
-            for vehicle rentals, save favorite listings, contact us for support,
-            or subscribe to our newsletter.
+            Vechura ("we," "our," or "us") collects information you provide
+            directly to us, such as when you create an account, search for
+            vehicle rentals, save favorite listings, contact us for support, or
+            subscribe to our newsletter.
           </p>
 
           <h2 className="text-xl font-semibold">1. Information We Collect</h2>
@@ -92,9 +92,9 @@ export default function PrivacyPolicy() {
           <p>
             Email:{" "}
             <a
-              href="mailto:info@vehiclevoyager.net"
+              href="mailto:info@vechura.com"
               className="text-blue-600 underline">
-              info@vehiclevoyager.net
+              info@vechura.com
             </a>
           </p>
         </section>

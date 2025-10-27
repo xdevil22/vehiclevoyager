@@ -38,9 +38,9 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-bold mb-2">Contact Us</h4>
               <a
-                href="mailto:info@vehiclevoyager.net"
+                href="mailto:info@vechura.com"
                 className="text-neutral-200 hover:text-primary transition-colors">
-                info@vehiclevoyager.net
+                info@vechura.com
               </a>
             </div>
           </div>

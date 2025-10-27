@@ -16,7 +16,7 @@ const Layout = () => {
   return (
     <>
       <Helmet>
-        <title>VehicleVoyager</title>
+        <title>Vechura</title>
         <meta
           name="description"
           content="Explore vehicles for every adventure."

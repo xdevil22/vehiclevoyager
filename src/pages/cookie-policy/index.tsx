@@ -92,8 +92,8 @@ export default function CookiePolicy() {
         <h2 className="text-xl font-semibold mt-6 mb-2">9. Contact Us</h2>
         <p>
           Email:{" "}
-          <a href="mailto:info@vehiclevoyager.net" className="text-blue-600">
-            info@vehiclevoyager.net
+          <a href="mailto:info@vechura.com" className="text-blue-600">
+            info@vechura.com
           </a>
         </p>
       </div>

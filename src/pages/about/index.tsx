@@ -9,14 +9,14 @@ const About = () => {
             {/* About VehicleVoyager */}
             <div>
               <h2 className="text-3xl font-bold text-neutral-900 mb-6">
-                About VehicleVoyager
+                About Vechura
               </h2>
 
               <p className="text-neutral-800 mb-4">
-                At VehicleVoyager, we're passionate about helping travelers find
-                the perfect vehicle for their adventures. Our platform
-                aggregates rental options from hundreds of providers, giving you
-                access to the best selection and prices.
+                At vechura, we're passionate about helping travelers find the
+                perfect vehicle for their adventures. Our platform aggregates
+                rental options from hundreds of providers, giving you access to
+                the best selection and prices.
               </p>
               <p className="text-neutral-800 mb-4">
                 Unlike other comparison sites, we specialize exclusively in
