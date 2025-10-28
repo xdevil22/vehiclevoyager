@@ -2,12 +2,14 @@
   "rewrites": [{"source": "/(.*)", "destination": "/"}],
   "redirects": [
     {
-      "source": "https://vechura.net/:path*",
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "vechura.net"}],
       "destination": "https://www.vechura.com/:path*",
       "permanent": true
     },
     {
-      "source": "https://vehiclevoyager.net/:path*",
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "vehiclevoyager.net"}],
       "destination": "https://www.vechura.com/:path*",
       "permanent": true
     }
