@@ -1,3 +1,15 @@
 {
-  "rewrites": [{"source": "/(.*)", "destination": "/"}]
+  "rewrites": [{"source": "/(.*)", "destination": "/"}],
+  "redirects": [
+    {
+      "source": "https://vechura.net/:path*",
+      "destination": "https://www.vechura.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "https://vehiclevoyager.net/:path*",
+      "destination": "https://www.vechura.com/:path*",
+      "permanent": true
+    }
+  ]
 }
