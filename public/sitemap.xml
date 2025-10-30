@@ -1,30 +1,35 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vehiclevoyager-kosi.vercel.app/</loc>
+    <loc>https://www.vechura.com/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vehiclevoyager-kosi.vercel.app/cars</loc>
+    <loc>https://www.vechura.com/cars</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vehiclevoyager-kosi.vercel.app/about</loc>
+    <loc>https://www.vechura.com/about</loc>
     <priority>0.6</priority>
   </url>
-  
-    <url>
-    <loc>https://www.vehiclevoyager.net/</loc>
-    <priority>1.0</priority>
-  </url>
   <url>
-    <loc>https://www.vehiclevoyager.net/cars</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.vehiclevoyager.net/about</loc>
+    <loc>https://www.vechura.com/blog</loc>
     <priority>0.6</priority>
   </url>
-
+  <url>
+    <loc>https://www.vechura.com/booking-tools</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.vechura.com/privacy-policy</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.vechura.com/terms-of-service</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.vechura.com/cookie-policy</loc>
+    <priority>0.4</priority>
+  </url>
 </urlset>

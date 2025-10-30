@@ -7,24 +7,21 @@
     <title>Vechura | All Your Rides. One Site.</title>
     <meta
       name="description"
-      content="Compare cars, RVs, boats, planes, motorcycles, and more — all in one place. Vechura helps you find, book, and save on every ride for your next adventure."
-    />
+      content="Compare cars, RVs, boats, planes, motorcycles, and more — all in one place. Vechura helps you find, book, and save on every ride for your next adventure." />
 
     <meta property="og:title" content="vechura" />
     <meta
       property="og:description"
-      content="Find and book your next ride — from cars to boats — all in one platform."
-    />
+      content="Find and book your next ride — from cars to boats — all in one platform." />
     <meta property="og:image" content="/og-image.jpg" />
-    <meta property="og:url" content="https://vechura.com/" />
+    <meta property="og:url" content="https://www.vechura.com/" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="VehicleVoyager" />
+    <meta name="twitter:title" content="Vechura" />
     <meta
       name="twitter:description"
-      content="Rent cars, bikes, and boats — all in one place."
-    />
+      content="Rent cars, bikes, and boats — all in one place." />
     <meta name="twitter:image" content="/og-image.jpg" />
 
     <!-- Fonts -->
@@ -38,83 +35,58 @@
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-    />
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       media="print"
-      onload="this.media='all'"
-    />
+      onload="this.media='all'" />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      />
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" />
     </noscript>
 
     <!-- Lato (preload + async load) -->
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-    />
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       media="print"
-      onload="this.media='all'"
-    />
+      onload="this.media='all'" />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      />
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" />
     </noscript>
 
-    <!-- Material Icons (preload + async load) -->
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      />
-    </noscript>
+    <!-- Removed Material Icons: not used -->
 
     <!-- Remixicon (preload + async load) -->
     <link
       rel="preload"
       as="style"
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       media="print"
-      onload="this.media='all'"
-    />
+      onload="this.media='all'" />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      />
+        href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
     </noscript>
 
     <!-- Google Analytics 4 -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-3EQ5WQKVLP"
-    ></script>
+      src="https://www.googletagmanager.com/gtag/js?id=G-3EQ5WQKVLP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -133,7 +105,7 @@
           }
         });
       });
-      observer.observe(document.body, { childList: true, subtree: true });
+      observer.observe(document.body, {childList: true, subtree: true});
 
       (function () {
         const blockList = ["Cookies are disabled", "Please enable cookies"];
@@ -158,7 +130,7 @@
             }
           });
         });
-        observer2.observe(document.body, { childList: true, subtree: true });
+        observer2.observe(document.body, {childList: true, subtree: true});
       })();
     </script>
   </head>
@@ -170,7 +142,7 @@
     <script>
       document.querySelectorAll('a[href*="affiliate"]').forEach((link) => {
         link.addEventListener("click", () => {
-          gtag("event", "affiliate_click", { link: link.href });
+          gtag("event", "affiliate_click", {link: link.href});
         });
       });
 
