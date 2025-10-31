@@ -1,7 +1,7 @@
 import React from "react";
 
 import {Link} from "react-router-dom";
-import vechuraLogo from "../../public/assets/vechura-logo.png";
+import vechuraLogo from "../../public/assets/vechura-logo.webp";
 import {BASE_URL} from "../utils/constants";
 const Footer = () => {
   return (

@@ -1,7 +1,7 @@
 import {NavLink, useNavigate, useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {Listbox} from "@headlessui/react";
-import vechuraLogo from "../../public/assets/vechura-logo.png";
+import vechuraLogo from "../../public/assets/vechura-logo.webp";
 import {BASE_URL} from "../utils/constants";
 
 export default function Header() {

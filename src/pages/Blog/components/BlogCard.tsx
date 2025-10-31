@@ -26,7 +26,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <img
           src={BASE_URL + image}
           alt={title}
-          className="w-full h-48 object-cover"
+          className="w-full"
           loading="lazy"
         />
 
