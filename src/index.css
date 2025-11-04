@@ -6,12 +6,6 @@
 .blog-article a:hover {
   text-decoration: underline;
 }
-.blog-article .underlinelink a {
-  text-decoration: underline;
-}
-.blog-article .underlinelink a:hover {
-  text-decoration: none;
-}
-.vechuraLogo img {
-  height: 30px;
-}
+.blog-article .underlinelink a {  text-decoration: underline;}
+.blog-article .underlinelink a:hover {  text-decoration: none;}
+.vechuraLogo img {  height: 30px;  width: auto;}

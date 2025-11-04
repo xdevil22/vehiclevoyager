@@ -6,7 +6,7 @@ const About = () => {
       <section id="about" className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* About VehicleVoyager */}
+            {/* About Vechura */}
             <div>
               <h2 className="text-3xl font-bold text-neutral-900 mb-6">
                 About Vechura

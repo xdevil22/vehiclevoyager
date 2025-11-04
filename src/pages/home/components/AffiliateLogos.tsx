@@ -1,5 +1,5 @@
 import React from "react";
-import {logosImages} from "../../../assets";
+import { logosImages } from "../../../assets";
 type Provider = {
   href: string;
   imgSrc: string;
@@ -37,6 +37,16 @@ const providers: Provider[] = [
     imgSrc: logosImages.sailo,
     alt: "Fox Rent A Car logo",
   },
+  {
+    href: "https://www.maverickhelicopter.com/al.aspx?id=280252&t=0",
+    imgSrc: logosImages.maverick,
+    alt: "Maverick",
+  },
+  {
+    href: "https://lvcexotics.com",
+    imgSrc: logosImages.lvcexotic,
+    alt: "Lvc Exotic",
+  },
 ];
 {
 }
@@ -55,7 +65,8 @@ const AffiliateLogos = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visit ${provider.alt}`}
-              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200">
+              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200"
+            >
               <img
                 src={provider.imgSrc}
                 alt={provider.alt}

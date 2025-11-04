@@ -201,5 +201,13 @@
     "image": "assets/custom-images/300X250-1.webp",
     "url": "https://www.villiersjets.com/?id=10228",
     "price": null
+  },
+  {
+    "type": "Helicopter Tours",
+    "brand": "Maverick Helicopters",
+    "name": "Maverick Helicopters",
+    "image": "assets/custom-images/helicopters/maverick-molokai-voyage.4.webp",
+    "url": "https://www.maverickhelicopter.com/al.aspx?id=280252&t=0",
+    "price": null
   }
 ]

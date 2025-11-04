@@ -1,8 +1,8 @@
 import React from "react";
 
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import vechuraLogo from "../../public/assets/vechura-logo.webp";
-import {BASE_URL} from "../utils/constants";
+import { BASE_URL } from "../utils/constants";
 const Footer = () => {
   return (
     <footer className="bg-neutral-900 text-white py-12">
@@ -15,7 +15,8 @@ const Footer = () => {
           padding: 0,
           height: "0px",
           overflow: "hidden",
-        }}>
+        }}
+      >
         Impact-Site-Verification: 54deb5d6-162c-4ff1-b44c-96f31b50fc38
       </p>
 
@@ -26,7 +27,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-6 vechuraLogo">
               {/* <RiSteering2Fill className="text-primary text-3xl" />
               <span className="text-2xl font-bold font-heading">
-                VehicleVoyager
+                Vechura
               </span> */}
               <img src={BASE_URL + vechuraLogo} alt="vechura" loading="lazy" />
               <span className="text-2xl font-bold font-heading">Vechura</span>
@@ -39,7 +40,8 @@ const Footer = () => {
               <h4 className="text-lg font-bold mb-2">Contact Us</h4>
               <a
                 href="mailto:info@vechura.com"
-                className="text-neutral-200 hover:text-primary transition-colors">
+                className="text-neutral-200 hover:text-primary transition-colors"
+              >
                 info@vechura.com
               </a>
             </div>
@@ -50,15 +52,16 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {[
-                {label: "Home", to: "/"},
-                {label: "Booking Tools", to: "/booking-tools"},
-                {label: "About", to: "/about"},
-                {label: "Blog", to: "/blog"},
-              ].map(({label, to}) => (
+                { label: "Home", to: "/" },
+                { label: "Booking Tools", to: "/booking-tools" },
+                { label: "About", to: "/about" },
+                { label: "Blog", to: "/blog" },
+              ].map(({ label, to }) => (
                 <li key={to}>
                   <Link
                     to={to}
-                    className="text-neutral-200 hover:text-primary transition-colors">
+                    className="text-neutral-200 hover:text-primary transition-colors"
+                  >
                     {label}
                   </Link>
                 </li>
@@ -117,17 +120,20 @@ const Footer = () => {
           <div className="flex space-x-6">
             <Link
               to="/privacy-policy"
-              className="text-neutral-400 hover:text-primary text-sm transition-colors">
+              className="text-neutral-400 hover:text-primary text-sm transition-colors"
+            >
               Privacy Policy
             </Link>
             <Link
               to="/terms-of-service"
-              className="text-neutral-400 hover:text-primary text-sm transition-colors">
+              className="text-neutral-400 hover:text-primary text-sm transition-colors"
+            >
               Terms of Service
             </Link>
             <Link
               to="/cookie-policy"
-              className="text-neutral-400 hover:text-primary text-sm transition-colors">
+              className="text-neutral-400 hover:text-primary text-sm transition-colors"
+            >
               Cookie Policy
             </Link>
           </div>

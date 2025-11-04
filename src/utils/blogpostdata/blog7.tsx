@@ -5,7 +5,7 @@ import designinterior from "../../../public/assets/blogs/design-interior.webp";
 import coststoown from "../../../public/assets/blogs/costs-to-own.webp";
 import lvcexotics from "../../../public/assets/blogs/lvc-exotics.webp";
 
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 export default function Blog7() {
   return (
@@ -17,7 +17,8 @@ export default function Blog7() {
           href="https://lvcexotics.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Ferrari SF90 Stradale
         </a>{" "}
         stops time.
@@ -63,7 +64,7 @@ export default function Blog7() {
         <p>The SF90 is Ferrari's first plug-in hybrid supercar.</p>
         <ul className="list-disc pl-6 mt-2 space-y-1">
           <li>
-            A lithium-ion battery provides roughly 15–16 miles of electric
+            A lithium-ion battery provides roughly 15-16 miles of electric
             range, enough for emission-free driving in city zones.
           </li>
           <li>
@@ -156,7 +157,8 @@ export default function Blog7() {
             href="https://lvcexotics.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             LVC Exotics
           </a>
           , you can slip behind the wheel of a Ferrari SF90 Stradale in Las

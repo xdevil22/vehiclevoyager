@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { heroImages } from "../../../assets";
+import { FaHelicopter } from "react-icons/fa";
 
 const categories = [
   { icon: "ri-car-line", label: "Cars" },
@@ -7,6 +8,7 @@ const categories = [
   { icon: "ri-bus-line", label: "RVs and Motorhomes" },
   { icon: "ri-motorbike-line", label: "Motorcycles" },
   { icon: "ri-plane-line", label: "Private Jets" },
+  { icon: <FaHelicopter size={22} />, label: "Helicopter Tours" },
 ];
 
 const HeroBanner: React.FC = () => {
@@ -28,11 +30,6 @@ const HeroBanner: React.FC = () => {
         <img
           key={i}
           src={img.src}
-          // srcSet={img.srcSet}
-          // sizes="(max-width: 480px) 480px,
-          //        (max-width: 768px) 768px,
-          //        (max-width: 1280px) 1280px,
-          //        1920px"
           alt={img.alt}
           fetchPriority={i === 0 ? "high" : undefined}
           loading={i === 0 ? "eager" : "lazy"}
@@ -56,7 +53,7 @@ const HeroBanner: React.FC = () => {
 
         {/* Categories */}
         <div className="absolute bottom-8 left-0 right-0 px-2 flex justify-center space-x-3 md:space-x-8 items-center">
-          {categories.map((cat, idx) => (
+          {/* {categories.map((cat, idx) => (
             <a
               key={idx}
               href={`#${cat.label.replace(/\s+/g, "-")}`}
@@ -64,6 +61,21 @@ const HeroBanner: React.FC = () => {
             >
               <i className={`${cat.icon} text-2xl`} />
               <span className="text-sm mt-1">{cat.label}</span>
+            </a>
+          ))}  */}
+          {categories.map((cat, idx) => (
+            <a
+              key={idx}
+              href={`#${cat.label.replace(/\s+/g, "-")}`}
+              className="flex flex-col items-center text-white transition-all cursor-pointer opacity-80 hover:opacity-100"
+            >
+              {typeof cat.icon === "string" ? (
+                <i className={`${cat.icon} text-2xl`} />
+              ) : (
+                // Render React icon
+                <div className="text-2xl">{cat.icon}</div>
+              )}
+              <span className="text-sm mt-1 hidden md:block">{cat.label}</span>
             </a>
           ))}
         </div>
