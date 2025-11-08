@@ -1,9 +1,9 @@
-import {NavLink, useNavigate, useLocation} from "react-router-dom";
-import {JSX, useEffect, useState} from "react";
-import {Listbox} from "@headlessui/react";
-import {FaHelicopter} from "react-icons/fa";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import { JSX, useEffect, useState } from "react";
+import { Listbox } from "@headlessui/react";
+import { FaHelicopter } from "react-icons/fa";
 import vechuraLogo from "../../public/assets/vechura-logo.webp";
-import {BASE_URL} from "../utils/constants";
+import { BASE_URL } from "../utils/constants";
 
 // 🧩 Type definition for categories
 interface Category {
@@ -35,19 +35,19 @@ export default function Header() {
 
   // ✅ Typed category array
   const categories: Category[] = [
-    {label: "Cars", icon: "ri-car-line"},
-    {label: "Boats", icon: "ri-ship-line"},
-    {label: "RVs and Motorhomes", icon: "ri-bus-line"},
-    {label: "Motorcycles", icon: "ri-motorbike-line"},
-    {label: "Private Jets", icon: "ri-plane-line"},
-    {label: "Helicopter Tours", icon: <FaHelicopter size={18} />},
+    { label: "Cars", icon: "ri-car-line" },
+    { label: "Boats", icon: "ri-ship-line" },
+    { label: "RVs and Motorhomes", icon: "ri-bus-line" },
+    { label: "Motorcycles", icon: "ri-motorbike-line" },
+    { label: "Private Jets", icon: "ri-plane-line" },
+    { label: "Helicopter Tours", icon: <FaHelicopter size={18} /> },
   ];
 
   const navLinks = [
-    {name: "Home", path: "/"},
-    {name: "Booking Tools", path: "/booking-tools"},
-    {name: "About", path: "/about"},
-    {name: "Blog", path: "/blog"},
+    { name: "Home", path: "/" },
+    { name: "Booking Tools", path: "/booking-tools" },
+    { name: "About", path: "/about" },
+    { name: "Blog", path: "/blog" },
   ];
 
   const [selected, setSelected] = useState<Category>(categories[0]);
@@ -55,7 +55,7 @@ export default function Header() {
   const handleSelect = (cat: Category): void => {
     setSelected(cat);
     const target = document.getElementById(cat.label.replace(/\s+/g, "-"));
-    if (target) target.scrollIntoView({behavior: "smooth"});
+    if (target) target.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -80,11 +80,12 @@ export default function Header() {
               <NavLink
                 key={link.name}
                 to={link.path}
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   `text-lg font-medium hover:text-blue-600 ${
                     isActive ? "text-blue-600" : "text-gray-800"
                   }`
-                }>
+                }
+              >
                 {link.name}
               </NavLink>
             ))}
@@ -95,13 +96,15 @@ export default function Header() {
             {isLoggedIn ? (
               <button
                 onClick={handleLogout}
-                className="border border-gray-300 rounded px-4 py-1 text-lg hover:bg-gray-100">
+                className="border border-gray-300 rounded px-4 py-1 text-lg hover:bg-gray-100"
+              >
                 Logout
               </button>
             ) : (
               <button
                 onClick={handleLogin}
-                className="border border-gray-300 rounded px-4 py-1 text-lg hover:bg-gray-100">
+                className="border border-gray-300 rounded px-4 py-1 text-lg hover:bg-gray-100"
+              >
                 Login
               </button>
             )}
@@ -111,7 +114,8 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-800 text-2xl focus:outline-none">
+              className="text-gray-800 text-2xl focus:outline-none"
+            >
               <i className={`ri-${isMenuOpen ? "close" : "menu"}-line`}></i>
             </button>
           </div>
@@ -125,11 +129,12 @@ export default function Header() {
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsMenuOpen(false)}
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   `block px-4 py-2 text-sm font-medium ${
                     isActive ? "text-blue-600" : "text-gray-800"
                   }`
-                }>
+                }
+              >
                 {link.name}
               </NavLink>
             ))}
@@ -140,7 +145,8 @@ export default function Header() {
                   setIsMenuOpen(false);
                   handleLogout();
                 }}
-                className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800">
+                className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800"
+              >
                 Logout
               </button>
             ) : (
@@ -149,7 +155,8 @@ export default function Header() {
                   setIsMenuOpen(false);
                   handleLogin();
                 }}
-                className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800">
+                className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800"
+              >
                 Login
               </button>
             )}
@@ -165,7 +172,8 @@ export default function Header() {
                 <a
                   key={cat.label}
                   href={`#${cat.label.replace(/\s+/g, "-")}`}
-                  className="text-sm font-semibold text-blue-600 hover:underline whitespace-nowrap flex items-center">
+                  className="text-sm font-semibold text-blue-600 hover:underline whitespace-nowrap flex items-center"
+                >
                   {typeof cat.icon === "string" ? (
                     <i className={`${cat.icon} mr-1`} />
                   ) : (
@@ -192,7 +200,8 @@ export default function Header() {
                     className="w-4 h-4 text-gray-500"
                     fill="none"
                     stroke="currentColor"
-                    viewBox="0 0 24 24">
+                    viewBox="0 0 24 24"
+                  >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -207,12 +216,13 @@ export default function Header() {
                     <Listbox.Option
                       key={cat.label}
                       value={cat}
-                      className={({active}: {active: boolean}) =>
+                      className={({ active }: { active: boolean }) =>
                         `cursor-pointer select-none flex items-center gap-2 p-2 transition-colors duration-150 ${
                           active ? "bg-blue-100 text-blue-700" : "text-gray-700"
                         }`
-                      }>
-                      {({active}) => (
+                      }
+                    >
+                      {({ active }) => (
                         <>
                           {typeof cat.icon === "string" ? (
                             <i
@@ -224,14 +234,16 @@ export default function Header() {
                             <span
                               className={`${
                                 active ? "text-blue-700" : "text-gray-500"
-                              }`}>
+                              }`}
+                            >
                               {cat.icon}
                             </span>
                           )}
                           <span
                             className={`${
                               active ? "font-semibold" : "font-normal"
-                            }`}>
+                            }`}
+                          >
                             {cat.label}
                           </span>
                         </>

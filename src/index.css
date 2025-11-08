@@ -9,3 +9,14 @@
 .blog-article .underlinelink a {  text-decoration: underline;}
 .blog-article .underlinelink a:hover {  text-decoration: none;}
 .vechuraLogo img {  height: 30px;  width: auto;}
+.affiliate-logos a {
+  height: 74px;
+  padding: 0 1rem;
+}
+.affiliate-logos a .riderslogo {
+  height: 66px;
+}
+
+.affiliate-logos a .lvcexotic {
+  height: 66px;
+}

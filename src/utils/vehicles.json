@@ -109,22 +109,7 @@
     "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/tesla/model-s/2679292",
     "price": null
   },
-  {
-    "type": "Cars",
-    "brand": "Honda",
-    "name": "Rent a Honda Accord in Las Vegas",
-    "image": "assets/custom-images/cars/honda-9943.webp",
-    "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/honda/accord/1946062?endDate=08%2F10%2F2025&endTime=14%3A00&startDate=08%2F07%2F2025&startTime=10%3A00",
-    "price": null
-  },
-  {
-    "type": "Cars",
-    "brand": "Turo \u2013 Hyundai Genesis",
-    "name": "Rent a Hyundai Genesis in Las Vegas",
-    "image": "assets/custom-images/cars/genesis.webp",
-    "url": "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/hyundai/genesis/2462922",
-    "price": null
-  },
+
   {
     "type": "Cars",
     "brand": "Dollar Car Rental MX",
@@ -159,7 +144,38 @@
     "url": "https://thriftycarrentalmxmxusca.pxf.io/c/6269754/2071316/25949",
     "price": null
   },
-
+  {
+    "type": "Cars",
+    "brand": "Lamborghini Huracan-Las Vegas",
+    "name": "Lamborghini Huracan-Las Vegas",
+    "image": "assets/custom-images/cars/lvc-green-huracan.webp",
+    "url": "https://lvcexotics.com",
+    "price": null
+  },
+  {
+    "type": "Cars",
+    "brand": "Ferrari 812 Superfast-Las Vegas",
+    "name": "Ferrari 812 Superfast-Las Vegas",
+    "image": "assets/custom-images/cars/lvc-ferrari-812-super.webp",
+    "url": "https://lvcexotics.com",
+    "price": null
+  },
+  {
+    "type": "Cars",
+    "brand": "McLaren 720S Spider-Las Vegas",
+    "name": "McLaren 720S Spider-Las Vegas",
+    "image": "assets/custom-images/cars/lvc-mclaren.webp",
+    "url": "https://lvcexotics.com",
+    "price": null
+  },
+  {
+    "type": "Cars",
+    "brand": "Corvette C8 Z06 3LZ-Las Vegas",
+    "name": "Corvette C8 Z06 3LZ-Las Vegas",
+    "image": "assets/custom-images/cars/lvc-corvette.webp",
+    "url": "https://lvcexotics.com",
+    "price": null
+  },
   {
     "type": "Motorcycles",
     "brand": "EagleRider",
