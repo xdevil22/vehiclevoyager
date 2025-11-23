@@ -56,6 +56,7 @@ const Footer = () => {
                 { label: "Booking Tools", to: "/booking-tools" },
                 { label: "About", to: "/about" },
                 { label: "Blog", to: "/blog" },
+  {label: "Advertiser Disclosure", to: "/advertiser-disclosure"},
               ].map(({ label, to }) => (
                 <li key={to}>
                   <Link

@@ -17,6 +17,8 @@ import BlogPostPage from "./pages/Blog/BlogPost";
 import CookiePolicy from "./pages/cookie-policy";
 import PrivacyPolicy from "./pages/privacypolicy";
 import BookingTools from "./pages/booking-tools";
+import AdvertiserDisclosure from "./pages/advertiser-disclosure";
+import BrevoNewsletter from "./components/BrevoNewsletter";
 function ProtectedRoute({children}: {children: React.ReactNode}) {
   const isAdmin = sessionStorage.getItem("adminAccess") === "granted";
   return isAdmin ? children : <Navigate to="/admin/login" replace />;
@@ -35,6 +37,12 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route path="/cookiepolicy" element={<CookiePolicy />} />
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route
+              path="advertiser-disclosure"
+              element={<AdvertiserDisclosure />}
+            />
+            <Route path="/email-signup" element={<BrevoNewsletter />} />
+
             <Route
               path="admin"
               element={
