@@ -60,10 +60,10 @@ export default function Header() {
     {name: "Booking Tools", path: "/booking-tools"},
     {name: "About", path: "/about"},
     {name: "Blog", path: "/blog"},
-    {
-      name: isLoggedIn ? "Logout" : "Login",
-      path: isLoggedIn ? "/" : "/admin/login",
-    },
+    // {
+    //   name: isLoggedIn ? "Logout" : "Login",
+    //   path: isLoggedIn ? "/" : "/admin/login",
+    // },
   ];
 
   const [selected, setSelected] = useState<Category>(categories[0]);
@@ -96,9 +96,9 @@ export default function Header() {
               <NavLink
                 key={link.name}
                 to={link.path}
-                onClick={() => {
-                  if (link.name === "Logout") handleLogout();
-                }}
+                // onClick={() => {
+                //   if (link.name === "Logout") handleLogout();
+                // }}
                 className={({isActive}) =>
                   `text-lg font-medium hover:text-blue-600 ${
                     isActive ? "text-blue-600" : "text-gray-800"

@@ -24,7 +24,7 @@ const BlogPost: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 blog-article">
         <article className="md:col-span-2">
           <h1 className="text-3xl font-bold mb-6">{post.mainTitle}</h1>
-          <div className="text-md text-gray-600 italic leading-relaxed">
+          <div className="text-sm text-gray-600 italic leading-relaxed">
             Vechura may earn a commission from affiliate links in this post, at
             no extra cost to you. As an Amazon Associate, we earn from
             qualifying purchases. Learn more in our Advertiser Disclosure.

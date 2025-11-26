@@ -1,9 +1,20 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import vechuraLogo from "../../public/assets/vechura-logo.webp";
 import { BASE_URL } from "../utils/constants";
 const Footer = () => {
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    setIsLoggedIn(sessionStorage.getItem("adminAccess") === "granted");
+  }, []);
+
+  const handleLogout = (): void => {
+    sessionStorage.removeItem("adminAccess");
+    setIsLoggedIn(false);
+    navigate("/");
+  };
   return (
     <footer className="bg-neutral-900 text-white py-12">
       {/* SEO Verification (Hidden) */}
@@ -57,12 +68,18 @@ const Footer = () => {
                 { label: "About", to: "/about" },
                 { label: "Blog", to: "/blog" },
   {label: "Advertiser Disclosure", to: "/advertiser-disclosure"},
+   {
+                  label: isLoggedIn ? "Logout" : "Login",
+                  to: isLoggedIn ? "/" : "/admin/login",
+                },
               ].map(({ label, to }) => (
                 <li key={to}>
                   <Link
                     to={to}
-                    className="text-neutral-200 hover:text-primary transition-colors"
-                  >
+                    onClick={() => {
+                      if (label === "Logout") handleLogout();
+                    }}
+                    className="text-neutral-200 hover:text-primary transition-colors">
                     {label}
                   </Link>
                 </li>

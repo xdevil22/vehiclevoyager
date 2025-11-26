@@ -25,7 +25,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <h1 className="text-3xl font-bold mb-6 px-5 pt-5">{mainTitle}</h1>
         <div className="px-5">
           {" "}
-          <div className="text-md text-gray-600 italic leading-relaxed">
+          <div className="text-sm text-gray-600 italic leading-relaxed">
             Vechura may earn a commission from affiliate links in this post, at
             no extra cost to you. As an Amazon Associate, we earn from
             qualifying purchases. Learn more in our Advertiser Disclosure.
