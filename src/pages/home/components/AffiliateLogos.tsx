@@ -26,12 +26,12 @@ const providers: Provider[] = [
     alt: "Outdoorsy logo",
     className: "outdoorsylogo",
   },
-  {
-    href: "https://www.getmyboat.com/",
-    imgSrc: logosImages.getmyboatlogo,
-    alt: "Getmyboat logo",
-    className: "getmyboatlogo",
-  },
+  // {
+  //   href: "https://www.getmyboat.com/",
+  //   imgSrc: logosImages.getmyboatlogo,
+  //   alt: "Getmyboat logo",
+  //   className: "getmyboatlogo",
+  // },
   {
     href: "https://www.foxrentacar.com/",
     imgSrc: logosImages.fox,

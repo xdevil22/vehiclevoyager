@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>EagleRider Widget</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #divWidgetMobile {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        #divWidget {
+          display: none;
+        }
+        #divWidgetMobile {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="eg-widget"
+      data-widget="search"
+      data-program="us-hcom"
+      data-lobs="stays"
+      data-network="pz"
+      data-camref="1110luHzv"
+      data-pubref=""></div>
+    <script
+      class="eg-widgets-script"
+      src="https://creator.expediagroup.com/products/widgets/assets/eg-widgets.js"></script>
+  </body>
+</html>

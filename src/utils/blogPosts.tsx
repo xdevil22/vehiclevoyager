@@ -11,6 +11,7 @@ import Blog7 from "./blogpostdata/blog7";
 import Blog10 from "./blogpostdata/blog10";
 import Blog9 from "./blogpostdata/blog9";
 import Blog8 from "./blogpostdata/blog8";
+import Blog11 from "./blogpostdata/blog11";
 export interface BlogPost {
   slug: string;
   mainTitle: string;
@@ -25,6 +26,35 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "must-have-travel-gadgets-for-2026",
+    mainTitle: "Must-Have Travel Gadgets for 2026",
+
+    title: "Why Travel Gadgets Are a Frequent Traveler's Best Friend",
+    excerpt: (
+      <>
+        When you're constantly on the move for work, adventure, or a
+        well-deserved break, the right gear can mean the difference between
+        stress and smooth sailing.
+        <br /> Today's <strong>best travel gadgets for 2026</strong> go far
+        beyond flashy tech. They help you stay connected, save space, charge
+        faster, and make every leg of the journey a little more comfortable.
+      </>
+    ),
+    date: "Published on: December 7, 2025",
+    image: "assets/blogs/travel-gadgets.webp",
+    seoTitle: "Best Travel Gadgets for 2026 - 12 Must-Haves",
+    seoDescription:
+      "Upgrade your travel experience with these 12 top-rated gadgets that make flying, driving, and exploring easier than ever.",
+    keywords:
+      "adventure gear, portable tech, travel upgrades, vacation essentials,modern travel tools, airline travel hacks, travel comfort accessories, digital nomad essentials",
+
+    content: (
+      <>
+        <Blog11 />
+      </>
+    ),
+  },
   {
     slug: "ferrari-sf90-stradale-las-vegas-rental",
     mainTitle: "The Ferrari SF90 Stradale: When Engineering Becomes Art",

@@ -19,7 +19,6 @@ const Blog: React.FC = () => {
     // Split search into words: "rentals in las vegas" → ["rentals", "las", "vegas"]
     const keywords = query.split(" ").filter(Boolean);
 
-    // Check if ALL keywords exist somewhere in the text
     return keywords.every((word) => text.includes(word));
   });
 
@@ -30,7 +29,7 @@ const Blog: React.FC = () => {
         <meta name="description" content="Articles, guides & news by Vechura" />
       </Helmet>
 
-      <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-2">
         <div className="md:col-span-2 space-y-6">
           {query && (
             <p className="text-gray-600 italic text-sm mb-2">
