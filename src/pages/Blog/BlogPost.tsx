@@ -3,8 +3,8 @@ import {useParams} from "react-router-dom";
 import {blogPosts} from "../../utils/blogPosts";
 import Sidebar from "./components/Sidebar";
 import {BASE_URL} from "../../utils/constants";
-import {Helmet} from "react-helmet";
 
+import {HeadProvider, Title, Meta} from "react-head";
 const BlogPost: React.FC = () => {
   const {slug} = useParams();
   const post = blogPosts.find((p) => p.slug === slug);
@@ -16,11 +16,11 @@ const BlogPost: React.FC = () => {
   return (
     <>
       {" "}
-      <Helmet>
-        <title>{post.seoTitle || post.title}</title>
-        <meta name="description" content={post.seoDescription} />
-        <meta name="keywords" content={post.keywords} />
-      </Helmet>
+      <HeadProvider>
+        <Title>{post.seoTitle || post.title}</Title>
+        <Meta name="description" content={post.seoDescription} />
+        <Meta name="keywords" content={post.keywords} />
+      </HeadProvider>
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 blog-article">
         <article className="md:col-span-2">
           <h1 className="text-3xl font-bold mb-6">{post.mainTitle}</h1>

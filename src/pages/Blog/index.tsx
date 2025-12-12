@@ -3,7 +3,8 @@ import {useLocation} from "react-router-dom";
 import {blogPosts} from "../../utils/blogPosts";
 import BlogCard from "./components/BlogCard";
 import Sidebar from "./components/Sidebar";
-import {Helmet} from "react-helmet";
+
+import {HeadProvider, Title, Meta} from "react-head";
 
 const Blog: React.FC = () => {
   const location = useLocation();
@@ -24,10 +25,10 @@ const Blog: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Vechura Blog</title>
-        <meta name="description" content="Articles, guides & news by Vechura" />
-      </Helmet>
+      <HeadProvider>
+        <Title>Vechura Blog</Title>
+        <Meta name="description" content="Articles, guides & news by Vechura" />
+      </HeadProvider>
 
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-2">
         <div className="md:col-span-2 space-y-6">

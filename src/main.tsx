@@ -10,7 +10,8 @@ import Admin from "./pages/admin/admin";
 import "./index.css";
 import "./indexpegy.css";
 import Layout from "./layouts/Layouts";
-import {HelmetProvider} from "react-helmet-async";
+
+import {HeadProvider} from "react-head";
 import AdminLogin from "./pages/admin/adminLogin";
 import Blog from "./pages/Blog";
 import BlogPostPage from "./pages/Blog/BlogPost";
@@ -26,7 +27,7 @@ function ProtectedRoute({children}: {children: React.ReactNode}) {
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <HelmetProvider>
+    <HeadProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -56,6 +57,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/admin/login" element={<AdminLogin />} />
         </Routes>
       </BrowserRouter>
-    </HelmetProvider>
+    </HeadProvider>
   </React.StrictMode>
 );
