@@ -1,5 +1,4 @@
 import {JSX} from "react";
-import {BASE_URL} from "./constants";
 
 import Blog2 from "./blogpostdata/blog2";
 import Blog1 from "./blogpostdata/blog1";
@@ -12,6 +11,7 @@ import Blog10 from "./blogpostdata/blog10";
 import Blog9 from "./blogpostdata/blog9";
 import Blog8 from "./blogpostdata/blog8";
 import Blog11 from "./blogpostdata/blog11";
+import Blog12 from "./blogpostdata/blog12";
 export interface BlogPost {
   slug: string;
   mainTitle: string;
@@ -98,6 +98,27 @@ export const blogPosts: BlogPost[] = [
     content: (
       <>
         <Blog10 />
+      </>
+    ),
+  },
+  {
+    slug: "rving-with-pets-best-pet-friendly-rv-rentals-travel-tips",
+    mainTitle: "RVing with Pets - Best Pet-Friendly RV Rentals and Travel Tips",
+
+    title: "Why More Travelers Are Taking Their Pets on the Road",
+    excerpt:
+      "RV travel has exploded in popularity and so has bringing pets along for the ride. For many pet parents, leaving furry family members behind isn’t an option, and thankfully, it no longer has to be.",
+    date: "Published on: June 2, 2025",
+    image: "assets/blogs/rving-pet.webp",
+    seoTitle: "RVing with Pets - Best Pet-Friendly RV Rentals and Travel Tips",
+    seoDescription:
+      "Discover the best pet-friendly RV rentals and expert tips for traveling safely with your dog or cat on the open road",
+    keywords:
+      "Pet-friendly RV rentals, RV travel with pets,Traveling with pets in an RV, RV rentals that allow pets, Pet-friendly RV travel",
+
+    content: (
+      <>
+        <Blog12 />
       </>
     ),
   },

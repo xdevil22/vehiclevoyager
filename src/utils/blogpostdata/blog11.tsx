@@ -1,9 +1,4 @@
 import React from "react";
-import canyonhelicopter from "../../../public/assets/blogs/canyon-helicopter.webp";
-import redrockcanyon from "../../../public/assets/blogs/red-rock-canyon.webp";
-import catalinaisland from "../../../public/assets/blogs/catalina-island.webp";
-import mauihawaii from "../../../public/assets/blogs/maui-hawaii.webp";
-import {BASE_URL} from "../constants";
 
 export default function Blog11() {
   return (
