@@ -17,11 +17,7 @@ const BookingTools: React.FC = () => {
               <ClickAndBoatWidget />
             </div>
           </div>
-          <div className="container mx-auto px-4">
-            <div className="my-4">
-              <EagleRiderWidget />
-            </div>
-          </div>
+
           <div>
             <iframe
               src="/ExpediaSearchWidget.html"
@@ -57,6 +53,11 @@ const BookingTools: React.FC = () => {
               // onLoad={() => setLoading(false)}
               className="eagle-rider-widget mb-2"
             />
+          </div>
+          <div className="container mx-auto px-4">
+            <div className="my-4">
+              <EagleRiderWidget />
+            </div>
           </div>
         </div>
       </div>

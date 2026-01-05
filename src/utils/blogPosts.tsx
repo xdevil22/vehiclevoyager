@@ -12,6 +12,7 @@ import Blog9 from "./blogpostdata/blog9";
 import Blog8 from "./blogpostdata/blog8";
 import Blog11 from "./blogpostdata/blog11";
 import Blog12 from "./blogpostdata/blog12";
+import Blog13 from "./blogpostdata/blog13";
 export interface BlogPost {
   slug: string;
   mainTitle: string;
@@ -26,6 +27,38 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "barrett-jackson-scottsdale-auto-auction-history-insider-guide-ultimate-trip",
+    mainTitle:
+      "Barrett-Jackson Scottsdale Auto Auction: History, Insider Guide, and How to Plan the Ultimate Trip",
+
+    title: "History, Insider Guide, and How to Plan the Ultimate Trip",
+    excerpt: (
+      <>
+        Every January, Scottsdale, Arizona becomes the epicenter of the
+        collector-car world as Barrett-Jackson Scottsdale, the most famous
+        automotive auction in the United States, returns for its flagship event.
+        What began as a niche collector gathering has grown into a globally
+        televised spectacle drawing hundreds of thousands of attendees,
+        thousands of vehicles, celebrities, and some of the highest hammer
+        prices ever recorded.
+      </>
+    ),
+    date: "Published on: January 1, 2026",
+    image: "assets/blogs/barreett.webp",
+    seoTitle:
+      "Barrett-Jackson Scottsdale Auto Auction-History, Insider Guide, and How to Plan the Ultimate Trip",
+    seoDescription:
+      "Experience Barrett-Jackson Scottsdale, the worlds most famous car auction. History, insider tips, record sales, and travel planning guide",
+    keywords:
+      "Barrett-Jackson history, Barrett-Jackson insider guide, How to attend Barrett-Jackson, Barrett-Jackson ticket prices, How to bid at Barrett-Jackson, Barrett-Jackson record sales, Luxury car auction Scottsdale, Muscle cars at Barrett-Jackson, Celebrity cars Barrett-Jackson, Barrett-Jackson auction week events",
+
+    content: (
+      <>
+        <Blog13 />
+      </>
+    ),
+  },
   {
     slug: "must-have-travel-gadgets-for-2026",
     mainTitle: "Must-Have Travel Gadgets for 2026",
