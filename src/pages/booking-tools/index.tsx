@@ -2,7 +2,14 @@ import React from "react";
 import {HeadProvider, Title, Meta} from "react-head";
 import ClickAndBoatWidget from "../../components/ClickAndBoatWidget";
 import EagleRiderWidget from "../../components/EagleRiderWidget";
-const BookingTools: React.FC = () => {
+import VilliersAffiliate from "../../components/VilliersAffiliate/VilliersAffiliate";
+
+import {VilliersFlight} from "../../components/VilliersAffiliate/villiersTypes";
+// import {VilliersFlight} from "./villiersTypes";
+interface Props {
+  flights?: VilliersFlight[];
+}
+const BookingTools: React.FC<Props> = ({flights}) => {
   return (
     <>
       {" "}
@@ -53,6 +60,12 @@ const BookingTools: React.FC = () => {
               // onLoad={() => setLoading(false)}
               className="eagle-rider-widget mb-2"
             />
+          </div>
+
+          <div className="container mx-auto px-4">
+            <div className="my-4">
+              <VilliersAffiliate />
+            </div>
           </div>
           <div className="container mx-auto px-4">
             <div className="my-4">

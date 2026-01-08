@@ -172,7 +172,7 @@ export default function Blog13() {
         </p>
         <p>
           <a
-            href="http://ticketr.auhm.net/2aoMQ0"
+            href="https://www.ticketliquidator.com/performers/barrett-jackson-tickets?kwds=Barrett-Jackson&clickId=XWQx3BWi7xycUy62I-yUlUTDUkpXnvy4vUof2s0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline">
