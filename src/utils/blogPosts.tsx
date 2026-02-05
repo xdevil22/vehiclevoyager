@@ -13,7 +13,9 @@ import Blog8 from "./blogpostdata/blog8";
 import Blog11 from "./blogpostdata/blog11";
 import Blog12 from "./blogpostdata/blog12";
 import Blog13 from "./blogpostdata/blog13";
+import Blog14 from "./blogpostdata/blog14";
 export interface BlogPost {
+  blogid: number;
   slug: string;
   mainTitle: string;
   title: string;
@@ -28,6 +30,38 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    blogid: 14,
+    slug: "waste-management-phoenix-open-history-insider-guide-ultimate-trip",
+    mainTitle:
+      "Waste Management Phoenix Open: History, Insider Guide, and How to Plan the Ultimate Trip",
+
+    title: "History, Insider Guide, and How to Plan the Ultimate Trip",
+    excerpt: (
+      <>
+        This February 2nd-8th, Scottsdale, Arizona becomes the epicenter of the
+        golf world as the Waste Management Phoenix Open returns to the Valley of
+        the Sun. Known as “The Greatest Show on Grass,” this PGA Tour event
+        blends elite professional golf with a high-energy, festival-like
+        atmosphere unlike any other tournament in the sport.
+      </>
+    ),
+    date: "Published on: January 29, 2026",
+    image: "assets/blogs/phoenix-open.webp",
+    seoTitle:
+      "Waste Management Phoenix Open-History, Insider Guide, and How to Plan the Ultimate Trip",
+    seoDescription:
+      "Experience Waste Management Phoenix Open, the most famous golf tournament in the United States. History, insider tips, record sales, and travel planning guide",
+    keywords:
+      "Waste Management Phoenix Open history, Waste Management Phoenix Open insider guide, How to attend Waste Management Phoenix Open, Waste Management Phoenix Open ticket prices, How to watch Waste Management Phoenix Open, Waste Management Phoenix Open record sales, Luxury golf tournament Scottsdale, Muscle cars at Waste Management Phoenix Open, Celebrity golfers at Waste Management Phoenix Open, Waste Management Phoenix Open tournament week events",
+
+    content: (
+      <>
+        <Blog14 />
+      </>
+    ),
+  },
+  {
+    blogid: 13,
     slug: "barrett-jackson-scottsdale-auto-auction-history-insider-guide-ultimate-trip",
     mainTitle:
       "Barrett-Jackson Scottsdale Auto Auction: History, Insider Guide, and How to Plan the Ultimate Trip",
@@ -60,6 +94,7 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 11,
     slug: "must-have-travel-gadgets-for-2026",
     mainTitle: "Must-Have Travel Gadgets for 2026",
 
@@ -89,6 +124,7 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 7,
     slug: "ferrari-sf90-stradale-las-vegas-rental",
     mainTitle: "The Ferrari SF90 Stradale: When Engineering Becomes Art",
 
@@ -111,6 +147,7 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 10,
     slug: "unforgettable-views-from-above",
     mainTitle:
       "Unforgettable Views from Above: The Best Helicopter Tours in Vegas, Maui, Catalina & the Grand Canyon",
@@ -135,6 +172,7 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 12,
     slug: "rving-with-pets-best-pet-friendly-rv-rentals-travel-tips",
     mainTitle: "RVing with Pets - Best Pet-Friendly RV Rentals and Travel Tips",
 
@@ -156,6 +194,7 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 4,
     slug: "exotic-car-rentals-in-las-vegas",
     mainTitle: "Exotic Car Rentals in Las Vegas - Drive Your Dream Ride",
 
@@ -177,6 +216,7 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 2,
     slug: "road-trip-ready-15-must-have-items-for-your-next-adventure",
     mainTitle: "Road Trip Ready - 15 Must-Have Items for Your Next Adventure",
     title: "Why the Right Gear Makes All the Difference on a Road Trip",
@@ -197,6 +237,7 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 5,
     slug: "7best-rv-rentals-in-phoenix",
     mainTitle: "7 Best RV Rentals in Phoenix for Desert Adventures",
 
@@ -218,6 +259,7 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 6,
     slug: "motorcycle-rentals-in-los-angeles",
     mainTitle: "Motorcycle Rentals in Los Angeles - Top 5 Picks",
 
@@ -246,6 +288,7 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 3,
     slug: "10-best-family-friendly-boat-rentals-in-fort-lauderdale",
     mainTitle: "10 Best Family-Friendly Boat Rentals in Fort Lauderdale",
     title: "Why Fort Lauderdale is Perfect for a Family Boating Day",
@@ -267,6 +310,7 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 1,
     slug: "top-7-luxury-yacht-rentals-in-miami",
     mainTitle:
       "Top 7 Luxury Yacht Rentals in Miami for an Unforgettable Getaway",
@@ -290,6 +334,7 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
+    blogid: 8,
     slug: "u-s-tourism-statistics-trends",
     mainTitle:
       "Travel in Full Swing: U.S. Tourism Statistics & Trends for 2024",
@@ -312,6 +357,7 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 9,
     slug: "new-york-travel-by-the-numbers",
     mainTitle:
       "New York Travel by the Numbers: 2023 Tourism Insights & What's Ahead",

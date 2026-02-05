@@ -1,17 +1,19 @@
-import React from "react";
+import React, {JSX} from "react";
 import {Link} from "react-router-dom";
 import {BASE_URL} from "../../../utils/constants";
 
 interface BlogCardProps {
+  blogid: number;
   slug: string;
   mainTitle: string;
   title: string;
-  excerpt: string;
+  excerpt: string | JSX.Element;
   date: string;
   image: string;
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({
+  blogid,
   slug,
   mainTitle,
   title,
@@ -26,9 +28,9 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <div className="px-5">
           {" "}
           <div className="text-sm text-gray-600 italic leading-relaxed advertiser-disclosure">
-            Vechura may earn a commission from affiliate links in this post, at
-            no extra cost to you. As an Amazon Associate, we earn from
-            qualifying purchases. Learn more in our Advertiser Disclosure.
+            {blogid === 14
+              ? "Vechura may earn a commission from affiliate links in this post, at no extra cost to you. Learn more in our Advertiser Disclosure"
+              : "Vechura may earn a commission from affiliate links in this post, at no extra cost to you. As an Amazon Associate, we earn from qualifying purchases. Learn more in our Advertiser Disclosure."}
           </div>
           <hr className="my-6 border-t-2 border-gray-400" />
         </div>

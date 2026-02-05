@@ -25,9 +25,9 @@ const BlogPost: React.FC = () => {
         <article className="md:col-span-2">
           <h1 className="text-3xl font-bold mb-6">{post.mainTitle}</h1>
           <div className="text-sm text-gray-600 italic leading-relaxed advertiser-disclosure">
-            Vechura may earn a commission from affiliate links in this post, at
-            no extra cost to you. As an Amazon Associate, we earn from
-            qualifying purchases. Learn more in our Advertiser Disclosure.
+            {post.blogid === 14
+              ? "Vechura may earn a commission from affiliate links in this post, at no extra cost to you. Learn more in our Advertiser Disclosure"
+              : "Vechura may earn a commission from affiliate links in this post, at no extra cost to you. As an Amazon Associate, we earn from qualifying purchases. Learn more in our Advertiser Disclosure."}
           </div>
           <hr className="my-6 border-t-2 border-gray-400" />
           <img
