@@ -1,5 +1,7 @@
 import React from "react";
 import {logosImages} from "../../../assets";
+
+import ExpediaAffiliate from "./ExpediaAffiliate";
 type Provider = {
   href: string;
   imgSrc: string;
@@ -56,6 +58,12 @@ const providers: Provider[] = [
     alt: "Lvc Exotic",
     className: "lvcexotic",
   },
+  {
+    href: "https://www.expedia.com/?siteid=1&langid=1033&clickref=1110lVjksag&affcid=US.DIRECT.PHG.1100l416322.1100l75595&ref_id=1110lVjksag&my_ad=AFF.US.DIRECT.PHG.1100l416322.1100l75595&afflid=1110lVjksag&affdtl=PHG.1110lVjksag.PZAcfXM5TJ",
+    imgSrc: logosImages.expediainline,
+    alt: "Expedia Inline",
+    className: "expediainline",
+  },
 ];
 {
 }
@@ -74,7 +82,7 @@ const AffiliateLogos = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visit ${provider.alt}`}
-              className="flex items-center justify-center  bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200">
+              className={`flex items-center justify-center  bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200 ${provider.className === "expediainline" ? "expediainline" : null}`}>
               <img
                 src={provider.imgSrc}
                 alt={provider.alt}

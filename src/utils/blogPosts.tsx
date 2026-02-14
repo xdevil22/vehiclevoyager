@@ -14,6 +14,8 @@ import Blog11 from "./blogpostdata/blog11";
 import Blog12 from "./blogpostdata/blog12";
 import Blog13 from "./blogpostdata/blog13";
 import Blog14 from "./blogpostdata/blog14";
+import Blog15 from "./blogpostdata/blog15";
+import Blog16 from "./blogpostdata/blog16";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -124,6 +126,29 @@ export const blogPosts: BlogPost[] = [
     ),
   },
   {
+    blogid: 16,
+    slug: "top-10-car-rental-scams-and-how-to-avoid-them-in-2026",
+    mainTitle: "Top 10 Car Rental Scams and How to Avoid Them in 2026",
+
+    title:
+      "Before you book your next rental, learn how to spot hidden fees, false damage claims, and costly upsells that catch travelers off guard.",
+    excerpt:
+      "Most rental experiences go smoothly, but some companies, and plenty of lesser-known operators, still rely on sneaky tricks to squeeze extra money out of travelers. From phantom damage fees to unnecessary insurance charges, the wrong rental counter can turn a relaxing trip into a financial headache.",
+    date: "Published on: November 18, 2025",
+    image: "assets/blogs/rental-sacam.webp",
+    seoTitle: "Top 10 Car Rental Scams in 2026 - Avoid These Costly Traps",
+    seoDescription:
+      "Learn how to spot and avoid the most common car rental scams in 2026. Protect your wallet with insider tips and trusted rental platforms.",
+    keywords:
+      "car rental scams 2026, avoid car rental fraud, car hire hidden fees, rental car scams at airport, how to avoid rental car scams, trusted car rental platforms, car rental safety tips, rental car overcharging scams",
+
+    content: (
+      <>
+        <Blog16 />
+      </>
+    ),
+  },
+  {
     blogid: 7,
     slug: "ferrari-sf90-stradale-las-vegas-rental",
     mainTitle: "The Ferrari SF90 Stradale: When Engineering Becomes Art",
@@ -190,6 +215,31 @@ export const blogPosts: BlogPost[] = [
     content: (
       <>
         <Blog12 />
+      </>
+    ),
+  },
+  {
+    blogid: 15,
+    slug: "flying-private-first-time-what-to-expect-etiquette-insider-tips",
+    mainTitle:
+      "Flying Private for the First Time: What to Expect, Etiquette, and Insider Tips",
+
+    title:
+      "Everything you need to know before chartering your first private jet from arrival timing to onboard etiquette.",
+    excerpt:
+      "Chartering a private jet is one of the most luxurious ways to travel, but if it's your first time, you might wonder: What's the proper etiquette? Private aviation has its own rhythm, with unspoken rules that help maintain comfort, safety, and professionalism for everyone on board.",
+    date: "Published on: May 12, 2025",
+    image: "assets/blogs/blog15/flying-private.webp",
+    seoTitle:
+      "Private Jet Etiquette-What to Expect on Your First Charter Flight",
+    seoDescription:
+      "Flying private? Learn the essential do's and don'ts of private jet etiquette, from boarding and tipping to in-flight behavior.",
+    keywords:
+      "private jet etiquette, private jet travel tips, private flight manners, private aviation guide, flying private for the first time, private jet boarding rules, in-flight etiquette private jet, private aviation dos and don'ts",
+
+    content: (
+      <>
+        <Blog15 />
       </>
     ),
   },

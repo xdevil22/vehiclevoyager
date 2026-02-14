@@ -27,7 +27,9 @@ const BlogPost: React.FC = () => {
           <div className="text-sm text-gray-600 italic leading-relaxed advertiser-disclosure">
             {post.blogid === 14
               ? "Vechura may earn a commission from affiliate links in this post, at no extra cost to you. Learn more in our Advertiser Disclosure"
-              : "Vechura may earn a commission from affiliate links in this post, at no extra cost to you. As an Amazon Associate, we earn from qualifying purchases. Learn more in our Advertiser Disclosure."}
+              : post.blogid === 16
+                ? null
+                : "Vechura may earn a commission from affiliate links in this post, at no extra cost to you. As an Amazon Associate, we earn from qualifying purchases. Learn more in our Advertiser Disclosure."}
           </div>
           <hr className="my-6 border-t-2 border-gray-400" />
           <img

@@ -91,3 +91,7 @@ div
   font-size: 12px !important;
   font-family: Helvetica, sans-serif;
 }
+.affiliate-logos a.expediainline {
+  background: #181f3a;
+  border-radius: 0;
+}

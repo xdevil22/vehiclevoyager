@@ -13,6 +13,7 @@ import sailo from "./logos/sailo.webp";
 import defaultVehicle2 from "./default-vehicle2.webp";
 import lvcexotic from "./logos/lvcexotic.webp";
 import maverick from "./logos/maverick.webp";
+import expediainline from "./logos/expedia-inline.svg";
 
 export const heroImages = [
   {
@@ -49,6 +50,7 @@ export const logosImages = {
   sailo,
   maverick,
   lvcexotic,
+  expediainline,
 };
 export const defaultImages = {
   defaultVehicle2,
