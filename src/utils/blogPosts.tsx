@@ -16,6 +16,7 @@ import Blog13 from "./blogpostdata/blog13";
 import Blog14 from "./blogpostdata/blog14";
 import Blog15 from "./blogpostdata/blog15";
 import Blog16 from "./blogpostdata/blog16";
+import Blog17 from "./blogpostdata/blog17";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -31,6 +32,46 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 17,
+    slug: "spring-training-in-arizona-complete-travel-guide-for-tickets-travel-and-getting-around",
+    mainTitle:
+      "Spring Training in Arizona: Complete Travel Guide for Tickets, Travel, and Getting Around",
+
+    title: "Complete Travel Guide for Tickets, Travel, and Getting Around",
+    excerpt: (
+      <>
+        Every February and March, Arizona becomes the center of the baseball
+        world as 15{" "}
+        <a
+          href="https://www.mlb.com/spring-training/cactus-league"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline">
+          Major League Baseball
+        </a>{" "}
+        teams head to the desert for Cactus League Spring Training. For fans, it
+        is one of the best times of year to experience MLB up close. Smaller
+        ballparks, sunny weather, relaxed seating, and easy access to players
+        make Spring Training one of the most fan-friendly events in professional
+        sports.
+      </>
+    ),
+    date: "Published on: February 18, 2026",
+    image: "assets/blogs/blog17/spring-training.webp",
+    seoTitle:
+      "Spring Training in Arizona: Complete Travel Guide for Tickets, Travel, and Getting Around",
+    seoDescription:
+      "Experience Spring Training in Arizona, the most popular baseball event in the United States. History, insider tips, record sales, and travel planning guide",
+    keywords:
+      "Spring Training in Arizona, Major League Baseball, Cactus League, baseball travel guide, Arizona baseball events, Spring Training tickets, Spring Training travel tips",
+
+    content: (
+      <>
+        <Blog17 />
+      </>
+    ),
+  },
   {
     blogid: 14,
     slug: "waste-management-phoenix-open-history-insider-guide-ultimate-trip",
