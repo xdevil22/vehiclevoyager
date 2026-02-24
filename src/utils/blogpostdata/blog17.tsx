@@ -1,6 +1,5 @@
 import React from "react";
 import {BASE_URL} from "../constants";
-import fbo from "../../../public/assets/blogs/blog15/fbo.webp";
 import springGround from "../../../public/assets/blogs/blog17/spring-ground.webp";
 import clevelandIndian from "../../../public/assets/blogs/blog17/cleveland-indian.webp";
 import springBaseball from "../../../public/assets/blogs/blog17/spring-baseball.webp";
@@ -52,7 +51,7 @@ export default function Blog17() {
         <div className="text-center">
           <img
             src={BASE_URL + clevelandIndian}
-            alt="power meets precision"
+            alt="cleveland indian"
             className="inline-block"
             loading="lazy"
           />
@@ -266,7 +265,7 @@ export default function Blog17() {
         <div className="text-center">
           <img
             src={BASE_URL + springGround}
-            alt="power meets precision"
+            alt="spring ground"
             className="inline-block"
             loading="lazy"
           />
@@ -450,7 +449,7 @@ export default function Blog17() {
         <div className="text-center">
           <img
             src={BASE_URL + springBaseball}
-            alt="power meets precision"
+            alt="spring-baseball"
             className="inline-block"
             loading="lazy"
           />
@@ -542,8 +541,6 @@ export default function Blog17() {
           </a>
           .{" "}
         </p>
-
-        <hr className="my-6 border-t-2 border-gray-400" />
       </div>
     </>
   );

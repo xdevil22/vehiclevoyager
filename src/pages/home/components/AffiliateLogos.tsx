@@ -12,9 +12,9 @@ type Provider = {
 const providers: Provider[] = [
   {
     href: "https://www.villiersjets.com/",
-    imgSrc: logosImages.Jetslogo,
+    imgSrc: logosImages.villers,
     alt: "Villiers Jets logo",
-    className: "jetslogo",
+    className: "villerslogo",
   },
   {
     href: "https://www.riders-share.com/",
@@ -64,6 +64,12 @@ const providers: Provider[] = [
     alt: "Expedia Inline",
     className: "expediainline",
   },
+  {
+    href: "https://turoinc.sjv.io/xJEn5A",
+    imgSrc: logosImages.turologo,
+    alt: "Turo",
+    className: "turologo",
+  },
 ];
 {
 }
@@ -82,7 +88,7 @@ const AffiliateLogos = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visit ${provider.alt}`}
-              className={`flex items-center justify-center  bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200 ${provider.className === "expediainline" ? "expediainline" : null}`}>
+              className={`flex items-center justify-center  bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200 ${provider.className === "expediainline" ? "expediainline" : provider.className === "turologo" ? "turologo" : null}`}>
               <img
                 src={provider.imgSrc}
                 alt={provider.alt}

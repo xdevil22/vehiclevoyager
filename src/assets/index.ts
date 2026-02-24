@@ -4,7 +4,7 @@ import bus from "./herobanner/bus.webp";
 import motercycle from "./herobanner/motercycle.webp";
 import plane from "./herobanner/plane.webp";
 import helicopters from "./herobanner/helicopters.webp";
-import Jetslogo from "./logos/turo.webp";
+import villers from "./logos/villers.webp";
 import riderslogo from "./logos/ride-share.webp";
 import outdoorsylogo from "./logos/outdoorsy.webp";
 import getmyboatlogo from "./logos/gmyb.webp";
@@ -14,6 +14,7 @@ import defaultVehicle2 from "./default-vehicle2.webp";
 import lvcexotic from "./logos/lvcexotic.webp";
 import maverick from "./logos/maverick.webp";
 import expediainline from "./logos/expedia-inline.svg";
+import turologo from "./logos/turoemblema.webp";
 
 export const heroImages = [
   {
@@ -42,7 +43,7 @@ export const heroImages = [
   },
 ];
 export const logosImages = {
-  Jetslogo,
+  villers,
   riderslogo,
   outdoorsylogo,
   getmyboatlogo,
@@ -51,6 +52,7 @@ export const logosImages = {
   maverick,
   lvcexotic,
   expediainline,
+  turologo,
 };
 export const defaultImages = {
   defaultVehicle2,

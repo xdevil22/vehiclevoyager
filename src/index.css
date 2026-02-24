@@ -95,3 +95,13 @@ div
   background: #181f3a;
   border-radius: 0;
 }
+.affiliate-logos a.turologo {
+  padding: 0;
+}
+.affiliate-logos a.turologo img {
+  max-width: 100%;
+  height: auto;
+}
+.affiliate-logos a .villerslogo {
+  height: 66px;
+}

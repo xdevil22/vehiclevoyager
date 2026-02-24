@@ -17,6 +17,7 @@ import Blog14 from "./blogpostdata/blog14";
 import Blog15 from "./blogpostdata/blog15";
 import Blog16 from "./blogpostdata/blog16";
 import Blog17 from "./blogpostdata/blog17";
+import Blog18 from "./blogpostdata/blog18";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -32,6 +33,35 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 18,
+    slug: "best-places-to-ski-in-the-u-s-7-top-winter-destinations-for-skiers-and-snowboarders",
+    mainTitle:
+      "Best Places to Ski in the U.S.: 7 Top Winter Destinations for Skiers and Snowboarders",
+
+    title: "7 Top Winter Destinations for Skiers and Snowboarders",
+    excerpt: (
+      <>
+        From powder-filled bowls in Colorado to lake-view runs in California,
+        the United States offers some of the best skiing and snowboarding in the
+        world. But choosing the right destination can make or break your trip.
+      </>
+    ),
+    date: "Published on: February 20, 2026",
+    image: "assets/blogs/blog18/skiers.webp",
+    seoTitle:
+      "Best Places to Ski in the U.S.: 7 Top Winter Destinations for Skiers and Snowboarders",
+    seoDescription:
+      "Discover the best ski destinations in the U.S. from Colorado to California. Find top winter resorts for skiers and snowboarders.",
+    keywords:
+      "skiing in the U.S., winter sports, ski resorts, snowboarding, best ski destinations, Colorado skiing, California skiing",
+
+    content: (
+      <>
+        <Blog18 />
+      </>
+    ),
+  },
   {
     blogid: 17,
     slug: "spring-training-in-arizona-complete-travel-guide-for-tickets-travel-and-getting-around",
