@@ -18,6 +18,7 @@ import Blog15 from "./blogpostdata/blog15";
 import Blog16 from "./blogpostdata/blog16";
 import Blog17 from "./blogpostdata/blog17";
 import Blog18 from "./blogpostdata/blog18";
+import Blog19 from "./blogpostdata/blog19";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -33,6 +34,47 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 19,
+    slug: "sxsw-2026-travel-guide-for-tickets-events-where-to-stay-and-getting-around-austin",
+    mainTitle:
+      "SXSW 2026: Travel Guide for Tickets, Events, Where to Stay, and Getting Around Austin",
+
+    title:
+      "Travel Guide for Tickets, Events, Where to Stay, and Getting Around Austin",
+    excerpt: (
+      <>
+        Every March, Austin becomes one of the busiest and most creative cities
+        in the world as{" "}
+        <a
+          href="https://sxsw.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline">
+          SXSW
+        </a>{" "}
+        <strong>(South by Southwest) </strong> takes over downtown. What began
+        as a small music festival in 1987, has grown into one of the largest
+        cultural events in the United States. It brings together technology
+        leaders, musicians, filmmakers, entrepreneurs, and fans from around the
+        globe.
+      </>
+    ),
+    date: "Published on: March 10, 2026",
+    image: "assets/blogs/blog19/sxsw-austin.webp",
+    seoTitle:
+      "Best Places to Ski in the U.S.: 7 Top Winter Destinations for Skiers and Snowboarders",
+    seoDescription:
+      "Discover the best ski destinations in the U.S. from Colorado to California. Find top winter resorts for skiers and snowboarders.",
+    keywords:
+      "skiing in the U.S., winter sports, ski resorts, snowboarding, best ski destinations, Colorado skiing, California skiing",
+
+    content: (
+      <>
+        <Blog19 />
+      </>
+    ),
+  },
   {
     blogid: 18,
     slug: "best-places-to-ski-in-the-u-s-7-top-winter-destinations-for-skiers-and-snowboarders",
