@@ -81,11 +81,11 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-2 vechuraLogo">
             <img
-              src={BASE_URL + vechuraLogo}
+              src={vechuraLogo}
               alt="Vechura"
               loading="lazy"
-              height="30px"
-              width="42px"
+              height="30"
+              width="42"
             />
             <span className="text-3xl font-bold text-neutral-900">Vechura</span>
           </div>
