@@ -11,6 +11,7 @@ const ClickBoatWidget = () => {
           width="100%"
           height="600"
           title="Click&Boat Widget"
+          loading="lazy"
           className="w-full click-boat-iframe"
         ></iframe>
       </div>
