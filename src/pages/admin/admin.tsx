@@ -89,6 +89,17 @@ const Admin = () => {
           appear here.
         </p>
       </section>
+
+      {/* LANDING PAGES MANAGEMENT */}
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold mb-2">Landing Pages</h2>
+        <a
+          href="/admin/create-landing-page"
+          className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Create New Landing Page
+        </a>
+      </section>
     </div>
   );
 };

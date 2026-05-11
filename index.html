@@ -104,16 +104,15 @@
 
     <!-- Cookie Suppression Scripts -->
     <script>
-      const observer = new MutationObserver(() => {
-        document.querySelectorAll("div, p, span").forEach((el) => {
-          if (el.innerText?.includes("Cookies are disabled")) {
-            el.style.display = "none";
-          }
+      const initCookieSuppression = () => {
+        const observer = new MutationObserver(() => {
+          document.querySelectorAll("div, p, span").forEach((el) => {
+            if (el.innerText?.includes("Cookies are disabled")) {
+              el.style.display = "none";
+            }
+          });
         });
-      });
-      observer.observe(document.body, {childList: true, subtree: true});
 
-      (function () {
         const blockList = ["Cookies are disabled", "Please enable cookies"];
         const originalAlert = window.alert;
         window.alert = function (msg) {
@@ -126,6 +125,7 @@
           }
           return originalAlert(msg);
         };
+
         const observer2 = new MutationObserver(() => {
           document.querySelectorAll("div, p, span").forEach((el) => {
             if (
@@ -136,8 +136,18 @@
             }
           });
         });
-        observer2.observe(document.body, {childList: true, subtree: true});
-      })();
+
+        if (document.body) {
+          observer.observe(document.body, {childList: true, subtree: true});
+          observer2.observe(document.body, {childList: true, subtree: true});
+        }
+      };
+
+      if (document.readyState === "loading") {
+        window.addEventListener("DOMContentLoaded", initCookieSuppression);
+      } else {
+        initCookieSuppression();
+      }
     </script>
     <script
       async
@@ -182,10 +192,6 @@
           setTimeout(registerEvents, 250);
         }
       });
-
-
-
-
     </script>
 
     <script type="module" src="/src/main.tsx"></script>

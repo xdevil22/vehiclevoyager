@@ -5,6 +5,7 @@ import {FaHelicopter} from "react-icons/fa";
 import vechuraLogo from "../../public/assets/vechura-logo.webp";
 import {BASE_URL} from "../utils/constants";
 import BlogSearchDropdown from "./BlogSearchDropdown";
+import InfoModal from "./InfoModal";
 
 // 🧩 Type definition for categories
 interface Category {
@@ -18,6 +19,7 @@ export default function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   const isHomePage = location.pathname === "/";
   const [searchInput, setSearchInput] = useState("");
@@ -39,6 +41,15 @@ export default function Header() {
   const handleSubscribe = (): void => {
     navigate("/email-signup");
   };
+
+  const handleCreateLandingPage = (): void => {
+    if (!isLoggedIn) {
+      setShowLoginModal(true);
+    } else {
+      navigate("/admin/create-landing-page");
+    }
+  };
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (!searchInput.trim()) return;
@@ -60,6 +71,8 @@ export default function Header() {
     {name: "Booking Tools", path: "/booking-tools"},
     {name: "About", path: "/about"},
     {name: "Blog", path: "/blog"},
+    {name: "Create Landing Pages", path: "/admin/create-landing-page"},
+
     // {
     //   name: isLoggedIn ? "Logout" : "Login",
     //   path: isLoggedIn ? "/" : "/admin/login",
@@ -75,59 +88,71 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full border-b sticky top-0 z-40 bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 lg:px-6">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center space-x-2 vechuraLogo">
-            <img
-              src={vechuraLogo}
-              alt="Vechura"
-              loading="lazy"
-              height="30"
-              width="42"
-            />
-            <span className="text-3xl font-bold text-neutral-900">Vechura</span>
-          </div>
+    <>
+      <header className="w-full border-b sticky top-0 z-40 bg-white shadow-md">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+          <div className="flex justify-between items-center py-4">
+            {/* Logo */}
+            <div className="flex items-center space-x-2 vechuraLogo">
+              <img
+                src={vechuraLogo}
+                alt="Vechura"
+                loading="lazy"
+                height="30"
+                width="42"
+              />
+              <span className="text-3xl font-bold text-neutral-900">
+                Vechura
+              </span>
+            </div>
 
-          {/* Desktop Navigation */}
-          <nav className="space-x-6 hidden md:flex">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.path}
-                // onClick={() => {
-                //   if (link.name === "Logout") handleLogout();
-                // }}
-                className={({isActive}) =>
-                  `text-lg font-medium hover:text-blue-600 ${
-                    isActive ? "text-blue-600" : "text-gray-800"
-                  }`
-                }>
-                {link.name}
-              </NavLink>
-            ))}
-            {/* Search Bar */}
-          </nav>
+            {/* Desktop Navigation */}
+            <nav className="space-x-6 hidden md:flex">
+              {navLinks.map((link) =>
+                link.name === "Create Landing Pages" ? (
+                  <button
+                    key={link.name}
+                    onClick={handleCreateLandingPage}
+                    className="text-lg font-medium text-gray-800 hover:text-blue-600 cursor-pointer">
+                    {link.name}
+                  </button>
+                ) : (
+                  <NavLink
+                    key={link.name}
+                    to={link.path}
+                    // onClick={() => {
+                    //   if (link.name === "Logout") handleLogout();
+                    // }}
+                    className={({isActive}) =>
+                      `text-lg font-medium hover:text-blue-600 ${
+                        isActive ? "text-blue-600" : "text-gray-800"
+                      }`
+                    }>
+                    {link.name}
+                  </NavLink>
+                ),
+              )}
+              {/* Search Bar */}
+            </nav>
 
-          {/* Desktop Login/Logout */}
-          <div className="hidden md:flex items-center gap-6 relative">
-            {/* Subscribe Button */}
-            <button
-              onClick={handleSubscribe}
-              className="bg-blue-600 text-white rounded-full px-6 py-2 text-sm font-semibold hover:bg-blue-700 transition-all duration-200">
-              Subscribe
-            </button>
+            {/* Desktop Login/Logout */}
+            <div className="hidden md:flex items-center gap-6 relative">
+              {/* Subscribe Button */}
+              <button
+                onClick={handleSubscribe}
+                className="bg-blue-600 text-white rounded-full px-6 py-2 text-sm font-semibold hover:bg-blue-700 transition-all duration-200">
+                Subscribe
+              </button>
 
-            {/* Advertiser Disclosure */}
-            <Link
-              to="/advertiser-disclosure"
-              className="text-sm font-medium text-blue-600 hover:underline">
-              Advertiser Disclosure
-            </Link>
+              {/* Advertiser Disclosure */}
+              <Link
+                to="/advertiser-disclosure"
+                className="text-sm font-medium text-blue-600 hover:underline">
+                Advertiser Disclosure
+              </Link>
 
-            {/* Search Icon */}
-            {/* <button
+              {/* Search Icon */}
+              {/* <button
               onClick={() => setSearchOpen((prev) => !prev)}
               className="relative z-50">
               {searchOpen ? (
@@ -137,15 +162,15 @@ export default function Header() {
               )}
             </button> */}
 
-            {/* Floating Search Bar */}
-            {/* <div
+              {/* Floating Search Bar */}
+              {/* <div
               className={`absolute right-0 top-full mt-3 w-64 bg-white shadow-md rounded-full px-4 py-2 flex items-center transition-all duration-300 overflow-hidden border 
       ${
         searchOpen
           ? "opacity-100 translate-y-0"
           : "opacity-0 -translate-y-2 pointer-events-none"
       }`}> */}
-            {/* <form onSubmit={handleSearch} className="flex w-full">
+              {/* <form onSubmit={handleSearch} className="flex w-full">
                 <input
                   type="text"
                   placeholder="Search blog..."
@@ -158,20 +183,6 @@ export default function Header() {
                   <i className="ri-search-line text-lg text-gray-600 hover:text-blue-600"></i>
                 </button>
               </form> */}
-            <BlogSearchDropdown
-              searchOpen={searchOpen}
-              setSearchOpen={setSearchOpen}
-              searchInput={searchInput}
-              setSearchInput={setSearchInput}
-              handleSearch={handleSearch}
-            />
-            {/* </div> */}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden ">
-            {/* Search Icon */}
-            <div className="relative inline-block">
               <BlogSearchDropdown
                 searchOpen={searchOpen}
                 setSearchOpen={setSearchOpen}
@@ -179,21 +190,35 @@ export default function Header() {
                 setSearchInput={setSearchInput}
                 handleSearch={handleSearch}
               />
+              {/* </div> */}
             </div>
 
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-800 text-2xl focus:outline-none">
-              <i className={`ri-${isMenuOpen ? "close" : "menu"}-line`}></i>
-            </button>
-          </div>
-        </div>
+            {/* Mobile Menu Button */}
+            <div className="md:hidden ">
+              {/* Search Icon */}
+              <div className="relative inline-block">
+                <BlogSearchDropdown
+                  searchOpen={searchOpen}
+                  setSearchOpen={setSearchOpen}
+                  searchInput={searchInput}
+                  setSearchInput={setSearchInput}
+                  handleSearch={handleSearch}
+                />
+              </div>
 
-        {/* Mobile Menu Dropdown */}
-        {isMenuOpen && (
-          <div className="md:hidden border-t py-2 space-y-2">
-            {/* Mobile Search */}
-            {/* <form onSubmit={handleSearch} className="relative px-4">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-800 text-2xl focus:outline-none">
+                <i className={`ri-${isMenuOpen ? "close" : "menu"}-line`}></i>
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Menu Dropdown */}
+          {isMenuOpen && (
+            <div className="md:hidden border-t py-2 space-y-2">
+              {/* Mobile Search */}
+              {/* <form onSubmit={handleSearch} className="relative px-4">
               <input
                 type="text"
                 placeholder="Search blog..."
@@ -207,127 +232,156 @@ export default function Header() {
                 <i className="ri-search-line text-lg"></i>
               </button>
             </form> */}
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.path}
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  if (link.name === "Logout") {
-                    handleLogout();
-                  }
-                }}
-                className={({isActive}) =>
-                  `block px-4 py-2 text-sm font-medium ${
-                    isActive ? "text-blue-600" : "text-gray-800"
-                  }`
-                }>
-                {link.name}
-              </NavLink>
-            ))}
+              {navLinks.map((link) =>
+                link.name === "Create Landing Pages" ? (
+                  <button
+                    key={link.name}
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      handleCreateLandingPage();
+                    }}
+                    className="block w-full text-left px-4 py-2 text-sm font-medium text-gray-800 hover:text-blue-600">
+                    {link.name}
+                  </button>
+                ) : (
+                  <NavLink
+                    key={link.name}
+                    to={link.path}
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      if (link.name === "Logout") {
+                        handleLogout();
+                      }
+                    }}
+                    className={({isActive}) =>
+                      `block px-4 py-2 text-sm font-medium ${
+                        isActive ? "text-blue-600" : "text-gray-800"
+                      }`
+                    }>
+                    {link.name}
+                  </NavLink>
+                ),
+              )}
 
-            <button
-              onClick={handleSubscribe}
-              className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800">
-              Subscribe
-            </button>
-            <Link
-              key="AdvertiserDisclosure"
-              to="/advertiser-disclosure"
-              className="text-blue-600 hover:underline text-sm font-medium">
-              Advertiser Disclosure
-            </Link>
-          </div>
-        )}
-
-        {/* Homepage Category Bar */}
-        {isHomePage && (
-          <nav className="pt-2">
-            {/* Desktop / Tablet: horizontal scroll */}
-            <div className="hidden md:flex gap-4 overflow-x-auto">
-              {categories.map((cat) => (
-                <a
-                  key={cat.label}
-                  href={`#${cat.label.replace(/\s+/g, "-")}`}
-                  className="text-sm font-semibold text-blue-600 hover:underline whitespace-nowrap flex items-center">
-                  {typeof cat.icon === "string" ? (
-                    <i className={`${cat.icon} mr-1`} />
-                  ) : (
-                    <span className="mr-1">{cat.icon}</span>
-                  )}
-                  {cat.label}
-                </a>
-              ))}
+              <button
+                onClick={handleSubscribe}
+                className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800">
+                Subscribe
+              </button>
+              <Link
+                key="AdvertiserDisclosure"
+                to="/advertiser-disclosure"
+                className="text-blue-600 hover:underline text-sm font-medium">
+                Advertiser Disclosure
+              </Link>
             </div>
+          )}
 
-            {/* Mobile: dropdown */}
-            <div className="w-full md:hidden relative">
-              <Listbox value={selected} onChange={handleSelect}>
-                <Listbox.Button className="w-full bg-white border border-gray-300 rounded-lg p-2 flex items-center justify-between shadow-sm hover:border-blue-400">
-                  <div className="flex items-center gap-2">
-                    {typeof selected.icon === "string" ? (
-                      <i className={`${selected.icon} text-blue-600`} />
+          {/* Homepage Category Bar */}
+          {isHomePage && (
+            <nav className="pt-2">
+              {/* Desktop / Tablet: horizontal scroll */}
+              <div className="hidden md:flex gap-4 overflow-x-auto">
+                {categories.map((cat) => (
+                  <a
+                    key={cat.label}
+                    href={`#${cat.label.replace(/\s+/g, "-")}`}
+                    className="text-sm font-semibold text-blue-600 hover:underline whitespace-nowrap flex items-center">
+                    {typeof cat.icon === "string" ? (
+                      <i className={`${cat.icon} mr-1`} />
                     ) : (
-                      <span className="text-blue-600">{selected.icon}</span>
+                      <span className="mr-1">{cat.icon}</span>
                     )}
-                    <span>{selected.label}</span>
-                  </div>
-                  <svg
-                    className="w-4 h-4 text-gray-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </Listbox.Button>
+                    {cat.label}
+                  </a>
+                ))}
+              </div>
 
-                <Listbox.Options className="absolute z-10 mt-1 w-full max-h-60 overflow-auto rounded-lg bg-white border border-gray-300 shadow-lg">
-                  {categories.map((cat) => (
-                    <Listbox.Option
-                      key={cat.label}
-                      value={cat}
-                      className={({active}: {active: boolean}) =>
-                        `cursor-pointer select-none flex items-center gap-2 p-2 transition-colors duration-150 ${
-                          active ? "bg-blue-100 text-blue-700" : "text-gray-700"
-                        }`
-                      }>
-                      {({active}) => (
-                        <>
-                          {typeof cat.icon === "string" ? (
-                            <i
-                              className={`${cat.icon} ${
-                                active ? "text-blue-700" : "text-gray-500"
-                              }`}
-                            />
-                          ) : (
+              {/* Mobile: dropdown */}
+              <div className="w-full md:hidden relative">
+                <Listbox value={selected} onChange={handleSelect}>
+                  <Listbox.Button className="w-full bg-white border border-gray-300 rounded-lg p-2 flex items-center justify-between shadow-sm hover:border-blue-400">
+                    <div className="flex items-center gap-2">
+                      {typeof selected.icon === "string" ? (
+                        <i className={`${selected.icon} text-blue-600`} />
+                      ) : (
+                        <span className="text-blue-600">{selected.icon}</span>
+                      )}
+                      <span>{selected.label}</span>
+                    </div>
+                    <svg
+                      className="w-4 h-4 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </Listbox.Button>
+
+                  <Listbox.Options className="absolute z-10 mt-1 w-full max-h-60 overflow-auto rounded-lg bg-white border border-gray-300 shadow-lg">
+                    {categories.map((cat) => (
+                      <Listbox.Option
+                        key={cat.label}
+                        value={cat}
+                        className={({active}: {active: boolean}) =>
+                          `cursor-pointer select-none flex items-center gap-2 p-2 transition-colors duration-150 ${
+                            active
+                              ? "bg-blue-100 text-blue-700"
+                              : "text-gray-700"
+                          }`
+                        }>
+                        {({active}) => (
+                          <>
+                            {typeof cat.icon === "string" ? (
+                              <i
+                                className={`${cat.icon} ${
+                                  active ? "text-blue-700" : "text-gray-500"
+                                }`}
+                              />
+                            ) : (
+                              <span
+                                className={`${
+                                  active ? "text-blue-700" : "text-gray-500"
+                                }`}>
+                                {cat.icon}
+                              </span>
+                            )}
                             <span
                               className={`${
-                                active ? "text-blue-700" : "text-gray-500"
+                                active ? "font-semibold" : "font-normal"
                               }`}>
-                              {cat.icon}
+                              {cat.label}
                             </span>
-                          )}
-                          <span
-                            className={`${
-                              active ? "font-semibold" : "font-normal"
-                            }`}>
-                            {cat.label}
-                          </span>
-                        </>
-                      )}
-                    </Listbox.Option>
-                  ))}
-                </Listbox.Options>
-              </Listbox>
-            </div>
-          </nav>
-        )}
-      </div>
-    </header>
+                          </>
+                        )}
+                      </Listbox.Option>
+                    ))}
+                  </Listbox.Options>
+                </Listbox>
+              </div>
+            </nav>
+          )}
+        </div>
+      </header>
+
+      <InfoModal
+        isOpen={showLoginModal}
+        title="Login Required"
+        message="For creating a landing page you need to login."
+        type="info"
+        closeText="Cancel"
+        confirmText="Go to Login"
+        onClose={() => setShowLoginModal(false)}
+        onConfirm={() => {
+          setShowLoginModal(false);
+          navigate("/admin/login");
+        }}
+      />
+    </>
   );
 }

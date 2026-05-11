@@ -1,4 +1,4 @@
-import React from "react";
+import React, {JSX} from "react";
 import ReactDOM from "react-dom/client";
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 
@@ -20,9 +20,16 @@ import PrivacyPolicy from "./pages/privacypolicy";
 import BookingTools from "./pages/booking-tools";
 import AdvertiserDisclosure from "./pages/advertiser-disclosure";
 import BrevoNewsletter from "./components/BrevoNewsletter";
-function ProtectedRoute({children}: {children: React.ReactNode}) {
+import LandingPage from "./pages/landing/LandingPage";
+import CreateLandingPage from "./pages/admin/CreateLandingPage";
+
+function ProtectedRoute({
+  children,
+}: {
+  children: React.ReactNode;
+}): JSX.Element | null {
   const isAdmin = sessionStorage.getItem("adminAccess") === "granted";
-  return isAdmin ? children : <Navigate to="/admin/login" replace />;
+  return isAdmin ? <>{children}</> : <Navigate to="/admin/login" replace />;
 }
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -38,6 +45,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route path="/cookiepolicy" element={<CookiePolicy />} />
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/:slug" element={<LandingPage />} />
             <Route
               path="advertiser-disclosure"
               element={<AdvertiserDisclosure />}
@@ -52,11 +60,19 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
                 </ProtectedRoute>
               }
             />
+            <Route
+              path="admin/create-landing-page"
+              element={
+                <ProtectedRoute>
+                  <CreateLandingPage />
+                </ProtectedRoute>
+              }
+            />
           </Route>
 
           <Route path="/admin/login" element={<AdminLogin />} />
         </Routes>
       </BrowserRouter>
     </HeadProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

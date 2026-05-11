@@ -39,7 +39,7 @@ const Footer = () => {
               <span className="text-2xl font-bold font-heading">
                 Vechura
               </span> */}
-              <img src={BASE_URL + vechuraLogo} alt="vechura" loading="lazy" />
+              <img src={vechuraLogo} alt="vechura" loading="lazy" />
               <span className="text-2xl font-bold font-heading">Vechura</span>
             </div>
             <p className="text-neutral-200 mb-6">
@@ -113,9 +113,10 @@ const Footer = () => {
                 "Los Angeles, CA",
                 "Las Vegas, NV",
                 "New York, NY",
-                "Orlando, FL",
+                "Fort Lauderdale, FL",
                 "San Diego, CA",
                 "Phoenix, AZ",
+                "Austin, TX",
               ].map((city) => (
                 <li key={city}>
                   <span className="text-neutral-200">{city}</span>
