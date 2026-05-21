@@ -80,13 +80,7 @@ div
   height: 74px;
   padding: 0 1rem;
 }
-.affiliate-logos a .riderslogo {
-  height: 66px;
-}
 
-.affiliate-logos a .lvcexotic {
-  height: 66px;
-}
 .advertiser-disclosure {
   font-size: 12px !important;
   font-family: Helvetica, sans-serif;
@@ -102,6 +96,22 @@ div
   max-width: 100%;
   height: auto;
 }
+
+.affiliate-logos a.villerslogo {
+  padding: 0;
+  overflow: hidden;
+}
 .affiliate-logos a .villerslogo {
-  height: 66px;
+  height: 80px;
+}
+.affiliate-logos a.riderslogo,
+.affiliate-logos a.lvcexotic {
+  padding: 0;
+}
+.affiliate-logos a .riderslogo {
+  height: 80px;
+}
+
+.affiliate-logos a .lvcexotic {
+  height: 80px;
 }

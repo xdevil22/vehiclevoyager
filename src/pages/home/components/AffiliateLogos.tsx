@@ -88,7 +88,7 @@ const AffiliateLogos = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visit ${provider.alt}`}
-              className={`flex items-center justify-center  bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200 ${provider.className === "expediainline" ? "expediainline" : provider.className === "turologo" ? "turologo" : null}`}>
+              className={`flex items-center justify-center  bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200 ${provider.className === "expediainline" ? "expediainline" : provider.className === "turologo" ? "turologo" : provider.className === "villerslogo" ? "villerslogo" : provider.className === "riderslogo" ? "riderslogo" : provider.className === "lvcexotic" ? "lvcexotic" : null}`}>
               <img
                 src={provider.imgSrc}
                 alt={provider.alt}

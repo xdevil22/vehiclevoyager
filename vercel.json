@@ -1,3 +1,26 @@
 {
-  "rewrites": [{"source": "/(.*)", "destination": "/"}]
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "vehiclevoyager.com"}],
+      "destination": "https://vechura.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "www.vehiclevoyager.com"}],
+      "destination": "https://vechura.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "www.vechura.com"}],
+      "destination": "https://vechura.com/:path*",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {"source": "/api/(.*)", "destination": "/api/$1"},
+    {"source": "/(.*)", "destination": "/"}
+  ]
 }

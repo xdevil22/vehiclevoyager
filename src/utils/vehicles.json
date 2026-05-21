@@ -51,17 +51,17 @@
   {
     "type": "Boats",
     "brand": "Click&Boat",
-    "name": "Samboat Rentals-Bali Catamaran",
-    "image": "assets/custom-images/boats/samboat-catamaran.webp",
-    "url": "https://samboat.pxf.io/RGdmPa",
+    "name": "50' sailing catamaran-42 passengers",
+    "image": "assets/custom-images/boats/ftl_cat image.webp",
+    "url": "https://tidd.ly/3RhoNTD",
     "price": null
   },
   {
     "type": "Boats",
     "brand": "Click&Boat",
-    "name": "Jetcar Watercraft-Samboat Rentals",
-    "image": "assets/custom-images/boats/jetcarsamboat.webp",
-    "url": "https://samboat.pxf.io/POdDJQ",
+    "name": "Ft. Lauderdale Motor Yacht",
+    "image": "assets/custom-images/boats/ftl_motoryacht.webp",
+    "url": "https://tidd.ly/4wExqYp",
     "price": null
   },
 

@@ -71,7 +71,7 @@ export default function Header() {
     {name: "Booking Tools", path: "/booking-tools"},
     {name: "About", path: "/about"},
     {name: "Blog", path: "/blog"},
-    {name: "Create Landing Pages", path: "/admin/create-landing-page"},
+    // {name: "Create Landing Pages", path: "/admin/create-landing-page"},
 
     // {
     //   name: isLoggedIn ? "Logout" : "Login",
@@ -108,30 +108,21 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="space-x-6 hidden md:flex">
-              {navLinks.map((link) =>
-                link.name === "Create Landing Pages" ? (
-                  <button
-                    key={link.name}
-                    onClick={handleCreateLandingPage}
-                    className="text-lg font-medium text-gray-800 hover:text-blue-600 cursor-pointer">
-                    {link.name}
-                  </button>
-                ) : (
-                  <NavLink
-                    key={link.name}
-                    to={link.path}
-                    // onClick={() => {
-                    //   if (link.name === "Logout") handleLogout();
-                    // }}
-                    className={({isActive}) =>
-                      `text-lg font-medium hover:text-blue-600 ${
-                        isActive ? "text-blue-600" : "text-gray-800"
-                      }`
-                    }>
-                    {link.name}
-                  </NavLink>
-                ),
-              )}
+              {navLinks.map((link) => (
+                <NavLink
+                  key={link.name}
+                  to={link.path}
+                  // onClick={() => {
+                  //   if (link.name === "Logout") handleLogout();
+                  // }}
+                  className={({isActive}) =>
+                    `text-lg font-medium hover:text-blue-600 ${
+                      isActive ? "text-blue-600" : "text-gray-800"
+                    }`
+                  }>
+                  {link.name}
+                </NavLink>
+              ))}
               {/* Search Bar */}
             </nav>
 

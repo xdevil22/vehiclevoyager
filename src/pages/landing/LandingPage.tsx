@@ -1,19 +1,70 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {HeadProvider, Title, Meta} from "react-head";
-import {landingPagesBySlug, LandingPageSection} from "./content";
+import {
+  landingPagesBySlug,
+  LandingPageData,
+  LandingPageSection,
+} from "./content";
 import LandingHero from "../../components/landing/LandingHero";
 import LandingSection from "../../components/landing/LandingSection";
 import LandingFAQ from "../../components/landing/LandingFAQ";
 import LandingCTABanner from "../../components/landing/LandingCTABanner";
 
+const readDynamicLandingPages = () => {
+  try {
+    const stored = JSON.parse(localStorage.getItem("landingPages") || "{}");
+    return stored && typeof stored === "object" && !Array.isArray(stored)
+      ? stored
+      : {};
+  } catch (error) {
+    console.warn("Unable to read dynamic landing pages:", error);
+    return {};
+  }
+};
+
 const LandingPage: React.FC = () => {
   const {slug} = useParams();
+  const [dynamicPages, setDynamicPages] =
+    useState<Record<string, LandingPageData>>(readDynamicLandingPages);
+  const [isLoadingDynamicPages, setIsLoadingDynamicPages] = useState(true);
   const staticPage = slug ? landingPagesBySlug[slug] : undefined;
-  const dynamicPages = JSON.parse(localStorage.getItem('landingPages') || '{}');
-  const page = staticPage || (slug ? dynamicPages[slug] : undefined);
+  const page = (slug ? dynamicPages[slug] : undefined) || staticPage;
+
+  useEffect(() => {
+    let isMounted = true;
+
+    fetch(`/landing-pages.json?ts=${Date.now()}`)
+      .then((response) => (response.ok ? response.json() : {}))
+      .then((pages) => {
+        if (!isMounted) return;
+        if (pages && typeof pages === "object" && !Array.isArray(pages)) {
+          setDynamicPages(pages);
+        }
+      })
+      .catch((error) => {
+        console.warn("Unable to fetch landing pages JSON:", error);
+      })
+      .finally(() => {
+        if (isMounted) {
+          setIsLoadingDynamicPages(false);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   if (!page) {
+    if (isLoadingDynamicPages) {
+      return (
+        <div className="min-h-screen bg-neutral-100 flex items-center justify-center px-4 py-16">
+          <p className="text-gray-600">Loading landing page...</p>
+        </div>
+      );
+    }
+
     return (
       <div className="min-h-screen bg-neutral-100 flex items-center justify-center px-4 py-16">
         <div className="max-w-xl text-center bg-white rounded-3xl p-8 shadow-lg">

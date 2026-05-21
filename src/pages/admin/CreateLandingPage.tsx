@@ -32,6 +32,51 @@ interface FAQItem {
   answer: string;
 }
 
+const readStoredLandingPages = (): Record<string, LandingPageData> => {
+  try {
+    const stored = JSON.parse(localStorage.getItem("landingPages") || "{}");
+    return stored && typeof stored === "object" && !Array.isArray(stored)
+      ? stored
+      : {};
+  } catch (error) {
+    console.warn("Unable to read stored landing pages:", error);
+    return {};
+  }
+};
+
+const fetchStoredLandingPages = async (): Promise<
+  Record<string, LandingPageData>
+> => {
+  try {
+    const response = await fetch("/api/create-landing-page");
+    if (!response.ok) {
+      return readStoredLandingPages();
+    }
+
+    const pages = await response.json();
+    return pages && typeof pages === "object" && !Array.isArray(pages)
+      ? pages
+      : {};
+  } catch (error) {
+    console.warn("Unable to fetch landing pages JSON:", error);
+    return readStoredLandingPages();
+  }
+};
+
+const titleCaseFromSlugPart = (value: string) =>
+  value
+    .split("-")
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+const slugify = (value: string) =>
+  value
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
 const CreateLandingPage: React.FC = () => {
   const navigate = useNavigate();
   const [city, setCity] = useState("");
@@ -57,21 +102,20 @@ const CreateLandingPage: React.FC = () => {
   const [editingSlug, setEditingSlug] = useState<string | null>(null);
 
   useEffect(() => {
-    const pages = JSON.parse(localStorage.getItem("landingPages") || "{}");
-    setExistingPages(Object.values(pages));
+    fetchStoredLandingPages().then((pages) =>
+      setExistingPages(Object.values(pages)),
+    );
   }, []);
 
   const loadPageForEdit = (page: LandingPageData) => {
     setEditingSlug(page.slug);
+    const [titleCategory, titleCity] = page.title.split(/\s+in\s+/i);
     const parts = page.slug.split("-");
-    const city = parts.pop() || "";
-    const category = parts.join("-");
-    setCity(city.charAt(0).toUpperCase() + city.slice(1));
+    const fallbackCity = parts.pop() || "";
+    const fallbackCategory = parts.join("-");
+    setCity(titleCity || titleCaseFromSlugPart(fallbackCity));
     setCategory(
-      category
-        .split("-")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" "),
+      titleCity ? titleCategory : titleCaseFromSlugPart(fallbackCategory),
     );
     setHeadline(page.hero.headline);
     setIntro(page.hero.subheadline);
@@ -295,24 +339,42 @@ const CreateLandingPage: React.FC = () => {
     setFaqs(faqs.filter((_, i) => i !== index));
   };
 
-  const generateSlug = (cat: string, cit: string) => {
-    return `${cat.toLowerCase().replace(/\s+/g, "-")}-${cit.toLowerCase().replace(/\s+/g, "-")}`;
-  };
+  const generateSlug = (cat: string) => slugify(cat);
 
-  const deletePage = (slug: string) => {
+  const deletePage = async (slug: string) => {
     if (
       confirm(`Are you sure you want to delete the landing page: /${slug}?`)
     ) {
-      const existing = JSON.parse(localStorage.getItem("landingPages") || "{}");
+      try {
+        const response = await fetch(
+          `/api/create-landing-page?slug=${encodeURIComponent(slug)}`,
+          {
+            method: "DELETE",
+          },
+        );
+
+        if (!response.ok) {
+          console.warn(
+            "API delete failed, removing from localStorage only:",
+            response.status,
+            await response.text(),
+          );
+        }
+      } catch (error) {
+        console.warn("API unavailable, removing from localStorage only:", error);
+      }
+
+      const existing = readStoredLandingPages();
       delete existing[slug];
       localStorage.setItem("landingPages", JSON.stringify(existing));
-      setExistingPages(Object.values(existing));
+      const pages = await fetchStoredLandingPages();
+      setExistingPages(Object.values(pages));
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const slug = editingSlug || generateSlug(category, city);
+    const slug = generateSlug(category);
     const pageData: LandingPageData = {
       slug,
       title: `${category} in ${city}`,
@@ -410,7 +472,7 @@ const CreateLandingPage: React.FC = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({slug, data: pageData}),
+        body: JSON.stringify({slug, previousSlug: editingSlug, data: pageData}),
       });
 
       if (!response.ok) {
@@ -429,7 +491,10 @@ const CreateLandingPage: React.FC = () => {
     }
 
     // Save to localStorage for immediate display and development preview
-    const existing = JSON.parse(localStorage.getItem("landingPages") || "{}");
+    const existing = readStoredLandingPages();
+    if (editingSlug && editingSlug !== slug) {
+      delete existing[editingSlug];
+    }
     existing[slug] = pageData;
     localStorage.setItem("landingPages", JSON.stringify(existing));
 

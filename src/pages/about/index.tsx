@@ -13,14 +13,14 @@ const About = () => {
               </h2>
 
               <p className="text-neutral-800 mb-4">
-                At vechura, we're passionate about helping travelers find the
+                At Vechura, we're passionate about helping travelers find the
                 perfect vehicle for their adventures. Our platform aggregates
                 rental options from hundreds of providers, giving you access to
                 the best selection and prices.
               </p>
               <p className="text-neutral-800 mb-4">
                 Unlike other comparison sites, we specialize exclusively in
-                vehicle rentals – from luxury cars to yachts and RVs – allowing
+                vehicle rentals - from luxury cars to yachts and RVs - allowing
                 us to provide deeper insights and more specialized options for
                 each category.
               </p>
