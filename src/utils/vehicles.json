@@ -1,34 +1,101 @@
 [
   {
     "type": "Cars",
-    "brand": "Lamborghini Huracan-Las Vegas",
-    "name": "Lamborghini Huracan-Las Vegas",
+    "brand": "Lamborghini Huracan",
+    "name": "Lamborghini Huracan",
     "image": "assets/custom-images/cars/lvc-green-huracan.webp",
     "url": "https://lvcexotics.com",
     "price": null
   },
   {
     "type": "Cars",
-    "brand": "Ferrari 812 Superfast-Las Vegas",
-    "name": "Ferrari 812 Superfast-Las Vegas",
+    "brand": "Cadillac Escalade Affiliate",
+    "name": "Cadillac Escalade Affiliate",
+    "image": "assets/custom-images/cars/escphxmtn.webp",
+    "url": "https://turoinc.sjv.io/E0e294",
+    "price": null
+  },
+  {
+    "type": "Cars",
+    "brand": "Ferrari 812 Superfast",
+    "name": "Ferrari 812 Superfast",
     "image": "assets/custom-images/cars/lvc-ferrari-812-super.webp",
     "url": "https://lvcexotics.com",
     "price": null
   },
   {
     "type": "Cars",
-    "brand": "McLaren 720S Spider-Las Vegas",
-    "name": "McLaren 720S Spider-Las Vegas",
+    "brand": "Tesla Cybertruck Affiliate",
+    "name": "Tesla Cybertruck Affiliate",
+    "image": "assets/custom-images/cars/cybertphx.webp",
+    "url": "https://turoinc.sjv.io/JkVBLa",
+    "price": null
+  },
+  {
+    "type": "Cars",
+    "brand": "McLaren 720S Spider",
+    "name": "McLaren 720S Spider",
     "image": "assets/custom-images/cars/lvc-mclaren.webp",
     "url": "https://lvcexotics.com",
     "price": null
   },
   {
     "type": "Cars",
-    "brand": "Corvette C8 Z06 3LZ-Las Vegas",
-    "name": "Corvette C8 Z06 3LZ-Las Vegas",
+    "brand": "Corvette C8 Z06 3LZ",
+    "name": "Corvette C8 Z06 3LZ",
     "image": "assets/custom-images/cars/lvc-corvette.webp",
     "url": "https://lvcexotics.com",
+    "price": null
+  },
+  {
+    "type": "Cars",
+    "brand": "Porsche 911 Carrera Affiliate",
+    "name": "Porsche 911 Carrera Affiliate",
+    "image": "assets/custom-images/cars/porschemiamigrey.webp",
+    "url": "https://turoinc.sjv.io/ZVKqX1",
+    "price": null
+  },
+  {
+    "type": "Cars",
+    "brand": "Fox Rent a Car",
+    "name": "Fox Rent a Car \u2013 Nationwide Deals",
+    "image": "assets/custom-images/cars/fox-jeep.webp",
+    "url": "https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1810073.21&type=3&subid=0&LSNSUBSITE=LSNS",
+    "price": null
+  },
+
+  {
+    "type": "Cars",
+    "brand": "Dollar Car Rental MX",
+    "name": "Dollar Car Rentals - Mexico",
+    "image": "assets/custom-images/cars/dollar-vw-taos.webp",
+    "url": "https://dollarcarrentalmx.sjv.io/c/6269754/2059948/25800",
+    "price": null
+  },
+
+  {
+    "type": "Cars",
+    "brand": "Hertz MX (GLOBAL)",
+    "name": "Rent with Hertz Mexico",
+    "image": "assets/custom-images/cars/hertz-chevy-cavalier.webp",
+    "url": "https://hertzmx.pxf.io/c/6269754/2068206/23996",
+    "price": null
+  },
+  {
+    "type": "Cars",
+    "brand": "Firefly Car Rental MX",
+    "name": "Firefly Car Rentals \u2013 Mexico",
+    "image": "assets/custom-images/cars/firefly-vs-jetta.webp",
+    "url": "https://fireflycarrentalmx.pxf.io/c/6269754/2071148/25799",
+    "price": null
+  },
+
+  {
+    "type": "Cars",
+    "brand": "Thrifty Car Rental MX",
+    "name": "Thrifty Car Rentals \u2013 Mexico",
+    "image": "assets/custom-images/cars/thrify-chevy-aveo.webp",
+    "url": "https://thriftycarrentalmxmxusca.pxf.io/c/6269754/2071316/25949",
     "price": null
   },
   {
@@ -122,50 +189,6 @@
     "name": "2024 Thor Motor Coach-Rvezy",
     "image": "assets/custom-images/rvs/thor-motor-coachrvezy2024.webp",
     "url": "https://rvezypartnershipprogram.sjv.io/vP6dzA",
-    "price": null
-  },
-
-  {
-    "type": "Cars",
-    "brand": "Fox Rent a Car",
-    "name": "Fox Rent a Car \u2013 Nationwide Deals",
-    "image": "assets/custom-images/cars/fox-jeep.webp",
-    "url": "https://click.linksynergy.com/fs-bin/click?id=tM2c46u%2asYY&offerid=1810073.21&type=3&subid=0&LSNSUBSITE=LSNS",
-    "price": null
-  },
-
-  {
-    "type": "Cars",
-    "brand": "Dollar Car Rental MX",
-    "name": "Dollar Car Rentals - Mexico",
-    "image": "assets/custom-images/cars/dollar-vw-taos.webp",
-    "url": "https://dollarcarrentalmx.sjv.io/c/6269754/2059948/25800",
-    "price": null
-  },
-
-  {
-    "type": "Cars",
-    "brand": "Hertz MX (GLOBAL)",
-    "name": "Rent with Hertz Mexico",
-    "image": "assets/custom-images/cars/hertz-chevy-cavalier.webp",
-    "url": "https://hertzmx.pxf.io/c/6269754/2068206/23996",
-    "price": null
-  },
-  {
-    "type": "Cars",
-    "brand": "Firefly Car Rental MX",
-    "name": "Firefly Car Rentals \u2013 Mexico",
-    "image": "assets/custom-images/cars/firefly-vs-jetta.webp",
-    "url": "https://fireflycarrentalmx.pxf.io/c/6269754/2071148/25799",
-    "price": null
-  },
-
-  {
-    "type": "Cars",
-    "brand": "Thrifty Car Rental MX",
-    "name": "Thrifty Car Rentals \u2013 Mexico",
-    "image": "assets/custom-images/cars/thrify-chevy-aveo.webp",
-    "url": "https://thriftycarrentalmxmxusca.pxf.io/c/6269754/2071316/25949",
     "price": null
   },
 

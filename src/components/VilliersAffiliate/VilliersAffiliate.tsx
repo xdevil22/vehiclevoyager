@@ -2,6 +2,11 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import {VilliersFlight} from "./villiersTypes";
 
+const API_BASE_URL = (
+  import.meta.env.VITE_API_BASE_URL || "https://vechura-backend.vercel.app"
+).replace(/\/$/, "");
+const VILLIERS_API_URL = `${API_BASE_URL}/api/villiers`;
+
 const VilliersAffiliate = () => {
   const [flights, setFlights] = useState<VilliersFlight[]>([]);
   const [loading, setLoading] = useState(true);
@@ -10,9 +15,7 @@ const VilliersAffiliate = () => {
   useEffect(() => {
     const loadFlights = async () => {
       try {
-        const res = await axios.get<any[]>(
-          "https://vechura-backend.vercel.app/api/villiers"
-        );
+        const res = await axios.get<any[]>(VILLIERS_API_URL);
 
         const mapped = res.data.map((item) => ({
           origin: item["villiers:originAirport"],

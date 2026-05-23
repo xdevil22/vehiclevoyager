@@ -11,6 +11,10 @@ import LandingSection from "../../components/landing/LandingSection";
 import LandingFAQ from "../../components/landing/LandingFAQ";
 import LandingCTABanner from "../../components/landing/LandingCTABanner";
 
+const LANDING_PAGES_API_URL = `${
+  import.meta.env.VITE_API_BASE_URL
+}/api/create-landing-page`;
+
 const readDynamicLandingPages = () => {
   try {
     const stored = JSON.parse(localStorage.getItem("landingPages") || "{}");
@@ -25,8 +29,9 @@ const readDynamicLandingPages = () => {
 
 const LandingPage: React.FC = () => {
   const {slug} = useParams();
-  const [dynamicPages, setDynamicPages] =
-    useState<Record<string, LandingPageData>>(readDynamicLandingPages);
+  const [dynamicPages, setDynamicPages] = useState<
+    Record<string, LandingPageData>
+  >(readDynamicLandingPages);
   const [isLoadingDynamicPages, setIsLoadingDynamicPages] = useState(true);
   const staticPage = slug ? landingPagesBySlug[slug] : undefined;
   const page = (slug ? dynamicPages[slug] : undefined) || staticPage;
@@ -34,16 +39,23 @@ const LandingPage: React.FC = () => {
   useEffect(() => {
     let isMounted = true;
 
-    fetch(`/landing-pages.json?ts=${Date.now()}`)
-      .then((response) => (response.ok ? response.json() : {}))
+    fetch(`${LANDING_PAGES_API_URL}?ts=${Date.now()}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Landing pages API returned ${response.status}`);
+        }
+
+        return response.json();
+      })
       .then((pages) => {
         if (!isMounted) return;
         if (pages && typeof pages === "object" && !Array.isArray(pages)) {
           setDynamicPages(pages);
+          localStorage.setItem("landingPages", JSON.stringify(pages));
         }
       })
       .catch((error) => {
-        console.warn("Unable to fetch landing pages JSON:", error);
+        console.warn("Unable to fetch landing pages from API:", error);
       })
       .finally(() => {
         if (isMounted) {

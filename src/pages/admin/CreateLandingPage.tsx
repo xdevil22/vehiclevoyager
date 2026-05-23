@@ -5,6 +5,10 @@ import {
   LandingPageSection,
 } from "../../pages/landing/content/types";
 
+const LANDING_PAGES_API_URL = `${
+  import.meta.env.VITE_API_BASE_URL
+}/api/create-landing-page`;
+
 type EditableSectionType = "content" | "featureGrid" | "tips" | "internalLinks";
 
 interface EditableSectionItem {
@@ -48,7 +52,7 @@ const fetchStoredLandingPages = async (): Promise<
   Record<string, LandingPageData>
 > => {
   try {
-    const response = await fetch("/api/create-landing-page");
+    const response = await fetch(LANDING_PAGES_API_URL);
     if (!response.ok) {
       return readStoredLandingPages();
     }
@@ -347,21 +351,19 @@ const CreateLandingPage: React.FC = () => {
     ) {
       try {
         const response = await fetch(
-          `/api/create-landing-page?slug=${encodeURIComponent(slug)}`,
+          `${LANDING_PAGES_API_URL}?slug=${encodeURIComponent(slug)}`,
           {
             method: "DELETE",
           },
         );
 
         if (!response.ok) {
-          console.warn(
-            "API delete failed, removing from localStorage only:",
-            response.status,
-            await response.text(),
-          );
+          throw new Error(await response.text());
         }
       } catch (error) {
-        console.warn("API unavailable, removing from localStorage only:", error);
+        console.error("Unable to delete landing page:", error);
+        setSuccessMessage("Unable to delete landing page. Please try again.");
+        return;
       }
 
       const existing = readStoredLandingPages();
@@ -467,8 +469,8 @@ const CreateLandingPage: React.FC = () => {
     };
 
     try {
-      const response = await fetch("/api/create-landing-page", {
-        method: "POST",
+      const response = await fetch(LANDING_PAGES_API_URL, {
+        method: editingSlug ? "PATCH" : "POST",
         headers: {
           "Content-Type": "application/json",
         },
@@ -476,18 +478,12 @@ const CreateLandingPage: React.FC = () => {
       });
 
       if (!response.ok) {
-        const body = await response.text();
-        console.warn(
-          "API call failed, falling back to localStorage:",
-          response.status,
-          body,
-        );
-      } else {
-        const json = await response.json();
-        console.log("API created file:", json);
+        throw new Error(await response.text());
       }
     } catch (error) {
-      console.warn("API unavailable, falling back to localStorage:", error);
+      console.error("Unable to save landing page:", error);
+      setSuccessMessage("Unable to save landing page. Please try again.");
+      return;
     }
 
     // Save to localStorage for immediate display and development preview
