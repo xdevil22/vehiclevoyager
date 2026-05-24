@@ -9,8 +9,8 @@
   },
   {
     "type": "Cars",
-    "brand": "Cadillac Escalade Affiliate",
-    "name": "Cadillac Escalade Affiliate",
+    "brand": "Cadillac Escalade",
+    "name": "Cadillac Escalade",
     "image": "assets/custom-images/cars/escphxmtn.webp",
     "url": "https://turoinc.sjv.io/E0e294",
     "price": null
@@ -25,8 +25,8 @@
   },
   {
     "type": "Cars",
-    "brand": "Tesla Cybertruck Affiliate",
-    "name": "Tesla Cybertruck Affiliate",
+    "brand": "Tesla Cybertruck",
+    "name": "Tesla Cybertruck",
     "image": "assets/custom-images/cars/cybertphx.webp",
     "url": "https://turoinc.sjv.io/JkVBLa",
     "price": null
@@ -49,8 +49,8 @@
   },
   {
     "type": "Cars",
-    "brand": "Porsche 911 Carrera Affiliate",
-    "name": "Porsche 911 Carrera Affiliate",
+    "brand": "Porsche 911 Carrera",
+    "name": "Porsche 911 Carrera",
     "image": "assets/custom-images/cars/porschemiamigrey.webp",
     "url": "https://turoinc.sjv.io/ZVKqX1",
     "price": null
