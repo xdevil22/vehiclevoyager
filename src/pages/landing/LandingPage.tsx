@@ -175,7 +175,7 @@ const LandingPage: React.FC = () => {
                   )}
 
                   {block.type === "subtitle" && block.text && (
-                    <h3 className="text-left text-2xl font-semibold text-slate-900">
+                    <h3 className="text-left text-2xl font-semibold text-[#3073cc]">
                       {block.text}
                     </h3>
                   )}
