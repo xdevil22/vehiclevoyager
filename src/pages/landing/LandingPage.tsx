@@ -52,7 +52,7 @@ const renderLinkedText = (
         href={linkHref}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-semibold text-blue-600 underline-offset-4 hover:underline">
+        className="text-blue-600 underline-offset-4 hover:underline">
         {linkLabel}
       </a>
       {afterLink}

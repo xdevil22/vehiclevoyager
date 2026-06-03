@@ -932,7 +932,7 @@ const CreateLandingPage: React.FC = () => {
             />
           </div>
         </div>
-        <div>
+        {/* <div>
           <label className="block text-sm font-medium mb-1">Headline</label>
           <input
             type="text"
@@ -941,8 +941,8 @@ const CreateLandingPage: React.FC = () => {
             className="w-full border px-3 py-2 rounded"
             required
           />
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <label className="block text-sm font-medium mb-1">
             Subheadline (Intro)
           </label>
@@ -953,7 +953,7 @@ const CreateLandingPage: React.FC = () => {
             rows={3}
             required
           />
-        </div>
+        </div> */}
         <div>
           <label className="block text-sm font-medium mb-1">SEO Title</label>
           <input
@@ -974,7 +974,7 @@ const CreateLandingPage: React.FC = () => {
             rows={2}
           />
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        {/* <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium mb-1">CTA 1 Text</label>
             <input
@@ -1013,7 +1013,7 @@ const CreateLandingPage: React.FC = () => {
               className="w-full border px-3 py-2 rounded"
             />
           </div>
-        </div>
+        </div> */}
         <div>
           <label className="block text-sm font-medium mb-2">Sections</label>
           {sections.map((sec, idx) => (
