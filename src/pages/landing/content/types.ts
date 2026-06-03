@@ -1,5 +1,6 @@
 export type LandingPageSectionType =
   | "content"
+  | "customContent"
   | "featureGrid"
   | "tips"
   | "faq"
@@ -28,6 +29,30 @@ export interface LandingPageLinkItem {
   href: string;
 }
 
+export interface LandingPageCustomContentItem {
+  text: string;
+  linkLabel?: string;
+  linkHref?: string;
+}
+
+export type LandingPageCustomContentBlockType =
+  | "title"
+  | "subtitle"
+  | "paragraph"
+  | "image"
+  | "list"
+  | "ctaButton";
+
+export interface LandingPageCustomContentBlock {
+  id?: string;
+  type: LandingPageCustomContentBlockType;
+  text?: string;
+  image?: string;
+  linkLabel?: string;
+  linkHref?: string;
+  items?: LandingPageCustomContentItem[];
+}
+
 export type LandingPageSection =
   | {
       id?: string;
@@ -36,6 +61,16 @@ export type LandingPageSection =
       subtitle?: string;
       body?: string[];
       buttons?: LandingPageCTA[];
+    }
+  | {
+      id?: string;
+      type: "customContent";
+      title?: string;
+      subtitle?: string;
+      image?: string;
+      paragraphs?: LandingPageCustomContentItem[];
+      bullets?: LandingPageCustomContentItem[];
+      blocks?: LandingPageCustomContentBlock[];
     }
   | {
       id?: string;

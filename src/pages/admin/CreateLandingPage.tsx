@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {
+  LandingPageCustomContentBlock,
+  LandingPageCustomContentBlockType,
   LandingPageData,
+  LandingPageCustomContentItem,
   LandingPageSection,
 } from "../../pages/landing/content/types";
 
@@ -9,7 +12,12 @@ const LANDING_PAGES_API_URL = `${
   import.meta.env.VITE_API_BASE_URL
 }/api/create-landing-page`;
 
-type EditableSectionType = "content" | "featureGrid" | "tips" | "internalLinks";
+type EditableSectionType =
+  | "content"
+  | "customContent"
+  | "featureGrid"
+  | "tips"
+  | "internalLinks";
 
 interface EditableSectionItem {
   title: string;
@@ -21,12 +29,32 @@ interface EditableLinkItem {
   href: string;
 }
 
+interface EditableCustomContentItem {
+  text: string;
+  linkLabel: string;
+  linkHref: string;
+}
+
+interface EditableCustomContentBlock {
+  id: string;
+  type: LandingPageCustomContentBlockType;
+  text: string;
+  image: string;
+  linkLabel: string;
+  linkHref: string;
+  items: EditableCustomContentItem[];
+}
+
 interface EditableSection {
   id: string;
   type: EditableSectionType;
   title: string;
   subtitle?: string;
   body?: string;
+  image?: string;
+  paragraphs?: EditableCustomContentItem[];
+  bullets?: EditableCustomContentItem[];
+  blocks?: EditableCustomContentBlock[];
   items?: EditableSectionItem[];
   links?: EditableLinkItem[];
 }
@@ -81,6 +109,67 @@ const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
+const toEditableCustomContentItems = (
+  items?: LandingPageCustomContentItem[],
+): EditableCustomContentItem[] =>
+  items?.map((item) => ({
+    text: item.text,
+    linkLabel: item.linkLabel || "",
+    linkHref: item.linkHref || "",
+  })) || [{text: "", linkLabel: "", linkHref: ""}];
+
+const createCustomContentBlock = (
+  type: LandingPageCustomContentBlockType = "paragraph",
+): EditableCustomContentBlock => ({
+  id: `custom-block-${Date.now()}-${Math.random().toString(36).slice(2)}`,
+  type,
+  text: "",
+  image: "",
+  linkLabel: "",
+  linkHref: "",
+  items: [{text: "", linkLabel: "", linkHref: ""}],
+});
+
+const toEditableCustomContentBlocks = (
+  section: Extract<LandingPageSection, {type: "customContent"}>,
+): EditableCustomContentBlock[] => {
+  if (section.blocks?.length) {
+    return section.blocks.map((block) => ({
+      id: block.id || `custom-block-${Date.now()}`,
+      type: block.type,
+      text: block.text || "",
+      image: block.image || "",
+      linkLabel: block.linkLabel || "",
+      linkHref: block.linkHref || "",
+      items: toEditableCustomContentItems(block.items),
+    }));
+  }
+
+  const blocks: EditableCustomContentBlock[] = [];
+  if (section.title) {
+    blocks.push({...createCustomContentBlock("title"), text: section.title});
+  }
+  if (section.image) {
+    blocks.push({...createCustomContentBlock("image"), image: section.image});
+  }
+  section.paragraphs?.forEach((paragraph) => {
+    blocks.push({
+      ...createCustomContentBlock("paragraph"),
+      text: paragraph.text,
+      linkLabel: paragraph.linkLabel || "",
+      linkHref: paragraph.linkHref || "",
+    });
+  });
+  if (section.bullets?.length) {
+    blocks.push({
+      ...createCustomContentBlock("list"),
+      items: toEditableCustomContentItems(section.bullets),
+    });
+  }
+
+  return blocks.length ? blocks : [createCustomContentBlock("paragraph")];
+};
+
 const CreateLandingPage: React.FC = () => {
   const navigate = useNavigate();
   const [city, setCity] = useState("");
@@ -103,12 +192,27 @@ const CreateLandingPage: React.FC = () => {
   const [finalCtaBtn2Link, setFinalCtaBtn2Link] = useState("#pricing");
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [existingPages, setExistingPages] = useState<LandingPageData[]>([]);
+  const [isLoadingExistingPages, setIsLoadingExistingPages] = useState(true);
   const [editingSlug, setEditingSlug] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchStoredLandingPages().then((pages) =>
-      setExistingPages(Object.values(pages)),
-    );
+    let isMounted = true;
+
+    fetchStoredLandingPages()
+      .then((pages) => {
+        if (isMounted) {
+          setExistingPages(Object.values(pages));
+        }
+      })
+      .finally(() => {
+        if (isMounted) {
+          setIsLoadingExistingPages(false);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const loadPageForEdit = (page: LandingPageData) => {
@@ -137,7 +241,14 @@ const CreateLandingPage: React.FC = () => {
             s,
           ): s is Extract<
             LandingPageSection,
-            {type: "content" | "featureGrid" | "tips" | "internalLinks"}
+            {
+              type:
+                | "content"
+                | "customContent"
+                | "featureGrid"
+                | "tips"
+                | "internalLinks";
+            }
           > => s.type !== "faq" && s.type !== "cta",
         )
         .map((s) => {
@@ -149,6 +260,17 @@ const CreateLandingPage: React.FC = () => {
                 title: s.title || "",
                 subtitle: s.subtitle || "",
                 body: s.body?.join("\n") || "",
+              };
+            case "customContent":
+              return {
+                id: s.id || `section-${Date.now()}`,
+                type: "customContent",
+                title: s.title || "",
+                subtitle: s.subtitle || "",
+                image: s.image || "",
+                paragraphs: toEditableCustomContentItems(s.paragraphs),
+                bullets: toEditableCustomContentItems(s.bullets),
+                blocks: toEditableCustomContentBlocks(s),
               };
             case "featureGrid":
             case "tips":
@@ -178,7 +300,9 @@ const CreateLandingPage: React.FC = () => {
           }
         }),
     );
-    const faqSection = page.sections.find((s) => s.type === "faq");
+    const faqSection = page.sections.find(
+      (s): s is Extract<LandingPageSection, {type: "faq"}> => s.type === "faq",
+    );
     setFaqs(faqSection?.items || []);
     const ctaSection = page.sections.find((s) => s.type === "cta") as any;
     if (ctaSection) {
@@ -239,12 +363,61 @@ const CreateLandingPage: React.FC = () => {
     setSections(newSections);
   };
 
+  const handleCustomContentImageUpload = (
+    sectionIndex: number,
+    blockIndex: number,
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+      setSuccessMessage("Please upload a valid image file.");
+      event.target.value = "";
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result === "string") {
+        updateCustomContentBlock(
+          sectionIndex,
+          blockIndex,
+          "image",
+          reader.result,
+        );
+      }
+    };
+    reader.onerror = () => {
+      setSuccessMessage("Unable to upload image. Please try again.");
+    };
+    reader.readAsDataURL(file);
+  };
+
   const updateSectionType = (index: number, type: EditableSectionType) => {
     const newSections = [...sections];
     newSections[index] = {
       ...newSections[index],
       type,
       body: type === "content" ? newSections[index].body || "" : undefined,
+      image:
+        type === "customContent" ? newSections[index].image || "" : undefined,
+      paragraphs:
+        type === "customContent"
+          ? newSections[index].paragraphs || [
+              {text: "", linkLabel: "", linkHref: ""},
+            ]
+          : undefined,
+      bullets:
+        type === "customContent"
+          ? newSections[index].bullets || [
+              {text: "", linkLabel: "", linkHref: ""},
+            ]
+          : undefined,
+      blocks:
+        type === "customContent"
+          ? newSections[index].blocks || [createCustomContentBlock()]
+          : undefined,
       items:
         type === "featureGrid" || type === "tips"
           ? newSections[index].items || [
@@ -258,6 +431,130 @@ const CreateLandingPage: React.FC = () => {
           ? newSections[index].links || [{label: "", href: ""}]
           : undefined,
     };
+    setSections(newSections);
+  };
+
+  const addCustomContentBlock = (sectionIndex: number) => {
+    const newSections = [...sections];
+    const section = newSections[sectionIndex];
+    if (!section.blocks) section.blocks = [];
+    section.blocks.push(createCustomContentBlock());
+    setSections(newSections);
+  };
+
+  const updateCustomContentBlock = (
+    sectionIndex: number,
+    blockIndex: number,
+    field: keyof EditableCustomContentBlock,
+    value: string | LandingPageCustomContentBlockType,
+  ) => {
+    const newSections = [...sections];
+    const block = newSections[sectionIndex].blocks?.[blockIndex];
+    if (!block) return;
+    newSections[sectionIndex].blocks![blockIndex] = {
+      ...block,
+      [field]: value,
+    };
+    setSections(newSections);
+  };
+
+  const moveCustomContentBlock = (
+    sectionIndex: number,
+    blockIndex: number,
+    direction: -1 | 1,
+  ) => {
+    const newSections = [...sections];
+    const blocks = newSections[sectionIndex].blocks;
+    if (!blocks) return;
+
+    const targetIndex = blockIndex + direction;
+    if (targetIndex < 0 || targetIndex >= blocks.length) return;
+
+    [blocks[blockIndex], blocks[targetIndex]] = [
+      blocks[targetIndex],
+      blocks[blockIndex],
+    ];
+    setSections(newSections);
+  };
+
+  const addCustomContentBlockItem = (
+    sectionIndex: number,
+    blockIndex: number,
+  ) => {
+    const newSections = [...sections];
+    const block = newSections[sectionIndex].blocks?.[blockIndex];
+    if (!block) return;
+    block.items.push({text: "", linkLabel: "", linkHref: ""});
+    setSections(newSections);
+  };
+
+  const updateCustomContentBlockItem = (
+    sectionIndex: number,
+    blockIndex: number,
+    itemIndex: number,
+    itemField: keyof EditableCustomContentItem,
+    value: string,
+  ) => {
+    const newSections = [...sections];
+    const item =
+      newSections[sectionIndex].blocks?.[blockIndex]?.items[itemIndex];
+    if (!item) return;
+    newSections[sectionIndex].blocks![blockIndex].items[itemIndex] = {
+      ...item,
+      [itemField]: value,
+    };
+    setSections(newSections);
+  };
+
+  const removeCustomContentBlockItem = (
+    sectionIndex: number,
+    blockIndex: number,
+    itemIndex: number,
+  ) => {
+    const newSections = [...sections];
+    const block = newSections[sectionIndex].blocks?.[blockIndex];
+    if (!block) return;
+    block.items = block.items.filter((_, idx) => idx !== itemIndex);
+    setSections(newSections);
+  };
+
+  const addCustomContentItem = (
+    sectionIndex: number,
+    field: "paragraphs" | "bullets",
+  ) => {
+    const newSections = [...sections];
+    const section = newSections[sectionIndex];
+    if (!section[field]) section[field] = [];
+    section[field]!.push({text: "", linkLabel: "", linkHref: ""});
+    setSections(newSections);
+  };
+
+  const updateCustomContentItem = (
+    sectionIndex: number,
+    field: "paragraphs" | "bullets",
+    itemIndex: number,
+    itemField: keyof EditableCustomContentItem,
+    value: string,
+  ) => {
+    const newSections = [...sections];
+    if (!newSections[sectionIndex][field]) return;
+    newSections[sectionIndex][field]![itemIndex] = {
+      ...newSections[sectionIndex][field]![itemIndex],
+      [itemField]: value,
+    };
+    setSections(newSections);
+  };
+
+  const removeCustomContentItem = (
+    sectionIndex: number,
+    field: "paragraphs" | "bullets",
+    itemIndex: number,
+  ) => {
+    const newSections = [...sections];
+    if (!newSections[sectionIndex][field]) return;
+    newSections[sectionIndex][field] = newSections[sectionIndex][field]!.filter(
+      (_, idx) => idx !== itemIndex,
+    );
     setSections(newSections);
   };
 
@@ -403,6 +700,57 @@ const CreateLandingPage: React.FC = () => {
               body: sec.body?.split("\n") || [],
             };
           }
+          if (sec.type === "customContent") {
+            const mapCustomItems = (items?: EditableCustomContentItem[]) =>
+              items
+                ?.filter(
+                  (item) =>
+                    item.text.trim() ||
+                    item.linkLabel.trim() ||
+                    item.linkHref.trim(),
+                )
+                .map((item) => ({
+                  text: item.text,
+                  linkLabel: item.linkLabel || undefined,
+                  linkHref: item.linkHref || undefined,
+                }));
+
+            return {
+              id: sec.id,
+              type: "customContent" as const,
+              blocks: sec.blocks
+                ?.map((block) => ({
+                  id: block.id,
+                  type: block.type,
+                  text: block.text || undefined,
+                  image: block.image || undefined,
+                  linkLabel: block.linkLabel || undefined,
+                  linkHref: block.linkHref || undefined,
+                  items:
+                    block.type === "list"
+                      ? mapCustomItems(block.items)
+                      : undefined,
+                }))
+                .filter((block) => {
+                  if (
+                    block.type === "title" ||
+                    block.type === "subtitle" ||
+                    block.type === "paragraph"
+                  ) {
+                    return Boolean(
+                      block.text || block.linkLabel || block.linkHref,
+                    );
+                  }
+                  if (block.type === "image") {
+                    return Boolean(block.image);
+                  }
+                  if (block.type === "ctaButton") {
+                    return Boolean(block.text || block.linkHref);
+                  }
+                  return Boolean(block.items?.length);
+                }),
+            };
+          }
           if (sec.type === "featureGrid" || sec.type === "tips") {
             return {
               id: sec.id,
@@ -522,7 +870,12 @@ const CreateLandingPage: React.FC = () => {
       {/* Recent Pages */}
       <div className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Recent Landing Pages</h2>
-        {existingPages.length === 0 ? (
+        {isLoadingExistingPages ? (
+          <div className="flex items-center gap-3 rounded border border-slate-200 bg-slate-50 p-3 text-sm text-slate-600">
+            <span className="h-4 w-4 animate-spin rounded-full border-2 border-slate-300 border-t-blue-600" />
+            Loading recent landing pages...
+          </div>
+        ) : existingPages.length === 0 ? (
           <p>No pages created yet.</p>
         ) : (
           <ul className="space-y-2">
@@ -533,6 +886,7 @@ const CreateLandingPage: React.FC = () => {
                 <a
                   href={`/${page.slug}`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-500">
                   /{page.slug}
                 </a>
@@ -677,35 +1031,40 @@ const CreateLandingPage: React.FC = () => {
                     }
                     className="w-full border px-3 py-2 rounded mt-1">
                     <option value="content">Content</option>
+                    <option value="customContent">Custom Content</option>
                     <option value="featureGrid">Pricing / Info Blocks</option>
                     <option value="tips">Tips</option>
                     <option value="internalLinks">Quick Links</option>
                   </select>
                 </label>
-                <label className="block">
-                  <span className="text-sm text-slate-600">Title</span>
-                  <input
-                    type="text"
-                    placeholder="Section title"
-                    value={sec.title}
-                    onChange={(e) =>
-                      updateSection(idx, "title", e.target.value)
-                    }
-                    className="w-full border px-3 py-2 rounded mt-1"
-                  />
-                </label>
-                <label className="block">
-                  <span className="text-sm text-slate-600">Subtitle</span>
-                  <input
-                    type="text"
-                    placeholder="Section subtitle"
-                    value={sec.subtitle || ""}
-                    onChange={(e) =>
-                      updateSection(idx, "subtitle", e.target.value)
-                    }
-                    className="w-full border px-3 py-2 rounded mt-1"
-                  />
-                </label>
+                {sec.type !== "customContent" && (
+                  <>
+                    <label className="block">
+                      <span className="text-sm text-slate-600">Title</span>
+                      <input
+                        type="text"
+                        placeholder="Section title"
+                        value={sec.title}
+                        onChange={(e) =>
+                          updateSection(idx, "title", e.target.value)
+                        }
+                        className="w-full border px-3 py-2 rounded mt-1"
+                      />
+                    </label>
+                    <label className="block">
+                      <span className="text-sm text-slate-600">Subtitle</span>
+                      <input
+                        type="text"
+                        placeholder="Section subtitle"
+                        value={sec.subtitle || ""}
+                        onChange={(e) =>
+                          updateSection(idx, "subtitle", e.target.value)
+                        }
+                        className="w-full border px-3 py-2 rounded mt-1"
+                      />
+                    </label>
+                  </>
+                )}
               </div>
 
               {sec.type === "content" && (
@@ -716,6 +1075,289 @@ const CreateLandingPage: React.FC = () => {
                   className="w-full border px-3 py-2 rounded mb-2"
                   rows={4}
                 />
+              )}
+
+              {sec.type === "customContent" && (
+                <div className="space-y-5 mb-2">
+                  <div className="text-sm font-medium text-slate-700">
+                    Custom Content Blocks
+                  </div>
+                  {(sec.blocks || []).map((block, blockIdx) => (
+                    <div
+                      key={block.id}
+                      className="space-y-3 rounded border border-slate-200 p-3">
+                      <label className="block">
+                        <span className="text-sm text-slate-600">
+                          Block Type
+                        </span>
+                        <select
+                          value={block.type}
+                          onChange={(e) =>
+                            updateCustomContentBlock(
+                              idx,
+                              blockIdx,
+                              "type",
+                              e.target
+                                .value as LandingPageCustomContentBlockType,
+                            )
+                          }
+                          className="w-full border px-3 py-2 rounded mt-1">
+                          <option value="title">Title</option>
+                          <option value="subtitle">Sub Title</option>
+                          <option value="paragraph">Paragraph</option>
+                          <option value="image">Image</option>
+                          <option value="list">List</option>
+                          <option value="ctaButton">CTA Button</option>
+                        </select>
+                      </label>
+
+                      {block.type === "title" && (
+                        <input
+                          type="text"
+                          placeholder="Title text"
+                          value={block.text}
+                          onChange={(e) =>
+                            updateCustomContentBlock(
+                              idx,
+                              blockIdx,
+                              "text",
+                              e.target.value,
+                            )
+                          }
+                          className="w-full border px-3 py-2 rounded"
+                        />
+                      )}
+
+                      {block.type === "subtitle" && (
+                        <input
+                          type="text"
+                          placeholder="Sub title text"
+                          value={block.text}
+                          onChange={(e) =>
+                            updateCustomContentBlock(
+                              idx,
+                              blockIdx,
+                              "text",
+                              e.target.value,
+                            )
+                          }
+                          className="w-full border px-3 py-2 rounded"
+                        />
+                      )}
+
+                      {block.type === "paragraph" && (
+                        <div className="space-y-3">
+                          <textarea
+                            placeholder="Paragraph text"
+                            value={block.text}
+                            onChange={(e) =>
+                              updateCustomContentBlock(
+                                idx,
+                                blockIdx,
+                                "text",
+                                e.target.value,
+                              )
+                            }
+                            className="w-full border px-3 py-2 rounded"
+                            rows={3}
+                          />
+                          <div className="grid grid-cols-2 gap-3">
+                            <input
+                              type="text"
+                              placeholder="Optional link label"
+                              value={block.linkLabel}
+                              onChange={(e) =>
+                                updateCustomContentBlock(
+                                  idx,
+                                  blockIdx,
+                                  "linkLabel",
+                                  e.target.value,
+                                )
+                              }
+                              className="border px-3 py-2 rounded"
+                            />
+                            <input
+                              type="text"
+                              placeholder="Optional link URL"
+                              value={block.linkHref}
+                              onChange={(e) =>
+                                updateCustomContentBlock(
+                                  idx,
+                                  blockIdx,
+                                  "linkHref",
+                                  e.target.value,
+                                )
+                              }
+                              className="border px-3 py-2 rounded"
+                            />
+                          </div>
+                        </div>
+                      )}
+
+                      {block.type === "image" && (
+                        <div className="space-y-3">
+                          <input
+                            type="file"
+                            accept="image/*"
+                            onChange={(e) =>
+                              handleCustomContentImageUpload(idx, blockIdx, e)
+                            }
+                            className="w-full border px-3 py-2 rounded"
+                          />
+                          {block.image && (
+                            <div className="rounded border border-slate-200 p-3 text-center">
+                              <img
+                                src={block.image}
+                                alt="Uploaded custom content preview"
+                                className="mx-auto h-40 w-full max-w-md rounded object-cover"
+                              />
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  updateCustomContentBlock(
+                                    idx,
+                                    blockIdx,
+                                    "image",
+                                    "",
+                                  )
+                                }
+                                className="mt-3 text-red-500">
+                                Remove Image
+                              </button>
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {block.type === "list" && (
+                        <div className="space-y-3">
+                          {block.items.map((item, itemIdx) => (
+                            <div key={itemIdx} className="grid gap-3">
+                              <input
+                                type="text"
+                                placeholder="Bullet text"
+                                value={item.text}
+                                onChange={(e) =>
+                                  updateCustomContentBlockItem(
+                                    idx,
+                                    blockIdx,
+                                    itemIdx,
+                                    "text",
+                                    e.target.value,
+                                  )
+                                }
+                                className="border px-3 py-2 rounded"
+                              />
+                              <div className="grid grid-cols-2 gap-3">
+                                <input
+                                  type="text"
+                                  placeholder="Optional link label"
+                                  value={item.linkLabel}
+                                  onChange={(e) =>
+                                    updateCustomContentBlockItem(
+                                      idx,
+                                      blockIdx,
+                                      itemIdx,
+                                      "linkLabel",
+                                      e.target.value,
+                                    )
+                                  }
+                                  className="border px-3 py-2 rounded"
+                                />
+                                <input
+                                  type="text"
+                                  placeholder="Optional link URL"
+                                  value={item.linkHref}
+                                  onChange={(e) =>
+                                    updateCustomContentBlockItem(
+                                      idx,
+                                      blockIdx,
+                                      itemIdx,
+                                      "linkHref",
+                                      e.target.value,
+                                    )
+                                  }
+                                  className="border px-3 py-2 rounded"
+                                />
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  removeCustomContentBlockItem(
+                                    idx,
+                                    blockIdx,
+                                    itemIdx,
+                                  )
+                                }
+                                className="justify-self-start text-red-500">
+                                Remove Bullet
+                              </button>
+                            </div>
+                          ))}
+                          <button
+                            type="button"
+                            onClick={() =>
+                              addCustomContentBlockItem(idx, blockIdx)
+                            }
+                            className="bg-blue-500 text-white px-3 py-2 rounded">
+                            Add Bullet
+                          </button>
+                        </div>
+                      )}
+
+                      {block.type === "ctaButton" && (
+                        <div className="grid grid-cols-2 gap-3">
+                          <input
+                            type="text"
+                            placeholder="Button text"
+                            value={block.text}
+                            onChange={(e) =>
+                              updateCustomContentBlock(
+                                idx,
+                                blockIdx,
+                                "text",
+                                e.target.value,
+                              )
+                            }
+                            className="border px-3 py-2 rounded"
+                          />
+                          <input
+                            type="text"
+                            placeholder="Button URL"
+                            value={block.linkHref}
+                            onChange={(e) =>
+                              updateCustomContentBlock(
+                                idx,
+                                blockIdx,
+                                "linkHref",
+                                e.target.value,
+                              )
+                            }
+                            className="border px-3 py-2 rounded"
+                          />
+                        </div>
+                      )}
+
+                      <div className="flex flex-wrap gap-3">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            moveCustomContentBlock(idx, blockIdx, -1)
+                          }
+                          disabled={blockIdx === 0}
+                          className="text-slate-600 disabled:text-slate-300">
+                          Move Up
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                  <button
+                    type="button"
+                    onClick={() => addCustomContentBlock(idx)}
+                    className="bg-blue-500 text-white px-3 py-2 rounded">
+                    Add Content Block
+                  </button>
+                </div>
               )}
 
               {(sec.type === "featureGrid" || sec.type === "tips") && (

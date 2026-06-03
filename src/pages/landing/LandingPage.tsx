@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import {HeadProvider, Title, Meta} from "react-head";
 import {
   landingPagesBySlug,
+  LandingPageCustomContentBlock,
   LandingPageData,
   LandingPageSection,
 } from "./content";
@@ -25,6 +26,38 @@ const readDynamicLandingPages = () => {
     console.warn("Unable to read dynamic landing pages:", error);
     return {};
   }
+};
+
+const renderLinkedText = (
+  text: string,
+  linkLabel?: string,
+  linkHref?: string,
+) => {
+  if (!linkLabel || !linkHref) {
+    return text;
+  }
+
+  const linkIndex = text.indexOf(linkLabel);
+  if (linkIndex === -1) {
+    return text;
+  }
+
+  const beforeLink = text.slice(0, linkIndex);
+  const afterLink = text.slice(linkIndex + linkLabel.length);
+
+  return (
+    <>
+      {beforeLink}
+      <a
+        href={linkHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-semibold text-blue-600 underline-offset-4 hover:underline">
+        {linkLabel}
+      </a>
+      {afterLink}
+    </>
+  );
 };
 
 const LandingPage: React.FC = () => {
@@ -108,6 +141,100 @@ const LandingPage: React.FC = () => {
             variant="simple"
           />
         );
+      case "customContent":
+        const blocks: LandingPageCustomContentBlock[] =
+          section.blocks && section.blocks.length > 0
+            ? section.blocks
+            : [
+                ...(section.title
+                  ? [{type: "title" as const, text: section.title}]
+                  : []),
+                ...(section.image
+                  ? [{type: "image" as const, image: section.image}]
+                  : []),
+                ...(section.paragraphs?.map((paragraph) => ({
+                  type: "paragraph" as const,
+                  text: paragraph.text,
+                  linkLabel: paragraph.linkLabel,
+                  linkHref: paragraph.linkHref,
+                })) || []),
+                ...(section.bullets?.length
+                  ? [{type: "list" as const, items: section.bullets}]
+                  : []),
+              ];
+
+        return (
+          <section key={section.id || index} id={section.id} className="py-2">
+            <div className="mx-auto max-w-4xl space-y-6 text-left">
+              {blocks.map((block, blockIndex) => (
+                <React.Fragment key={block.id || blockIndex}>
+                  {block.type === "title" && block.text && (
+                    <h2 className="text-left text-3xl font-bold text-[#3073cc]">
+                      {block.text}
+                    </h2>
+                  )}
+
+                  {block.type === "subtitle" && block.text && (
+                    <h3 className="text-left text-2xl font-semibold text-slate-900">
+                      {block.text}
+                    </h3>
+                  )}
+
+                  {block.type === "paragraph" && block.text && (
+                    <p className="text-left text-slate-700 leading-relaxed">
+                      {renderLinkedText(
+                        block.text,
+                        block.linkLabel,
+                        block.linkHref,
+                      )}
+                    </p>
+                  )}
+
+                  {block.type === "image" && block.image && (
+                    <div className="flex justify-center">
+                      <img
+                        src={block.image}
+                        alt="Custom content image"
+                        className="max-h-[420px] w-full max-w-3xl rounded-2xl object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+
+                  {block.type === "list" &&
+                    block.items &&
+                    block.items.length > 0 && (
+                      <ul className="space-y-3 pl-5 text-slate-700 list-disc">
+                        {block.items.map((item, itemIndex) => (
+                          <li key={`${item.text}-${itemIndex}`}>
+                            {renderLinkedText(
+                              item.text,
+                              item.linkLabel,
+                              item.linkHref,
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                  {block.type === "ctaButton" &&
+                    block.text &&
+                    block.linkHref && (
+                      <div className="flex justify-center">
+                        <a
+                          href={block.linkHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+                          {block.text}
+                        </a>
+                      </div>
+                    )}
+                </React.Fragment>
+              ))}
+            </div>
+          </section>
+        );
       case "featureGrid":
       case "tips":
         return (
@@ -177,8 +304,8 @@ const LandingPage: React.FC = () => {
         <Title>{page.seoTitle}</Title>
         <Meta name="description" content={page.seoDescription} />
       </HeadProvider>
-      <div className="bg-neutral-100">
-        <LandingHero {...page.hero} />
+      <div className="bg-white">
+        {/* <LandingHero {...page.hero} /> */}
         <div className="max-w-7xl mx-auto px-4 py-12 space-y-14">
           {page.sections.map(renderSection)}
         </div>

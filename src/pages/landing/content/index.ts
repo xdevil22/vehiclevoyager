@@ -18,6 +18,7 @@ export const landingPagesBySlug = Object.fromEntries(
 export type {
   LandingPageData,
   LandingPageSection,
+  LandingPageCustomContentBlock,
   LandingPageCTA,
   LandingPageFAQItem,
   LandingPageLinkItem,

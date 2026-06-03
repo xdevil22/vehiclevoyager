@@ -8,8 +8,8 @@ type Props = {
 };
 
 const LandingFAQ: React.FC<Props> = ({id, title, items}) => (
-  <section id={id} className="rounded-3xl bg-white p-8 shadow-sm">
-    <div className="max-w-5xl mx-auto">
+  <section id={id} className="py-2">
+    <div className="max-w-4xl mx-auto">
       <h2 className="text-3xl font-bold text-slate-900 mb-4">{title}</h2>
       <div className="space-y-4">
         {items.map((item) => (
