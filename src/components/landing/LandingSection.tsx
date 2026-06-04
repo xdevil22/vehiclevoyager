@@ -28,7 +28,9 @@ const LandingSection: React.FC<Props> = ({
   return (
     <section id={id} className="rounded-3xl bg-white p-8 shadow-sm">
       <div className="max-w-5xl mx-auto">
-        {title && <h2 className="text-3xl font-bold text-slate-900 mb-3">{title}</h2>}
+        {title && (
+          <h2 className="text-3xl font-bold text-slate-900 mb-3">{title}</h2>
+        )}
         {subtitle && <p className="text-slate-600 mb-6">{subtitle}</p>}
 
         {body?.map((paragraph, index) => (
@@ -42,8 +44,7 @@ const LandingSection: React.FC<Props> = ({
             {items.map((item) => (
               <div
                 key={item.title}
-                className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm"
-              >
+                className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   {item.title}
                 </h3>
@@ -56,8 +57,12 @@ const LandingSection: React.FC<Props> = ({
         {items && items.length > 0 && variant === "list" && (
           <div className="mt-6 space-y-4">
             {items.map((item) => (
-              <div key={item.title} className="rounded-3xl border border-slate-200 bg-slate-50 p-5">
-                <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+              <div
+                key={item.title}
+                className="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {item.title}
+                </h3>
                 <p className="text-slate-600 mt-2">{item.description}</p>
               </div>
             ))}
@@ -68,7 +73,10 @@ const LandingSection: React.FC<Props> = ({
           <ul className="mt-6 space-y-3 list-disc list-inside text-slate-700">
             {items.map((item) => (
               <li key={item.title}>
-                <span className="font-semibold text-slate-900">{item.title}:</span> {item.description}
+                <span className="font-semibold text-slate-900">
+                  {item.title}:
+                </span>{" "}
+                {item.description}
               </li>
             ))}
           </ul>
@@ -84,8 +92,7 @@ const LandingSection: React.FC<Props> = ({
                   button.style === "primary"
                     ? "bg-slate-900 text-white hover:bg-slate-800"
                     : "border border-slate-300 bg-white text-slate-900 hover:bg-slate-50"
-                }`}
-              >
+                }`}>
                 {button.label}
               </a>
             ))}

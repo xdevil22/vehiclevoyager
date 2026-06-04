@@ -20,6 +20,7 @@ import Blog17 from "./blogpostdata/blog17";
 import Blog18 from "./blogpostdata/blog18";
 import Blog19 from "./blogpostdata/blog19";
 import Blog20 from "./blogpostdata/blog20";
+import Blog21 from "./blogpostdata/blog21";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -35,6 +36,34 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 21,
+    slug: "getting-around-phoenix-rental-car",
+    mainTitle: "Getting Around Phoenix: Do You Need a Rental Car?",
+
+    title: "Do You Need a Rental Car?",
+    excerpt: (
+      <>
+        Ah, the desert. Hot, dry days, panoramic views, and cactus-dotted
+        landscapes make for interesting experiences and photo ops at every turn.
+        And one of the best ways to explore Arizona's Sonoran Desert is with a
+        trip to Phoenix.
+      </>
+    ),
+    date: "Published on: June 2, 2026",
+    image: "assets/blogs/blog21/desert-park.webp",
+    seoTitle: "Getting Around Phoenix: Do You Need a Rental Car?",
+    seoDescription:
+      "Phoenix is famous for its urban sprawl. Learn if Phoenix car rental is worth it. Get tips on parking, airport transfers, public transportation, and road trips.",
+    keywords:
+      "Phoenix car rental, getting around Phoenix, do you need a rental car in Phoenix, Phoenix airport transfers, Phoenix parking tips, Phoenix public transportation, Phoenix road trips, Phoenix travel guide, rental car Phoenix, Phoenix transportation tips",
+
+    content: (
+      <>
+        <Blog21 />
+      </>
+    ),
+  },
   {
     blogid: 20,
     slug: "coachella-2026-travel-guide-for-tickets-where-to-stay-and-getting-around",
@@ -73,6 +102,7 @@ export const blogPosts: BlogPost[] = [
       </>
     ),
   },
+
   {
     blogid: 19,
     slug: "sxsw-2026-travel-guide-for-tickets-events-where-to-stay-and-getting-around-austin",
