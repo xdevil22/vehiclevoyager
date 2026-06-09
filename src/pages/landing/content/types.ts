@@ -33,23 +33,29 @@ export interface LandingPageCustomContentItem {
   text: string;
   linkLabel?: string;
   linkHref?: string;
+  boldLabel?: string;
 }
 
 export type LandingPageCustomContentBlockType =
   | "title"
   | "subtitle"
+  | "caption"
   | "paragraph"
   | "image"
   | "list"
+  | "link"
+  | "affiliateCta"
   | "ctaButton";
 
 export interface LandingPageCustomContentBlock {
   id?: string;
   type: LandingPageCustomContentBlockType;
   text?: string;
+  description?: string;
   image?: string;
   linkLabel?: string;
   linkHref?: string;
+  boldLabel?: string;
   items?: LandingPageCustomContentItem[];
 }
 

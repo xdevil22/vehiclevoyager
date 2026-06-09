@@ -33,15 +33,18 @@ interface EditableCustomContentItem {
   text: string;
   linkLabel: string;
   linkHref: string;
+  boldLabel: string;
 }
 
 interface EditableCustomContentBlock {
   id: string;
   type: LandingPageCustomContentBlockType;
   text: string;
+  description: string;
   image: string;
   linkLabel: string;
   linkHref: string;
+  boldLabel: string;
   items: EditableCustomContentItem[];
 }
 
@@ -116,7 +119,8 @@ const toEditableCustomContentItems = (
     text: item.text,
     linkLabel: item.linkLabel || "",
     linkHref: item.linkHref || "",
-  })) || [{text: "", linkLabel: "", linkHref: ""}];
+    boldLabel: item.boldLabel || "",
+  })) || [{text: "", linkLabel: "", linkHref: "", boldLabel: ""}];
 
 const createCustomContentBlock = (
   type: LandingPageCustomContentBlockType = "paragraph",
@@ -124,10 +128,12 @@ const createCustomContentBlock = (
   id: `custom-block-${Date.now()}-${Math.random().toString(36).slice(2)}`,
   type,
   text: "",
+  description: "",
   image: "",
   linkLabel: "",
   linkHref: "",
-  items: [{text: "", linkLabel: "", linkHref: ""}],
+  boldLabel: "",
+  items: [{text: "", linkLabel: "", linkHref: "", boldLabel: ""}],
 });
 
 const toEditableCustomContentBlocks = (
@@ -138,9 +144,11 @@ const toEditableCustomContentBlocks = (
       id: block.id || `custom-block-${Date.now()}`,
       type: block.type,
       text: block.text || "",
+      description: block.description || "",
       image: block.image || "",
       linkLabel: block.linkLabel || "",
       linkHref: block.linkHref || "",
+      boldLabel: block.boldLabel || "",
       items: toEditableCustomContentItems(block.items),
     }));
   }
@@ -158,6 +166,7 @@ const toEditableCustomContentBlocks = (
       text: paragraph.text,
       linkLabel: paragraph.linkLabel || "",
       linkHref: paragraph.linkHref || "",
+      boldLabel: paragraph.boldLabel || "",
     });
   });
   if (section.bullets?.length) {
@@ -193,6 +202,7 @@ const CreateLandingPage: React.FC = () => {
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [existingPages, setExistingPages] = useState<LandingPageData[]>([]);
   const [isLoadingExistingPages, setIsLoadingExistingPages] = useState(true);
+  const [isSavingLandingPage, setIsSavingLandingPage] = useState(false);
   const [editingSlug, setEditingSlug] = useState<string | null>(null);
 
   useEffect(() => {
@@ -405,13 +415,13 @@ const CreateLandingPage: React.FC = () => {
       paragraphs:
         type === "customContent"
           ? newSections[index].paragraphs || [
-              {text: "", linkLabel: "", linkHref: ""},
+              {text: "", linkLabel: "", linkHref: "", boldLabel: ""},
             ]
           : undefined,
       bullets:
         type === "customContent"
           ? newSections[index].bullets || [
-              {text: "", linkLabel: "", linkHref: ""},
+              {text: "", linkLabel: "", linkHref: "", boldLabel: ""},
             ]
           : undefined,
       blocks:
@@ -484,7 +494,7 @@ const CreateLandingPage: React.FC = () => {
     const newSections = [...sections];
     const block = newSections[sectionIndex].blocks?.[blockIndex];
     if (!block) return;
-    block.items.push({text: "", linkLabel: "", linkHref: ""});
+    block.items.push({text: "", linkLabel: "", linkHref: "", boldLabel: ""});
     setSections(newSections);
   };
 
@@ -525,7 +535,12 @@ const CreateLandingPage: React.FC = () => {
     const newSections = [...sections];
     const section = newSections[sectionIndex];
     if (!section[field]) section[field] = [];
-    section[field]!.push({text: "", linkLabel: "", linkHref: ""});
+    section[field]!.push({
+      text: "",
+      linkLabel: "",
+      linkHref: "",
+      boldLabel: "",
+    });
     setSections(newSections);
   };
 
@@ -626,6 +641,17 @@ const CreateLandingPage: React.FC = () => {
     setSections(sections.filter((_, i) => i !== index));
   };
 
+  const moveSectionUp = (index: number) => {
+    if (index === 0) return;
+
+    const newSections = [...sections];
+    [newSections[index - 1], newSections[index]] = [
+      newSections[index],
+      newSections[index - 1],
+    ];
+    setSections(newSections);
+  };
+
   const addFAQ = () => {
     setFaqs([...faqs, {question: "", answer: ""}]);
   };
@@ -673,6 +699,9 @@ const CreateLandingPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSuccessMessage(null);
+    setIsSavingLandingPage(true);
+    const isEditing = Boolean(editingSlug);
     const slug = generateSlug(category);
     const pageData: LandingPageData = {
       slug,
@@ -707,12 +736,14 @@ const CreateLandingPage: React.FC = () => {
                   (item) =>
                     item.text.trim() ||
                     item.linkLabel.trim() ||
-                    item.linkHref.trim(),
+                    item.linkHref.trim() ||
+                    item.boldLabel.trim(),
                 )
                 .map((item) => ({
                   text: item.text,
                   linkLabel: item.linkLabel || undefined,
                   linkHref: item.linkHref || undefined,
+                  boldLabel: item.boldLabel || undefined,
                 }));
 
             return {
@@ -723,9 +754,11 @@ const CreateLandingPage: React.FC = () => {
                   id: block.id,
                   type: block.type,
                   text: block.text || undefined,
+                  description: block.description || undefined,
                   image: block.image || undefined,
                   linkLabel: block.linkLabel || undefined,
                   linkHref: block.linkHref || undefined,
+                  boldLabel: block.boldLabel || undefined,
                   items:
                     block.type === "list"
                       ? mapCustomItems(block.items)
@@ -735,14 +768,29 @@ const CreateLandingPage: React.FC = () => {
                   if (
                     block.type === "title" ||
                     block.type === "subtitle" ||
+                    block.type === "caption" ||
                     block.type === "paragraph"
                   ) {
                     return Boolean(
-                      block.text || block.linkLabel || block.linkHref,
+                      block.text ||
+                        block.linkLabel ||
+                        block.linkHref ||
+                        block.boldLabel,
                     );
                   }
                   if (block.type === "image") {
                     return Boolean(block.image);
+                  }
+                  if (block.type === "link") {
+                    return Boolean(block.text || block.linkHref);
+                  }
+                  if (block.type === "affiliateCta") {
+                    return Boolean(
+                      block.text ||
+                        block.description ||
+                        block.linkLabel ||
+                        block.linkHref,
+                    );
                   }
                   if (block.type === "ctaButton") {
                     return Boolean(block.text || block.linkHref);
@@ -818,7 +866,7 @@ const CreateLandingPage: React.FC = () => {
 
     try {
       const response = await fetch(LANDING_PAGES_API_URL, {
-        method: editingSlug ? "PATCH" : "POST",
+        method: isEditing ? "PATCH" : "POST",
         headers: {
           "Content-Type": "application/json",
         },
@@ -831,6 +879,7 @@ const CreateLandingPage: React.FC = () => {
     } catch (error) {
       console.error("Unable to save landing page:", error);
       setSuccessMessage("Unable to save landing page. Please try again.");
+      setIsSavingLandingPage(false);
       return;
     }
 
@@ -844,28 +893,18 @@ const CreateLandingPage: React.FC = () => {
 
     setExistingPages(Object.values(existing));
     setSuccessMessage(
-      `${editingSlug ? "Updated" : "Created"} landing page successfully!`,
+      `${isEditing ? "Updated" : "Created"} landing page successfully!`,
     );
-    if (!editingSlug) {
+    if (!isEditing) {
       window.open(`/${slug}`, "_blank");
     }
     resetForm();
+    setIsSavingLandingPage(false);
   };
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Create/Edit Landing Page</h1>
-
-      {successMessage && (
-        <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
-          {successMessage}
-          <button
-            onClick={() => setSuccessMessage(null)}
-            className="ml-4 text-green-700 hover:text-green-900">
-            ×
-          </button>
-        </div>
-      )}
 
       {/* Recent Pages */}
       <div className="mb-6">
@@ -1104,13 +1143,15 @@ const CreateLandingPage: React.FC = () => {
                           className="w-full border px-3 py-2 rounded mt-1">
                           <option value="title">Title</option>
                           <option value="subtitle">Sub Title</option>
+                          <option value="caption">Caption</option>
                           <option value="paragraph">Paragraph</option>
                           <option value="image">Image</option>
                           <option value="list">List</option>
+                          <option value="link">Link</option>
+                          <option value="affiliateCta">Affiliate CTA</option>
                           <option value="ctaButton">CTA Button</option>
                         </select>
                       </label>
-
                       {block.type === "title" && (
                         <input
                           type="text"
@@ -1127,7 +1168,6 @@ const CreateLandingPage: React.FC = () => {
                           className="w-full border px-3 py-2 rounded"
                         />
                       )}
-
                       {block.type === "subtitle" && (
                         <input
                           type="text"
@@ -1144,7 +1184,23 @@ const CreateLandingPage: React.FC = () => {
                           className="w-full border px-3 py-2 rounded"
                         />
                       )}
-
+                      {block.type === "caption" && (
+                        <textarea
+                          placeholder="Caption text"
+                          value={block.text}
+                          onChange={(e) =>
+                            updateCustomContentBlock(
+                              idx,
+                              blockIdx,
+                              "text",
+                              e.target.value,
+                            )
+                          }
+                          className="w-full border px-3 py-2 rounded"
+                          rows={2}
+                          required
+                        />
+                      )}
                       {block.type === "paragraph" && (
                         <div className="space-y-3">
                           <textarea
@@ -1161,7 +1217,7 @@ const CreateLandingPage: React.FC = () => {
                             className="w-full border px-3 py-2 rounded"
                             rows={3}
                           />
-                          <div className="grid grid-cols-2 gap-3">
+                          <div className="grid gap-3 md:grid-cols-3">
                             <input
                               type="text"
                               placeholder="Optional link label"
@@ -1190,10 +1246,23 @@ const CreateLandingPage: React.FC = () => {
                               }
                               className="border px-3 py-2 rounded"
                             />
+                            <input
+                              type="text"
+                              placeholder="Optional bold text"
+                              value={block.boldLabel}
+                              onChange={(e) =>
+                                updateCustomContentBlock(
+                                  idx,
+                                  blockIdx,
+                                  "boldLabel",
+                                  e.target.value,
+                                )
+                              }
+                              className="border px-3 py-2 rounded"
+                            />
                           </div>
                         </div>
                       )}
-
                       {block.type === "image" && (
                         <div className="space-y-3">
                           <input
@@ -1248,7 +1317,7 @@ const CreateLandingPage: React.FC = () => {
                                 }
                                 className="border px-3 py-2 rounded"
                               />
-                              <div className="grid grid-cols-2 gap-3">
+                              <div className="grid gap-3 md:grid-cols-3">
                                 <input
                                   type="text"
                                   placeholder="Optional link label"
@@ -1279,6 +1348,21 @@ const CreateLandingPage: React.FC = () => {
                                   }
                                   className="border px-3 py-2 rounded"
                                 />
+                                <input
+                                  type="text"
+                                  placeholder="Optional bold text"
+                                  value={item.boldLabel}
+                                  onChange={(e) =>
+                                    updateCustomContentBlockItem(
+                                      idx,
+                                      blockIdx,
+                                      itemIdx,
+                                      "boldLabel",
+                                      e.target.value,
+                                    )
+                                  }
+                                  className="border px-3 py-2 rounded"
+                                />
                               </div>
                               <button
                                 type="button"
@@ -1304,7 +1388,100 @@ const CreateLandingPage: React.FC = () => {
                           </button>
                         </div>
                       )}
-
+                      {block.type === "link" && (
+                        <div className="grid gap-3 md:grid-cols-2">
+                          <input
+                            type="text"
+                            placeholder="Link text"
+                            value={block.text}
+                            onChange={(e) =>
+                              updateCustomContentBlock(
+                                idx,
+                                blockIdx,
+                                "text",
+                                e.target.value,
+                              )
+                            }
+                            className="border px-3 py-2 rounded"
+                          />
+                          <input
+                            type="text"
+                            placeholder="Link URL"
+                            value={block.linkHref}
+                            onChange={(e) =>
+                              updateCustomContentBlock(
+                                idx,
+                                blockIdx,
+                                "linkHref",
+                                e.target.value,
+                              )
+                            }
+                            className="border px-3 py-2 rounded"
+                          />
+                        </div>
+                      )}
+                      {block.type === "affiliateCta" && (
+                        <div className="grid gap-3">
+                          <input
+                            type="text"
+                            placeholder="CTA title"
+                            value={block.text}
+                            onChange={(e) =>
+                              updateCustomContentBlock(
+                                idx,
+                                blockIdx,
+                                "text",
+                                e.target.value,
+                              )
+                            }
+                            className="border px-3 py-2 rounded"
+                          />
+                          <textarea
+                            placeholder="CTA description"
+                            value={block.description}
+                            onChange={(e) =>
+                              updateCustomContentBlock(
+                                idx,
+                                blockIdx,
+                                "description",
+                                e.target.value,
+                              )
+                            }
+                            className="border px-3 py-2 rounded"
+                            rows={3}
+                          />
+                          <div className="grid gap-3 md:grid-cols-2">
+                            <input
+                              type="text"
+                              placeholder="Button text"
+                              value={block.linkLabel}
+                              onChange={(e) =>
+                                updateCustomContentBlock(
+                                  idx,
+                                  blockIdx,
+                                  "linkLabel",
+                                  e.target.value,
+                                )
+                              }
+                              className="border px-3 py-2 rounded"
+                            />
+                            <input
+                              type="text"
+                              placeholder="Button URL"
+                              value={block.linkHref}
+                              onChange={(e) =>
+                                updateCustomContentBlock(
+                                  idx,
+                                  blockIdx,
+                                  "linkHref",
+                                  e.target.value,
+                                )
+                              }
+                              className="border px-3 py-2 rounded"
+                            />
+                          </div>
+                        </div>
+                      )}
                       {block.type === "ctaButton" && (
                         <div className="grid grid-cols-2 gap-3">
                           <input
@@ -1337,7 +1514,6 @@ const CreateLandingPage: React.FC = () => {
                           />
                         </div>
                       )}
-
                       <div className="flex flex-wrap gap-3">
                         <button
                           type="button"
@@ -1454,12 +1630,21 @@ const CreateLandingPage: React.FC = () => {
                 </div>
               )}
 
-              <button
-                type="button"
-                onClick={() => removeSection(idx)}
-                className="text-red-500">
-                Remove Section
-              </button>
+              <div className="flex flex-wrap gap-4">
+                <button
+                  type="button"
+                  onClick={() => moveSectionUp(idx)}
+                  disabled={idx === 0}
+                  className="text-slate-600 disabled:text-slate-300">
+                  Move Up
+                </button>
+                <button
+                  type="button"
+                  onClick={() => removeSection(idx)}
+                  className="text-red-500">
+                  Remove Section
+                </button>
+              </div>
             </div>
           ))}
           <button
@@ -1558,21 +1743,40 @@ const CreateLandingPage: React.FC = () => {
         <div className="flex gap-4">
           <button
             type="submit"
-            className="bg-green-500 text-white px-6 py-3 rounded">
-            {editingSlug ? "Update" : "Generate"} Landing Page
+            disabled={isSavingLandingPage}
+            className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded disabled:cursor-not-allowed disabled:bg-green-300">
+            {isSavingLandingPage && (
+              <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/60 border-t-white" />
+            )}
+            {isSavingLandingPage
+              ? `${editingSlug ? "Updating" : "Generating"}...`
+              : `${editingSlug ? "Update" : "Generate"} Landing Page`}
           </button>
           {editingSlug && (
             <button
               type="button"
               onClick={resetForm}
-              className="bg-gray-500 text-white px-6 py-3 rounded">
+              disabled={isSavingLandingPage}
+              className="bg-gray-500 text-white px-6 py-3 rounded disabled:cursor-not-allowed disabled:bg-gray-300">
               Cancel Edit
             </button>
           )}
         </div>
+        {successMessage && (
+          <div className="flex items-center justify-between gap-4 rounded border border-green-400 bg-green-100 p-4 text-green-700">
+            <span>{successMessage}</span>
+            <button
+              type="button"
+              onClick={() => setSuccessMessage(null)}
+              className="text-green-700 hover:text-green-900">
+              Close
+            </button>
+          </div>
+        )}
       </form>
     </div>
   );
 };
 
 export default CreateLandingPage;
+

@@ -109,17 +109,33 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Popular Destinations</h3>
             <ul className="space-y-2">
               {[
-                "Miami, FL",
-                "Los Angeles, CA",
-                "Las Vegas, NV",
-                "New York, NY",
-                "Fort Lauderdale, FL",
-                "San Diego, CA",
-                "Phoenix, AZ",
-                "Austin, TX",
-              ].map((city) => (
-                <li key={city}>
-                  <span className="text-neutral-200">{city}</span>
+                {label: "Miami, FL", href: "#"},
+                {
+                  label: "Los Angeles, CA",
+                  href: "#",
+                },
+                {
+                  label: "Las Vegas, NV",
+                  href: "#",
+                },
+                {label: "New York, NY", href: "#"},
+                {
+                  label: "Fort Lauderdale, FL",
+                  href: "#",
+                },
+                {
+                  label: "San Diego, CA",
+                  href: "#",
+                },
+                {label: "Phoenix, AZ", href: "/car-rental-phoenix"},
+                {label: "Austin, TX", href: "#"},
+              ].map(({label, href}) => (
+                <li key={href}>
+                  <Link
+                    to={href}
+                    className="text-neutral-200 hover:text-primary transition-colors">
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>

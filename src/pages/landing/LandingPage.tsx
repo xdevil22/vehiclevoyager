@@ -28,34 +28,81 @@ const readDynamicLandingPages = () => {
   }
 };
 
-const renderLinkedText = (
+const renderFormattedText = (
   text: string,
   linkLabel?: string,
   linkHref?: string,
+  boldLabel?: string,
 ) => {
-  if (!linkLabel || !linkHref) {
+  if ((!linkLabel || !linkHref) && !boldLabel) {
     return text;
   }
 
-  const linkIndex = text.indexOf(linkLabel);
-  if (linkIndex === -1) {
+  const linkIndex = linkLabel ? text.indexOf(linkLabel) : -1;
+  const boldIndex = boldLabel ? text.indexOf(boldLabel) : -1;
+  const ranges = {
+    link:
+      linkLabel && linkHref && linkIndex !== -1
+        ? {start: linkIndex, end: linkIndex + linkLabel.length}
+        : undefined,
+    bold:
+      boldLabel && boldIndex !== -1
+        ? {start: boldIndex, end: boldIndex + boldLabel.length}
+        : undefined,
+  };
+
+  if (!ranges.link && !ranges.bold) {
     return text;
   }
 
-  const beforeLink = text.slice(0, linkIndex);
-  const afterLink = text.slice(linkIndex + linkLabel.length);
+  const boundaries = Array.from(
+    new Set([
+      0,
+      text.length,
+      ...(ranges.link ? [ranges.link.start, ranges.link.end] : []),
+      ...(ranges.bold ? [ranges.bold.start, ranges.bold.end] : []),
+    ]),
+  ).sort((a, b) => a - b);
 
   return (
     <>
-      {beforeLink}
-      <a
-        href={linkHref}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-600 underline-offset-4 hover:underline">
-        {linkLabel}
-      </a>
-      {afterLink}
+      {boundaries.slice(0, -1).map((start, index) => {
+        const end = boundaries[index + 1];
+        const segment = text.slice(start, end);
+        const isLinked =
+          Boolean(ranges.link) &&
+          start >= ranges.link!.start &&
+          end <= ranges.link!.end;
+        const isBold =
+          Boolean(ranges.bold) &&
+          start >= ranges.bold!.start &&
+          end <= ranges.bold!.end;
+
+        if (isLinked) {
+          return (
+            <a
+              key={`${start}-${end}`}
+              href={linkHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-blue-600 underline-offset-4 hover:underline ${
+                isBold ? "font-semibold" : ""
+              }`}>
+              {segment}
+            </a>
+          );
+        }
+
+        if (isBold) {
+          return (
+            <strong key={`${start}-${end}`} className="font-semibold">
+              {segment}
+            </strong>
+          );
+        }
+
+        return segment;
+      })}
     </>
   );
 };
@@ -157,6 +204,7 @@ const LandingPage: React.FC = () => {
                   text: paragraph.text,
                   linkLabel: paragraph.linkLabel,
                   linkHref: paragraph.linkHref,
+                  boldLabel: paragraph.boldLabel,
                 })) || []),
                 ...(section.bullets?.length
                   ? [{type: "list" as const, items: section.bullets}]
@@ -180,12 +228,19 @@ const LandingPage: React.FC = () => {
                     </h3>
                   )}
 
+                  {block.type === "caption" && block.text && (
+                    <p className="text-sm text-gray-600 italic leading-relaxed advertiser-disclosure">
+                      {block.text}
+                    </p>
+                  )}
+
                   {block.type === "paragraph" && block.text && (
                     <p className="text-left text-slate-700 leading-relaxed">
-                      {renderLinkedText(
+                      {renderFormattedText(
                         block.text,
                         block.linkLabel,
                         block.linkHref,
+                        block.boldLabel,
                       )}
                     </p>
                   )}
@@ -207,14 +262,49 @@ const LandingPage: React.FC = () => {
                       <ul className="space-y-3 pl-5 text-slate-700 list-disc">
                         {block.items.map((item, itemIndex) => (
                           <li key={`${item.text}-${itemIndex}`}>
-                            {renderLinkedText(
+                            {renderFormattedText(
                               item.text,
                               item.linkLabel,
                               item.linkHref,
+                              item.boldLabel,
                             )}
                           </li>
                         ))}
                       </ul>
+                    )}
+
+                  {block.type === "link" && block.text && block.linkHref && (
+                    <div className="text-left">
+                      <a
+                        href={block.linkHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline-offset-4 hover:underline">
+                        {block.text}
+                      </a>
+                    </div>
+                  )}
+
+                  {block.type === "affiliateCta" &&
+                    block.text &&
+                    block.description &&
+                    block.linkLabel &&
+                    block.linkHref && (
+                      <div className="bg-blue-600 text-white p-6 rounded-lg shadow">
+                        <h3 className="text-lg font-bold mb-2">
+                          {block.text}
+                        </h3>
+                        <p className="mb-4 leading-relaxed">
+                          {block.description}
+                        </p>
+                        <a
+                          href={block.linkHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">
+                          {block.linkLabel}
+                        </a>
+                      </div>
                     )}
 
                   {block.type === "ctaButton" &&
