@@ -200,6 +200,7 @@ const CreateLandingPage: React.FC = () => {
   const [finalCtaBtn2Text, setFinalCtaBtn2Text] = useState("Check Prices");
   const [finalCtaBtn2Link, setFinalCtaBtn2Link] = useState("#pricing");
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [existingPages, setExistingPages] = useState<LandingPageData[]>([]);
   const [isLoadingExistingPages, setIsLoadingExistingPages] = useState(true);
   const [isSavingLandingPage, setIsSavingLandingPage] = useState(false);
@@ -382,7 +383,7 @@ const CreateLandingPage: React.FC = () => {
     if (!file) return;
 
     if (!file.type.startsWith("image/")) {
-      setSuccessMessage("Please upload a valid image file.");
+      setErrorMessage("Please upload a valid image file.");
       event.target.value = "";
       return;
     }
@@ -399,7 +400,7 @@ const CreateLandingPage: React.FC = () => {
       }
     };
     reader.onerror = () => {
-      setSuccessMessage("Unable to upload image. Please try again.");
+      setErrorMessage("Unable to upload image. Please try again.");
     };
     reader.readAsDataURL(file);
   };
@@ -685,7 +686,7 @@ const CreateLandingPage: React.FC = () => {
         }
       } catch (error) {
         console.error("Unable to delete landing page:", error);
-        setSuccessMessage("Unable to delete landing page. Please try again.");
+        setErrorMessage("Unable to delete landing page. Please try again.");
         return;
       }
 
@@ -700,6 +701,7 @@ const CreateLandingPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSuccessMessage(null);
+    setErrorMessage(null);
     setIsSavingLandingPage(true);
     const isEditing = Boolean(editingSlug);
     const slug = generateSlug(category);
@@ -878,7 +880,7 @@ const CreateLandingPage: React.FC = () => {
       }
     } catch (error) {
       console.error("Unable to save landing page:", error);
-      setSuccessMessage("Unable to save landing page. Please try again.");
+      setErrorMessage("Unable to save landing page. Please try again.");
       setIsSavingLandingPage(false);
       return;
     }
@@ -892,6 +894,7 @@ const CreateLandingPage: React.FC = () => {
     localStorage.setItem("landingPages", JSON.stringify(existing));
 
     setExistingPages(Object.values(existing));
+    setErrorMessage(null);
     setSuccessMessage(
       `${isEditing ? "Updated" : "Created"} landing page successfully!`,
     );
@@ -1769,6 +1772,17 @@ const CreateLandingPage: React.FC = () => {
               type="button"
               onClick={() => setSuccessMessage(null)}
               className="text-green-700 hover:text-green-900">
+              Close
+            </button>
+          </div>
+        )}
+        {errorMessage && (
+          <div className="flex items-center justify-between gap-4 rounded border border-red-400 bg-red-100 p-4 text-red-700">
+            <span>{errorMessage}</span>
+            <button
+              type="button"
+              onClick={() => setErrorMessage(null)}
+              className="text-red-700 hover:text-red-900">
               Close
             </button>
           </div>
