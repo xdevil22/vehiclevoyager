@@ -97,16 +97,13 @@ export default function Blog24() {
         </p>
 
         <p>
-          The South Rim is the Grand Canyon you’ve seen on postcards, in movies,
-          and in travel guides. It’s home to the most iconic viewpoints, like
-          Yavapai Observation Station and Mather Point. It also hosts the
-          purpose-built Grand Canyon Village, with accommodation, hiking trails,
-          and campsites. Open year-round, the South Rim is also where the
-          largest crowds will congregate. Lodging inside and around the park can
-          book up months in advance during peak travel season, so it's wise to
-          reserve accommodations early. And if the views from the rim aren’t
-          enough, a helicopter tour over the canyon offers a perspective no
-          viewpoint on earth can match.
+          The North Rim is the destination for those seeking solitude and
+          cooler, more forested scenery. It’s more rugged, less developed, and
+          sits around 1,000 feet higher in elevation. As only around 10% of the
+          canyon’s annual visitors come to the North Rim, it’s the natural
+          choice for those seeking a quieter, more personal experience. Please
+          note that the North Rim is open only from mid-May to mid-October due
+          to snow.
         </p>
         <p>
           If you’re looking at a map and thinking you can visit both the South
