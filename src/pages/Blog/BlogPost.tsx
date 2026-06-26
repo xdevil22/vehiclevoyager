@@ -25,23 +25,23 @@ const BlogPost: React.FC = () => {
           buttonText: "Book Turo Car Rental",
         }
       : post.slug ===
-        "sxsw-2026-travel-guide-for-tickets-events-where-to-stay-and-getting-around-austin"
-      ? {
-          title: "Book SXSW travel essentials",
-          description:
-            "Reserve hotels, flights, and event transport for Austin with trusted booking partners.",
-          href: "https://www.hotels.com/affiliates/search-result-austin-texas-united-states-of-america.hLgW73T",
-          buttonText: "Find SXSW Hotels",
-        }
-      : post.slug === "top-7-luxury-yacht-rentals-in-miami"
-      ? {
-          title: "Reserve a luxury Miami yacht today",
-          description:
-            "Browse premium yacht charters for Miami and book your next luxury getaway with confidence.",
-          href: "https://www.sailo.com/boat-rentals/FL/Miami?sv1=affiliate&sv_campaign_id=1967225",
-          buttonText: "Book Miami Yacht",
-        }
-      : undefined;
+          "sxsw-2026-travel-guide-for-tickets-events-where-to-stay-and-getting-around-austin"
+        ? {
+            title: "Book SXSW travel essentials",
+            description:
+              "Reserve hotels, flights, and event transport for Austin with trusted booking partners.",
+            href: "https://www.hotels.com/affiliates/search-result-austin-texas-united-states-of-america.hLgW73T",
+            buttonText: "Find SXSW Hotels",
+          }
+        : post.slug === "top-7-luxury-yacht-rentals-in-miami"
+          ? {
+              title: "Reserve a luxury Miami yacht today",
+              description:
+                "Browse premium yacht charters for Miami and book your next luxury getaway with confidence.",
+              href: "https://www.sailo.com/boat-rentals/FL/Miami?sv1=affiliate&sv_campaign_id=1967225",
+              buttonText: "Book Miami Yacht",
+            }
+          : undefined;
 
   return (
     <>
@@ -66,7 +66,7 @@ const BlogPost: React.FC = () => {
             <img
               src={BASE_URL + post.image}
               alt={post.title}
-              className="w-full h-64 object-cover rounded-lg mb-6"
+              className={`w-full ${post.blogid === 25 ? "h-auto" : "h-64 object-cover"} rounded-lg mb-6`}
               loading="eager"
               decoding="async"
               fetchPriority="high"

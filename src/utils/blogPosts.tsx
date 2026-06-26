@@ -24,6 +24,7 @@ import Blog21 from "./blogpostdata/blog21";
 import Blog22 from "./blogpostdata/blog22";
 import Blog23 from "./blogpostdata/blog23";
 import Blog24 from "./blogpostdata/blog24";
+import Blog25 from "./blogpostdata/blog25";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -39,6 +40,34 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 25,
+    slug: "outdoorsy-rvezy-rv-rental-platform-better",
+    mainTitle: "Outdoorsy vs RVezy: Which RV Rental Platform Is Better?",
+
+    title: "Which RV Rental Platform Is Better?",
+    excerpt: (
+      <>
+        If you've been shopping for an RV rental, you've probably come across
+        the same two names repeatedly: Outdoorsy and RVezy. Both platforms
+        connect travelers with privately owned RVs, both offer thousands of
+        listings, and both make it easy to rent everything from small campervans
+        to luxury motorhomes.
+      </>
+    ),
+    date: "Published on: June 24, 2026",
+    image: "assets/blogs/blog25/outdoorsy-vs-rVezy.webp",
+    seoTitle: "Outdoorsy vs RVezy: Which RV Rental Platform Is Better?",
+    seoDescription:
+      "Not sure whether to book with Outdoorsy or RVezy? Compare pricing, RV inventory, fees, insurance, and key features to find the best platform for your next RV adventure.",
+    keywords:
+      "Outdoorsy vs RVezy, RV rental comparison, Outdoorsy review, RVezy review, best RV rental platform, peer-to-peer RV rentals, RV rental marketplace, RV rental pricing comparison, RV rental insurance coverage, RV rental fees and costs, RV rental inventory comparison, rent an RV online, RV travel planning, RV road trip rentals, RV sharing platform, RV rental booking guide, Outdoorsy alternatives, RVezy alternatives, RV rental platform comparison, best RV rental app.",
+    content: (
+      <>
+        <Blog25 />
+      </>
+    ),
+  },
   {
     blogid: 24,
     slug: "driving-the-grand-canyon-routes-stops-travel-tips",
