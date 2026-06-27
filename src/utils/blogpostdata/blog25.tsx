@@ -72,7 +72,7 @@ export default function Blog25() {
         <p>
           RVezy always offers{" "}
           <a
-            href="#"
+            href="https://www.rvezy.com/?irclickid=yJxVvg3nGxycU9tyNU0qT3YkUkuQglW1w0UvRg0&irgwc=1&afsrc=1"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline">

@@ -15,6 +15,8 @@ import lvcexotic from "./logos/lvcexotic.webp";
 import maverick from "./logos/maverick.webp";
 import expediainline from "./logos/expedia-inline.svg";
 import turologo from "./logos/turoemblema.webp";
+import samboatlogo from "./logos/samboat-logo.webp";
+import rvezylogo from "./logos/rvezy-logo.webp";
 
 export const heroImages = [
   {
@@ -53,6 +55,8 @@ export const logosImages = {
   lvcexotic,
   expediainline,
   turologo,
+  samboatlogo,
+  rvezylogo,
 };
 export const defaultImages = {
   defaultVehicle2,

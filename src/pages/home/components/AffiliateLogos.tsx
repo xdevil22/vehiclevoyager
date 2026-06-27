@@ -70,6 +70,18 @@ const providers: Provider[] = [
     alt: "Turo",
     className: "turologo",
   },
+  {
+    href: "https://www.awin1.com/cread.php?awinmid=32679&awinaffid=1967225&ued=https%3A%2F%2Fwww.samboat.com",
+    imgSrc: logosImages.samboatlogo,
+    alt: "Samboat",
+    className: "samboatlogo",
+  },
+  {
+    href: "https://rvezypartnershipprogram.sjv.io/c/6269754/1686722/19443?subId1=text1",
+    imgSrc: logosImages.rvezylogo,
+    alt: "RVezy",
+    className: "rvezylogo",
+  },
 ];
 {
 }
