@@ -109,26 +109,35 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Popular Destinations</h3>
             <ul className="space-y-2">
               {[
-                {label: "Miami, FL", href: "#"},
+                {
+                  label: "Miami, FL",
+                  href: "https://vechura.com/boat-rental-miami",
+                },
                 {
                   label: "Los Angeles, CA",
                   href: "#",
                 },
                 {
                   label: "Las Vegas, NV",
-                  href: "#",
+                  href: "https://vechura.com/hotels-las-vegas",
                 },
-                {label: "New York, NY", href: "#"},
+                {
+                  label: "New York, NY",
+                  href: "https://vechura.com/hotels-new-york",
+                },
                 {
                   label: "Fort Lauderdale, FL",
                   href: "#",
                 },
                 {
                   label: "San Diego, CA",
-                  href: "#",
+                  href: "https://vechura.com/boat-rental-san-diego",
                 },
                 {label: "Phoenix, AZ", href: "/car-rental-phoenix"},
-                {label: "Austin, TX", href: "#"},
+                {
+                  label: "Austin, TX",
+                  href: "https://vechura.com/rv-rental-austin",
+                },
               ].map(({label, href}) => (
                 <li key={href}>
                   <Link
