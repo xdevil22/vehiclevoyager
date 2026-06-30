@@ -111,7 +111,7 @@ const Footer = () => {
               {[
                 {
                   label: "Miami, FL",
-                  href: "https://vechura.com/boat-rental-miami",
+                  href: "/boat-rental-miami",
                 },
                 {
                   label: "Los Angeles, CA",
@@ -119,11 +119,11 @@ const Footer = () => {
                 },
                 {
                   label: "Las Vegas, NV",
-                  href: "https://vechura.com/hotels-las-vegas",
+                  href: "/hotels-las-vegas",
                 },
                 {
                   label: "New York, NY",
-                  href: "https://vechura.com/hotels-new-york",
+                  href: "/hotels-new-york",
                 },
                 {
                   label: "Fort Lauderdale, FL",
@@ -131,12 +131,12 @@ const Footer = () => {
                 },
                 {
                   label: "San Diego, CA",
-                  href: "https://vechura.com/boat-rental-san-diego",
+                  href: "/boat-rental-san-diego",
                 },
                 {label: "Phoenix, AZ", href: "/car-rental-phoenix"},
                 {
                   label: "Austin, TX",
-                  href: "https://vechura.com/rv-rental-austin",
+                  href: "/rv-rental-austin",
                 },
               ].map(({label, href}) => (
                 <li key={href}>
