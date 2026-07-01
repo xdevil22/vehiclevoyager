@@ -25,6 +25,7 @@ import Blog22 from "./blogpostdata/blog22";
 import Blog23 from "./blogpostdata/blog23";
 import Blog24 from "./blogpostdata/blog24";
 import Blog25 from "./blogpostdata/blog25";
+import Blog26 from "./blogpostdata/blog26";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -40,6 +41,35 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 26,
+    slug: "best-luxury-experiences-in-las-vegas-beyond-the-casinos",
+    mainTitle: "Best Luxury Experiences in Las Vegas Beyond the Casinos",
+
+    title: "Best Luxury Experiences in Las Vegas Beyond the Casinos",
+    excerpt: (
+      <>
+        Las Vegas has earned its reputation for world-class entertainment, but
+        some of its most memorable experiences happen well beyond the casino
+        floor. Whether you're arriving by private jet, driving an exotic car
+        through the Nevada desert, enjoying an intimate Michelin-starred dinner,
+        or unwinding at a luxury spa, the city offers countless ways to indulge
+        without ever sitting at a gaming table.
+      </>
+    ),
+    date: "Published on: June 30, 2026",
+    image: "assets/blogs/blog26/las-vegas-casinos.webp",
+    seoTitle: "Best Luxury Experiences in Las Vegas Beyond the Casinos",
+    seoDescription:
+      "Discover unforgettable luxury experiences in Las Vegas, from exotic car rentals and private helicopter flights to Michelin-starred dining, luxury spas, and VIP adventures beyond the casinos.",
+    keywords:
+      "Luxury Experiences in Las Vegas, Exotic car rentals Las Vegas, Private helicopter tours Las Vegas, Michelin-star restaurants Las Vegas, Luxury spas Las Vegas, VIP experiences Las Vegas, Luxury travel Las Vegas, Las Vegas luxury vacation, Private tours Las Vegas, Fine dining Las Vegas, Luxury activities in Las Vegas, High-end experiences Las Vegas, Las Vegas helicopter ride, Luxury weekend in Las Vegas, Exclusive Las Vegas experiences",
+    content: (
+      <>
+        <Blog26 />
+      </>
+    ),
+  },
   {
     blogid: 25,
     slug: "outdoorsy-rvezy-rv-rental-platform-better",

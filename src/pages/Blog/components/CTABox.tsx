@@ -2,7 +2,7 @@ import React from "react";
 
 type CTABoxProps = {
   title: string;
-  description: string;
+  description?: string;
   href: string;
   buttonText: string;
   className?: string;

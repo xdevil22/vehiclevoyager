@@ -71,6 +71,13 @@ div
 .blog-article .underlinelink a:hover {
   text-decoration: none;
 }
+.blog-article .blog-cta-box h3 {
+  color: #fff;
+  margin-top: 0;
+}
+.blog-article .blog-cta-box p {
+  color: #fff;
+}
 .vechuraLogo img {
   height: 30px;
   width: auto;
