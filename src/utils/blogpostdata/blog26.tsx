@@ -81,7 +81,7 @@ export default function Blog26() {
         <div className="mb-5">
           {" "}
           <a
-            href="https://vechura.com/blog/exotic-car-rentals-in-las-vegas"
+            href="/blog/exotic-car-rentals-in-las-vegas"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline">
@@ -248,7 +248,7 @@ export default function Blog26() {
         </p>
         <CTABox
           title="Ticket Liquidator"
-          href={"https://ticketliquidator.auhm.net/QY0XWY "}
+          href={"https://ticketliquidator.auhm.net/QY0XWY"}
           buttonText={"Browse Las Vegas Shows"}
           className={"blog-cta-box"}
         />
@@ -302,7 +302,7 @@ export default function Blog26() {
         <div>
           {" "}
           <a
-            href="https://vechura.com/hotels-las-vegas"
+            href="/hotels-las-vegas"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline">
