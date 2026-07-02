@@ -142,7 +142,9 @@ export default function Blog26() {
         </p>
         <CTABox
           title="Maverick Helicopters"
-          href={"#"}
+          href={
+            "https://www.maverickhelicopter.com/al.aspx?id=280252&t=0 target="
+          }
           buttonText={"Explore Helicopter Experiences"}
           className={"blog-cta-box"}
         />
