@@ -26,6 +26,7 @@ import Blog23 from "./blogpostdata/blog23";
 import Blog24 from "./blogpostdata/blog24";
 import Blog25 from "./blogpostdata/blog25";
 import Blog26 from "./blogpostdata/blog26";
+import Blog27 from "./blogpostdata/blog27";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -41,6 +42,34 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 27,
+    slug: "best-luxury-experiences-in-las-vegas-beyond-the-casinos",
+    mainTitle: "San Diego Travel Guide: Beaches, Boats & Summer Adventuress",
+
+    title: "BSun, Surf and the Best of the Bay",
+    excerpt: (
+      <>
+        With lazy summer days and a permanent summer vacation vibe, San Diego
+        doesn't have to try too hard to be America's finest city. 70 miles of
+        coastline, near-perfect weather, and a harbour that doubles as one of
+        the most scenic backdrops in California, planning the perfect break
+        really isn't that hard.
+      </>
+    ),
+    date: "Published on: July 4, 2026",
+    image: "assets/blogs/blog27/summer-adventures.webp",
+    seoTitle: "San Diego Travel Guide: Beaches, Boats & Summer Adventures",
+    seoDescription:
+      "Plan the perfect San Diego summer trip with our guide to the best beaches, boat rentals, Mission Bay, water sports, top attractions, and how to get around America's Finest City.",
+    keywords:
+      "San Diego summer trip, San Diego summer vacation, things to do in San Diego in summer, best beaches in San Diego, San Diego travel guide, Mission Bay activities, San Diego boat rentals, water sports in San Diego, summer activities in San Diego, San Diego attractions, San Diego itinerary, best beaches in San Diego for families, Mission Beach, Pacific Beach, La Jolla Cove, Coronado Beach, Balboa Park, San Diego Zoo, USS Midway Museum, Gaslamp Quarter, SeaWorld San Diego, Sunset Cliffs, harbor cruises, whale watching San Diego, kayaking in San Diego, paddleboarding in Mission Bay, America's Finest City, Southern California travel, California beach vacation.",
+    content: (
+      <>
+        <Blog27 />
+      </>
+    ),
+  },
   {
     blogid: 26,
     slug: "best-luxury-experiences-in-las-vegas-beyond-the-casinos",

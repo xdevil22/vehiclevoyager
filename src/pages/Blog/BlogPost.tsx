@@ -66,7 +66,7 @@ const BlogPost: React.FC = () => {
             <img
               src={BASE_URL + post.image}
               alt={post.title}
-              className={`w-full ${post.blogid === 25 ? "h-auto" : "h-64 object-cover"} rounded-lg mb-6`}
+              className={`w-full ${post.blogid === 25 || post.blogid === 27 ? "h-auto" : "h-64 object-cover"} rounded-lg mb-6`}
               loading="eager"
               decoding="async"
               fetchPriority="high"
