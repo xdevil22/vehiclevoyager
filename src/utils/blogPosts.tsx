@@ -27,6 +27,7 @@ import Blog24 from "./blogpostdata/blog24";
 import Blog25 from "./blogpostdata/blog25";
 import Blog26 from "./blogpostdata/blog26";
 import Blog27 from "./blogpostdata/blog27";
+import Blog28 from "./blogpostdata/blog28";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -43,11 +44,40 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    blogid: 27,
-    slug: "best-luxury-experiences-in-las-vegas-beyond-the-casinos",
-    mainTitle: "San Diego Travel Guide: Beaches, Boats & Summer Adventuress",
+    blogid: 28,
+    slug: "monterey-car-week-travel-guide-events-hotels-luxury-experiences",
+    mainTitle:
+      "Monterey Car Week Travel Guide: Events, Hotels & Luxury Experiences",
 
-    title: "BSun, Surf and the Best of the Bay",
+    title: "Events, Hotels & Luxury Experiences",
+    excerpt: (
+      <>
+        Every August, California's Monterey Peninsula becomes the center of the
+        collector car world. This prestigious week draws global attention for
+        its contrast of modern luxury cars, like Ferraris, Lamborghinis, and
+        million-dollar hypercars, along with vintage cars you won’t see anywhere
+        else.
+      </>
+    ),
+    date: "Published on: July 7, 2026",
+    image: "assets/blogs/blog28/monterey.webp",
+    seoTitle: "Monterey Car Week: Where to Stay, What to See & Travel Tips",
+    seoDescription:
+      "Plan the perfect Monterey Car Week getaway with tips on the top events, luxury hotels, Pebble Beach, transportation, and unforgettable automotive experiences",
+    keywords:
+      "Monterey Car Week, Monterey Car Week events, Pebble Beach Concours d'Elegance, Monterey Car Week guide, luxury hotels in Monterey, Pebble Beach attractions, Monterey transportation, classic car events California, Monterey travel guide, luxury travel Monterey, automotive experiences Monterey, Car Week itinerary, Monterey vacation planning",
+    content: (
+      <>
+        <Blog28 />
+      </>
+    ),
+  },
+  {
+    blogid: 27,
+    slug: "san-diego-travel-guide-beaches-boats-summer-adventures",
+    mainTitle: "San Diego Travel Guide: Beaches, Boats & Summer Adventures",
+
+    title: "Sun, Surf and the Best of the Bay",
     excerpt: (
       <>
         With lazy summer days and a permanent summer vacation vibe, San Diego

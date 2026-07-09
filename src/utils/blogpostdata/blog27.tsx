@@ -3,8 +3,7 @@ import {BASE_URL} from "../constants";
 
 import theHarbor from "../../../public/assets/blogs/blog27/the-harbor.webp";
 import torreyPines from "../../../public/assets/blogs/blog27/torrey-pines.webp";
-import CTABox from "../../pages/Blog/components/CTABox";
-// import CTABox from "./CTABox";
+
 export default function Blog27() {
   return (
     <>
