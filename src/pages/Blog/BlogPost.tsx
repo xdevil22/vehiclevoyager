@@ -49,6 +49,7 @@ const BlogPost: React.FC = () => {
         <Title>{post.seoTitle || post.title}</Title>
         <Meta name="description" content={post.seoDescription} />
         <Meta name="keywords" content={post.keywords} />
+        <Meta name="robots" content="index,follow" />
       </HeadProvider>
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 blog-article">
         <article className="md:col-span-2">

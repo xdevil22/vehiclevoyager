@@ -28,6 +28,7 @@ import Blog25 from "./blogpostdata/blog25";
 import Blog26 from "./blogpostdata/blog26";
 import Blog27 from "./blogpostdata/blog27";
 import Blog28 from "./blogpostdata/blog28";
+import Blog29 from "./blogpostdata/blog29";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -43,6 +44,34 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 29,
+    slug: "sturgis-motorcycle-rally-travel-guide-best-rides-camping-events",
+    mainTitle:
+      "Sturgis Motorcycle Rally Travel Guide: Best Rides, Camping & Events",
+
+    title: "Best Rides, Camping & Events",
+    excerpt: (
+      <>
+        The Sturgis Motorcycle Rally is the world's largest motorcycle rally,
+         attracting hundreds of thousands of riders to South Dakota's Black Hills 
+         every August. What began in 1938 as a small gathering has grown into an 
+         iconic celebration of motorcycles. Head here for everything from scenic rides and custom bike shows to concerts and races. And it doesn’t hurt that the area has some of the best riding roads in North America.
+      </>
+    ),
+    date: "Published on: July 17, 2026",
+    image: "assets/blogs/blog29/sturgis-motorcycle-rally.webp",
+    seoTitle: "Sturgis Motorcycle Rally Travel Guide: Best Rides, Camping & Events",
+    seoDescription:
+      "Get ready for the Sturgis Motorcycle Rally with our travel guide covering the best rides, campgrounds, top events, motorcycle rentals, and Black Hills attractions",
+    keywords:
+      "Get ready for the Sturgis Motorcycle Rally, Sturgis Motorcycle Rally travel guide, best rides near Sturgis, Sturgis Motorcycle Rally itinerary, Sturgis motorcycle campgrounds, best campgrounds in Sturgis, top Sturgis Rally events, Sturgis motorcycle rentals, motorcycle rentals in Sturgis SD, Black Hills motorcycle routes, Black Hills attractions, scenic motorcycle rides in South Dakota, Needles Highway motorcycle ride, Iron Mountain Road ride, Spearfish Canyon scenic drive, Mount Rushmore motorcycle trip, Custer State Park motorcycle ride, Sturgis Rally tips, where to stay during Sturgis Rally, Sturgis Rally travel planning, South Dakota motorcycle vacation, Black Hills road trip, Sturgis biker guide, best roads for motorcyclists in the Black Hills, Sturgis Rally camping guide, first-time Sturgis Rally guide, best motorcycle rides during the Sturgis Motorcycle Rally, complete Sturgis Motorcycle Rally travel guide, where to camp for the Sturgis Motorcycle Rally, best motorcycle rental companies in Sturgis, top attractions to visit in the Black Hills during Sturgis, how to plan a Sturgis Motorcycle Rally trip, scenic routes around Sturgis South Dakota, Sturgis Rally travel tips for first-time riders, best places to stay during the Sturgis Motorcycle Rally, ultimate Black Hills motorcycle adventure guide.",
+    content: (
+      <>
+        <Blog29 />
+      </>
+    ),
+  },
   {
     blogid: 28,
     slug: "monterey-car-week-travel-guide-events-hotels-luxury-experiences",

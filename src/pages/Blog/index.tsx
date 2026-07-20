@@ -28,6 +28,7 @@ const Blog: React.FC = () => {
       <HeadProvider>
         <Title>Vechura Blog</Title>
         <Meta name="description" content="Articles, guides & news by Vechura" />
+        <Meta name="robots" content="index,follow" />
       </HeadProvider>
 
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-2">

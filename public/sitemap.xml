@@ -1,35 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vechura.com/</loc>
-    <priority>1.0</priority>
+    <loc>https://vechura.com</loc>
   </url>
   <url>
     <loc>https://vechura.com/cars</loc>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://vechura.com/about</loc>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://vechura.com/blog</loc>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://vechura.com/booking-tools</loc>
-    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://vechura.com/privacy-policy</loc>
-    <priority>0.4</priority>
+    <loc>https://vechura.com/cookiepolicy</loc>
   </url>
   <url>
-    <loc>https://vechura.com/terms-of-service</loc>
-    <priority>0.4</priority>
+    <loc>https://vechura.com/privacypolicy</loc>
   </url>
   <url>
-    <loc>https://vechura.com/cookie-policy</loc>
-    <priority>0.4</priority>
+    <loc>https://vechura.com/advertiser-disclosure</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/email-signup</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/sturgis-motorcycle-rally-travel-guide-best-rides-camping-events</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/monterey-car-week-travel-guide-events-hotels-luxury-experiences</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/san-diego-travel-guide-beaches-boats-summer-adventures</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/best-luxury-experiences-in-las-vegas-beyond-the-casinos</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/outdoorsy-rvezy-rv-rental-platform-better</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/driving-the-grand-canyon-routes-stops-travel-tips</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/best-rv-rentals-for-national-parks-americas-greatest-parks</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/burning-man-travel-guide-tickets-transportation</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/getting-around-phoenix-rental-car</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/coachella-2026-travel-guide-for-tickets-where-to-stay-and-getting-around</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/sxsw-2026-travel-guide-for-tickets-events-where-to-stay-and-getting-around-austin</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/best-places-to-ski-in-the-u-s-7-top-winter-destinations-for-skiers-and-snowboarders</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/spring-training-in-arizona-complete-travel-guide-for-tickets-travel-and-getting-around</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/waste-management-phoenix-open-history-insider-guide-ultimate-trip</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/barrett-jackson-scottsdale-auto-auction-history-insider-guide-ultimate-trip</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/must-have-travel-gadgets-for-2026</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/top-10-car-rental-scams-and-how-to-avoid-them-in-2026</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/ferrari-sf90-stradale-las-vegas-rental</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/unforgettable-views-from-above</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/rving-with-pets-best-pet-friendly-rv-rentals-travel-tips</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/flying-private-first-time-what-to-expect-etiquette-insider-tips</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/exotic-car-rentals-in-las-vegas</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/road-trip-ready-15-must-have-items-for-your-next-adventure</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/7best-rv-rentals-in-phoenix</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/motorcycle-rentals-in-los-angeles</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/10-best-family-friendly-boat-rentals-in-fort-lauderdale</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/top-7-luxury-yacht-rentals-in-miami</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/u-s-tourism-statistics-trends</loc>
+  </url>
+  <url>
+    <loc>https://vechura.com/blog/new-york-travel-by-the-numbers</loc>
   </url>
 </urlset>
