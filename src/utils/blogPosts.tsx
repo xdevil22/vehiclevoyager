@@ -1,4 +1,4 @@
-import {JSX} from "react";
+import { JSX } from "react";
 
 import Blog2 from "./blogpostdata/blog2";
 import Blog1 from "./blogpostdata/blog1";
@@ -29,6 +29,7 @@ import Blog26 from "./blogpostdata/blog26";
 import Blog27 from "./blogpostdata/blog27";
 import Blog28 from "./blogpostdata/blog28";
 import Blog29 from "./blogpostdata/blog29";
+import Blog30 from "./blogpostdata/blog30";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -45,6 +46,45 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    blogid: 30,
+    slug: "california-coast-road-trip-guide-the-ultimate-pacific-coast-highway-itinerary",
+    mainTitle:
+      "California Coast Road Trip Guide: The Ultimate Pacific Coast Highway Itinerary",
+
+    title: "The Ultimate Pacific Coast Highway Itinerary",
+    excerpt: (
+      <>
+        <p className="italic mb-4">
+          “Because the greatest part of a road trip isn’t arriving at your
+          destination. It’s all the wild stuff that happens along the way.”{" "}
+        </p>
+        <p>
+          In her novel <i>Tamed</i>, Emma Chase perfectly captures the spirit of
+          the great American road trip. The Pacific Coast Highway is one of the
+          greatest.
+          <br /> The PCH (officially California State Route 1) tracks nearly 650
+          miles of the California coastline. From dramatic landscapes to
+          engineering marvels, from sun-bleached surf towns to vintage wooden
+          roller coasters, a PCH road trip is a bucket list adventure that will
+          both race your heart and soothe your soul.
+        </p>
+      </>
+    ),
+    date: "Published on: July 22, 2026",
+    image: "assets/blogs/blog30/california-coast.webp",
+    seoTitle:
+      "California Coast Road Trip Guide: The Ultimate Pacific Coast Highway Itinerary ",
+    seoDescription:
+      "Experience the ultimate California coast road trip with our Pacific Coast Highway Itinerary. Discover the best scenic stops, must-see views, vehicle tips, and driving advice for America's most iconic highway",
+    keywords:
+      "The Pacific Coast Highway Itinerary is your ultimate guide to experiencing one of the world's most breathtaking road trips. Stretching along California's stunning coastline, this iconic route offers dramatic ocean views, charming seaside towns, rugged cliffs, and unforgettable attractions at every turn. Whether you're planning a weekend getaway or a week-long adventure, a well-planned Pacific Coast Highway Itinerary helps you discover the best scenic stops, hidden gems, must-see viewpoints, and practical driving tips. From choosing the right vehicle to knowing the ideal travel season, this guide covers everything you need to make your California coastal journey safe, memorable, and truly unforgettable.",
+    content: (
+      <>
+        <Blog30 />
+      </>
+    ),
+  },
+  {
     blogid: 29,
     slug: "sturgis-motorcycle-rally-travel-guide-best-rides-camping-events",
     mainTitle:
@@ -54,14 +94,17 @@ export const blogPosts: BlogPost[] = [
     excerpt: (
       <>
         The Sturgis Motorcycle Rally is the world's largest motorcycle rally,
-         attracting hundreds of thousands of riders to South Dakota's Black Hills 
-         every August. What began in 1938 as a small gathering has grown into an 
-         iconic celebration of motorcycles. Head here for everything from scenic rides and custom bike shows to concerts and races. And it doesn’t hurt that the area has some of the best riding roads in North America.
+        attracting hundreds of thousands of riders to South Dakota's Black Hills
+        every August. What began in 1938 as a small gathering has grown into an
+        iconic celebration of motorcycles. Head here for everything from scenic
+        rides and custom bike shows to concerts and races. And it doesn’t hurt
+        that the area has some of the best riding roads in North America.
       </>
     ),
     date: "Published on: July 17, 2026",
     image: "assets/blogs/blog29/sturgis-motorcycle-rally.webp",
-    seoTitle: "Sturgis Motorcycle Rally Travel Guide: Best Rides, Camping & Events",
+    seoTitle:
+      "Sturgis Motorcycle Rally Travel Guide: Best Rides, Camping & Events",
     seoDescription:
       "Get ready for the Sturgis Motorcycle Rally with our travel guide covering the best rides, campgrounds, top events, motorcycle rentals, and Black Hills attractions",
     keywords:
@@ -318,7 +361,8 @@ export const blogPosts: BlogPost[] = [
           href="https://www.coachella.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Coachella Valley Music and Arts Festival
         </a>{" "}
         . Known simply as Coachella, the event blends major music performances,
@@ -358,7 +402,8 @@ export const blogPosts: BlogPost[] = [
           href="https://sxsw.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           SXSW
         </a>{" "}
         <strong>(South by Southwest) </strong> takes over downtown. What began
@@ -427,7 +472,8 @@ export const blogPosts: BlogPost[] = [
           href="https://www.mlb.com/spring-training/cactus-league"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Major League Baseball
         </a>{" "}
         teams head to the desert for Cactus League Spring Training. For fans, it
