@@ -38,6 +38,7 @@ export default function Blog29() {
             alt="the Sturgis"
             className="inline-block"
             loading="lazy"
+            decoding="async"
           />
         </div>
         <p>
@@ -250,6 +251,7 @@ export default function Blog29() {
             alt="motorcycle Rides"
             className="inline-block"
             loading="lazy"
+            decoding="async"
           />
         </div>
         <p>
@@ -299,6 +301,7 @@ export default function Blog29() {
             alt="vanocker Canyon"
             className="inline-block"
             loading="lazy"
+            decoding="async"
           />
         </div>
         <p>

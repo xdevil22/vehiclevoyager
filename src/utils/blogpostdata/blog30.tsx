@@ -124,6 +124,7 @@ export default function Blog30() {
             alt="Monterey Carmel"
             className="inline-block"
             loading="lazy"
+            decoding="async"
           />
         </div>
         <h2>Monterey, Carmel & Big Sur - History, Romance and Wilderness</h2>
@@ -206,6 +207,7 @@ export default function Blog30() {
             alt="Big Sur"
             className="inline-block"
             loading="lazy"
+            decoding="async"
           />
         </div>
         <h2>The Central Coast: San Simeon to Santa Barbara </h2>
@@ -325,6 +327,7 @@ export default function Blog30() {
             alt="Santa Monica"
             className="inline-block"
             loading="lazy"
+            decoding="async"
           />
         </div>
         <h3>Santa Monica to San Diego</h3>
@@ -362,10 +365,10 @@ export default function Blog30() {
           <table className="min-w-full border-collapse text-left text-sm text-slate-700 m-0">
             <thead className="bg-slate-100 text-slate-900">
               <tr>
-                <th className="px-4 py-3 font-semibold">Segment</th>
-                <th className="px-4 py-3 font-semibold">Distance</th>
-                <th className="px-4 py-3 font-semibold">Drive Time</th>
-                <th className="px-4 py-3 font-semibold">Suggested Overnight</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Segment</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Distance</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Drive Time</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Suggested Overnight</th>
               </tr>
             </thead>
             <tbody>
