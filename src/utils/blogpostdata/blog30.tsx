@@ -9,8 +9,8 @@ export default function Blog30() {
   return (
     <>
       <p className="italic mb-4">
-        “Because the greatest part of a road trip isn’t arriving at your
-        destination. It’s all the wild stuff that happens along the way.”{" "}
+        “Because the greatest part of a road trip isn't arriving at your
+        destination. It's all the wild stuff that happens along the way.”{" "}
       </p>
       <p>
         In her novel <i>Tamed</i>, Emma Chase perfectly captures the spirit of

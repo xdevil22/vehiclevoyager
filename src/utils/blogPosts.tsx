@@ -30,6 +30,7 @@ import Blog27 from "./blogpostdata/blog27";
 import Blog28 from "./blogpostdata/blog28";
 import Blog29 from "./blogpostdata/blog29";
 import Blog30 from "./blogpostdata/blog30";
+import Blog31 from "./blogpostdata/blog31";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -45,6 +46,40 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 31,
+    slug: "driving-the-florida-keys-from-miami-to-key-west-on-the-overseas-highway",
+    mainTitle:
+      "Driving the Florida Keys: From Miami to Key West on the Overseas Highway",
+
+    title: "From Miami to Key West on the Overseas Highway",
+    excerpt: (
+      <>
+        <p>
+          The best excuse to slow down you'll ever find. There are road trips
+          with a destination, and there are roads where the journey is the whole
+          point. The Overseas Highway is essentially a floating road spanning
+          113 miles, with almost 19 miles of bridges along the route. This isn't
+          a drive that needs military planning or precision; it's an unhurried
+          escape through some of the South's most eccentric and off-the-wall
+          areas. It's Hemingway drinking at noon; it's America unplugged.
+        </p>
+      </>
+    ),
+    date: "Published on: July 24, 2026",
+    image: "assets/blogs/blog31/overseas-highway.webp",
+    seoTitle:
+      "Miami to Key West Road Trip: The Definitive Overseas Highway Itinerary",
+    seoDescription:
+      "Escape to the tropics with our ultimate Miami to Key West road trip itinerary. Discover the best stops, scenic views, and local secrets along the iconic Overseas Highway.",
+    keywords:
+      "The Overseas Highway Itinerary is your ultimate guide to experiencing one of the world's most breathtaking road trips. Stretching along Florida's stunning coastline, this iconic route offers dramatic ocean views, charming seaside towns, rugged cliffs, and unforgettable attractions at every turn. Whether you're planning a weekend getaway or a week-long adventure, a well-planned Overseas Highway Itinerary helps you discover the best scenic stops, hidden gems, must-see viewpoints, and practical driving tips. From choosing the right vehicle to knowing the ideal travel season, this guide covers everything you need to make your Florida coastal journey safe, memorable, and truly unforgettable.",
+    content: (
+      <>
+        <Blog31 />
+      </>
+    ),
+  },
   {
     blogid: 30,
     slug: "california-coast-road-trip-guide-the-ultimate-pacific-coast-highway-itinerary",
