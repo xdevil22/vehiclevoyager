@@ -1,13 +1,13 @@
 import React from "react";
-import {useParams} from "react-router-dom";
-import {blogPosts} from "../../utils/blogPosts";
+import { useParams } from "react-router-dom";
+import { blogPosts } from "../../utils/blogPosts";
 import Sidebar from "./components/Sidebar";
 import CTABox from "./components/CTABox";
-import {BASE_URL} from "../../utils/constants";
+import { BASE_URL } from "../../utils/constants";
 
-import {HeadProvider, Title, Meta} from "react-head";
+import { HeadProvider, Title, Meta } from "react-head";
 const BlogPost: React.FC = () => {
-  const {slug} = useParams();
+  const { slug } = useParams();
   const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
@@ -49,6 +49,11 @@ const BlogPost: React.FC = () => {
         <Title>{post.seoTitle || post.title}</Title>
         <Meta name="description" content={post.seoDescription} />
         <Meta name="keywords" content={post.keywords} />
+        <Meta property="og:title" content={post.seoTitle || post.title} />
+        <Meta property="og:description" content={post.seoDescription} />
+        <Meta property="og:image" content={BASE_URL + post.image} />
+        <Meta property="og:type" content="article" />
+        <Meta name="twitter:card" content="summary_large_image" />
         <Meta name="robots" content="index,follow" />
       </HeadProvider>
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 blog-article">

@@ -31,6 +31,7 @@ import Blog28 from "./blogpostdata/blog28";
 import Blog29 from "./blogpostdata/blog29";
 import Blog30 from "./blogpostdata/blog30";
 import Blog31 from "./blogpostdata/blog31";
+import Blog32 from "./blogpostdata/blog32";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -46,6 +47,37 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 32,
+    slug: "private-jet-vs-first-class-which-travel-experience-is-worth-the-upgrade",
+    mainTitle:
+      "Private Jet vs. First Class: Which Travel Experience Is Worth the Upgrade?",
+
+    title: "Which Travel Experience Is Worth the Upgrade?",
+    excerpt: (
+      <>
+        <p>
+          A high-end travel experience always starts with the flight. And that
+          doesn’t mean being crammed into economy class. It means an upgrade.
+          But the decision is: do you splurge on a private jet or stick with
+          commercial but go first class?
+        </p>
+      </>
+    ),
+    date: "Published on: July 25, 2026",
+    image: "assets/blogs/blog32/private-jet.webp",
+    seoTitle:
+      "Private Jet vs. First Class: Which Travel Experience Is Worth the Upgrade?",
+    seoDescription:
+      "Deciding between taking a private jet and flying first class? We compare cost, comfort, privacy, flexibility, and overall value for the best luxury travel experience.",
+    keywords:
+      "private jet, first class, travel experience, upgrade, luxury travel",
+    content: (
+      <>
+        <Blog32 />
+      </>
+    ),
+  },
   {
     blogid: 31,
     slug: "driving-the-florida-keys-from-miami-to-key-west-on-the-overseas-highway",

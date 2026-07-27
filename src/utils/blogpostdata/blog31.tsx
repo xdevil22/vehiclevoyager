@@ -138,7 +138,7 @@ export default function Blog31() {
           </a>{" "}
           , this is the place to do it. Don't miss:
         </p>
-        <ul className="list-disc list-inside- pl-4">
+        <ul className="list-disc list-inside- ml-4">
           <li>
             <strong>Robbie’s Marina:</strong> An unmissable, quirky roadside
             institution. Buy a bucket of bait and feed the massive, wild tarpon
@@ -156,7 +156,7 @@ export default function Blog31() {
           Marathon is a family-friendly boating paradise located right in the
           center of the island chain.{" "}
         </p>
-        <ul>
+        <ul className="list-disc list-inside- ml-4">
           <li>
             <strong>The Turtle Hospital:</strong> A working veterinary hospital
             dedicated to the rehabilitation of injured sea turtles. The guided
@@ -220,7 +220,7 @@ export default function Blog31() {
           Beyond the bridge, the Lower Keys have a quieter, wilder feel as
           nature reclaims your attention after the drama of the crossing.
         </p>
-        <ul className="list-disc list-inside- pl-4">
+        <ul className="list-disc list-inside- ml-4">
           <li>
             <strong>Bahia Honda State Park:</strong> Home to what some consider
             the most beautiful beach in the entire Keys, framed by the dramatic
@@ -247,7 +247,7 @@ export default function Blog31() {
           as Key West is a city that deserves to be explored on foot.
         </p>
 
-        <ul className="list-disc list-inside- pl-4">
+        <ul className="list-disc list-inside- ml-4">
           <li>
             <strong>Duval Street:</strong> The center of Key West's nightlife.
             Famous for its historic saloons, live music, and legendary bar
