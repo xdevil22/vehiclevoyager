@@ -118,7 +118,7 @@ export default function Blog31() {
         </div>
         <h2>The Middle Keys: Islamorada to Marathon</h2>
         <p>
-          IAs you leave Key Largo, the highway narrows, and the road is cradled
+          As you leave Key Largo, the highway narrows, and the road is cradled
           by the Atlantic Ocean to your left and the Gulf of Mexico to the
           right. You are now in the Middle Keys, where old-school Floridian
           charm meets a sport fishing mecca.
@@ -140,7 +140,7 @@ export default function Blog31() {
         </p>
         <ul className="list-disc list-inside- ml-4">
           <li>
-            <strong>Robbie’s Marina:</strong> An unmissable, quirky roadside
+            <strong>Robbie's Marina:</strong> An unmissable, quirky roadside
             institution. Buy a bucket of bait and feed the massive, wild tarpon
             directly from the dock by hand. Beware: Pelicans will try to steal
             your bait.
@@ -196,7 +196,7 @@ export default function Blog31() {
           is strictly forbidden for safety reasons, so photos should be taken by
           your passengers.{" "}
           <a
-            href="https://amzn.to/4fr34ay"
+            href="https://amzn.to/4fr34AY"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"

@@ -376,29 +376,29 @@ export default function Blog29() {
             >
               Book your campsite
             </a>
-            {""} early – the best ones fill up months ahead of the actual rally.
+            {""} early - the best ones fill up months ahead of the actual rally.
           </li>
           <li>
-            Start your scenic rides early – congestion can really take away from
+            Start your scenic rides early - congestion can really take away from
             the experience.
           </li>
           <li>
             <a
-              href="https://amzn.to/4ytkell"
+              href="https://amzn.to/4ytKell"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
             >
               Pack rain gear
             </a>{" "}
-            – Even in August, mountain weather patterns are unpredictable.
+            - Even in August, mountain weather patterns are unpredictable.
           </li>
           <li>
-            Gas up often – Certain routes have limited fueling stations, so when
+            Gas up often - Certain routes have limited fueling stations, so when
             you see one, use it.
           </li>
           <li>
-            Respect the locals – As you can imagine, the influx of people and
+            Respect the locals - As you can imagine, the influx of people and
             motorcycles has a big impact on this small community. Be respectful
             when riding and attending events.
           </li>
@@ -419,7 +419,7 @@ export default function Blog29() {
         <h2>Ride Home with Stories Worth Telling </h2>
         <p>
           Yes, the Sturgis Motorcycle Rally has concerts , custom bikes, and a
-          lively atmosphere, but that’s only part of the equation. What you’ll
+          lively atmosphere, but that's only part of the equation. What you'll
           remember are the miles spent carving through the Black Hills,
           discovering small towns, and sharing the road with fellow
           enthusiasts.{" "}

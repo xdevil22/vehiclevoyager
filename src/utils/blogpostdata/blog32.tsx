@@ -310,9 +310,9 @@ export default function Blog32() {
       <div>
         <h2>So, Is a Private Jet Worth the Upgrade?</h2>
         <p>
-          It depends on what you’re paying the extra money for. Choose first
+          It depends on what you're paying the extra money for. Choose first
           class if your itinerary is flexible and involves a major airport, or
-          your budget doesn’t extend to private prices. Choose a private jet if
+          your budget doesn't extend to private prices. Choose a private jet if
           you want:
         </p>
         <ul className="list-disc list-inside- ml-4">
@@ -326,7 +326,7 @@ export default function Blog32() {
           Whichever option you choose, consider upgrading the rest of your
           journey too. Investing in{" "}
           <a
-            href="https://amzn.to/3tvw8kJ"
+            href="https://amzn.to/3TyW8KL"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -340,14 +340,14 @@ export default function Blog32() {
         </p>
         <p>
           The bottom line is that you should consider yourself lucky to even be
-          having the private jet vs. first class conversation. Most people don’t
+          having the private jet vs. first class conversation. Most people don't
           experience either even once.{" "}
         </p>
         <p>
           Luxury and value combine perfectly with first-class flying. But if
-          time is what’s most precious to you or you're traveling with family,
+          time is what's most precious to you or you're traveling with family,
           colleagues, or a group, upgrading to a private jet can completely
-          transform the way you travel. Either way, you can’t go far wrong.
+          transform the way you travel. Either way, you can't go far wrong.
         </p>
         <div className="flex justify-center">
           <a
