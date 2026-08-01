@@ -31,7 +31,7 @@ export default function Blog2() {
         <div>
           👉{" "}
           <a
-            href="https://www.amazon.com/dp/B0FK3R9GKZ?&linkCode=sl1&tag=vehiclevoyage-20&linkId=6c18b02d13e06829fddcb54f98f91f60&language=en_US&ref_=as_li_ss_tl"
+            href="https://www.amazon.com/dp/B0FK3R9GKZ?&linkCode=ll2&tag=vechura-20&linkId=1d7dabb7feb188ca57f7f1689c58b6ec&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -52,7 +52,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=portable+car+cooler&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=portable+car+cooler&i=automotive&language=en_US&linkCode=ll2&linkId=431abb353f95fcdf8357438f71d37423&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -72,7 +72,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=dash+cam&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=dash+cam&i=electronics&language=en_US&linkCode=ll2&linkId=3a8a3ff94f3d4277e2e3443c9d4cb25f&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -92,7 +92,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=car+phone+mount&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=car+phone+mount&i=wireless&language=en_US&linkCode=ll2&linkId=24e4290895c979a28ad712c6677919ce&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -112,7 +112,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=emergency+roadside+kit&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=emergency+roadside+kit&i=automotive&language=en_US&linkCode=ll2&linkId=57b1993803245b2c018e1f27c3bbe222&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -132,7 +132,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=first+aid+kit+travel&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=first+aid+kit&i=hpc&language=en_US&linkCode=ll2&linkId=c8014b3dd5a9c7224fe4573d39cd0612&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -152,7 +152,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=travel+pillow&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=travel+pillow&language=en_US&linkCode=ll2&linkId=5b99533040d858da66e3d0a9b69a7b5e&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -172,7 +172,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=packing+cubes&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=packing+cubes&i=fashion-luggage&language=en_US&linkCode=ll2&linkId=878b9199fc44fddbd01d0f5ea3568260&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -192,7 +192,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=portable+bluetooth+speaker&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=bluetooth+speaker&i=electronics&language=en_US&linkCode=ll2&linkId=e2bb1d3d565b3b07d2c7fef2899067b6&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -212,7 +212,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=foldable+picnic+blanket&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=foldable+picnic+blanket&i=outdoor-recreation&language=en_US&linkCode=ll2&linkId=cf98980fe73f5b613976eb11bee18f53&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -232,7 +232,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=polarized+sunglasses&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=polarized+sunglasses&i=fashion&language=en_US&linkCode=ll2&linkId=1918e25becdaaa49067bf36b30a4146f&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -252,7 +252,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=hand+sanitizer+wipes&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=hand+sanitizer+wipes&i=hpc&language=en_US&linkCode=ll2&linkId=e86af0e4f337191f448206fd786edc8b&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -272,7 +272,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=reusable+water+bottle&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=reusable+water+bottle&i=kitchen&language=en_US&linkCode=ll2&linkId=1c512cbf079435e9b2ca1780a46fff9a&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -292,7 +292,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=portable+power+bank&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=portable+power+bank&i=electronics&language=en_US&linkCode=ll2&linkId=60044e6ac1825d667d431187721f11a7&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
@@ -314,7 +314,7 @@ export default function Blog2() {
           {" "}
           👉{" "}
           <a
-            href="https://www.amazon.com/s?k=led+lantern&tag=yourtag-20"
+            href="https://www.amazon.com/s?k=led+lantern&i=outdoor-recreation&language=en_US&linkCode=ll2&linkId=15b9b55e4c76131cffb3e97fdda8bf97&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"

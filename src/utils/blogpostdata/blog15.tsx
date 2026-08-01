@@ -39,7 +39,8 @@ export default function Blog15() {
             href="https://www.villiersjets.com/?id=10228"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Villiers
           </a>
           , communication is easy, and the crew can often adjust your departure
@@ -183,7 +184,8 @@ export default function Blog15() {
             href="https://www.villiersjets.com/?id=10228"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             many charter providers
           </a>{" "}
           like allow gratuities through their booking platform.
@@ -210,10 +212,11 @@ export default function Blog15() {
           If you're traveling with children or pets, ask about protective covers
           or use{" "}
           <a
-            href="https://amzn.to/496yWc3"
+            href="https://www.amazon.com/s?k=pet+plane+carrier&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3Amp%2Bb1v%2F6aP6xyNQMUng6KeFryTKApL1PsHFFpMWWOes&crid=2D701CNNTPR8Z&linkCode=ll2&linkId=339ebdbc24e5762b0264a5dee6e8bb2c&qid=1765475625&rnid=2470954011&sprefix=pet+plane%2Caps%2C175&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             pet travel carriers
           </a>{" "}
           to prevent damage.
@@ -281,7 +284,8 @@ export default function Blog15() {
             href="https://www.villiersjets.com/?id=10228"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Villiers Jets
           </a>{" "}
           ensures your flight is safe, insured, and tailored to your
@@ -424,7 +428,8 @@ export default function Blog15() {
             href="https://www.villiersjets.com/?id=10228"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Villiers Jets
           </a>{" "}
           and book your next private flight with confidence.

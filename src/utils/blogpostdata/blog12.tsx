@@ -43,7 +43,8 @@ export default function Blog12() {
             href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Search pet-friendly RVs on Outdoorsy
           </a>
         </p>
@@ -73,7 +74,8 @@ export default function Blog12() {
             href="https://rvezypartnershipprogram.sjv.io/c/6269754/1686722/19443?subId1=text1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Find pet-friendly RVs on RVezy
           </a>
         </p>
@@ -97,7 +99,8 @@ export default function Blog12() {
             href="https://cruiseamerica.pxf.io/c/6269754/2807206/29922"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Check pet-friendly options at Cruise America
           </a>
         </p>
@@ -146,10 +149,11 @@ export default function Blog12() {
         <p>
           If your pet gets carsick or nervous, ask your vet about &nbsp;
           <a
-            href="https://amzn.to/44gHXN3"
+            href="https://www.amazon.com/s?k=pet+motion+sickness&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3A3nj1qWmNOQFl7DdWVk8pT9Q9zf7ZYxH58KdgZ8JFj7o&crid=2ZSSF1BG76LR4&linkCode=ll2&linkId=7f5fff800cc4ee52ba57170c4f876e38&qid=1765312511&rnid=2470954011&sprefix=pet+motion+sickne%2Caps%2C245&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             travel-safe calming aids or motion-sickness medication
           </a>{" "}
           before departure.
@@ -169,7 +173,8 @@ export default function Blog12() {
             href="https://tidd.ly/4puugmd"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Campspot
           </a>{" "}
           and The Dyrt let you filter for pet-friendly sites, so you can avoid
@@ -183,10 +188,11 @@ export default function Blog12() {
           Even with windows open or the AC running, temperatures can rise fast
           inside an RV. Use{" "}
           <a
-            href="https://amzn.to/4oFGx6d"
+            href="https://www.amazon.com/s?k=car+temperature+monitor+for+dogs&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AlujluRpnlqTBYzUT1ETkRwDxATCoVXyhJ2TcfpCyZp8&crid=35VYE6UVQSOXM&linkCode=ll2&linkId=81c69cfa3c31f32fb6c63e632651afbc&qid=1765313620&rnid=2470954011&sprefix=car+temperature%2Caps%2C287&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             temperature monitors or remote alert devices
           </a>{" "}
           &nbsp; to track the interior climate when you step out. Always park in
@@ -214,7 +220,8 @@ export default function Blog12() {
             href="https://www.roamly.com/?tid=1020a6e36cde55e1bbec6dab4f93a1&cam=R7&subcam=2660&utm_source=VEHICLE+VOYAGER&utm_medium=partnerships"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Roamly is Perfect
           </a>{" "}
           for Pet-Friendly Trips:
@@ -236,7 +243,8 @@ export default function Blog12() {
             href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=28&aff_id=2660&source=vehiclevoyager&sub_id=rvinsurance"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Roamly RV Insurance
           </a>{" "}
         </p>
@@ -283,10 +291,11 @@ export default function Blog12() {
           alone can make a big difference for anxious pets on their first big
           trip.{" "}
           <a
-            href="https://amzn.to/4iJymEo"
+            href="https://www.amazon.com/s?k=pet+travel+accessories&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AhIZyIxpdHXq8sB8WjTD5PTyNgnZo8kNXNOQIJjEvSfA&crid=3R9DFWJG9YWK8&linkCode=ll2&linkId=eb9b168cc667b2b3d023c5b4a9ff5b76&qid=1765314061&rnid=2470954011&sprefix=pet+travel%2Caps%2C338&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Find these items and others on Amazon
           </a>{" "}
           .{" "}
@@ -308,10 +317,11 @@ export default function Blog12() {
               {" "}
               Carry a{" "}
               <a
-                href="https://amzn.to/4aFrDJE"
+                href="https://www.amazon.com/s?k=travel+first+aid+kit&rh=p_85%3A2470955011&s=exact-aware-popularity-rank&dc&language=en_US&ds=v1%3A36ARgNWDXjFd7LH7CW1DrRsS%2FCSoS1qP3qV2kstkjho&crid=1A306TFNX4V3W&linkCode=ll2&linkId=aa0e481b7f3605dc0c997d4fb05a48d1&qid=1785434749&rnid=2470954011&sprefix=travel+fi%2Caps%2C363&tag=vechura-20&ref=as_li_ss_tl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline">
+                className="text-blue-600 hover:underline"
+              >
                 First Aid Kit
               </a>
               :
@@ -377,7 +387,8 @@ export default function Blog12() {
               href="https://www.roamly.com/?tid=1020a6e36cde55e1bbec6dab4f93a1&cam=R7&subcam=2660&utm_source=VEHICLE+VOYAGER&utm_medium=partnerships"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               Roamly Insurance
             </a>{" "}
             &nbsp; is a smart investment.
@@ -417,7 +428,8 @@ export default function Blog12() {
             href="https://www.outdoorsy.com/?hotid=102575f45c5bcd438cc2881991f8f5&offer_id=2&cam=751&subcam=2660&aff_sub=&utm_source=VEHICLE+VOYAGER&utm_medium=affiliate&utm_campaign=hasoffers"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             on Outdoorsy
           </a>
           ,{" "}
@@ -425,7 +437,8 @@ export default function Blog12() {
             href="https://rvexpanthershipprogram.sjv.io/c/269754/1686722/19443?subid1=text1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             on RVezy
           </a>
           , or{" "}
@@ -433,8 +446,9 @@ export default function Blog12() {
             href="https://www.cruiseamerica.com/?irclickid=XWQx3BWi7xycUy62I-yUlUTDUkpQHgX8vTAUTI0&sharedid=&irpid=6269754&cruiseid=&irgwc=1&afsrc=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
-            Cruse America
+            className="text-blue-600 hover:underline"
+          >
+            Cruise America
           </a>{" "}
           today.
         </p>

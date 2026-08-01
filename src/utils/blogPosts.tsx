@@ -33,6 +33,7 @@ import Blog30 from "./blogpostdata/blog30";
 import Blog31 from "./blogpostdata/blog31";
 import Blog32 from "./blogpostdata/blog32";
 import Blog33 from "./blogpostdata/blog33";
+import Blog34 from "./blogpostdata/blog34";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -48,6 +49,34 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 34,
+    slug: "cruise-america-vs-outdoorsy-which-rv-rental-is-better",
+    mainTitle: "Cruise America vs. Outdoorsy: Which RV Rental Is Better?",
+
+    title: "Which RV Rental Is Better?",
+    excerpt: (
+      <>
+        <p>
+          Renting an RV is one of the best ways to experience an American road
+          trip. And while there are many companies offering this service, some
+          of the most commonly mentioned platforms are Cruise America and
+          Outdoorsy.
+        </p>
+      </>
+    ),
+    date: "Published on: August 1, 2026",
+    image: "assets/blogs/blog34/cruise-america-outdoorsy.webp",
+    seoTitle: "Cruise America vs Outdoorsy: Which RV Rental Is Better?",
+    seoDescription:
+      "Choosing between Cruise America and Outdoorsy? Check out our guide with a full comparison of prices, vehicle fleets, insurance policies, and extra features.",
+    keywords: "rv rental, cruise america, outdoorsy, travel, road trip",
+    content: (
+      <>
+        <Blog34 />
+      </>
+    ),
+  },
   {
     blogid: 33,
     slug: "car-rental-vs-uber-in-las-vegas-which-is-better",

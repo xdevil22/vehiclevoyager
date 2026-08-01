@@ -34,10 +34,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=noise+cancelling+headphones&rh=p_123%3A237204%257C264616&dc&language=en_US&ds=v1%3AkV0KAs5BBolIcDQrB1A0aNUnZh%2FqO6N5xWDtFIGRcO4&crid=1ZSECTUYIIE3N&linkCode=sl2&linkId=9434cd3a6880403667b4171a922f9b4f&qid=1765147177&rnid=85457740011&sprefix=noise+cancelling+headphones%2Caps%2C283&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=noise+cancelling+headphones&rh=p_123%3A237204%257C264616&dc&language=en_US&ds=v1%3AkV0KAs5BBolIcDQrB1A0aNUnZh%2FqO6N5xWDtFIGRcO4&crid=1ZSECTUYIIE3N&linkCode=ll2&linkId=ef1da0e7a7c7807673161ad21a91f540&qid=1765147177&rnid=85457740011&sprefix=noise+cancelling+headphones%2Caps%2C283&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Find the best noise cancelling headphones here
           </a>
         </p>
@@ -61,10 +62,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=Smart+Luggage+with+GPS+Tracking&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AY5WxR2pHgQzZoZoVa9QaKq6QkcpSbFdwAL%2BL7S1rtWc&crid=2F2WS65EFAOS8&linkCode=sl2&linkId=e4ac5fa89ce0366e9be5f4cfbefb444b&qid=1765148407&rnid=2470954011&sprefix=smart+luggage+with+gps+tracking%2Caps%2C300&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=Smart+Luggage+with+GPS+Tracking&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AY5WxR2pHgQzZoZoVa9QaKq6QkcpSbFdwAL%2BL7S1rtWc&crid=2F2WS65EFAOS8&linkCode=ll2&linkId=9744499d5159253d4dd0ce8fef362ea5&qid=1765148407&rnid=2470954011&sprefix=smart+luggage+with+gps+tracking%2Caps%2C300&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Top smart luggage choices
           </a>
         </p>
@@ -86,10 +88,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=Portable+Travel+Router&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3A%2FGbVJ8Rvromr37s6aprWW058XQ7cO3PYCQMPtcO%2BWYU&crid=3XRVGF3SXA4W&linkCode=sl2&linkId=7be51ca7461181e24888e5ba906cc8c6&qid=1765148686&rnid=2470954011&sprefix=portable+travel+router%2Caps%2C532&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=Portable+Travel+Router&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3A%2FGbVJ8Rvromr37s6aprWW058XQ7cO3PYCQMPtcO%2BWYU&crid=3XRVGF3SXA4W&linkCode=ll2&linkId=1ac4c87ff52744465904e0c3e7811c72&qid=1765148686&rnid=2470954011&sprefix=portable+travel+router%2Caps%2C532&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Newest portable travel routers
           </a>
         </p>
@@ -111,10 +114,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=Universal+Power+Adapter&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AHGN7A8trb35kt9UCxd%2BMgAm%2Bb45clxdZgLlOVK8AvLA&crid=J789JGMV6JLT&linkCode=sl2&linkId=5be2450944473acbb4b72e1828bfb2cc&qid=1765148767&rnid=2470954011&sprefix=universal+power+adapter%2Caps%2C486&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=Universal+Power+Adapter&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AHGN7A8trb35kt9UCxd%2BMgAm%2Bb45clxdZgLlOVK8AvLA&crid=J789JGMV6JLT&linkCode=ll2&linkId=f0e82f566ff34966c8514cb05871bb64&qid=1765148767&rnid=2470954011&sprefix=universal+power+adapter%2Caps%2C486&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Best options for universal adapters
           </a>
         </p>
@@ -136,10 +140,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=Compression+Packing+Cubes&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AMdpEowGT4Atfb%2B1LHZA3AruBMwlfVur8uroyPLXEiEY&crid=1A5FWUO7E8GUC&linkCode=sl2&linkId=b28672148363e2f4e46066c538046b8d&qid=1765148849&rnid=2470954011&sprefix=compression+packing+cubes%2Caps%2C514&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=Compression+Packing+Cubes&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AMdpEowGT4Atfb%2B1LHZA3AruBMwlfVur8uroyPLXEiEY&crid=1A5FWUO7E8GUC&linkCode=ll2&linkId=51dc841117da958def750eaef0651570&qid=1765148849&rnid=2470954011&sprefix=compression+packing+cubes%2Caps%2C514&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Check out packing cubes here
           </a>
         </p>
@@ -161,10 +166,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=Travel-Sized+Power+Bank&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3ARnlsg15tkca7WqV3BNUxtY5J2kD9mSlGrpZNIx%2BSxxc&crid=2Z3MAGKZ6VI2T&linkCode=sl2&linkId=948019c1d6d3dead4b491780e704d69d&qid=1765148935&rnid=2470954011&sprefix=travel-sized+power+bank%2Caps%2C456&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=Travel-Sized+Power+Bank&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3ARnlsg15tkca7WqV3BNUxtY5J2kD9mSlGrpZNIx%2BSxxc&crid=2Z3MAGKZ6VI2T&linkCode=ll2&linkId=f8305bab2ec4dbc2ed768ef6633f1226&qid=1765148935&rnid=2470954011&sprefix=travel-sized+power+bank%2Caps%2C456&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Top options for portable power banks
           </a>
         </p>
@@ -186,10 +192,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=Bluetooth+Tracker&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3Al7cLbM%2BhTgrPQllrUmM3QogY3JwAh1ee5kMhkh0hctY&crid=FZZXQ4PRT00R&linkCode=sl2&linkId=53acdb1f42abb06eebedc20ba25e53fa&qid=1765149055&rnid=2470954011&sprefix=bluetooth+tracker+%2Caps%2C526&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=Bluetooth+Tracker&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3Al7cLbM%2BhTgrPQllrUmM3QogY3JwAh1ee5kMhkh0hctY&crid=FZZXQ4PRT00R&linkCode=ll2&linkId=f95f2852843b21c2ab59b89379810f63&qid=1765149055&rnid=2470954011&sprefix=bluetooth+tracker+%2Caps%2C526&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Most popular travel trackers
           </a>
         </p>
@@ -210,10 +217,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=Travel+Pillow+with+Built-In+Headphones&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AZfuze0CBYlKl3x1pZv44nDf4qjmVeFHBc0rAXp4J10g&crid=3W3PI3FSWJCTX&linkCode=sl2&linkId=4f0568532b9152806a158f188fbbfe14&qid=1765149169&rnid=2470954011&sprefix=travel+pillow+with+built-in+headphones%2Caps%2C484&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=Travel+Pillow+with+Built-In+Headphones&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AZfuze0CBYlKl3x1pZv44nDf4qjmVeFHBc0rAXp4J10g&crid=3W3PI3FSWJCTX&linkCode=ll2&linkId=595f0ad317f4fa87fc78b3235eb84add&qid=1765149169&rnid=2470954011&sprefix=travel+pillow+with+built-in+headphones%2Caps%2C484&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Check out the comfiest travel pillows here
           </a>
         </p>
@@ -236,10 +244,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=Foldable+Water+Bottle&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AZqVDAD5iov0q%2BadsE7rJrNthN94FqZ4xgsYdH2Lkt1c&crid=35JHNJIWMA8OQ&linkCode=sl2&linkId=77ed5a3667b7721bbdd2ecdca100ab1c&qid=1765149257&rnid=2470954011&sprefix=foldable+water+bottle%2Caps%2C528&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=Foldable+Water+Bottle&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AZqVDAD5iov0q%2BadsE7rJrNthN94FqZ4xgsYdH2Lkt1c&crid=35JHNJIWMA8OQ&linkCode=ll2&linkId=8de28de628b9ce2e82378d8fc44d1a29&qid=1765149257&rnid=2470954011&sprefix=foldable+water+bottle%2Caps%2C528&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Current deals on foldable water bottles
           </a>
         </p>
@@ -261,10 +270,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=Compact+Digital+Luggage+Scale&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3Awx2oBFf63IZ%2BhdMKpY%2BdaHG%2Bp%2F5IjtUzZJmB9OwPu68&crid=2WXAZONN89OE7&linkCode=sl2&linkId=6622995404129e52d51fea3159ba0373&qid=1765149339&rnid=2470954011&sprefix=compact+digital+luggage+scale%2Caps%2C499&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=Compact+Digital+Luggage+Scale&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3Awx2oBFf63IZ%2BhdMKpY%2BdaHG%2Bp%2F5IjtUzZJmB9OwPu68&crid=2WXAZONN89OE7&linkCode=ll2&linkId=179d1641fe701121d3ca6f5a380238a3&qid=1765149339&rnid=2470954011&sprefix=compact+digital+luggage+scale%2Caps%2C499&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Digital luggage scale options
           </a>
         </p>
@@ -286,10 +296,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=Mini+Travel+Steamer&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3Ap6OU%2FnSxztm9gvuHLQjMnz6AGAp8KMHTbWjJeGTY0gI&crid=1QTO1ONC84BQA&linkCode=sl2&linkId=28006dac7fa71ef6e449c86ad0e47139&qid=1765149450&rnid=2470954011&sprefix=mini+travel+steamer%2Caps%2C550&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=Mini+Travel+Steamer&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3Ap6OU%2FnSxztm9gvuHLQjMnz6AGAp8KMHTbWjJeGTY0gI&crid=1QTO1ONC84BQA&linkCode=ll2&linkId=e2ee1d871cef7ed404c16f970c4c45ff&qid=1765149450&rnid=2470954011&sprefix=mini+travel+steamer%2Caps%2C550&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Trending travel steamers
           </a>
         </p>
@@ -311,10 +322,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=USB-C+Multi-Port+Hub&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AkqmfGRfUtFPp8bhv4GfuZyaXgt6SKzsHIqtcpapre70&crid=29RY67838SYJW&linkCode=sl2&linkId=77a3d04efb5e564527a09beca26884b1&qid=1765149535&rnid=2470954011&sprefix=usb-c+multi-port+hub%2Caps%2C516&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=USB-C+Multi-Port+Hub&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AkqmfGRfUtFPp8bhv4GfuZyaXgt6SKzsHIqtcpapre70&crid=29RY67838SYJW&linkCode=ll2&linkId=28530d0db6c8a664add31e2a204509e9&qid=1765149535&rnid=2470954011&sprefix=usb-c+multi-port+hub%2Caps%2C516&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Best variety of choices for multi-port hubs
           </a>
         </p>
@@ -387,10 +399,11 @@ export default function Blog11() {
         <p>
           👉 &nbsp;
           <a
-            href="https://www.amazon.com/s?k=best+travel+gadgets&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AzfGrj%2BbZSvXDdeaXqQrwpdnzyAyUv5WUs2P4riPPlMM&crid=DR9IFWPVI8MC&linkCode=sl2&linkId=76819910a8a006b5f167592a2c4af325&qid=1765149650&rnid=2470954011&sprefix=best+travel+gadgets%2Caps%2C307&tag=vehiclevoyage-20&ref=as_li_ss_tl"
+            href="https://www.amazon.com/s?k=best+travel+gadgets&rh=p_85%3A2470955011&dc&language=en_US&ds=v1%3AzfGrj%2BbZSvXDdeaXqQrwpdnzyAyUv5WUs2P4riPPlMM&crid=DR9IFWPVI8MC&linkCode=ll2&linkId=e0aac6d85e6a5b54f05fdfe3ebb83802&qid=1765149650&rnid=2470954011&sprefix=best+travel+gadgets%2Caps%2C307&tag=vechura-20&ref=as_li_ss_tl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Browse these top-rated travel gadgets and more now
           </a>
         </p>
