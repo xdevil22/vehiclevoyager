@@ -34,6 +34,8 @@ import Blog31 from "./blogpostdata/blog31";
 import Blog32 from "./blogpostdata/blog32";
 import Blog33 from "./blogpostdata/blog33";
 import Blog34 from "./blogpostdata/blog34";
+import Blog35 from "./blogpostdata/blog35";
+import Blog36 from "./blogpostdata/blog36";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -49,6 +51,68 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 36,
+    slug: "eaglerider-vs-riders-share",
+    mainTitle:
+      "EagleRider vs. Riders Share: Which Motorcycle Rental Is Better?",
+
+    title: "Which Motorcycle Rental Is Better?",
+    excerpt: (
+      <>
+        <p>
+          If you have looked into renting a motorcycle in the United States, you
+          have probably come across EagleRider and Riders Share. Both can put
+          you on a bike for a weekend or a longer road trip, but the experience
+          is not the same.
+        </p>
+      </>
+    ),
+    date: "Published on: August 27, 2026",
+    image: "assets/blogs/blog36/eaglerider-riders.webp",
+    seoTitle: "EagleRider vs. Riders Share: Which Is Better?",
+    seoDescription:
+      "Compare EagleRider vs. Riders Share for motorcycle selection, pricing, one-way trips, pickup options, tours, and more to find the better rental for your ride.",
+    keywords: "motorcycle rental, eaglerider, riders share, travel, road trip",
+    content: (
+      <>
+        <Blog36 />
+      </>
+    ),
+  },
+  {
+    blogid: 35,
+    slug: "austin-city-limits-travel-guide-for-tickets-where-to-stay-and-getting-around",
+    mainTitle:
+      "Austin City Limits: Travel Guide for Tickets, Where to Stay, and Getting Around",
+
+    title: "Travel Guide for Tickets, Where to Stay, and Getting Around",
+    excerpt: (
+      <>
+        <p>
+          The US is full of annual music festivals, but one of the absolute
+          best, without question, is Austin City Limits (ACL). This city-centric
+          two-weekend event started in 2002, so it’s newer than familiar
+          favorites like Lollapalooza and the legendary Woodstock. Today, it's
+          firmly established as one of the country's major music festivals and
+          can’t be ignored. In 2026, ACL returns to Zilker Park for two
+          weekends: October 2-4 and October 9-11.
+        </p>
+      </>
+    ),
+    date: "Published on: August 25, 2026",
+    image: "assets/blogs/blog35/austin-city.webp",
+    seoTitle: "Austin City Limits Travel Guide: Tickets & Hotels",
+    seoDescription:
+      "Going to Austin City Limits? Get accommodation tips, learn how to buy tickets and navigate Austin, and add exciting road trips to extend your ACL enjoyment.",
+    keywords:
+      "Austin City Limits, ACL tickets, ACL travel guide, Austin hotels, ACL accommodation, Austin transportation, ACL festival tips, ACL road trips, Austin attractions, ACL itinerary, Austin nightlife, ACL camping options, ACL shuttle service, Austin music scene, ACL festival planning",
+    content: (
+      <>
+        <Blog35 />
+      </>
+    ),
+  },
   {
     blogid: 34,
     slug: "cruise-america-vs-outdoorsy-which-rv-rental-is-better",

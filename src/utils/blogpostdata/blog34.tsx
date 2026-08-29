@@ -1,9 +1,4 @@
 import React from "react";
-import { BASE_URL } from "../constants";
-
-import uber from "../../../public/assets/blogs/blog33/uber.webp";
-import rollsRoyce from "../../../public/assets/blogs/blog33/rolls-royce.webp";
-import drivingConditions from "../../../public/assets/blogs/blog33/driving-conditions.webp";
 
 export default function Blog34() {
   return (
