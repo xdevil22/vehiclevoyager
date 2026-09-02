@@ -36,6 +36,7 @@ import Blog33 from "./blogpostdata/blog33";
 import Blog34 from "./blogpostdata/blog34";
 import Blog35 from "./blogpostdata/blog35";
 import Blog36 from "./blogpostdata/blog36";
+import Blog37 from "./blogpostdata/blog37";
 export interface BlogPost {
   blogid: number;
   slug: string;
@@ -51,6 +52,38 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    blogid: 37,
+    slug: "formula-1-united-states-grand-prix-travel-guide",
+    mainTitle:
+      "Formula 1 United States Grand Prix Travel Guide: Tickets, Hotels, Shuttles & Weekend Planning",
+
+    title:
+      "Formula 1 US Grand Prix Travel Guide for Tickets, Where to Stay, and Getting Around",
+    excerpt: (
+      <>
+        <p>
+          Austin has quickly risen through the ranks of the best event cities in
+          the US. From film festivals to music events like Austin City Limits,
+          the capital of Texas has a lot going on. And one of its most exciting
+          annual events caters to sports lovers and adrenaline junkies: F1's
+          United States Grand Prix.
+        </p>
+      </>
+    ),
+    date: "Published on: September 1, 2026",
+    image: "assets/blogs/blog37/formula-1-united-states.webp",
+    seoTitle: "Formula 1 Austin Travel Guide: Tickets, Hotels & Transportation",
+    seoDescription:
+      "Plan your Formula 1 weekend in Austin with tips for tickets, where to stay, transportation, parking, shuttles, and things to do beyond the race",
+    keywords:
+      "Formula 1 United States Grand Prix, F1 Austin travel guide, F1 tickets, Austin hotels, F1 transportation, F1 shuttles, Formula 1 weekend planning, Circuit of the Americas, Austin attractions, F1 race weekend itinerary",
+    content: (
+      <>
+        <Blog37 />
+      </>
+    ),
+  },
   {
     blogid: 36,
     slug: "eaglerider-vs-riders-share",
