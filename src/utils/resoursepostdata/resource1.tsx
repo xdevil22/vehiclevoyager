@@ -89,21 +89,20 @@ export default function Resource1() {
         </h2>
 
         <p>
-          <strong>Liability coverage</strong>
-          Pays covered claims for bodily injury or property damage you cause to
-          other people. It generally does not pay to repair the vehicle you
-          rented.
+          <strong>Liability coverage.</strong> Pays covered claims for bodily
+          injury or property damage you cause to other people. It generally does
+          not pay to repair the vehicle you rented.
         </p>
 
         <p>
-          <strong> Collision and comprehensive coverage</strong>
-          Addresses physical damage to the rented vehicle from a collision or
-          covered non-collision event. Your personal policy may extend this
-          coverage to some rentals, but exclusions are common.
+          <strong> Collision and comprehensive coverage.</strong> Addresses
+          physical damage to the rented vehicle from a collision or covered
+          non-collision event. Your personal policy may extend this coverage to
+          some rentals, but exclusions are common.
         </p>
 
         <p>
-          <strong>Loss or collision damage waiver</strong>A contractual waiver
+          <strong>Loss or collision damage waiver.</strong> A contractual waiver
           under which the rental company agrees to reduce or waive some
           financial responsibility for the rental vehicle. It may become void
           after an unauthorized driver, prohibited road, late report or other
@@ -111,14 +110,14 @@ export default function Resource1() {
         </p>
 
         <p>
-          <strong>Platform protection plan</strong>A peer-to-peer marketplace
+          <strong>Platform protection plan.</strong> A peer-to-peer marketplace
           may sell a contractual plan that caps eligible physical-damage
           responsibility. It may not be an insurance policy and may operate only
           after any applicable personal insurance.
         </p>
 
         <p>
-          <strong> Travel, accident and personal-effects coverage</strong>
+          <strong> Travel, accident and personal-effects coverage.</strong>{" "}
           These products can address trip cancellation, medical expenses or
           belongings. They are separate from liability coverage and protection
           for the rented vehicle.
