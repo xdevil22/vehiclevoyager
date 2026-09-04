@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
-import {Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import vechuraLogo from "../../public/assets/vechura-logo.webp";
-import {BASE_URL} from "../utils/constants";
+
 const Footer = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,7 +26,8 @@ const Footer = () => {
           padding: 0,
           height: "0px",
           overflow: "hidden",
-        }}>
+        }}
+      >
         Impact-Site-Verification: 54deb5d6-162c-4ff1-b44c-96f31b50fc38
       </p>
 
@@ -50,7 +51,8 @@ const Footer = () => {
               <h4 className="text-lg font-bold mb-2">Contact Us</h4>
               <a
                 href="mailto:info@vechura.com"
-                className="text-neutral-200 hover:text-primary transition-colors">
+                className="text-neutral-200 hover:text-primary transition-colors"
+              >
                 info@vechura.com
               </a>
             </div>
@@ -60,7 +62,8 @@ const Footer = () => {
                 href="https://www.instagram.com/vechura_official/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-200 hover:text-primary transition-colors text-2xl">
+                className="text-neutral-200 hover:text-primary transition-colors text-2xl"
+              >
                 <i className="ri-instagram-line"></i>
               </a>
 
@@ -69,7 +72,8 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=61584308684536"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-200 hover:text-primary transition-colors text-2xl">
+                className="text-neutral-200 hover:text-primary transition-colors text-2xl"
+              >
                 <i className="ri-facebook-circle-line"></i>
               </a>
             </div>
@@ -80,23 +84,28 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {[
-                {label: "Home", to: "/"},
-                {label: "Booking Tools", to: "/booking-tools"},
-                {label: "About", to: "/about"},
-                {label: "Blog", to: "/blog"},
-                {label: "Advertiser Disclosure", to: "/advertiser-disclosure"},
+                { label: "Home", to: "/" },
+                { label: "Booking Tools", to: "/booking-tools" },
+                { label: "About", to: "/about" },
+                { label: "Blog", to: "/blog" },
+                {
+                  label: "Advertiser Disclosure",
+                  to: "/advertiser-disclosure",
+                },
                 {
                   label: isLoggedIn ? "Logout" : "Login",
                   to: isLoggedIn ? "/" : "/admin/login",
                 },
-              ].map(({label, to}) => (
+                { label: "Resources", to: "/resources" },
+              ].map(({ label, to }) => (
                 <li key={to}>
                   <Link
                     to={to}
                     onClick={() => {
                       if (label === "Logout") handleLogout();
                     }}
-                    className="text-neutral-200 hover:text-primary transition-colors">
+                    className="text-neutral-200 hover:text-primary transition-colors"
+                  >
                     {label}
                   </Link>
                 </li>
@@ -133,16 +142,17 @@ const Footer = () => {
                   label: "San Diego, CA",
                   href: "/boat-rental-san-diego",
                 },
-                {label: "Phoenix, AZ", href: "/car-rental-phoenix"},
+                { label: "Phoenix, AZ", href: "/car-rental-phoenix" },
                 {
                   label: "Austin, TX",
                   href: "/rv-rental-austin",
                 },
-              ].map(({label, href}) => (
+              ].map(({ label, href }) => (
                 <li key={href}>
                   <Link
                     to={href}
-                    className="text-neutral-200 hover:text-primary transition-colors">
+                    className="text-neutral-200 hover:text-primary transition-colors"
+                  >
                     {label}
                   </Link>
                 </li>
@@ -181,17 +191,20 @@ const Footer = () => {
           <div className="flex space-x-6">
             <Link
               to="/privacy-policy"
-              className="text-neutral-400 hover:text-primary text-sm transition-colors">
+              className="text-neutral-400 hover:text-primary text-sm transition-colors"
+            >
               Privacy Policy
             </Link>
             <Link
               to="/terms-of-service"
-              className="text-neutral-400 hover:text-primary text-sm transition-colors">
+              className="text-neutral-400 hover:text-primary text-sm transition-colors"
+            >
               Terms of Service
             </Link>
             <Link
               to="/cookie-policy"
-              className="text-neutral-400 hover:text-primary text-sm transition-colors">
+              className="text-neutral-400 hover:text-primary text-sm transition-colors"
+            >
               Cookie Policy
             </Link>
           </div>

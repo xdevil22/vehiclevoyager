@@ -122,3 +122,20 @@ div
 .affiliate-logos a .lvcexotic {
   height: 80px;
 }
+.resource-article a {
+  text-decoration: none;
+}
+.resource-article a:hover {
+  text-decoration: underline;
+}
+.resource-article .underlinelink a {
+  text-decoration: underline;
+}
+.resource-article .underlinelink a:hover {
+  text-decoration: none;
+}
+.resource-article :where(h1):not(:where([class~="not-prose"], [class~="not-prose"] *)),
+.resource-article :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)),
+.resource-article :where(.date):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+ color: #1d496d !important;
+}

@@ -1,6 +1,6 @@
-import React, {JSX} from "react";
+import React, { JSX } from "react";
 import ReactDOM from "react-dom/client";
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Home from "./pages/home";
 import Cars from "./pages/cars";
@@ -11,7 +11,7 @@ import "./index.css";
 import "./indexpegy.css";
 import Layout from "./layouts/Layouts";
 
-import {HeadProvider} from "react-head";
+import { HeadProvider } from "react-head";
 import AdminLogin from "./pages/admin/adminLogin";
 import Blog from "./pages/Blog";
 import BlogPostPage from "./pages/Blog/BlogPost";
@@ -22,6 +22,8 @@ import AdvertiserDisclosure from "./pages/advertiser-disclosure";
 import BrevoNewsletter from "./components/BrevoNewsletter";
 import LandingPage from "./pages/landing/LandingPage";
 import CreateLandingPage from "./pages/admin/CreateLandingPage";
+import Resources from "./pages/Resources";
+import ResourcePost from "./pages/Resources/ResourcePost";
 
 function ProtectedRoute({
   children,
@@ -42,9 +44,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route path="/booking-tools" element={<BookingTools />} />
             <Route path="About" element={<About />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/resources" element={<Resources />} />
             <Route path="/cookiepolicy" element={<CookiePolicy />} />
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/resources/:slug" element={<ResourcePost />} />
             <Route path="/:slug" element={<LandingPage />} />
             <Route
               path="advertiser-disclosure"

@@ -1,9 +1,9 @@
-import {NavLink, Link, useNavigate, useLocation} from "react-router-dom";
-import {JSX, useEffect, useState} from "react";
-import {Listbox} from "@headlessui/react";
-import {FaHelicopter} from "react-icons/fa";
+import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
+import { JSX, useEffect, useState } from "react";
+import { Listbox } from "@headlessui/react";
+import { FaHelicopter } from "react-icons/fa";
 import vechuraLogo from "../../public/assets/vechura-logo.webp";
-import {BASE_URL} from "../utils/constants";
+
 import BlogSearchDropdown from "./BlogSearchDropdown";
 import InfoModal from "./InfoModal";
 
@@ -58,20 +58,20 @@ export default function Header() {
   };
   // ✅ Typed category array
   const categories: Category[] = [
-    {label: "Cars", icon: "ri-car-line"},
-    {label: "Boats", icon: "ri-ship-line"},
-    {label: "RVs and Motorhomes", icon: "ri-bus-line"},
-    {label: "Motorcycles", icon: "ri-motorbike-line"},
-    {label: "Private Jets", icon: "ri-plane-line"},
-    {label: "Helicopter Tours", icon: <FaHelicopter size={18} />},
+    { label: "Cars", icon: "ri-car-line" },
+    { label: "Boats", icon: "ri-ship-line" },
+    { label: "RVs and Motorhomes", icon: "ri-bus-line" },
+    { label: "Motorcycles", icon: "ri-motorbike-line" },
+    { label: "Private Jets", icon: "ri-plane-line" },
+    { label: "Helicopter Tours", icon: <FaHelicopter size={18} /> },
   ];
 
   const navLinks = [
-    {name: "Home", path: "/"},
-    {name: "Booking Tools", path: "/booking-tools"},
-    {name: "About", path: "/about"},
-    {name: "Blog", path: "/blog"},
-    // {name: "Create Landing Pages", path: "/admin/create-landing-page"},
+    { name: "Home", path: "/" },
+    { name: "Booking Tools", path: "/booking-tools" },
+    { name: "About", path: "/about" },
+    { name: "Blog", path: "/blog" },
+    { name: "Resources", path: "/resources" },
 
     // {
     //   name: isLoggedIn ? "Logout" : "Login",
@@ -84,7 +84,7 @@ export default function Header() {
   const handleSelect = (cat: Category): void => {
     setSelected(cat);
     const target = document.getElementById(cat.label.replace(/\s+/g, "-"));
-    if (target) target.scrollIntoView({behavior: "smooth"});
+    if (target) target.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -115,11 +115,12 @@ export default function Header() {
                   // onClick={() => {
                   //   if (link.name === "Logout") handleLogout();
                   // }}
-                  className={({isActive}) =>
+                  className={({ isActive }) =>
                     `text-lg font-medium hover:text-blue-600 ${
                       isActive ? "text-blue-600" : "text-gray-800"
                     }`
-                  }>
+                  }
+                >
                   {link.name}
                 </NavLink>
               ))}
@@ -131,14 +132,16 @@ export default function Header() {
               {/* Subscribe Button */}
               <button
                 onClick={handleSubscribe}
-                className="bg-blue-600 text-white rounded-full px-6 py-2 text-sm font-semibold hover:bg-blue-700 transition-all duration-200">
+                className="bg-blue-600 text-white rounded-full px-6 py-2 text-sm font-semibold hover:bg-blue-700 transition-all duration-200"
+              >
                 Subscribe
               </button>
 
               {/* Advertiser Disclosure */}
               <Link
                 to="/advertiser-disclosure"
-                className="text-sm font-medium text-blue-600 hover:underline">
+                className="text-sm font-medium text-blue-600 hover:underline"
+              >
                 Advertiser Disclosure
               </Link>
 
@@ -199,7 +202,8 @@ export default function Header() {
 
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-800 text-2xl focus:outline-none">
+                className="text-gray-800 text-2xl focus:outline-none"
+              >
                 <i className={`ri-${isMenuOpen ? "close" : "menu"}-line`}></i>
               </button>
             </div>
@@ -231,7 +235,8 @@ export default function Header() {
                       setIsMenuOpen(false);
                       handleCreateLandingPage();
                     }}
-                    className="block w-full text-left px-4 py-2 text-sm font-medium text-gray-800 hover:text-blue-600">
+                    className="block w-full text-left px-4 py-2 text-sm font-medium text-gray-800 hover:text-blue-600"
+                  >
                     {link.name}
                   </button>
                 ) : (
@@ -244,11 +249,12 @@ export default function Header() {
                         handleLogout();
                       }
                     }}
-                    className={({isActive}) =>
+                    className={({ isActive }) =>
                       `block px-4 py-2 text-sm font-medium ${
                         isActive ? "text-blue-600" : "text-gray-800"
                       }`
-                    }>
+                    }
+                  >
                     {link.name}
                   </NavLink>
                 ),
@@ -256,13 +262,15 @@ export default function Header() {
 
               <button
                 onClick={handleSubscribe}
-                className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800">
+                className="block w-full text-left px-4 py-2 text-sm border-t text-gray-800"
+              >
                 Subscribe
               </button>
               <Link
                 key="AdvertiserDisclosure"
                 to="/advertiser-disclosure"
-                className="text-blue-600 hover:underline text-sm font-medium">
+                className="text-blue-600 hover:underline text-sm font-medium"
+              >
                 Advertiser Disclosure
               </Link>
             </div>
@@ -277,7 +285,8 @@ export default function Header() {
                   <a
                     key={cat.label}
                     href={`#${cat.label.replace(/\s+/g, "-")}`}
-                    className="text-sm font-semibold text-blue-600 hover:underline whitespace-nowrap flex items-center">
+                    className="text-sm font-semibold text-blue-600 hover:underline whitespace-nowrap flex items-center"
+                  >
                     {typeof cat.icon === "string" ? (
                       <i className={`${cat.icon} mr-1`} />
                     ) : (
@@ -304,7 +313,8 @@ export default function Header() {
                       className="w-4 h-4 text-gray-500"
                       fill="none"
                       stroke="currentColor"
-                      viewBox="0 0 24 24">
+                      viewBox="0 0 24 24"
+                    >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -319,14 +329,15 @@ export default function Header() {
                       <Listbox.Option
                         key={cat.label}
                         value={cat}
-                        className={({active}: {active: boolean}) =>
+                        className={({ active }: { active: boolean }) =>
                           `cursor-pointer select-none flex items-center gap-2 p-2 transition-colors duration-150 ${
                             active
                               ? "bg-blue-100 text-blue-700"
                               : "text-gray-700"
                           }`
-                        }>
-                        {({active}) => (
+                        }
+                      >
+                        {({ active }) => (
                           <>
                             {typeof cat.icon === "string" ? (
                               <i
@@ -338,14 +349,16 @@ export default function Header() {
                               <span
                                 className={`${
                                   active ? "text-blue-700" : "text-gray-500"
-                                }`}>
+                                }`}
+                              >
                                 {cat.icon}
                               </span>
                             )}
                             <span
                               className={`${
                                 active ? "font-semibold" : "font-normal"
-                              }`}>
+                              }`}
+                            >
                               {cat.label}
                             </span>
                           </>
