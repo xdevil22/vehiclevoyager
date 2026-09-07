@@ -43,8 +43,8 @@ export default function Resource1() {
         .
       </p>
 
-      <h2 className="text-xl font-semibold mt-8">In this guide</h2>
       <p>
+        <strong>In this guide: </strong>
         <a
           href="https://vechura.com/#Cars"
           target="_blank"
@@ -304,7 +304,7 @@ export default function Resource1() {
           </table>
         </div>
 
-        <p className="mt-4 italic font-semibold">
+        <p className="mt-4 italic ">
           Important: This table describes the coverage structure, not a promise
           that a particular loss is covered. Booking-specific terms and
           exclusions control.

@@ -41,8 +41,6 @@ const ResourcePost: React.FC = () => {
           <div className="prose max-w-none">{post.content}</div>
         </article>
         <div>
-          {/* <TOC /> */}
-
           <Sidebar />
         </div>
       </div>
