@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Home from "./pages/home";
-import Cars from "./pages/cars";
+
 import About from "./pages/about";
 import Admin from "./pages/admin/admin";
 
@@ -12,6 +12,7 @@ import "./indexpegy.css";
 import Layout from "./layouts/Layouts";
 
 import { HeadProvider } from "react-head";
+import ScrollToTop from "./components/ScrollToTop";
 import AdminLogin from "./pages/admin/adminLogin";
 import Blog from "./pages/Blog";
 import BlogPostPage from "./pages/Blog/BlogPost";

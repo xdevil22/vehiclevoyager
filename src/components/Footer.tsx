@@ -190,7 +190,7 @@ const Footer = () => {
           </p>
           <div className="flex space-x-6">
             <Link
-              to="/privacy-policy"
+              to="/privacypolicy"
               className="text-neutral-400 hover:text-primary text-sm transition-colors"
             >
               Privacy Policy
@@ -202,7 +202,7 @@ const Footer = () => {
               Terms of Service
             </Link>
             <Link
-              to="/cookie-policy"
+              to="/cookiepolicy"
               className="text-neutral-400 hover:text-primary text-sm transition-colors"
             >
               Cookie Policy

@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import {VilliersFlight} from "./villiersTypes";
+import { VilliersFlight } from "./villiersTypes";
 
 const API_BASE_URL = (
   import.meta.env.VITE_API_BASE_URL || "https://vechura-backend.vercel.app"
@@ -84,7 +84,8 @@ const VilliersAffiliate = () => {
               href={flight.bookingLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 underline">
+              className="text-blue-600 underline"
+            >
               View & Book
             </a>
           )}
