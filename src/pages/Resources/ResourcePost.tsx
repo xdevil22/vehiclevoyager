@@ -5,7 +5,8 @@ import { blogPosts } from "../../utils/blogPosts";
 import Sidebar from "../Blog/components/Sidebar";
 
 import { BASE_URL } from "../../utils/constants";
-import { HeadProvider, Title, Meta } from "react-head";
+import { HeadProvider } from "react-head";
+import Seo from "../../components/Seo";
 
 const ResourcePost: React.FC = () => {
   const { slug } = useParams();
@@ -18,14 +19,12 @@ const ResourcePost: React.FC = () => {
   return (
     <>
       <HeadProvider>
-        <Title>{post.seoTitle || post.mainTitle}</Title>
-        <Meta name="description" content={post.seoDescription} />
-        <Meta name="keywords" content={post.keywords} />
-        <Meta property="og:title" content={post.seoTitle || post.mainTitle} />
-        <Meta property="og:description" content={post.seoDescription} />
-        <Meta property="og:type" content="article" />
-        <Meta name="twitter:card" content="summary_large_image" />
-        <Meta name="robots" content="index,follow" />
+        <Seo
+          title={post.seoTitle || post.mainTitle}
+          description={post.seoDescription}
+          keywords={post.keywords}
+          ogType="article"
+        />
       </HeadProvider>
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 resource-article">
         <article className="md:col-span-2">

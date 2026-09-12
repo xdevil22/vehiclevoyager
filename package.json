@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-sitemap.mjs && vite build",
+    "build": "vite build && node scripts/prerender.mjs && node scripts/generate-sitemap.mjs",
+    "check-sitemap": "node scripts/check-sitemap.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
-import {HeadProvider, Title, Meta} from "react-head";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { HeadProvider } from "react-head";
+import Seo from "../../components/Seo";
 import {
   landingPagesBySlug,
   LandingPageCustomContentBlock,
@@ -43,11 +44,11 @@ const renderFormattedText = (
   const ranges = {
     link:
       linkLabel && linkHref && linkIndex !== -1
-        ? {start: linkIndex, end: linkIndex + linkLabel.length}
+        ? { start: linkIndex, end: linkIndex + linkLabel.length }
         : undefined,
     bold:
       boldLabel && boldIndex !== -1
-        ? {start: boldIndex, end: boldIndex + boldLabel.length}
+        ? { start: boldIndex, end: boldIndex + boldLabel.length }
         : undefined,
   };
 
@@ -87,7 +88,8 @@ const renderFormattedText = (
               rel="noopener noreferrer"
               className={`text-blue-600 underline-offset-4 hover:underline ${
                 isBold ? "font-semibold" : ""
-              }`}>
+              }`}
+            >
               {segment}
             </a>
           );
@@ -108,13 +110,14 @@ const renderFormattedText = (
 };
 
 const LandingPage: React.FC = () => {
-  const {slug} = useParams();
+  const { slug } = useParams();
   const [dynamicPages, setDynamicPages] = useState<
     Record<string, LandingPageData>
   >(readDynamicLandingPages);
   const [isLoadingDynamicPages, setIsLoadingDynamicPages] = useState(true);
+  const [hasDynamicFetchError, setHasDynamicFetchError] = useState(false);
   const staticPage = slug ? landingPagesBySlug[slug] : undefined;
-  const page = (slug ? dynamicPages[slug] : undefined) || staticPage;
+  const page = (slug ? dynamicPages[slug] : undefined) ?? staticPage;
 
   useEffect(() => {
     let isMounted = true;
@@ -129,13 +132,20 @@ const LandingPage: React.FC = () => {
       })
       .then((pages) => {
         if (!isMounted) return;
+
         if (pages && typeof pages === "object" && !Array.isArray(pages)) {
           setDynamicPages(pages);
+          setHasDynamicFetchError(false);
           localStorage.setItem("landingPages", JSON.stringify(pages));
+          return;
         }
+
+        setHasDynamicFetchError(true);
       })
       .catch((error) => {
+        if (!isMounted) return;
         console.warn("Unable to fetch landing pages from API:", error);
+        setHasDynamicFetchError(true);
       })
       .finally(() => {
         if (isMounted) {
@@ -157,6 +167,28 @@ const LandingPage: React.FC = () => {
       );
     }
 
+    if (hasDynamicFetchError) {
+      return (
+        <div className="min-h-screen bg-neutral-100 flex items-center justify-center px-4 py-16">
+          <div className="max-w-xl text-center bg-white rounded-3xl p-8 shadow-lg">
+            <h1 className="text-3xl font-bold mb-4">
+              Page temporarily unavailable
+            </h1>
+            <p className="text-gray-600 mb-6">
+              We’re having trouble loading this landing page right now. Please
+              try again in a moment or return to the homepage.
+            </p>
+            <a
+              href="/"
+              className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+            >
+              Return home
+            </a>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="min-h-screen bg-neutral-100 flex items-center justify-center px-4 py-16">
         <div className="max-w-xl text-center bg-white rounded-3xl p-8 shadow-lg">
@@ -167,7 +199,8 @@ const LandingPage: React.FC = () => {
           </p>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Return home
           </a>
         </div>
@@ -194,10 +227,10 @@ const LandingPage: React.FC = () => {
             ? section.blocks
             : [
                 ...(section.title
-                  ? [{type: "title" as const, text: section.title}]
+                  ? [{ type: "title" as const, text: section.title }]
                   : []),
                 ...(section.image
-                  ? [{type: "image" as const, image: section.image}]
+                  ? [{ type: "image" as const, image: section.image }]
                   : []),
                 ...(section.paragraphs?.map((paragraph) => ({
                   type: "paragraph" as const,
@@ -207,7 +240,7 @@ const LandingPage: React.FC = () => {
                   boldLabel: paragraph.boldLabel,
                 })) || []),
                 ...(section.bullets?.length
-                  ? [{type: "list" as const, items: section.bullets}]
+                  ? [{ type: "list" as const, items: section.bullets }]
                   : []),
               ];
 
@@ -279,7 +312,8 @@ const LandingPage: React.FC = () => {
                         href={block.linkHref}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 underline-offset-4 hover:underline">
+                        className="text-blue-600 underline-offset-4 hover:underline"
+                      >
                         {block.text}
                       </a>
                     </div>
@@ -291,9 +325,7 @@ const LandingPage: React.FC = () => {
                     block.linkLabel &&
                     block.linkHref && (
                       <div className="bg-blue-600 text-white p-6 rounded-lg shadow">
-                        <h3 className="text-lg font-bold mb-2">
-                          {block.text}
-                        </h3>
+                        <h3 className="text-lg font-bold mb-2">{block.text}</h3>
                         <p className="mb-4 leading-relaxed">
                           {block.description}
                         </p>
@@ -301,7 +333,8 @@ const LandingPage: React.FC = () => {
                           href={block.linkHref}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">
+                          className="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
+                        >
                           {block.linkLabel}
                         </a>
                       </div>
@@ -315,7 +348,8 @@ const LandingPage: React.FC = () => {
                           href={block.linkHref}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+                          className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                        >
                           {block.text}
                         </a>
                       </div>
@@ -360,7 +394,8 @@ const LandingPage: React.FC = () => {
           <section
             key={section.id || index}
             id={section.id}
-            className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
+          >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
                 {section.title}
@@ -370,7 +405,8 @@ const LandingPage: React.FC = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 text-left text-slate-700 transition hover:border-blue-500 hover:bg-blue-50">
+                    className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 text-left text-slate-700 transition hover:border-blue-500 hover:bg-blue-50"
+                  >
                     <span className="font-semibold text-slate-900">
                       {link.label}
                     </span>
@@ -391,11 +427,18 @@ const LandingPage: React.FC = () => {
   return (
     <>
       <HeadProvider>
-        <Title>{page.seoTitle}</Title>
-        <Meta name="description" content={page.seoDescription} />
+        <Seo title={page.seoTitle} description={page.seoDescription} />
       </HeadProvider>
       <div className="bg-white">
-        {/* <LandingHero {...page.hero} /> */}
+        {page.hero ? (
+          <LandingHero {...page.hero} />
+        ) : (
+          <header className="max-w-7xl mx-auto px-4 py-12">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+              {page.title || page.seoTitle || page.slug}
+            </h1>
+          </header>
+        )}
         <div className="max-w-7xl mx-auto px-4 py-12 space-y-14">
           {page.sections.map(renderSection)}
         </div>
