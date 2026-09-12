@@ -58,7 +58,7 @@
     <!-- Preconnect for faster DNS & TLS handshakes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <!-- Keep only essential preconnects to avoid too many concurrent connections -->
 
     <!-- Montserrat (preload + async load) -->
     <link
@@ -96,10 +96,6 @@
 
     <!-- Remixicon (preload + async load) -->
     <link
-      rel="preload"
-      as="style"
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
-    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       media="print"
@@ -111,14 +107,7 @@
     </noscript>
 
     <!-- Google Analytics 4 -->
-    <link
-      rel="preconnect"
-      href="https://www.googletagmanager.com"
-      crossorigin />
-    <link
-      rel="preconnect"
-      href="https://www.google-analytics.com"
-      crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-3EQ5WQKVLP"></script>
