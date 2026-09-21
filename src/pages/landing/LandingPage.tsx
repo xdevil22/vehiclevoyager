@@ -12,10 +12,9 @@ import LandingHero from "../../components/landing/LandingHero";
 import LandingSection from "../../components/landing/LandingSection";
 import LandingFAQ from "../../components/landing/LandingFAQ";
 import LandingCTABanner from "../../components/landing/LandingCTABanner";
+import { getApiBaseUrl } from "../../utils/apiBaseUrl";
 
-const LANDING_PAGES_API_URL = `${
-  import.meta.env.VITE_API_BASE_URL
-}/api/create-landing-page`;
+const LANDING_PAGES_API_URL = `${getApiBaseUrl()}/api/create-landing-page`;
 
 const readDynamicLandingPages = () => {
   try {
@@ -250,9 +249,9 @@ const LandingPage: React.FC = () => {
               {blocks.map((block, blockIndex) => (
                 <React.Fragment key={block.id || blockIndex}>
                   {block.type === "title" && block.text && (
-                    <h2 className="text-left text-3xl font-bold text-[#3073cc]">
+                    <h1 className="text-left text-3xl font-bold text-[#3073cc]">
                       {block.text}
-                    </h2>
+                    </h1>
                   )}
 
                   {block.type === "subtitle" && block.text && (
@@ -430,7 +429,7 @@ const LandingPage: React.FC = () => {
         <Seo title={page.seoTitle} description={page.seoDescription} />
       </HeadProvider>
       <div className="bg-white">
-        {page.hero ? (
+        {/* {page.hero ? (
           <LandingHero {...page.hero} />
         ) : (
           <header className="max-w-7xl mx-auto px-4 py-12">
@@ -438,7 +437,8 @@ const LandingPage: React.FC = () => {
               {page.title || page.seoTitle || page.slug}
             </h1>
           </header>
-        )}
+        )} */}
+
         <div className="max-w-7xl mx-auto px-4 py-12 space-y-14">
           {page.sections.map(renderSection)}
         </div>

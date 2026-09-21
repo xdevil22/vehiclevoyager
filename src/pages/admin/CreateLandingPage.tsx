@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from "react";
-import {useNavigate} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   LandingPageCustomContentBlock,
   LandingPageCustomContentBlockType,
@@ -7,10 +7,9 @@ import {
   LandingPageCustomContentItem,
   LandingPageSection,
 } from "../../pages/landing/content/types";
+import { getApiBaseUrl } from "../../utils/apiBaseUrl";
 
-const LANDING_PAGES_API_URL = `${
-  import.meta.env.VITE_API_BASE_URL
-}/api/create-landing-page`;
+const LANDING_PAGES_API_URL = `${getApiBaseUrl()}/api/create-landing-page`;
 
 type EditableSectionType =
   | "content"
@@ -83,7 +82,9 @@ const fetchStoredLandingPages = async (): Promise<
   Record<string, LandingPageData>
 > => {
   try {
-    const response = await fetch(LANDING_PAGES_API_URL);
+    // Add cache-busting query and no-store to ensure we get the latest data
+    const url = `${LANDING_PAGES_API_URL}?_=${Date.now()}`;
+    const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) {
       return readStoredLandingPages();
     }
@@ -112,6 +113,156 @@ const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
+/* Removed unused client-side Supabase helper (uploads handled server-side).
+   If client-side uploads are required in future, reintroduce a secure approach. */
+
+const convertFileToWebp = (file: File): Promise<File> =>
+  new Promise((resolve, reject) => {
+    const image = new Image();
+    const objectUrl = URL.createObjectURL(file);
+
+    image.onload = () => {
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+
+      if (!context) {
+        URL.revokeObjectURL(objectUrl);
+        reject(
+          new Error("Unable to create canvas context for WebP conversion."),
+        );
+        return;
+      }
+
+      // Resize large images to a reasonable max dimension to keep payload small
+      const MAX_DIMENSION = 2000; // pixels
+      const { naturalWidth: iw, naturalHeight: ih } = image;
+      const scale = Math.min(1, MAX_DIMENSION / Math.max(iw, ih));
+      canvas.width = Math.round(iw * scale);
+      canvas.height = Math.round(ih * scale);
+      context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+      // Use slightly lower quality to reduce size (still good visual quality)
+      const WEBP_QUALITY = 0.75;
+
+      canvas.toBlob(
+        (blob) => {
+          URL.revokeObjectURL(objectUrl);
+
+          if (!blob) {
+            reject(new Error("Failed to generate WebP image."));
+            return;
+          }
+
+          const webpFile = new File(
+            [blob],
+            `${file.name.replace(/\.[^/.]+$/, "") || "landing-page-image"}.webp`,
+            { type: "image/webp" },
+          );
+
+          resolve(webpFile);
+        },
+        "image/webp",
+        WEBP_QUALITY,
+      );
+    };
+
+    image.onerror = () => {
+      URL.revokeObjectURL(objectUrl);
+      reject(new Error("Unable to read the selected image file."));
+    };
+
+    image.src = objectUrl;
+  });
+
+const uploadLandingPageImageToSupabase = async (file: File) => {
+  // Convert to webp first (client-side) then send the data URL to the server endpoint
+  const webpFile = await convertFileToWebp(file);
+
+  const dataUrl = await new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = (e) =>
+      reject(new Error("Failed to read file as data URL"));
+    reader.readAsDataURL(webpFile);
+  });
+
+  const sanitizedName = webpFile.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+  const storagePath = `landing-pages/${Date.now()}-${sanitizedName}`;
+  const bucketName =
+    import.meta.env.VITE_SUPABASE_BUCKET?.trim() || "page-images";
+
+  const resp = await fetch(`${getApiBaseUrl()}/api/upload-image`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ dataUrl, path: storagePath, bucket: bucketName }),
+  });
+
+  if (!resp.ok) {
+    const json = await resp.json().catch(() => null);
+    const message =
+      json?.message || json?.error || resp.statusText || "Upload failed";
+    throw new Error(message);
+  }
+
+  const json = await resp.json().catch(() => null);
+
+  // Support multiple response shapes: { publicUrl }, { url }, or Supabase-like responses
+  const publicUrl =
+    json?.publicUrl ||
+    json?.public_url ||
+    json?.url ||
+    json?.data?.publicUrl ||
+    json?.data?.public_url ||
+    null;
+
+  return publicUrl;
+};
+
+const fetchBlobUrlAsFile = async (
+  blobUrl: string,
+  suggestedName = "image.webp",
+) => {
+  const resp = await fetch(blobUrl);
+  const blob = await resp.blob();
+  const ext = suggestedName.split(".").pop() || "webp";
+  const name = suggestedName.endsWith(`.${ext}`)
+    ? suggestedName
+    : `${suggestedName}.${ext}`;
+  return new File([blob], name, { type: blob.type || "image/webp" });
+};
+
+const ensureUploadedImagesInPageData = async (pageData: LandingPageData) => {
+  const uploadPromises: Array<Promise<void>> = [];
+
+  pageData.sections.forEach((sec) => {
+    if (sec.type === "customContent") {
+      sec.blocks?.forEach((block) => {
+        if (block.type === "image" && typeof block.image === "string") {
+          const img = block.image;
+          if (img.startsWith("blob:")) {
+            const promise = (async () => {
+              try {
+                const file = await fetchBlobUrlAsFile(
+                  img,
+                  "landing-page-image.webp",
+                );
+                const publicUrl = await uploadLandingPageImageToSupabase(file);
+                if (publicUrl) block.image = publicUrl;
+              } catch (err) {
+                console.error("Failed to upload blob image before save:", err);
+              }
+            })();
+
+            uploadPromises.push(promise);
+          }
+        }
+      });
+    }
+  });
+
+  await Promise.all(uploadPromises);
+};
+
 const toEditableCustomContentItems = (
   items?: LandingPageCustomContentItem[],
 ): EditableCustomContentItem[] =>
@@ -120,7 +271,7 @@ const toEditableCustomContentItems = (
     linkLabel: item.linkLabel || "",
     linkHref: item.linkHref || "",
     boldLabel: item.boldLabel || "",
-  })) || [{text: "", linkLabel: "", linkHref: "", boldLabel: ""}];
+  })) || [{ text: "", linkLabel: "", linkHref: "", boldLabel: "" }];
 
 const createCustomContentBlock = (
   type: LandingPageCustomContentBlockType = "paragraph",
@@ -133,11 +284,11 @@ const createCustomContentBlock = (
   linkLabel: "",
   linkHref: "",
   boldLabel: "",
-  items: [{text: "", linkLabel: "", linkHref: "", boldLabel: ""}],
+  items: [{ text: "", linkLabel: "", linkHref: "", boldLabel: "" }],
 });
 
 const toEditableCustomContentBlocks = (
-  section: Extract<LandingPageSection, {type: "customContent"}>,
+  section: Extract<LandingPageSection, { type: "customContent" }>,
 ): EditableCustomContentBlock[] => {
   if (section.blocks?.length) {
     return section.blocks.map((block) => ({
@@ -155,10 +306,10 @@ const toEditableCustomContentBlocks = (
 
   const blocks: EditableCustomContentBlock[] = [];
   if (section.title) {
-    blocks.push({...createCustomContentBlock("title"), text: section.title});
+    blocks.push({ ...createCustomContentBlock("title"), text: section.title });
   }
   if (section.image) {
-    blocks.push({...createCustomContentBlock("image"), image: section.image});
+    blocks.push({ ...createCustomContentBlock("image"), image: section.image });
   }
   section.paragraphs?.forEach((paragraph) => {
     blocks.push({
@@ -294,8 +445,8 @@ const CreateLandingPage: React.FC = () => {
                   title: item.title,
                   description: item.description,
                 })) || [
-                  {title: "", description: ""},
-                  {title: "", description: ""},
+                  { title: "", description: "" },
+                  { title: "", description: "" },
                 ],
               };
             case "internalLinks":
@@ -306,13 +457,14 @@ const CreateLandingPage: React.FC = () => {
                 links: s.links?.map((link) => ({
                   label: link.label,
                   href: link.href,
-                })) || [{label: "", href: ""}],
+                })) || [{ label: "", href: "" }],
               };
           }
         }),
     );
     const faqSection = page.sections.find(
-      (s): s is Extract<LandingPageSection, {type: "faq"}> => s.type === "faq",
+      (s): s is Extract<LandingPageSection, { type: "faq" }> =>
+        s.type === "faq",
     );
     setFaqs(faqSection?.items || []);
     const ctaSection = page.sections.find((s) => s.type === "cta") as any;
@@ -374,13 +526,15 @@ const CreateLandingPage: React.FC = () => {
     setSections(newSections);
   };
 
-  const handleCustomContentImageUpload = (
+  const handleCustomContentImageUpload = async (
     sectionIndex: number,
     blockIndex: number,
     event: React.ChangeEvent<HTMLInputElement>,
   ) => {
     const file = event.target.files?.[0];
     if (!file) return;
+    // Basic client-side validation
+    const MAX_UPLOAD_SIZE = 5 * 1024 * 1024; // 5 MB
 
     if (!file.type.startsWith("image/")) {
       setErrorMessage("Please upload a valid image file.");
@@ -388,21 +542,48 @@ const CreateLandingPage: React.FC = () => {
       return;
     }
 
-    const reader = new FileReader();
-    reader.onload = () => {
-      if (typeof reader.result === "string") {
+    if (file.size > MAX_UPLOAD_SIZE) {
+      setErrorMessage("Image is too large. Maximum size is 5 MB.");
+      event.target.value = "";
+      return;
+    }
+
+    const localPreviewUrl = URL.createObjectURL(file);
+    updateCustomContentBlock(
+      sectionIndex,
+      blockIndex,
+      "image",
+      localPreviewUrl,
+    );
+
+    try {
+      setErrorMessage(null);
+      setSuccessMessage(null);
+      const uploadedUrl = await uploadLandingPageImageToSupabase(file);
+      if (uploadedUrl) {
         updateCustomContentBlock(
           sectionIndex,
           blockIndex,
           "image",
-          reader.result,
+          uploadedUrl,
         );
+        setSuccessMessage("Image uploaded successfully.");
+      } else {
+        setErrorMessage("Upload completed but no public URL returned.");
       }
-    };
-    reader.onerror = () => {
-      setErrorMessage("Unable to upload image. Please try again.");
-    };
-    reader.readAsDataURL(file);
+      URL.revokeObjectURL(localPreviewUrl);
+    } catch (error) {
+      console.error("Unable to upload landing page image:", error);
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : "Unable to upload image. Please try again.",
+      );
+      // Keep the local preview so the user still sees the image even if the remote
+      // Supabase bucket is not yet public or the configured bucket name differs.
+    } finally {
+      event.target.value = "";
+    }
   };
 
   const updateSectionType = (index: number, type: EditableSectionType) => {
@@ -416,13 +597,13 @@ const CreateLandingPage: React.FC = () => {
       paragraphs:
         type === "customContent"
           ? newSections[index].paragraphs || [
-              {text: "", linkLabel: "", linkHref: "", boldLabel: ""},
+              { text: "", linkLabel: "", linkHref: "", boldLabel: "" },
             ]
           : undefined,
       bullets:
         type === "customContent"
           ? newSections[index].bullets || [
-              {text: "", linkLabel: "", linkHref: "", boldLabel: ""},
+              { text: "", linkLabel: "", linkHref: "", boldLabel: "" },
             ]
           : undefined,
       blocks:
@@ -432,14 +613,14 @@ const CreateLandingPage: React.FC = () => {
       items:
         type === "featureGrid" || type === "tips"
           ? newSections[index].items || [
-              {title: "", description: ""},
-              {title: "", description: ""},
-              {title: "", description: ""},
+              { title: "", description: "" },
+              { title: "", description: "" },
+              { title: "", description: "" },
             ]
           : undefined,
       links:
         type === "internalLinks"
-          ? newSections[index].links || [{label: "", href: ""}]
+          ? newSections[index].links || [{ label: "", href: "" }]
           : undefined,
     };
     setSections(newSections);
@@ -495,7 +676,7 @@ const CreateLandingPage: React.FC = () => {
     const newSections = [...sections];
     const block = newSections[sectionIndex].blocks?.[blockIndex];
     if (!block) return;
-    block.items.push({text: "", linkLabel: "", linkHref: "", boldLabel: ""});
+    block.items.push({ text: "", linkLabel: "", linkHref: "", boldLabel: "" });
     setSections(newSections);
   };
 
@@ -578,7 +759,7 @@ const CreateLandingPage: React.FC = () => {
     const newSections = [...sections];
     const section = newSections[sectionIndex];
     if (!section.items) section.items = [];
-    section.items.push({title: "", description: ""});
+    section.items.push({ title: "", description: "" });
     setSections(newSections);
   };
 
@@ -610,7 +791,7 @@ const CreateLandingPage: React.FC = () => {
     const newSections = [...sections];
     const section = newSections[sectionIndex];
     if (!section.links) section.links = [];
-    section.links.push({label: "", href: ""});
+    section.links.push({ label: "", href: "" });
     setSections(newSections);
   };
 
@@ -654,7 +835,7 @@ const CreateLandingPage: React.FC = () => {
   };
 
   const addFAQ = () => {
-    setFaqs([...faqs, {question: "", answer: ""}]);
+    setFaqs([...faqs, { question: "", answer: "" }]);
   };
 
   const updateFAQ = (index: number, field: keyof FAQItem, value: string) => {
@@ -716,8 +897,8 @@ const CreateLandingPage: React.FC = () => {
         headline,
         subheadline: intro,
         buttons: [
-          {label: cta1Text, href: cta1Link, style: "primary"},
-          {label: cta2Text, href: cta2Link, style: "secondary"},
+          { label: cta1Text, href: cta1Link, style: "primary" },
+          { label: cta2Text, href: cta2Link, style: "secondary" },
         ],
       },
       sections: [
@@ -775,9 +956,9 @@ const CreateLandingPage: React.FC = () => {
                   ) {
                     return Boolean(
                       block.text ||
-                        block.linkLabel ||
-                        block.linkHref ||
-                        block.boldLabel,
+                      block.linkLabel ||
+                      block.linkHref ||
+                      block.boldLabel,
                     );
                   }
                   if (block.type === "image") {
@@ -789,9 +970,9 @@ const CreateLandingPage: React.FC = () => {
                   if (block.type === "affiliateCta") {
                     return Boolean(
                       block.text ||
-                        block.description ||
-                        block.linkLabel ||
-                        block.linkHref,
+                      block.description ||
+                      block.linkLabel ||
+                      block.linkHref,
                     );
                   }
                   if (block.type === "ctaButton") {
@@ -867,12 +1048,19 @@ const CreateLandingPage: React.FC = () => {
     };
 
     try {
+      // Ensure any local blob: preview images are uploaded and replaced with public URLs
+      await ensureUploadedImagesInPageData(pageData);
+
       const response = await fetch(LANDING_PAGES_API_URL, {
         method: isEditing ? "PATCH" : "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({slug, previousSlug: editingSlug, data: pageData}),
+        body: JSON.stringify({
+          slug,
+          previousSlug: editingSlug,
+          data: pageData,
+        }),
       });
 
       if (!response.ok) {
@@ -885,15 +1073,33 @@ const CreateLandingPage: React.FC = () => {
       return;
     }
 
-    // Save to localStorage for immediate display and development preview
-    const existing = readStoredLandingPages();
-    if (editingSlug && editingSlug !== slug) {
-      delete existing[editingSlug];
+    // Try to refresh landing pages from the backend (preferred)
+    try {
+      const pages = await fetchStoredLandingPages();
+      // If backend returned pages, persist them locally and update UI
+      if (pages && Object.keys(pages).length > 0) {
+        localStorage.setItem("landingPages", JSON.stringify(pages));
+        setExistingPages(Object.values(pages));
+      } else {
+        // Fallback to localStorage update if backend returned nothing
+        const existing = readStoredLandingPages();
+        if (editingSlug && editingSlug !== slug) {
+          delete existing[editingSlug];
+        }
+        existing[slug] = pageData;
+        localStorage.setItem("landingPages", JSON.stringify(existing));
+        setExistingPages(Object.values(existing));
+      }
+    } catch (err) {
+      // On error, fall back to local storage so the UI still updates immediately
+      const existing = readStoredLandingPages();
+      if (editingSlug && editingSlug !== slug) {
+        delete existing[editingSlug];
+      }
+      existing[slug] = pageData;
+      localStorage.setItem("landingPages", JSON.stringify(existing));
+      setExistingPages(Object.values(existing));
     }
-    existing[slug] = pageData;
-    localStorage.setItem("landingPages", JSON.stringify(existing));
-
-    setExistingPages(Object.values(existing));
     setErrorMessage(null);
     setSuccessMessage(
       `${isEditing ? "Updated" : "Created"} landing page successfully!`,
@@ -924,23 +1130,27 @@ const CreateLandingPage: React.FC = () => {
             {existingPages.map((page) => (
               <li
                 key={page.slug}
-                className="flex items-center justify-between border p-2 rounded">
+                className="flex items-center justify-between border p-2 rounded"
+              >
                 <a
                   href={`/${page.slug}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500">
+                  className="text-blue-500"
+                >
                   /{page.slug}
                 </a>
                 <div className="flex gap-2">
                   <button
                     onClick={() => loadPageForEdit(page)}
-                    className="bg-yellow-500 text-white px-3 py-1 rounded">
+                    className="bg-yellow-500 text-white px-3 py-1 rounded"
+                  >
                     Edit
                   </button>
                   <button
                     onClick={() => deletePage(page.slug)}
-                    className="bg-red-500 text-white px-3 py-1 rounded">
+                    className="bg-red-500 text-white px-3 py-1 rounded"
+                  >
                     Delete
                   </button>
                 </div>
@@ -1071,7 +1281,8 @@ const CreateLandingPage: React.FC = () => {
                         e.target.value as EditableSectionType,
                       )
                     }
-                    className="w-full border px-3 py-2 rounded mt-1">
+                    className="w-full border px-3 py-2 rounded mt-1"
+                  >
                     <option value="content">Content</option>
                     <option value="customContent">Custom Content</option>
                     <option value="featureGrid">Pricing / Info Blocks</option>
@@ -1127,7 +1338,8 @@ const CreateLandingPage: React.FC = () => {
                   {(sec.blocks || []).map((block, blockIdx) => (
                     <div
                       key={block.id}
-                      className="space-y-3 rounded border border-slate-200 p-3">
+                      className="space-y-3 rounded border border-slate-200 p-3"
+                    >
                       <label className="block">
                         <span className="text-sm text-slate-600">
                           Block Type
@@ -1143,7 +1355,8 @@ const CreateLandingPage: React.FC = () => {
                                 .value as LandingPageCustomContentBlockType,
                             )
                           }
-                          className="w-full border px-3 py-2 rounded mt-1">
+                          className="w-full border px-3 py-2 rounded mt-1"
+                        >
                           <option value="title">Title</option>
                           <option value="subtitle">Sub Title</option>
                           <option value="caption">Caption</option>
@@ -1293,7 +1506,8 @@ const CreateLandingPage: React.FC = () => {
                                     "",
                                   )
                                 }
-                                className="mt-3 text-red-500">
+                                className="mt-3 text-red-500"
+                              >
                                 Remove Image
                               </button>
                             </div>
@@ -1376,7 +1590,8 @@ const CreateLandingPage: React.FC = () => {
                                     itemIdx,
                                   )
                                 }
-                                className="justify-self-start text-red-500">
+                                className="justify-self-start text-red-500"
+                              >
                                 Remove Bullet
                               </button>
                             </div>
@@ -1386,7 +1601,8 @@ const CreateLandingPage: React.FC = () => {
                             onClick={() =>
                               addCustomContentBlockItem(idx, blockIdx)
                             }
-                            className="bg-blue-500 text-white px-3 py-2 rounded">
+                            className="bg-blue-500 text-white px-3 py-2 rounded"
+                          >
                             Add Bullet
                           </button>
                         </div>
@@ -1524,7 +1740,8 @@ const CreateLandingPage: React.FC = () => {
                             moveCustomContentBlock(idx, blockIdx, -1)
                           }
                           disabled={blockIdx === 0}
-                          className="text-slate-600 disabled:text-slate-300">
+                          className="text-slate-600 disabled:text-slate-300"
+                        >
                           Move Up
                         </button>
                       </div>
@@ -1533,7 +1750,8 @@ const CreateLandingPage: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => addCustomContentBlock(idx)}
-                    className="bg-blue-500 text-white px-3 py-2 rounded">
+                    className="bg-blue-500 text-white px-3 py-2 rounded"
+                  >
                     Add Content Block
                   </button>
                 </div>
@@ -1581,7 +1799,8 @@ const CreateLandingPage: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => addSectionItem(idx)}
-                    className="bg-blue-500 text-white px-3 py-2 rounded">
+                    className="bg-blue-500 text-white px-3 py-2 rounded"
+                  >
                     Add Item
                   </button>
                 </div>
@@ -1627,7 +1846,8 @@ const CreateLandingPage: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => addSectionLink(idx)}
-                    className="bg-blue-500 text-white px-3 py-2 rounded">
+                    className="bg-blue-500 text-white px-3 py-2 rounded"
+                  >
                     Add Link
                   </button>
                 </div>
@@ -1638,13 +1858,15 @@ const CreateLandingPage: React.FC = () => {
                   type="button"
                   onClick={() => moveSectionUp(idx)}
                   disabled={idx === 0}
-                  className="text-slate-600 disabled:text-slate-300">
+                  className="text-slate-600 disabled:text-slate-300"
+                >
                   Move Up
                 </button>
                 <button
                   type="button"
                   onClick={() => removeSection(idx)}
-                  className="text-red-500">
+                  className="text-red-500"
+                >
                   Remove Section
                 </button>
               </div>
@@ -1653,7 +1875,8 @@ const CreateLandingPage: React.FC = () => {
           <button
             type="button"
             onClick={addSection}
-            className="bg-blue-500 text-white px-4 py-2 rounded">
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+          >
             Add Section
           </button>
         </div>
@@ -1678,7 +1901,8 @@ const CreateLandingPage: React.FC = () => {
               <button
                 type="button"
                 onClick={() => removeFAQ(idx)}
-                className="text-red-500">
+                className="text-red-500"
+              >
                 Remove FAQ
               </button>
             </div>
@@ -1686,7 +1910,8 @@ const CreateLandingPage: React.FC = () => {
           <button
             type="button"
             onClick={addFAQ}
-            className="bg-blue-500 text-white px-4 py-2 rounded">
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+          >
             Add FAQ
           </button>
         </div>
@@ -1747,7 +1972,8 @@ const CreateLandingPage: React.FC = () => {
           <button
             type="submit"
             disabled={isSavingLandingPage}
-            className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded disabled:cursor-not-allowed disabled:bg-green-300">
+            className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded disabled:cursor-not-allowed disabled:bg-green-300"
+          >
             {isSavingLandingPage && (
               <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/60 border-t-white" />
             )}
@@ -1760,7 +1986,8 @@ const CreateLandingPage: React.FC = () => {
               type="button"
               onClick={resetForm}
               disabled={isSavingLandingPage}
-              className="bg-gray-500 text-white px-6 py-3 rounded disabled:cursor-not-allowed disabled:bg-gray-300">
+              className="bg-gray-500 text-white px-6 py-3 rounded disabled:cursor-not-allowed disabled:bg-gray-300"
+            >
               Cancel Edit
             </button>
           )}
@@ -1771,7 +1998,8 @@ const CreateLandingPage: React.FC = () => {
             <button
               type="button"
               onClick={() => setSuccessMessage(null)}
-              className="text-green-700 hover:text-green-900">
+              className="text-green-700 hover:text-green-900"
+            >
               Close
             </button>
           </div>
@@ -1782,7 +2010,8 @@ const CreateLandingPage: React.FC = () => {
             <button
               type="button"
               onClick={() => setErrorMessage(null)}
-              className="text-red-700 hover:text-red-900">
+              className="text-red-700 hover:text-red-900"
+            >
               Close
             </button>
           </div>

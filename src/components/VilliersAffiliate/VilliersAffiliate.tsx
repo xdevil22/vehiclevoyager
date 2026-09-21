@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { VilliersFlight } from "./villiersTypes";
+import { getApiBaseUrl } from "../../utils/apiBaseUrl";
 
-const API_BASE_URL = (
-  import.meta.env.VITE_API_BASE_URL || "https://vechura-backend.vercel.app"
-).replace(/\/$/, "");
+const API_BASE_URL = getApiBaseUrl();
 const VILLIERS_API_URL = `${API_BASE_URL}/api/villiers`;
 
 const VilliersAffiliate = () => {

@@ -29,7 +29,7 @@ const LandingSection: React.FC<Props> = ({
     <section id={id} className="rounded-3xl bg-white p-8 shadow-sm">
       <div className="max-w-5xl mx-auto">
         {title && (
-          <h2 className="text-3xl font-bold text-slate-900 mb-3">{title}</h2>
+          <h1 className="text-3xl font-bold text-slate-900 mb-3">{title}</h1>
         )}
         {subtitle && <p className="text-slate-600 mb-6">{subtitle}</p>}
 
@@ -44,7 +44,8 @@ const LandingSection: React.FC<Props> = ({
             {items.map((item) => (
               <div
                 key={item.title}
-                className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+                className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm"
+              >
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   {item.title}
                 </h3>
@@ -59,7 +60,8 @@ const LandingSection: React.FC<Props> = ({
             {items.map((item) => (
               <div
                 key={item.title}
-                className="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+                className="rounded-3xl border border-slate-200 bg-slate-50 p-5"
+              >
                 <h3 className="text-lg font-semibold text-slate-900">
                   {item.title}
                 </h3>
@@ -92,7 +94,8 @@ const LandingSection: React.FC<Props> = ({
                   button.style === "primary"
                     ? "bg-slate-900 text-white hover:bg-slate-800"
                     : "border border-slate-300 bg-white text-slate-900 hover:bg-slate-50"
-                }`}>
+                }`}
+              >
                 {button.label}
               </a>
             ))}
