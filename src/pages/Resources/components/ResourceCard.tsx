@@ -24,9 +24,9 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
   return (
     <>
       <div className="bg-white rounded-lg- shadow hover:shadow-lg transition overflow-hidden">
-        <h1 className="text-3xl font-bold mb-6 px-5 pt-5 text-[#1d496d]">
+        <h2 className="text-3xl font-bold mb-6 px-5 pt-5 text-[#1d496d]">
           {mainTitle}
-        </h1>
+        </h2>
         <div className="px-5">
           <div className="text-sm text-gray-600 italic leading-relaxed advertiser-disclosure">
             {caption}

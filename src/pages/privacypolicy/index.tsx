@@ -4,7 +4,7 @@ export default function PrivacyPolicy() {
   return (
     <div className="container mx-auto px-4">
       <div className="py-8 text-gray-800">
-        <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
+        <h2 className="text-3xl font-bold mb-4">Privacy Policy</h2>
         <p className="text-sm text-gray-500 mb-8">Last updated: 8/11/2025</p>
 
         <section className="space-y-4">
@@ -93,7 +93,8 @@ export default function PrivacyPolicy() {
             Email:{" "}
             <a
               href="mailto:info@vechura.com"
-              className="text-blue-600 underline">
+              className="text-blue-600 underline"
+            >
               info@vechura.com
             </a>
           </p>

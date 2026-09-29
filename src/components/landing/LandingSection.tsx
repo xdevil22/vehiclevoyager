@@ -29,7 +29,7 @@ const LandingSection: React.FC<Props> = ({
     <section id={id} className="rounded-3xl bg-white p-8 shadow-sm">
       <div className="max-w-5xl mx-auto">
         {title && (
-          <h1 className="text-3xl font-bold text-slate-900 mb-3">{title}</h1>
+          <h2 className="text-3xl font-bold text-slate-900 mb-3">{title}</h2>
         )}
         {subtitle && <p className="text-slate-600 mb-6">{subtitle}</p>}
 

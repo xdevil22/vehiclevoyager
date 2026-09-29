@@ -77,35 +77,35 @@ export default function Blog37() {
 
         <ul className="list-disc pl-6">
           <li>
-            <strong>3-Day General Admission (Grounds Pass)</strong> – Get access
+            <strong>3-Day General Admission (Grounds Pass)</strong> - Get access
             to the circuit for Friday (practice sessions), Saturday
             (qualifying), and Sunday (race day). This one is definitely the most
             popular.
           </li>
           <li>
-            <strong>Single-Day Tickets</strong> – Available for Friday,
+            <strong>Single-Day Tickets</strong> - Available for Friday,
             Saturday, or Sunday if you only want to attend a specific day. Race
             day sells out quicker than Friday or Saturday for obvious reasons.
           </li>
           <li>
-            <strong>Grandstand & Reserved Seating</strong> – Instead of general
-            admission, get reserved seats at key sections of the circuit – the
+            <strong>Grandstand & Reserved Seating</strong> - Instead of general
+            admission, get reserved seats at key sections of the circuit - the
             Main Grandstand, Turn 1, and Turn 12, for example. These come as 1
             or 3-day tickets.
           </li>
           <li>
-            <strong>Club SI</strong> – A premium hospitality experience with
+            <strong>Club SI</strong> - A premium hospitality experience with
             elevated viewing, upscale food and beverages, and exclusive
             amenities.
           </li>
           <li>
-            <strong>Premium Hospitality</strong> – Think of this as Club SI
+            <strong>Premium Hospitality</strong> - Think of this as Club SI
             taken up a few notches. Get premium viewing locations, gourmet
             dining, complimentary drinks, climate-controlled lounges, and access
             to all post-race concerts.
           </li>
           <li>
-            <strong>Paddock Club</strong> – The highest-tier F1 experience set
+            <strong>Paddock Club</strong> - The highest-tier F1 experience set
             right above the team garages with pit lane access, gourmet cuisine,
             and exclusive behind-the-scenes experiences.
           </li>
@@ -302,7 +302,7 @@ export default function Blog37() {
             >
               Vacation rentals
             </a>
-            – Great for larger groups or families, or for those planning to stay
+            - Great for larger groups or families, or for those planning to stay
             longer. Get all the comforts of home, not far from the action of
             COTA.
           </li>
@@ -315,12 +315,12 @@ export default function Blog37() {
             >
               Hotels
             </a>
-            – Easy check-in and check-out, housekeeping, and onsite restaurants
+            - Easy check-in and check-out, housekeeping, and onsite restaurants
             make life easier. As a big city, Austin has famous hotel chains,
             boutique options, and motels for the budget traveler.
           </li>
           <li>
-            <strong>RVs and campsites</strong>– Because Austin is on the eastern
+            <strong>RVs and campsites</strong>- Because Austin is on the eastern
             edge of Texas Hill Country, there's lots of nature to explore. An{" "}
             <a
               href="https://vechura.com/rv-rental-austin"

@@ -1,6 +1,6 @@
-import React, {JSX} from "react";
-import {Link} from "react-router-dom";
-import {BASE_URL} from "../../../utils/constants";
+import React, { JSX } from "react";
+import { Link } from "react-router-dom";
+import { BASE_URL } from "../../../utils/constants";
 
 interface BlogCardProps {
   blogid: number;
@@ -24,7 +24,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   return (
     <>
       <div className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-        <h1 className="text-3xl font-bold mb-6 px-5 pt-5">{mainTitle}</h1>
+        <h2 className="text-3xl font-bold mb-6 px-5 pt-5">{mainTitle}</h2>
         <div className="px-5">
           {" "}
           <div className="text-sm text-gray-600 italic leading-relaxed advertiser-disclosure">
@@ -50,7 +50,8 @@ const BlogCard: React.FC<BlogCardProps> = ({
           <p className="text-gray-700 mb-4">{excerpt}</p>
           <Link
             to={`/blog/${slug}`}
-            className="text-blue-600 hover:underline font-medium">
+            className="text-blue-600 hover:underline font-medium"
+          >
             Read More →
           </Link>
         </div>

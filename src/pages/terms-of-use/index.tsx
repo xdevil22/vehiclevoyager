@@ -4,7 +4,7 @@ export default function TermsofUse() {
   return (
     <div className="container mx-auto px-4">
       <div className="py-8 text-gray-800">
-        <h1 className="text-3xl font-bold mb-4">Terms of Use</h1>
+        <h2 className="text-3xl font-bold mb-4">Terms of Use</h2>
         <p className="text-sm text-gray-500 mb-8">
           Effective date: September 10, 2026
         </p>

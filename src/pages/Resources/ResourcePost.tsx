@@ -28,9 +28,9 @@ const ResourcePost: React.FC = () => {
       </HeadProvider>
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 resource-article">
         <article className="md:col-span-2">
-          <h1 className="text-3xl font-bold mb-6 text-[#1d496d]">
+          <h2 className="text-3xl font-bold mb-6 text-[#1d496d]">
             {post.mainTitle}
-          </h1>
+          </h2>
           <div className="text-sm text-gray-600 italic leading-relaxed advertiser-disclosure">
             {post.caption}
           </div>

@@ -409,7 +409,7 @@ export default function Blog1() {
       <img
         src={BASE_URL + miamidream}
         alt="Cruise am"
-        className="w-full  object-cover"
+        className="w-full object-cover"
         loading="lazy"
       />
     </>

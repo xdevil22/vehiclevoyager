@@ -4,9 +4,9 @@ export default function Cars() {
   return (
     <>
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl md:text-4xl font-bold font-heading text-neutral-900  p-6">
+        <h2 className="text-3xl md:text-4xl font-bold font-heading text-neutral-900  p-6">
           Cars
-        </h1>
+        </h2>
         <div className="p-6">
           <SearchFilters />
         </div>
@@ -21,13 +21,15 @@ export default function Cars() {
               <label className="block text-sm font-medium mb-1">Location</label>
               <button
                 type="button"
-                className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
+                className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              >
                 <span>Any Location</span>
                 <svg
                   className="lucide lucide-chevron-down h-4 w-4 opacity-50"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth={2}>
+                  strokeWidth={2}
+                >
                   <path d="M6 9l6 6 6-6" />
                 </svg>
               </button>
@@ -40,13 +42,15 @@ export default function Cars() {
               </label>
               <button
                 type="button"
-                className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
+                className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              >
                 <span>Any Type</span>
                 <svg
                   className="lucide lucide-chevron-down h-4 w-4 opacity-50"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth={2}>
+                  strokeWidth={2}
+                >
                   <path d="M6 9l6 6 6-6" />
                 </svg>
               </button>
@@ -59,13 +63,15 @@ export default function Cars() {
               </label>
               <button
                 type="button"
-                className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
+                className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              >
                 <span>Any Price</span>
                 <svg
                   className="lucide lucide-chevron-down h-4 w-4 opacity-50"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth={2}>
+                  strokeWidth={2}
+                >
                   <path d="M6 9l6 6 6-6" />
                 </svg>
               </button>

@@ -36,11 +36,13 @@ const Footer = () => {
           {/* Logo & Contact */}
           <div>
             <div className="flex items-center space-x-2 mb-6 vechuraLogo">
-              {/* <RiSteering2Fill className="text-primary text-3xl" />
-              <span className="text-2xl font-bold font-heading">
-                Vechura
-              </span> */}
-              <img src={vechuraLogo} alt="vechura" loading="lazy" />
+              <img
+                src={vechuraLogo}
+                alt="vechura"
+                loading="lazy"
+                height="30"
+                width="42"
+              />
               <span className="text-2xl font-bold font-heading">Vechura</span>
             </div>
             <p className="text-neutral-200 mb-6">

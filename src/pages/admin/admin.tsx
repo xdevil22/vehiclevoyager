@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 const Admin = () => {
   const [access, setAccess] = useState(false);
@@ -33,7 +33,8 @@ const Admin = () => {
           />
           <button
             onClick={handleLogin}
-            className="w-full bg-black text-white px-6 py-2 rounded hover:bg-gray-800">
+            className="w-full bg-black text-white px-6 py-2 rounded hover:bg-gray-800"
+          >
             Login
           </button>
         </div>
@@ -43,7 +44,7 @@ const Admin = () => {
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Admin Dashboard</h1>
+      <h2 className="text-3xl font-bold mb-6">Admin Dashboard</h2>
 
       {/* GA4 EMBED SECTION */}
       <section className="mb-10">
@@ -52,7 +53,7 @@ const Admin = () => {
           src="https://datastudio.google.com/embed/reporting/your-report-id/page/your-page-id"
           width="100%"
           height="400"
-          style={{border: 0}}
+          style={{ border: 0 }}
           allowFullScreen
           title="GA4 Report"
         />

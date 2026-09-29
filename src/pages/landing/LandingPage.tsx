@@ -170,9 +170,9 @@ const LandingPage: React.FC = () => {
       return (
         <div className="min-h-screen bg-neutral-100 flex items-center justify-center px-4 py-16">
           <div className="max-w-xl text-center bg-white rounded-3xl p-8 shadow-lg">
-            <h1 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl font-bold mb-4">
               Page temporarily unavailable
-            </h1>
+            </h2>
             <p className="text-gray-600 mb-6">
               We’re having trouble loading this landing page right now. Please
               try again in a moment or return to the homepage.
@@ -191,7 +191,7 @@ const LandingPage: React.FC = () => {
     return (
       <div className="min-h-screen bg-neutral-100 flex items-center justify-center px-4 py-16">
         <div className="max-w-xl text-center bg-white rounded-3xl p-8 shadow-lg">
-          <h1 className="text-3xl font-bold mb-4">Page not found</h1>
+          <h2 className="text-3xl font-bold mb-4">Page not found</h2>
           <p className="text-gray-600 mb-6">
             The landing page you’re looking for doesn’t exist yet. Check the URL
             or return to the homepage.
@@ -249,9 +249,9 @@ const LandingPage: React.FC = () => {
               {blocks.map((block, blockIndex) => (
                 <React.Fragment key={block.id || blockIndex}>
                   {block.type === "title" && block.text && (
-                    <h1 className="text-left text-3xl font-bold text-[#3073cc]">
+                    <h2 className="text-left text-3xl font-bold text-[#3073cc]">
                       {block.text}
-                    </h1>
+                    </h2>
                   )}
 
                   {block.type === "subtitle" && block.text && (
@@ -433,9 +433,9 @@ const LandingPage: React.FC = () => {
           <LandingHero {...page.hero} />
         ) : (
           <header className="max-w-7xl mx-auto px-4 py-12">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
               {page.title || page.seoTitle || page.slug}
-            </h1>
+            </h2>
           </header>
         )} */}
 

@@ -7,7 +7,7 @@ function AdvertiserDisclosure(props: Props) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Affiliate Disclosure</h1>
+      <h2 className="text-3xl font-bold mb-6">Affiliate Disclosure</h2>
       <p className="mb-4">
         Vechura participates in affiliate marketing programs designed to provide
         a means for websites to earn commissions by linking to partner products
@@ -34,7 +34,8 @@ function AdvertiserDisclosure(props: Props) {
             href="https://www.amazon.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 no-underline hover:underline">
+            className="text-blue-600 no-underline hover:underline"
+          >
             Amazon.com
           </a>{" "}
           and affiliated sites.
@@ -80,7 +81,8 @@ function AdvertiserDisclosure(props: Props) {
           contact us at{" "}
           <a
             href="mailto:info@vechura.com"
-            className="text-primary hover:underline transition-colors">
+            className="text-primary hover:underline transition-colors"
+          >
             info@vechura.com
           </a>
           .
