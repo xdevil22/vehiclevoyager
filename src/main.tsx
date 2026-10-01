@@ -1,6 +1,6 @@
 import React, { JSX, useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { trackAffiliateClick } from "./utils/affiliateTracking";
 
 import Home from "./pages/home";
@@ -54,13 +54,35 @@ function AffiliateTrackingBootstrap() {
   return null;
 }
 
+function CanonicalUrl() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const canonicalUrl = new URL(location.pathname, "https://vechura.com");
+    canonicalUrl.pathname = canonicalUrl.pathname.replace(/\/+$/, "") || "/";
+    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "canonical";
+      document.head.appendChild(link);
+    }
+    link.href = canonicalUrl.toString();
+  }, [location.pathname]);
+
+  return null;
+}
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <HeadProvider>
       <BrowserRouter>
         <AffiliateTrackingBootstrap />
+        <CanonicalUrl />
         <ScrollToTop />
         <Routes>
+          <Route path="/cookie-policy" element={<Navigate to="/cookiepolicy" replace />} />
+          <Route path="/terms-of-service" element={<Navigate to="/termsofuse" replace />} />
+          <Route path="/terms-of-use" element={<Navigate to="/termsofuse" replace />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/booking-tools" element={<BookingTools />} />

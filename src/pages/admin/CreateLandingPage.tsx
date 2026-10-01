@@ -1494,6 +1494,8 @@ const CreateLandingPage: React.FC = () => {
                               <img
                                 src={block.image}
                                 alt="Uploaded custom content preview"
+                                height="768"
+                                width="420"
                                 className="mx-auto h-40 w-full max-w-md rounded object-cover"
                               />
                               <button

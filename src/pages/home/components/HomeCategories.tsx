@@ -81,50 +81,6 @@ const HomeCategories = () => {
 
   const [rvs, setRVs] = useState<RV[]>(mockData);
 
-  // useEffect(() => {
-  //   const fetchRVs = async () => {
-  //     try {
-  //       const res = await fetch(
-  //         `https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660`,
-  //         {
-  //           headers: {
-  //             Authorization:
-  //               "Bearer e1fd8ca38a5481caedc751513afbd05a829abfe9575103f28de6f104ace9084f",
-  //           },
-  //         }
-  //       );
-
-  //       if (!res.ok || res.headers.get("content-type")?.includes("text/html")) {
-  //         throw new Error("Invalid response");
-  //       }
-
-  //       const data = await res.json();
-
-  //       const listings: RV[] = data?.data?.map((item: any) => ({
-  //         type: "RV",
-  //         brand: "Outdoorsy",
-  //         name: item.attributes?.name || "No Name",
-  //         image:
-  //           item.attributes?.primary_image_url ||
-  //           "https://via.placeholder.com/400x250.png?text=No+Image",
-  //         url: `https://www.outdoorsy.com/rv/${item.id}`,
-  //         price: null,
-  //       }));
-
-  //       if (Array.isArray(listings) && listings.length > 0) {
-  //         setRVs(listings);
-  //       } else {
-  //         setRVs(mockData);
-  //       }
-  //     } catch (err) {
-  //       console.warn("Using mock data due to error:", err);
-  //       setRVs(mockData);
-  //     }
-  //   };
-
-  //   fetchRVs();
-  // }, []);
-
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
   }, []);

@@ -383,6 +383,8 @@ export default function Blog5() {
         alt="Desert roads"
         className="w-full  object-cover"
         loading="lazy"
+        width="662"
+        height="441"
       />
       <hr className="my-6 border-t-2 border-gray-400" />
     </>

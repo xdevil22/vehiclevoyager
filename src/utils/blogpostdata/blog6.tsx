@@ -323,17 +323,13 @@ export default function Blog6() {
         </a>
       </p>
 
-      {/* <div>
-        👉 &nbsp;
-        <a href="/" className="text-blue-600 no-underline hover:underline">
-          Your dream day (or weekend) on the water starts here.{" "}
-        </a>
-      </div> */}
       <img
         src={BASE_URL + feelfreedom}
         alt="Feel Freedom"
         className="w-full object-cover"
         loading="lazy"
+        width="662"
+        height="440"
       />
     </>
   );

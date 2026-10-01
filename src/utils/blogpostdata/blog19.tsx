@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 import sxswEvent from "../../../public/assets/blogs/blog19/sxsw-event.webp";
 import sxswStands from "../../../public/assets/blogs/blog19/sxsw-stands.webp";
@@ -15,7 +15,8 @@ export default function Blog19() {
           href="https://sxsw.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           SXSW
         </a>{" "}
         <strong>(South by Southwest) </strong> takes over downtown. What began
@@ -41,9 +42,11 @@ export default function Blog19() {
         <div className="text-center">
           <img
             src={BASE_URL + sxswStands}
-            alt="Lake Tahoe California Nevada"
+            alt="SXSW Stands"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="399"
           />
         </div>
         <p>
@@ -105,7 +108,8 @@ export default function Blog19() {
             href="https://expedia.com/affiliates/hotel-search-austin.xhnYd67"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             flights and hotels
           </a>{" "}
           fill quickly once the official schedule is announced. Planning travel
@@ -143,7 +147,8 @@ export default function Blog19() {
             href="https://cart.sxsw.com/?_gl=1*ndw6n3*_gcl_au*MTQyMDU2Mzk2Mi4xNzczMTc5NTA3*_ga*NzQ5MTMzODg3LjE3NzMxNzk1MDc.*_ga_RLXXHDCCN4*czE3NzMxNzk1MDckbzEkZzEkdDE3NzMxNzk2MzQkajU0JGwwJGgw"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             the official SXSW site here
           </a>
           .
@@ -152,9 +157,11 @@ export default function Blog19() {
         <div className="text-center">
           <img
             src={BASE_URL + sxswEvent}
-            alt="Vail Colorado"
+            alt="sxsw Event"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="398"
           />
         </div>
         <p>
@@ -163,7 +170,8 @@ export default function Blog19() {
             href="https://ticketliquidator.auhm.net/0GZv1N"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             sell individual tickets
           </a>{" "}
           outside the official badge system. These can be easier to obtain and
@@ -176,7 +184,8 @@ export default function Blog19() {
             href="https://ticketliquidator.auhm.net/0GZv1N"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             comparing ticket availability
           </a>{" "}
           through secondary marketplaces can sometimes open up additional
@@ -217,7 +226,8 @@ export default function Blog19() {
             href="https://www.hotels.com/affiliates/search-result-austin-texas-united-states-of-america.hLgW73T"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Downtown hotels
           </a>{" "}
           sell out quickly, and prices increase as the event approaches.
@@ -254,7 +264,8 @@ export default function Blog19() {
             href="https://www.hotels.com/affiliates/search-result-austin-texas-united-states-of-america.hLgW73T"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Comparing hotels
           </a>{" "}
           and{" "}
@@ -262,7 +273,8 @@ export default function Blog19() {
             href="https://vrbo.com/affiliates/search-austin.uMFkCUm"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             vacation rentals
           </a>{" "}
           early helps secure better locations before prices spike
@@ -287,7 +299,8 @@ export default function Blog19() {
             href="https://expedia.com/affiliates/flights-search-phx-to-aus.U84xE15"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Booking flights early
           </a>{" "}
           is recommended, especially if you plan to arrive near the start of the
@@ -299,7 +312,8 @@ export default function Blog19() {
             href="https://www.villiersjets.com/?id=10228"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             using private charter flights
           </a>
           . Not only do you get a special upscale experience, but you also avoid
@@ -344,7 +358,8 @@ export default function Blog19() {
             href="https://expedia.com/affiliates/hotel-search-austin.jJcCu43"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             compare options from popular rental car companies
           </a>{" "}
           or for more unique vehicle options, you can{" "}
@@ -352,7 +367,8 @@ export default function Blog19() {
             href="https://turoinc.sjv.io/B50v1J"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             try the platform Turo
           </a>
           .{" "}
@@ -366,7 +382,8 @@ export default function Blog19() {
             href="https://rvezypartnershipprogram.sjv.io/6keYDm"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             booking an RV or camper van in Austin
           </a>{" "}
           can provide flexibility for exploring destinations beyond the city.
@@ -378,9 +395,11 @@ export default function Blog19() {
         <div className="text-center">
           <img
             src={BASE_URL + sxswVisitor}
-            alt="Lake Tahoe California Nevada"
+            alt="sxsw Visitor"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="397"
           />
         </div>
         <p>
@@ -444,7 +463,8 @@ export default function Blog19() {
             href="https://expedia.com/affiliates/hotel-search-austin.jJcCu43"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             tickets, lodging, and transportation
           </a>
           , SXSW can become one of the most memorable trips of the year.

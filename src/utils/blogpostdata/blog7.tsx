@@ -32,6 +32,8 @@ export default function Blog7() {
           alt="power meets precision"
           className="inline-block"
           loading="lazy"
+          width="377"
+          height="297"
         />
       </div>
 
@@ -53,9 +55,11 @@ export default function Blog7() {
       <div className="text-center">
         <img
           src={BASE_URL + hybridinnovation}
-          alt="power meets precision"
+          alt="hybrid innovation"
           className="inline-block"
           loading="lazy"
+          width="370"
+          height="270"
         />
       </div>
 
@@ -83,9 +87,11 @@ export default function Blog7() {
         <div className="text-center">
           <img
             src={BASE_URL + designinterior}
-            alt="power meets precision"
+            alt="design interior"
             className="inline-block"
             loading="lazy"
+            width="389"
+            height="292"
           />
         </div>
         <h2 className="text-xl font-bold mt-6">Design & Interior</h2>
@@ -110,9 +116,11 @@ export default function Blog7() {
         <div className="text-center">
           <img
             src={BASE_URL + coststoown}
-            alt="power meets precision"
+            alt="costs toown"
             className="inline-block"
             loading="lazy"
+            width="383"
+            height="256"
           />
         </div>
         <h2 className="text-xl font-bold mt-6">What It Costs to Own</h2>
@@ -140,9 +148,11 @@ export default function Blog7() {
         <div className="text-center">
           <img
             src={BASE_URL + lvcexotics}
-            alt="power meets precision"
+            alt="lvc exotics"
             className="inline-block"
             loading="lazy"
+            width="406"
+            height="271"
           />
         </div>
         <h2>Experience It Without Owning One</h2>

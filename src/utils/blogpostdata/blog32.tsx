@@ -36,6 +36,8 @@ export default function Blog32() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="400"
           />
         </div>
         <p>
@@ -168,6 +170,8 @@ export default function Blog32() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="400"
           />
         </div>
         <p>
@@ -265,6 +269,8 @@ export default function Blog32() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="372"
           />
         </div>
         <p>

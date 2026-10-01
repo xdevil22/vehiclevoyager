@@ -1,5 +1,5 @@
 import React from "react";
-import {logosImages} from "../../../assets";
+import { logosImages } from "../../../assets";
 
 import ExpediaAffiliate from "./ExpediaAffiliate";
 type Provider = {
@@ -100,14 +100,15 @@ const AffiliateLogos = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visit ${provider.alt}`}
-              className={`flex items-center justify-center  bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200 ${provider.className === "expediainline" ? "expediainline" : provider.className === "turologo" ? "turologo" : provider.className === "villerslogo" ? "villerslogo" : provider.className === "riderslogo" ? "riderslogo" : provider.className === "lvcexotic" ? "lvcexotic" : null}`}>
+              className={`flex items-center justify-center  bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-200 ${provider.className === "expediainline" ? "expediainline" : provider.className === "turologo" ? "turologo" : provider.className === "villerslogo" ? "villerslogo" : provider.className === "riderslogo" ? "riderslogo" : provider.className === "lvcexotic" ? "lvcexotic" : null}`}
+            >
               <img
                 src={provider.imgSrc}
                 alt={provider.alt}
                 className={`h-8 md:h-10 max-w-[120px] md:max-w-[150px] object-contain ${provider.className}`}
                 loading="lazy"
-                width={120}
-                height={50}
+                width="120"
+                height="50"
               />
             </a>
           ))}

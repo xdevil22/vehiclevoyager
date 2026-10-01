@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 import coachellaLineup from "../../../public/assets/blogs/blog20/coachella-2026-lineup.webp";
 import coachellaFestival from "../../../public/assets/blogs/blog20/coachella-festival.webp";
@@ -24,7 +24,8 @@ export default function Blog21() {
           href="https://vechura.com/#Cars"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           renting a car in Phoenix
         </a>{" "}
         makes the most sense.
@@ -123,7 +124,8 @@ export default function Blog21() {
               href="https://vechura.com/blog/spring-training-in-arizona-complete-travel-guide-for-tickets-travel-and-getting-around"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               Cactus League spring training
             </a>{" "}
             stadiums for baseball fans
@@ -136,7 +138,8 @@ export default function Blog21() {
               href="https://www.viator.com/Phoenix-attractions/Phoenix-Zoo/d639-a1034?pid=P00264796&mcid=42383&medium=link"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               The Phoenix Zoo
             </a>
             , the{" "}
@@ -144,7 +147,8 @@ export default function Blog21() {
               href="https://www.viator.com/tours/Phoenix/Phoenix-Landmarks-Tour-Desert-Botanical-Garden-and-More/d639-272935P14?pid=P00264796&mcid=42383&medium=link"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               Desert Botanical Garden
             </a>
             , Tempe nightlife, and Scottsdale shopping
@@ -160,7 +164,8 @@ export default function Blog21() {
             target="_blank"
             rel="noopener noreferrer"
             href="https://expedia.com/affiliate/B2kmGpQ"
-            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 bg-slate-900 text-white hover:bg-slate-800">
+            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 bg-slate-900 text-white hover:bg-slate-800"
+          >
             Browse the best deals on Phoenix car rentals
           </a>
         </div>
@@ -178,6 +183,8 @@ export default function Blog21() {
             alt="public Train"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
         <p>
@@ -314,7 +321,8 @@ export default function Blog21() {
             href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=encoded_destination_url"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             {" "}
             Book a fun RV
           </a>{" "}
@@ -324,7 +332,8 @@ export default function Blog21() {
             href="https://vechura.com/#RVs-and-Motorhomes"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             RV rental in Phoenix
           </a>
           . From Sedona, it's another two-hour drive north from Sedona to reach
@@ -347,7 +356,8 @@ export default function Blog21() {
             href="https://vechura.com/#Motorcycles"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             even motorcycle rentals in Phoenix
           </a>
           , and once you hit the road, you won't look back!

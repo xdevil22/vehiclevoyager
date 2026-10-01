@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 import dustStorm from "../../../public/assets/blogs/blog22/dust-strom.webp";
 import renoCity from "../../../public/assets/blogs/blog22/reno-city.webp";
@@ -84,7 +84,8 @@ export default function Blog22() {
             href="https://www.ticketliquidator.com/performers/burning-man-tickets?kwds=Burning+Man&clickId=XWQx3BWi7xycUy62I-yUlUTDUkuTLhR0vUobQk0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Burning Man tickets
           </a>{" "}
           can sell out quickly, but that doesn't necessarily mean you're out of
@@ -101,9 +102,11 @@ export default function Blog22() {
         <div className="text-center">
           <img
             src={BASE_URL + blackRockCity}
-            alt="public Train"
+            alt="black Rock City"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="450"
           />
         </div>
 
@@ -124,7 +127,8 @@ export default function Blog22() {
             href="https://expedia.com/affiliates/flights-search.elz4lpf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Reno is the obvious choice
           </a>{" "}
           . Why? It's only about 120 miles from Black Rock City. And because
@@ -174,7 +178,8 @@ export default function Blog22() {
             href="https://vechura.com/blog/must-have-travel-gadgets-for-2026"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             essential travel gear
           </a>{" "}
           before heading into Black Rock City. While you can leave and re-enter
@@ -188,7 +193,8 @@ export default function Blog22() {
               href="https://rvezypartnershipprogram.sjv.io/0GyqNE"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               Rent an affordable RV in Reno
             </a>{" "}
             Rent an affordable RV in Reno to explore the desert before heading
@@ -200,7 +206,8 @@ export default function Blog22() {
                 href="https://expedia.com/affiliates/hotel-search-reno.EUMBzoi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline">
+                className="text-blue-600 hover:underline"
+              >
                 Reno has hotels for every budget
               </a>{" "}
               . Find options everywhere from Downtown and Midtown to nearby
@@ -214,7 +221,8 @@ export default function Blog22() {
               href="https://tidd.ly/4xm75yK"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               RV rental, Reno-Tahoe has plenty of options
             </a>{" "}
             .
@@ -259,6 +267,8 @@ export default function Blog22() {
             alt="reno City"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="407"
           />
         </div>
         <h2>Getting to Black Rock City</h2>
@@ -281,7 +291,8 @@ export default function Blog22() {
             href="https://expedia.com/affiliate/gtwv8eu"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             a rental car
           </a>{" "}
           can provide the flexibility to pick up supplies, explore the region,
@@ -305,7 +316,8 @@ export default function Blog22() {
             href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=https%3A%2F%2Fwww.outdoorsy.com%2Frv-search%3Fhotid%3D102e2d0e9f63d652f79f6549eb5484%26offer_id%3D2%26cam%3D751%26subcam%3D2660%26utm_source%3DVECHURA%26utm_medium%3Daffiliate%26utm_campaign%3Dhasoffers%26address%3DReno%26manual_address_input%3Dtrue%26full_mapbox_address%3DReno%252C%2BNevada%252C%2BUnited%2BStates%26mapbox_id%3DdXJuOm1ieHBsYzpFR2ZJN0E%26date%255Bfrom%255D%3D2026-07-29%26date%255Bto%255D%3D2026-08-07%26flexible_days%3D3%26sleeps%255Badults%255D%3D2%26filter%255Bfeature%255D%3D%26filter%255Brenter_age%255D%3D25"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Compare RV rental prices near Reno
           </a>
         </div>
@@ -317,7 +329,8 @@ export default function Blog22() {
               href="https://burnerexpress.burningman.org/burner-express-bus-information/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               Burner Express Bus
             </a>{" "}
             is a bus service offered by Burning Man to transport Burners from
@@ -353,6 +366,8 @@ export default function Blog22() {
             alt="dust Storm"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
         <h2>Burning Man Driving Directions, Parking, and Weather</h2>
@@ -444,7 +459,8 @@ export default function Blog22() {
             href="https://www.cruiseamerica.com/rates?pickup_datetime=2026-08-10T14%3A00&flexible=false&return_datetime=2026-08-13T11%3A00&pickup_state=NV&pickup_loc=690&disc=&passengers=2&iata=IMPACT&irclickid=XWQx3BWi7xycUy62I-yUlUTDUkuTvyQ4vUobWI0&sharedid=&irpid=6269754&cruiseid=&irgwc=1&afsrc=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             explore by RV
           </a>{" "}
           , especially if you're extending your trip after Burning Man.

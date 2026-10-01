@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 import antelopeCanyon from "../../../public/assets/blogs/blog24/antelope-canyon.webp";
 import havasuFalls from "../../../public/assets/blogs/blog24/havasu-falls.webp";
@@ -37,7 +37,8 @@ export default function Blog24() {
               href="https://gowithguide.com/united-states/tour/las-vegas-grand-canyon-private-tour-with-expert-local-tour-guide-20063?utm_source=awin&utm_id=1967225_&utm_campaign=affiliate&sv1=affiliate&sv_campaign_id=1967225&awc=87121_1781872699_5e84b832cbd852926a5015b8adcea512"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               guided day trips from Las Vegas
             </a>{" "}
             to the Canyon are also available.
@@ -49,7 +50,8 @@ export default function Blog24() {
             href="https://www.outdoorsy.com/rv-search?address=Grand%20Canyon&manual_address_input=true&full_mapbox_address=Grand%20Canyon%2C%20Arizona%2C%20United%20States&mapbox_id=dXJuOm1ieHBsYzpCOFhvN0E&sleeps%5Badults%5D=2&filter%5Bfeature%5D=&filter%5Brenter_age%5D=25&skip_defaults=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             RV home on wheels
           </a>
           , to feel the desert winds on your face on a classic cruiser, or just
@@ -58,7 +60,8 @@ export default function Blog24() {
             href="https://vechura.com/blog/getting-around-phoenix-rental-car"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             modern and reliable SUV
           </a>{" "}
           with ice-cold air conditioning, your choice of vehicle can be
@@ -81,7 +84,8 @@ export default function Blog24() {
             href="https://expedia.com/affiliates/hotel-search-grand-canyon-b4EFsOy"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             reserve accommodations
           </a>{" "}
           {""}
@@ -90,7 +94,8 @@ export default function Blog24() {
             href="https://vechura.com/blog/unforgettable-views-from-above"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             helicopter tour over the canyon
           </a>{" "}
           offers a perspective no viewpoint on earth can match.
@@ -157,6 +162,8 @@ export default function Blog24() {
             alt="havasu Falls"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
         <p>
@@ -174,7 +181,8 @@ export default function Blog24() {
             href="https://www.viator.com/searchResults/all?text=grand+canyon&pid=P00264796&mcid=42383&medium=link"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             guided hiking and sightseeing tours
           </a>{" "}
           are available for travelers looking to explore the region with local
@@ -196,7 +204,8 @@ export default function Blog24() {
             href="https://www.viator.com/searchResults/all?text=Navajo+led+Monument+Valley&pid=P00264796&mcid=42383&medium=link"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             book a Navajo-guided Jeep tour
           </a>
           .
@@ -208,6 +217,8 @@ export default function Blog24() {
             alt="antelope Canyon"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="329"
           />
         </div>
         <p>
@@ -217,7 +228,8 @@ export default function Blog24() {
             href="https://www.viator.com/Page-attractions/Antelope-Canyon/d23393-a2087?pid=P00264796&mcid=42383&medium=link"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             guided tour
           </a>{" "}
           to visit. The effort rewards you as narrow sandstone walls glow orange
@@ -284,7 +296,8 @@ export default function Blog24() {
             href="https://vechura.com/blog/7best-rv-rentals-in-phoenix"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             7 Best RV Rentals in Phoenix for Desert Adventures
           </a>{" "}
           before you hit the road.
@@ -307,7 +320,8 @@ export default function Blog24() {
             href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660&url=https%3A%2F%2Fwww.outdoorsy.com%2Frv-search%3Faddress%3DGrand%2BCanyon%26manual_address_input%3Dtrue%26full_mapbox_address%3DGrand%2BCanyon%252C%2BArizona%252C%2BUnited%2BStates%26mapbox_id%3DdXJuOm1ieHBsYzpCOFhvN0E%26sleeps%255Badults%255D%3D2%26filter%255Bfeature%255D%3D%26filter%255Brenter_age%255D%3D25%26skip_defaults%3Dtrue"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Browse RV Rentals
           </a>
         </div>

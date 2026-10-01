@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 import dustStorm from "../../../public/assets/blogs/blog22/dust-strom.webp";
 import glacierNationalPark from "../../../public/assets/blogs/blog23/glacier-national-park.webp";
@@ -27,7 +27,8 @@ export default function Blog23() {
           href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           RV rental
         </a>{" "}
         can also be surprisingly affordable. When compared to the cost of
@@ -42,7 +43,8 @@ export default function Blog23() {
           href="https://vechura.com/blog/rving-with-pets-best-pet-friendly-rv-rentals-travel-tips"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           why more travelers are taking their pets on the road
         </a>
         , and see if an RV might work for you and your furry friends.
@@ -89,7 +91,8 @@ export default function Blog23() {
             href="https://cruiseramerica.pxf.io/c/269754/2807206/29922"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Class C motorhomes
           </a>{" "}
           occupy the middle ground between a Class A and a Class B. Often, they
@@ -107,7 +110,8 @@ export default function Blog23() {
             href="https://www.rvezy.com/?incidkid=yJxVvg3nGxycU9tyNU0qT3YkUkuTHhXQvS7g0c0&irgwc=1&afsrc=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             A travel trailer
           </a>{" "}
           can provide a more cost-effective option, especially if you already
@@ -138,9 +142,11 @@ export default function Blog23() {
         <div className="text-center">
           <img
             src={BASE_URL + yellowStone}
-            alt="public Train"
+            alt="yellow Stone"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="413"
           />
         </div>
         <p>
@@ -166,7 +172,8 @@ export default function Blog23() {
             href="https://vechura.com/blog/unforgettable-views-from-above"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             the best helicopter tours for the Grand Canyon, Las Vegas, Maui, and
             Catalina
           </a>
@@ -183,6 +190,8 @@ export default function Blog23() {
             alt="glacier National Park"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
         <p>
@@ -226,7 +235,8 @@ export default function Blog23() {
             href="https://vechura.com/blog/road-trip-ready-15-must-have-items-for-your-next-adventure"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Check out the 15 must-have items for your next adventure
           </a>{" "}
           to explore practical gear that makes life on the road easier.
@@ -252,7 +262,8 @@ export default function Blog23() {
             href="https://outdoorsyinc.go2cloud.org/aff_c?offer_id=2&aff_id=2660"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Browse RV Rentals
           </a>
         </div>

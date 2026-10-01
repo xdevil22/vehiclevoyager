@@ -56,6 +56,8 @@ export default function Blog35() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="449"
           />
         </div>
         <p>
@@ -195,6 +197,8 @@ export default function Blog35() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="400"
           />
         </div>
         <p>
@@ -318,6 +322,8 @@ export default function Blog35() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="400"
           />
         </div>
         <ul className="list-disc list-inside- ml-4">

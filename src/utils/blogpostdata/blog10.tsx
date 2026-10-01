@@ -2,10 +2,10 @@ import React from "react";
 import canyonhelicopter from "../../../public/assets/blogs/canyon-helicopter.webp";
 import redrockcanyon from "../../../public/assets/blogs/red-rock-canyon.webp";
 import catalinaisland from "../../../public/assets/blogs/catalina-island.webp";
-// import feelfreedom from "../../../public/assets/blogs/feel-freedom.webp";
+
 import mauihawaii from "../../../public/assets/blogs/maui-hawaii.webp";
 
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 export default function Blog10() {
   return (
@@ -27,6 +27,8 @@ export default function Blog10() {
           alt="canyon helicopter"
           className="inline-block"
           loading="lazy"
+          width="414"
+          height="276"
         />
       </div>
       <p>
@@ -40,7 +42,8 @@ export default function Blog10() {
           href="https://www.maverickhelicopter.com/al.aspx?id=9992&t=9992"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Many flights
         </a>{" "}
         depart directly from Las Vegas, so you can go from city lights to
@@ -59,6 +62,8 @@ export default function Blog10() {
           alt="red rock canyon"
           className="inline-block"
           loading="lazy"
+          width="453"
+          height="302"
         />
       </div>
       <p>
@@ -77,7 +82,8 @@ export default function Blog10() {
           href="https://www.maverickhelicopter.com/al.aspx?id=280252&t=9993"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Fly in comfort to major events
         </a>{" "}
         like <em>EDC Las Vegas</em>, the <em>Las Vegas Grand Prix</em>, or{" "}
@@ -89,9 +95,11 @@ export default function Blog10() {
       <div className="text-center">
         <img
           src={BASE_URL + mauihawaii}
-          alt="catalina island"
+          alt="maui hawaii"
           className="inline-block"
           loading="lazy"
+          width="458"
+          height="305"
         />
       </div>
       <p>
@@ -107,7 +115,8 @@ export default function Blog10() {
           href="https://www.maverickhelicopter.com/al.aspx?id=280252&t=9994"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Some tours
         </a>{" "}
         even cross over to Moloka'i, famous for its towering sea cliffs — the
@@ -121,6 +130,8 @@ export default function Blog10() {
           alt="catalina island"
           className="inline-block"
           loading="lazy"
+          width="424"
+          height="283"
         />
       </div>
       <p>
@@ -132,7 +143,8 @@ export default function Blog10() {
           href="https://www.maverickhelicopter.com/al.aspx?id=9991"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Helicopter tours
         </a>{" "}
         showcase the contrast between deep-blue ocean, green ridgelines, and the
@@ -158,7 +170,8 @@ export default function Blog10() {
           href="https://www.maverickhelicopter.com/al.aspx?id=280252&t=0"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Book your Maverick Helicopter tour here
         </a>{" "}
         and see the world from a perspective few ever experience.

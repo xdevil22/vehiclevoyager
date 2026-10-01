@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 import springGround from "../../../public/assets/blogs/blog17/spring-ground.webp";
 import clevelandIndian from "../../../public/assets/blogs/blog17/cleveland-indian.webp";
 import springBaseball from "../../../public/assets/blogs/blog17/spring-baseball.webp";
@@ -13,7 +13,8 @@ export default function Blog17() {
           href="https://www.mlb.com/spring-training/cactus-league"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Major League Baseball
         </a>{" "}
         teams head to the desert for Cactus League Spring Training. For fans, it
@@ -54,6 +55,8 @@ export default function Blog17() {
             alt="cleveland indian"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="477"
           />
         </div>
 
@@ -70,7 +73,8 @@ export default function Blog17() {
             href="https://cactusleague.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Cactus League official site
           </a>
           .
@@ -222,7 +226,8 @@ export default function Blog17() {
             href="https://ticketliquidator.auhm.net/KBK1Ax"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             secure tickets early
           </a>
           .
@@ -250,7 +255,8 @@ export default function Blog17() {
             href="https://ticketliquidator.auhm.net/KBK1Ax"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             ahead of time here
           </a>
           , through the stadium, or in-person. .
@@ -268,6 +274,8 @@ export default function Blog17() {
             alt="spring ground"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="448"
           />
         </div>
         <h2>Where to Stay During Spring Training</h2>
@@ -295,7 +303,8 @@ export default function Blog17() {
             href="https://www.hotels.com/affiliates/search-result-scottsdale-arizona-united-states-of-america.LblvTAw"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Browse Scottsdale and Phoenix Hotels
           </a>{" "}
           or{" "}
@@ -303,7 +312,8 @@ export default function Blog17() {
             href="https://vrbo.com/affiliates/search-phoenix-dateless.WQhB7OI"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Vacation Rentals in the Phoenix metro area
           </a>
         </p>
@@ -321,7 +331,8 @@ export default function Blog17() {
             href="https://expedia.com/affiliates/expedia-home.Lw0KQ1U"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Search Flights to Phoenix
           </a>{" "}
         </p>
@@ -335,7 +346,8 @@ export default function Blog17() {
             href="https://www.villiersjets.com/?id=10228"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Compare Private Charter Flight Options
           </a>{" "}
         </p>
@@ -365,7 +377,8 @@ export default function Blog17() {
             href="https://expedia.com/affiliates/expedia-home.lswZan1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             reserving a vehicle
           </a>{" "}
           in advance. Demand increases significantly during popular matchups and
@@ -379,7 +392,8 @@ export default function Blog17() {
             href="https://www.viator.com/Flagstaff/d21450-ttd?pid=P00264796&mcid=42383&medium=link"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Flagstaff
           </a>{" "}
           or Sedona, may benefit from a vehicle suited for mountain roads,
@@ -410,7 +424,8 @@ export default function Blog17() {
             href="https://expedia.com/affiliates/expedia-home.lswZan1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Compare between major car rental brands
           </a>{" "}
         </p>
@@ -419,7 +434,8 @@ export default function Blog17() {
             href="https://turoinc.sjv.io/dyKQYy"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Search more unique car rental options with Turo
           </a>{" "}
         </p>
@@ -452,6 +468,8 @@ export default function Blog17() {
             alt="spring-baseball"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="477"
           />
         </div>
         <h2>Make It More Than Just Baseball</h2>
@@ -466,7 +484,8 @@ export default function Blog17() {
               href="https://www.viator.com/Sedona/d750-ttd?pid=P00264796&mcid=42383&medium=link"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               Day trips to Sedona
             </a>
           </li>
@@ -528,7 +547,8 @@ export default function Blog17() {
             href="https://ticketliquidator.auhm.net/KBK1Ax"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             with tickets
           </a>
           ,{" "}
@@ -536,7 +556,8 @@ export default function Blog17() {
             href="https://expedia.com/affiliates/expedia-home.BxxyOWE"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             travel, and transportation today
           </a>
           .{" "}

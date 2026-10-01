@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 import carWeekEvents from "../../../public/assets/blogs/blog28/car-week-events.webp";
 import pebbleBeach from "../../../public/assets/blogs/blog28/pebble-beach.webp";
@@ -39,6 +39,8 @@ export default function Blog28() {
             alt="car week events"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
         <p>
@@ -90,7 +92,8 @@ export default function Blog28() {
             href="https://www.ticketliquidator.com/search?q=The+Quail%2C+A+Motorsports+Gathering"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Check Available Quail Tickets
           </a>
         </div>
@@ -110,7 +113,8 @@ export default function Blog28() {
             href="https://ticketliquidator.auhm.net/OYa1rW "
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Browse Rolex Reunion Tickets
           </a>
         </div>
@@ -153,6 +157,8 @@ export default function Blog28() {
             alt="pebble beach"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="337"
           />
         </div>
         <h3>Pebble Beach</h3>
@@ -207,7 +213,8 @@ export default function Blog28() {
             href="https://expedia.com/affiliates/hotel-search-monterey-dateless.4j43hWE"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Compare Monterey Hotels
           </a>
         </div>
@@ -239,7 +246,8 @@ export default function Blog28() {
             href="https://www.villiersjets.com/?id=10228"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Charter a Private Jet
           </a>
         </div>
@@ -252,7 +260,8 @@ export default function Blog28() {
             href="https://expedia.com/affiliates/flights-search-phx-to-sjc.Yfde9me"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             lots of national flight options
           </a>{" "}
           . It’s approximately 75 miles away from Monterey. Many visitors flying
@@ -279,7 +288,8 @@ export default function Blog28() {
               href="https://expedia.com/affiliates/flights-search-phx-to-sfo.SHwfNJy"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               The most international flight options
             </a>{" "}
           </li>
@@ -296,6 +306,8 @@ export default function Blog28() {
             alt="vossen"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="401"
           />
         </div>
         <h2>Getting Around During Car Week</h2>
@@ -307,7 +319,8 @@ export default function Blog28() {
             href="https://expedia.com/affiliate/QzZt33e"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline inline-block">
+            className="text-blue-600 hover:underline inline-block"
+          >
             rent a car
           </a>{" "}
           . With a car rental, your plans can be flexible, and you’ll have the
@@ -325,7 +338,8 @@ export default function Blog28() {
             href="https://turoinc.sjv.io/aNLKRM"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Find a Monterey Car Rental
           </a>
         </div>
@@ -383,7 +397,8 @@ export default function Blog28() {
             href="https://www.viator.com/Monterey-and-Carmel/d5250-ttd?pid=P00264796&mcid=42383&medium=link"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Explore Carmel Valley Tours
           </a>
         </div>
@@ -407,7 +422,8 @@ export default function Blog28() {
             href="https://www.maverickhelicopter.com/al.aspx?id=280252&t=0 target="
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Explore Helicopter Tours
           </a>
         </div>

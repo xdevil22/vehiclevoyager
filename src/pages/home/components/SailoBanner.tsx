@@ -12,6 +12,8 @@ const SailoBanner = () => {
           src={BASE_URL + sailoBanner}
           alt="sailo affordable boat rentals"
           loading="lazy"
+          width="300"
+          height="250"
         />
       </a>
     </div>

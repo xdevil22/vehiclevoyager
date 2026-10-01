@@ -246,115 +246,127 @@ const LandingPage: React.FC = () => {
         return (
           <section key={section.id || index} id={section.id} className="py-2">
             <div className="mx-auto max-w-4xl space-y-6 text-left">
-              {blocks.map((block, blockIndex) => (
-                <React.Fragment key={block.id || blockIndex}>
-                  {block.type === "title" && block.text && (
-                    <h2 className="text-left text-3xl font-bold text-[#3073cc]">
-                      {block.text}
-                    </h2>
-                  )}
+              {blocks.map((block, blockIndex) => {
+                const imageAlt =
+                  block.type === "image" &&
+                  blocks[blockIndex - 1]?.type === "title"
+                    ? blocks[blockIndex - 1].text || ""
+                    : "";
 
-                  {block.type === "subtitle" && block.text && (
-                    <h3 className="text-left text-2xl font-semibold text-[#3073cc]">
-                      {block.text}
-                    </h3>
-                  )}
-
-                  {block.type === "caption" && block.text && (
-                    <p className="text-sm text-gray-600 italic leading-relaxed advertiser-disclosure">
-                      {block.text}
-                    </p>
-                  )}
-
-                  {block.type === "paragraph" && block.text && (
-                    <p className="text-left text-slate-700 leading-relaxed">
-                      {renderFormattedText(
-                        block.text,
-                        block.linkLabel,
-                        block.linkHref,
-                        block.boldLabel,
-                      )}
-                    </p>
-                  )}
-
-                  {block.type === "image" && block.image && (
-                    <div className="flex justify-center">
-                      <img
-                        src={block.image}
-                        alt="Custom content image"
-                        className="max-h-[420px] w-full max-w-3xl rounded-2xl object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
-
-                  {block.type === "list" &&
-                    block.items &&
-                    block.items.length > 0 && (
-                      <ul className="space-y-3 pl-5 text-slate-700 list-disc">
-                        {block.items.map((item, itemIndex) => (
-                          <li key={`${item.text}-${itemIndex}`}>
-                            {renderFormattedText(
-                              item.text,
-                              item.linkLabel,
-                              item.linkHref,
-                              item.boldLabel,
-                            )}
-                          </li>
-                        ))}
-                      </ul>
+                return (
+                  <React.Fragment key={block.id || blockIndex}>
+                    {block.type === "title" && block.text && (
+                      <h2 className="text-left text-3xl font-bold text-[#3073cc]">
+                        {block.text}
+                      </h2>
                     )}
 
-                  {block.type === "link" && block.text && block.linkHref && (
-                    <div className="text-left">
-                      <a
-                        href={block.linkHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 underline-offset-4 hover:underline"
-                      >
+                    {block.type === "subtitle" && block.text && (
+                      <h3 className="text-left text-2xl font-semibold text-[#3073cc]">
                         {block.text}
-                      </a>
-                    </div>
-                  )}
+                      </h3>
+                    )}
 
-                  {block.type === "affiliateCta" &&
-                    block.text &&
-                    block.description &&
-                    block.linkLabel &&
-                    block.linkHref && (
-                      <div className="bg-blue-600 text-white p-6 rounded-lg shadow">
-                        <h3 className="text-lg font-bold mb-2">{block.text}</h3>
-                        <p className="mb-4 leading-relaxed">
-                          {block.description}
-                        </p>
-                        <a
-                          href={block.linkHref}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
-                        >
-                          {block.linkLabel}
-                        </a>
+                    {block.type === "caption" && block.text && (
+                      <p className="text-sm text-gray-600 italic leading-relaxed advertiser-disclosure">
+                        {block.text}
+                      </p>
+                    )}
+
+                    {block.type === "paragraph" && block.text && (
+                      <p className="text-left text-slate-700 leading-relaxed">
+                        {renderFormattedText(
+                          block.text,
+                          block.linkLabel,
+                          block.linkHref,
+                          block.boldLabel,
+                        )}
+                      </p>
+                    )}
+
+                    {block.type === "image" && block.image && (
+                      <div className="flex justify-center">
+                        <img
+                          src={block.image}
+                          alt={imageAlt}
+                          className="max-h-[420px] w-full max-w-3xl rounded-2xl object-cover"
+                          loading="lazy"
+                          width="768"
+                          height="420"
+                        />
                       </div>
                     )}
 
-                  {block.type === "ctaButton" &&
-                    block.text &&
-                    block.linkHref && (
-                      <div className="flex justify-center">
+                    {block.type === "list" &&
+                      block.items &&
+                      block.items.length > 0 && (
+                        <ul className="space-y-3 pl-5 text-slate-700 list-disc">
+                          {block.items.map((item, itemIndex) => (
+                            <li key={`${item.text}-${itemIndex}`}>
+                              {renderFormattedText(
+                                item.text,
+                                item.linkLabel,
+                                item.linkHref,
+                                item.boldLabel,
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
+                    {block.type === "link" && block.text && block.linkHref && (
+                      <div className="text-left">
                         <a
                           href={block.linkHref}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                          className="text-blue-600 underline-offset-4 hover:underline"
                         >
                           {block.text}
                         </a>
                       </div>
                     )}
-                </React.Fragment>
-              ))}
+
+                    {block.type === "affiliateCta" &&
+                      block.text &&
+                      block.description &&
+                      block.linkLabel &&
+                      block.linkHref && (
+                        <div className="bg-blue-600 text-white p-6 rounded-lg shadow">
+                          <h3 className="text-lg font-bold mb-2">
+                            {block.text}
+                          </h3>
+                          <p className="mb-4 leading-relaxed">
+                            {block.description}
+                          </p>
+                          <a
+                            href={block.linkHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
+                          >
+                            {block.linkLabel}
+                          </a>
+                        </div>
+                      )}
+
+                    {block.type === "ctaButton" &&
+                      block.text &&
+                      block.linkHref && (
+                        <div className="flex justify-center">
+                          <a
+                            href={block.linkHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                          >
+                            {block.text}
+                          </a>
+                        </div>
+                      )}
+                  </React.Fragment>
+                );
+              })}
             </div>
           </section>
         );

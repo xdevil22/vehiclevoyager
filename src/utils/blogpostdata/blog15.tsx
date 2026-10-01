@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 import fbo from "../../../public/assets/blogs/blog15/fbo.webp";
 import seatingProtocol from "../../../public/assets/blogs/blog15/seating-protocol.webp";
 import keepRequest from "../../../public/assets/blogs/blog15/keep-request.webp";
@@ -133,9 +133,11 @@ export default function Blog15() {
         <div className="text-center">
           <img
             src={BASE_URL + keepRequest}
-            alt="power meets precision"
+            alt="keep Request"
             className="inline-block"
             loading="lazy"
+            width="345"
+            height="230"
           />
         </div>
         <h2>Keep Requests Reasonable</h2>
@@ -227,9 +229,11 @@ export default function Blog15() {
         <div className="text-center">
           <img
             src={BASE_URL + seatingProtocol}
-            alt="power meets precision"
+            alt="seating Protocol"
             className="inline-block"
             loading="lazy"
+            width="356"
+            height="267"
           />
         </div>
         <h2>Know the Seating Protocol</h2>
@@ -297,9 +301,11 @@ export default function Blog15() {
         <div className="text-center">
           <img
             src={BASE_URL + fbo}
-            alt="power meets precision"
+            alt="Understand the FBO Experience"
             className="inline-block"
             loading="lazy"
+            width="357"
+            height="236"
           />
         </div>
         <h2>Understand the FBO Experience</h2>

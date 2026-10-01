@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 import theHarbor from "../../../public/assets/blogs/blog27/the-harbor.webp";
 import torreyPines from "../../../public/assets/blogs/blog27/torrey-pines.webp";
@@ -43,7 +43,8 @@ export default function Blog27() {
             href="https://expedia.com/affiliate/fAbw02j"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             all the major operators
           </a>{" "}
           on-site. Parking on summer weekends is competitive but manageable if
@@ -54,7 +55,8 @@ export default function Blog27() {
             href="https://turoinc.sjv.io/aNLKRM"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Find San Diego Rental Cars
           </a>
         </div>
@@ -188,6 +190,8 @@ export default function Blog27() {
             alt="the Harbor"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
         <h3>Mission Bay Boat Rentals</h3>
@@ -199,7 +203,8 @@ export default function Blog27() {
             href="https://vechura.com/boat-rental-san-diego"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             our Boat Rental San Diego guide
           </a>{" "}
           compares the most popular rental options, where to launch, and what to
@@ -227,7 +232,8 @@ export default function Blog27() {
             href="https://tidd.ly/43ZXDDY "
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Browse San Diego Boat Rentals
           </a>
         </div>
@@ -248,7 +254,8 @@ export default function Blog27() {
             href="https://www.viator.com/San-Diego/d736-ttd?pid=P00264796&mcid=42383&medium=link"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Book a San Diego Harbor Cruise
           </a>
         </div>
@@ -335,7 +342,8 @@ export default function Blog27() {
             href="https://ticketliquidator.auhm.net/OYa1rW"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Book Padres tickets here
           </a>
         </div>
@@ -345,6 +353,8 @@ export default function Blog27() {
             alt="torrey Pines"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
         <h3>Torrey Pines State Reserve</h3>
@@ -387,7 +397,8 @@ export default function Blog27() {
             href="https://expedia.com/affiliates/hotel-search-san-diego-dateless.NZxdSrT"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             Book San Diego Hotels
           </a>
         </div>
@@ -408,7 +419,8 @@ export default function Blog27() {
             href="https://vechura.com/blog/must-have-travel-gadgets-for-2026 "
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
             See Our Favorite Travel Gadgets
           </a>
         </div>

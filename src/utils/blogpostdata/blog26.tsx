@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 import experienceWorldClass from "../../../public/assets/blogs/blog26/experience-world-class.webp";
 import privateJet from "../../../public/assets/blogs/blog26/private-jet.webp";
@@ -30,6 +30,8 @@ export default function Blog26() {
             alt="private Jet"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
         <p>
@@ -84,7 +86,8 @@ export default function Blog26() {
             href="/blog/exotic-car-rentals-in-las-vegas"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Why Exotic Car Rentals Are the Perfect Fit for Las Vegas
           </a>
         </div>
@@ -219,6 +222,8 @@ export default function Blog26() {
             alt="Experience World Class"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="401"
           />
         </div>
         <p>
@@ -307,7 +312,8 @@ export default function Blog26() {
             href="/hotels-las-vegas"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Best Hotels in Las Vegas guide
           </a>
         </div>

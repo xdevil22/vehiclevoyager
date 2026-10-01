@@ -23,9 +23,8 @@ const HeroBanner: React.FC = () => {
 
   return (
     <div className="relative h-[500px] md:h-[600px]">
-      {/* Overlay for contrast */}
       <div className="absolute inset-0 bg-black/40 z-20 " />
-      {/* Carousel */}
+
       {heroImages.map((img, i) => (
         <img
           key={i}
@@ -37,6 +36,8 @@ const HeroBanner: React.FC = () => {
           className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             i === currentImage ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
+          height="1552"
+          width="2070"
         />
       ))}
 
@@ -53,16 +54,6 @@ const HeroBanner: React.FC = () => {
 
         {/* Categories */}
         <div className="absolute bottom-8 left-0 right-0 px-2 flex justify-center space-x-3 md:space-x-8 items-center">
-          {/* {categories.map((cat, idx) => (
-            <a
-              key={idx}
-              href={`#${cat.label.replace(/\s+/g, "-")}`}
-              className="flex flex-col items-center text-white transition-all cursor-pointer opacity-80 hover:opacity-100"
-            >
-              <i className={`${cat.icon} text-2xl`} />
-              <span className="text-sm mt-1">{cat.label}</span>
-            </a>
-          ))}  */}
           {categories.map((cat, idx) => (
             <a
               key={idx}
@@ -72,7 +63,6 @@ const HeroBanner: React.FC = () => {
               {typeof cat.icon === "string" ? (
                 <i className={`${cat.icon} text-2xl`} />
               ) : (
-                // Render React icon
                 <div className="text-2xl">{cat.icon}</div>
               )}
               <span className="text-sm mt-1 hidden md:block">{cat.label}</span>

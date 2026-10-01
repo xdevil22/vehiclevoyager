@@ -42,6 +42,8 @@ const BlogCard: React.FC<BlogCardProps> = ({
           alt={title}
           className="w-full"
           loading="lazy"
+          height="830"
+          width="460"
         />
 
         <div className="p-5">

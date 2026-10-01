@@ -114,6 +114,8 @@ export default function Blog31() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="400"
           />
         </div>
         <h2>The Middle Keys: Islamorada to Marathon</h2>
@@ -213,6 +215,8 @@ export default function Blog31() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="399"
           />
         </div>
         <h3>Big Pine Key & Bahia Honda</h3>

@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 import aspenSnowmass from "../../../public/assets/blogs/blog18/aspen-snowmass.webp";
 import breckenridge from "../../../public/assets/blogs/blog18/breckenridge.webp";
@@ -31,7 +31,8 @@ export default function Blog18() {
           href="https://expedia.com/affiliates/expedia-home.e9WbY1g"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           comparing options early
         </a>{" "}
         before peak weekends sell out.
@@ -44,6 +45,8 @@ export default function Blog18() {
             alt="Lake Tahoe California Nevada"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="399"
           />
         </div>
         <h2>1. Lake Tahoe, California / Nevada</h2>
@@ -74,7 +77,8 @@ export default function Blog18() {
               href="https://expedia.com/affiliates/flights-search-phx-to-rno.vzq2dIe"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               Direct flights
             </a>{" "}
             from major West Coast cities fly into Reno-Tahoe airport which is a
@@ -96,6 +100,8 @@ export default function Blog18() {
             alt="Aspen Snowmass Colorado"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="449"
           />
         </div>
         <h2>2. Aspen Snowmass, Colorado</h2>
@@ -132,6 +138,8 @@ export default function Blog18() {
             alt="Vail Colorado"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
         <h2>3. Vail, Colorado</h2>
@@ -167,7 +175,8 @@ export default function Blog18() {
             href="https://www.villiersjets.com/?id=10228"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             private charter flights to Vail
           </a>
           . This provides direct access to smaller mountain airports and greater
@@ -182,6 +191,8 @@ export default function Blog18() {
             alt="Park City Utah"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="402"
           />
         </div>
         <h2>4. Park City, Utah</h2>
@@ -198,7 +209,8 @@ export default function Blog18() {
             href="https://www.olympics.com/en/milano-cortina-2026"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Olympic Winter Games
           </a>
           . They have a whole area filled with memorabilia from the games.
@@ -224,7 +236,8 @@ export default function Blog18() {
             href="https://expedia.com/affiliates/hotel-search-park-city-dateless.CSbaK7q"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             compare flights and mountain lodging
           </a>{" "}
           early before availability tightens.{" "}
@@ -238,6 +251,8 @@ export default function Blog18() {
             alt="Jackson Hole Wyoming"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="399"
           />
         </div>
         <h2>5. Jackson Hole, Wyoming</h2>
@@ -276,6 +291,8 @@ export default function Blog18() {
             alt="Breckenridge Colorado"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="449"
           />
         </div>
         <h2>6. Breckenridge, Colorado</h2>
@@ -306,7 +323,8 @@ export default function Blog18() {
             href="https://vrbo.com/affiliates/search-breckenridge-mountain-village-dateless.tZyU8CT"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             booking a condo or mountain home
           </a>{" "}
           near the lifts, especially when traveling with a family or a group.
@@ -320,6 +338,8 @@ export default function Blog18() {
             alt="Big Sky Montana"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="399"
           />
         </div>
         <h2>7. Big Sky, Montana</h2>
@@ -350,7 +370,8 @@ export default function Blog18() {
             href="https://expedia.com/affiliates/hotel-search-big-sky-dateless.f75q4Di"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             checking flight options and vehicle availability
           </a>{" "}
           together often simplifies the trip.
@@ -392,7 +413,8 @@ export default function Blog18() {
             href="https://www.viator.com/?pid=P00264796&mcid=42383&medium=link"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Reserve lessons and snowy experiences here
           </a>
         </p>
@@ -405,7 +427,8 @@ export default function Blog18() {
             href="https://expedia.com/affiliates/expedia-home.e9WbY1g"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Book flights and lodging early
           </a>
           , especially for peak January and February weekends.
@@ -414,7 +437,8 @@ export default function Blog18() {
             href="https://turoinc.sjv.io/7Xme7Q"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Reserve rental cars with AWD or 4WD
           </a>{" "}
           capability.
@@ -428,7 +452,8 @@ export default function Blog18() {
             href="https://vrbo.com/affiliates/vrbo-home.HbFTVqR"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             vacation rentals
           </a>{" "}
           often provide better value than multiple{" "}
@@ -436,7 +461,8 @@ export default function Blog18() {
             href="https://www.hotels.com/affiliates/hotelscom-home.vVROuhX"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             hotel rooms
           </a>
           .
@@ -463,7 +489,8 @@ export default function Blog18() {
             href="https://expedia.com/affiliates/expedia-home.e9WbY1g"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Start comparing flights, accommodations, and vehicle options
           </a>{" "}
           early to secure the best rates and availability for your winter

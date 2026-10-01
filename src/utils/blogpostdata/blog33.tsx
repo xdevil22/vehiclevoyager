@@ -165,6 +165,8 @@ export default function Blog33() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="401"
           />
         </div>
         <p>
@@ -195,6 +197,8 @@ export default function Blog33() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="374"
           />
         </div>
         <div className="flex justify-center">
@@ -251,6 +255,8 @@ export default function Blog33() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="401"
           />
         </div>
         <div className="flex justify-center">

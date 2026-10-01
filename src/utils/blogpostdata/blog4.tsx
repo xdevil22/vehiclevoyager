@@ -26,7 +26,13 @@ export default function Blog4() {
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
         <div className="blog-inside-image">
-          <img src={BASE_URL + lamborghini} alt="lamborghini" loading="lazy" />
+          <img
+            src={BASE_URL + lamborghini}
+            alt="lamborghini"
+            loading="lazy"
+            width="311"
+            height="207"
+          />
         </div>
 
         <h3 className="text-lg font-bold mt-4">Lamborghini Huracán EVO</h3>
@@ -61,7 +67,13 @@ export default function Blog4() {
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
         <div className="blog-inside-image">
-          <img src={BASE_URL + ferrari488} alt="ferrari 488" loading="lazy" />
+          <img
+            src={BASE_URL + ferrari488}
+            alt="ferrari 488"
+            loading="lazy"
+            width="317"
+            height="211"
+          />
         </div>
 
         <h3 className="text-lg font-bold mt-4">Ferrari 488 Spider</h3>
@@ -97,7 +109,13 @@ export default function Blog4() {
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
         <div className="blog-inside-image">
-          <img src={BASE_URL + mclaren} alt="mclaren" loading="lazy" />
+          <img
+            src={BASE_URL + mclaren}
+            alt="mclaren"
+            loading="lazy"
+            width="309"
+            height="233"
+          />
         </div>
         <h3 className="text-lg font-bold mt-4">McLaren 720S</h3>
         <ul className="list-disc pl-6 mt-2 space-y-1">
@@ -134,6 +152,8 @@ export default function Blog4() {
             src={BASE_URL + rollsroyceghost}
             alt="Rolls Royce Ghost"
             loading="lazy"
+            width="311"
+            height="207"
           />
         </div>
         <h3 className="text-lg font-bold mt-4">Rolls-Royce Ghost</h3>
@@ -168,7 +188,13 @@ export default function Blog4() {
       <hr className="my-6 border-t-2 border-gray-400" />
       <div>
         <div className="blog-inside-image">
-          <img src={BASE_URL + porsche911} alt="Porsche 911" loading="lazy" />
+          <img
+            src={BASE_URL + porsche911}
+            alt="Porsche 911"
+            loading="lazy"
+            width="307"
+            height="173"
+          />
         </div>
         <h3 className="text-lg font-bold mt-4"> Porsche 911 Turbo S</h3>
         <ul className="list-disc pl-6 mt-2 space-y-1">
@@ -206,6 +232,8 @@ export default function Blog4() {
             src={BASE_URL + bmwi8roadster}
             alt="bmw i8 roadster"
             loading="lazy"
+            width="317"
+            height="211"
           />
         </div>
         <h3 className="text-lg font-bold mt-4">BMW i8 Roadster</h3>

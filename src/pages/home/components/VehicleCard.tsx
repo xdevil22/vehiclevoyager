@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-import {BASE_URL} from "../../../utils/constants";
-import {defaultImages} from "../../../assets";
+import { BASE_URL } from "../../../utils/constants";
+import { defaultImages } from "../../../assets";
 
 type VehicleCardProps = {
   type: string;
@@ -42,7 +42,8 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
                 target="_blank"
                 onClick={handleAffiliateClick}
                 rel="noopener noreferrer"
-                className="block w-full rounded-md overflow-hidden">
+                className="block w-full rounded-md overflow-hidden"
+              >
                 <img
                   src={imgSrc}
                   alt={`${brand} rental`}
@@ -51,8 +52,8 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
                   decoding="async"
                   onError={() => setImgSrc(defaultImages.defaultVehicle2)}
                   className="w-full"
-                  width={200}
-                  height={100}
+                  height="282"
+                  width="341"
                 />
               </a>
             </div>
@@ -67,8 +68,8 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
               loading="lazy"
               onError={() => setImgSrc(defaultImages.defaultVehicle2)}
               className="w-full"
-              width={200}
-              height={100}
+              height="184"
+              width="341"
             />
             {price && (
               <div className="absolute top-4 right-4 bg-accent text-neutral-900 font-medium text-sm px-2 py-1 rounded">
@@ -80,16 +81,6 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
             <h3 className="text-xl font-bold text-neutral-900 mb-2">{name}</h3>
 
             <div className="flex flex-col sm:flex-row gap-2">
-              {/* <a
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm 
-                font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 
-                focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50
-                bg-primary text-white hover:bg-primary/90 h-10 px-4 py-2 flex-1">
-                View Deals
-              </a> */}
               <a
                 href={url}
                 target="_blank"
@@ -98,7 +89,8 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
                 className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm 
              font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 
              focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 
-             bg-blue-600 text-white hover:bg-blue-700 h-10 px-4 py-2 flex-1">
+             bg-blue-600 text-white hover:bg-blue-700 h-10 px-4 py-2 flex-1"
+              >
                 View Deals
               </a>
             </div>

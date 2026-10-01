@@ -160,28 +160,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            {/* <ul className="space-y-2">
-              {[
-                "Miami, FL",
-                "Los Angeles, CA",
-                "Las Vegas, NV",
-                "New York, NY",
-                "Orlando, FL",
-                "San Diego, CA",
-                "Phoenix, AZ",
-              ].map((city) => (
-                <li key={city}>
-                  <Link
-                    to={`/category/cars?location=${encodeURIComponent(
-                      city.split(",")[0]
-                    )}`}
-                    className="text-neutral-200 hover:text-primary transition-colors"
-                  >
-                    {city}
-                  </Link>
-                </li>
-              ))}
-            </ul> */}
           </div>
         </div>
 

@@ -411,6 +411,8 @@ export default function Blog1() {
         alt="Cruise am"
         className="w-full object-cover"
         loading="lazy"
+        width="662"
+        height="442"
       />
     </>
   );

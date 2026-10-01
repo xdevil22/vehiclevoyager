@@ -48,6 +48,8 @@ export default function Blog37() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="400"
           />
         </div>
         <p>
@@ -249,6 +251,8 @@ export default function Blog37() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="400"
           />
         </div>
         <hr className="my-6 border-t-2 border-gray-400" />
@@ -371,6 +375,8 @@ export default function Blog37() {
             className="inline-block"
             loading="lazy"
             decoding="async"
+            width="600"
+            height="310"
           />
         </div>
         <div className="flex justify-center">

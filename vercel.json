@@ -1,6 +1,21 @@
 {
   "redirects": [
     {
+      "source": "/cookie-policy",
+      "destination": "/cookiepolicy",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-service",
+      "destination": "/termsofuse",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-use",
+      "destination": "/termsofuse",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "vehiclevoyager.com"}],
       "destination": "https://vechura.com/:path*",

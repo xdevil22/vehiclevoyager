@@ -76,6 +76,8 @@ const BlogPost: React.FC = () => {
               decoding="async"
               fetchPriority="high"
               sizes="(max-width: 768px) 100vw, 800px"
+              height="830"
+              width="460"
             />
           </picture>
           <h2 className="text-3xl font-bold mb-4">{post.title}</h2>

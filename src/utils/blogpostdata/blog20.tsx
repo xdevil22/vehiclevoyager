@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 
 import coachellaLineup from "../../../public/assets/blogs/blog20/coachella-2026-lineup.webp";
 import coachellaFestival from "../../../public/assets/blogs/blog20/coachella-festival.webp";
@@ -17,7 +17,8 @@ export default function Blog20() {
           href="https://www.coachella.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Coachella Valley Music and Arts Festival
         </a>{" "}
         . Known simply as Coachella, the event blends major music performances,
@@ -36,7 +37,8 @@ export default function Blog20() {
           href="https://www.ticketliquidator.com/performers/coachella-tickets?kwds=Coachella&clickId=XWQx3BWi7xycUy62I-yUlUTDUku1--SUvUoH1I0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Tickets
         </a>
         , accommodations, and transportation fill up quickly, and choosing the
@@ -49,7 +51,8 @@ export default function Blog20() {
           href="https://www.ticketliquidator.com/performers/coachella-tickets?kwds=Coachella&clickId=XWQx3BWi7xycUy62I-yUlUTDUku1-6ysvUoH1I0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           get tickets
         </a>
         , where to stay, and how to get around during festival weekend.
@@ -60,9 +63,11 @@ export default function Blog20() {
         <div className="text-center">
           <img
             src={BASE_URL + coachellaFestival}
-            alt="Lake Tahoe California Nevada"
+            alt="coachella Festival"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="401"
           />
         </div>
         <p>
@@ -110,6 +115,8 @@ export default function Blog20() {
             alt="Coachella 2026 Lineup"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="451"
           />
         </div>
         <p>
@@ -129,7 +136,8 @@ export default function Blog20() {
               href="https://www.ticketliquidator.com/search?q=taylor+swift&clickId=XWQx3BWi7xycUy62I-yUlUTDUku1-6V0vUoH1I0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               Taylor Swift
             </a>
             , one of the most influential pop artists in the world
@@ -187,7 +195,8 @@ export default function Blog20() {
             href="https://www.ticketliquidator.com/performers/coachella-tickets?kwds=Coachella&clickId=XWQx3BWi7xycUy62I-yUlUTDUku160zAvUoH1I0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Ticket options
           </a>{" "}
           generally include:
@@ -205,7 +214,8 @@ export default function Blog20() {
             href="https://www.ticketliquidator.com/performers/coachella-tickets?kwds=Coachella&clickId=XWQx3BWi7xycUy62I-yUlUTDUku16030vUoH1I0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             ticket options available
           </a>
           .
@@ -232,7 +242,8 @@ export default function Blog20() {
               href="https://www.ticketliquidator.com/search?q=beyonce&clickId=XWQx3BWi7xycUy62I-yUlUTDUku160XcvUoH1I0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               Beyoncé
             </a>{" "}
             headlined Coachella and delivered a groundbreaking performance
@@ -246,7 +257,8 @@ export default function Blog20() {
               href="https://www.ticketliquidator.com/search?q=snoop+dogg&clickId=XWQx3BWi7xycUy62I-yUlUTDUku16x2IvUoH1I0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               Snoop Dogg
             </a>{" "}
             (2012)
@@ -260,7 +272,8 @@ export default function Blog20() {
               href="https://www.ticketliquidator.com/search?q=daft+punk&clickId=XWQx3BWi7xycUy62I-yUlUTDUku16xUQvUoH1I0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline">
+              className="text-blue-600 hover:underline"
+            >
               Daft Punk's
             </a>{" "}
             Pyramid Stage (2006)
@@ -285,6 +298,8 @@ export default function Blog20() {
             alt="palm Spring"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
 
@@ -302,7 +317,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliates/hotel-search-palm-springs.pJrMoj"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Palm Springs
           </a>
         </h3>
@@ -326,7 +342,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliates/hotel-search-palm-desert.6stop88"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Palm Desert
           </a>{" "}
           and{" "}
@@ -334,7 +351,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliates/hotel-search-la-quinta.ihHs19"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             La Quinta
           </a>
         </h3>
@@ -350,7 +368,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliates/hotel-search-palm-desert.vfnllrk"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             renting larger homes
           </a>{" "}
           here to split costs and create a shared base for the weekend.
@@ -361,7 +380,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliates/hotel-search-indio.qRR7VC8"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Indio
           </a>
         </h3>
@@ -375,7 +395,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliates/hotel-search-indio.qRR7VC8"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Comparing hotels and vacation
           </a>{" "}
           rentals early helps secure the best locations before availability
@@ -392,7 +413,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliates/flights-search-phx-to-psp.Kofmcta"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Palm Springs International Airport (PSP)
           </a>
         </h3>
@@ -407,7 +429,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliates/flights-search-phx-to-lax.um9wwkz"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Los Angeles International Airport (LAX)
           </a>
         </h3>
@@ -423,7 +446,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliates/flights-search-phx-to-lax.um9wwkz"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Booking flights early
           </a>{" "}
           is recommended, especially if traveling during peak arrival days
@@ -436,7 +460,8 @@ export default function Blog20() {
             href="https://www.villiersjets.com/?id=10228"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             choose private charter flights
           </a>{" "}
           into smaller regional airports for added flexibility. They will often
@@ -451,9 +476,11 @@ export default function Blog20() {
         <div className="text-center">
           <img
             src={BASE_URL + duringCochella}
-            alt="Lake Tahoe California Nevada"
+            alt="during Cochella"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="402"
           />
         </div>
         <p>
@@ -467,7 +494,8 @@ export default function Blog20() {
             href="https://www.ticketliquidator.com/performers/coachella-shuttle-passes-tickets?kwds=Coachella+Shuttle+Passes&clickId=XWQx3BWi7xycUy62I-yUlUTDUku1-a3AvUoH1I0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Official Coachella shuttle passes
           </a>{" "}
           can be purchased and provide transportation between major hotels and
@@ -486,7 +514,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliate/49ACuBD"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             compare major rental brand options
           </a>{" "}
           to find vehicles that fit their travel schedule and group size.
@@ -498,7 +527,8 @@ export default function Blog20() {
             href="https://turo.com/us/en/search?age=30&country=US&defaultZoomLevel=11&deliveryLocationType=city&endDate=04%2F20%2F2026&endTime=10%3A00&flexibleType=NOT_FLEXIBLE&isMapSearch=false&itemsPerPage=200&latitude=33.7205771&location=Indio%2C%20CA%2C%20USA&locationType=CITY&longitude=-116.2155619&monthlyEndDate=07%2F21%2F2026&monthlyStartDate=04%2F21%2F2026&pickupType=ALL&placeId=ChIJhdffQzX02oARMVAjp83nbBY&region=CA&searchDurationType=DAILY&sortType=RELEVANCE&startDate=04%2F16%2F2026&startTime=10%3A00&utm_campaign=ir%3Are%3Awu%3Apro%3Aconv%3A6269754%3Aus%3Aen&utm_medium=affiliate&utm_source=impactradius"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             choose platforms like Turo
           </a>{" "}
           in order to have far more unique or luxury options for transportation.
@@ -517,7 +547,8 @@ export default function Blog20() {
             href="https://rvezypartnershipprogram.sjv.io/vD2Qdv"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             booking an RV rental or camper van to Indio
           </a>{" "}
           allows for a flexible festival weekend and the ability to explore
@@ -531,9 +562,11 @@ export default function Blog20() {
         <div className="text-center">
           <img
             src={BASE_URL + coachellaUnique}
-            alt="Lake Tahoe California Nevada"
+            alt="coachella Unique"
             className="inline-block"
             loading="lazy"
+            width="600"
+            height="399"
           />
         </div>
         <p>
@@ -677,7 +710,8 @@ export default function Blog20() {
             href="https://www.ticketliquidator.com/performers/coachella-tickets?kwds=Coachella&clickId=XWQx3BWi7xycUy62I-yUlUTDUku1-dUovUoH1I0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             tickets
           </a>
           ,{" "}
@@ -685,7 +719,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliates/hotel-search-indio.grr7cvb"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             accommodations
           </a>
           , and{" "}
@@ -693,7 +728,8 @@ export default function Blog20() {
             href="https://expedia.com/affiliate/49ACuBD"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             transportation
           </a>
           , Coachella can become one of the most memorable festival trips you

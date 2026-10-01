@@ -1,5 +1,5 @@
 import React from "react";
-import {BASE_URL} from "../constants";
+import { BASE_URL } from "../constants";
 import barrettroyalsroys from "../../../public/assets/blogs/barrett-royalsroys.webp";
 import barretposrsche from "../../../public/assets/blogs/barret-posrsche.webp";
 import barrettjacksonweek from "../../../public/assets/blogs/barrett-jackson-week.webp";
@@ -33,7 +33,8 @@ export default function Blog13() {
           href="http://ticketliquidator.auhm.net/2aoMQ0"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline">
+          className="text-blue-600 hover:underline"
+        >
           Get your Barrett-Jackson tickets here
         </a>
       </p>
@@ -44,9 +45,11 @@ export default function Blog13() {
         <div>
           <img
             src={BASE_URL + tombarrett1971}
-            alt="canyon helicopter"
+            alt="tom barrett 1971"
             className="inline-block"
             loading="lazy"
+            width="516"
+            height="344"
           />
         </div>
         <p>
@@ -82,9 +85,11 @@ export default function Blog13() {
         <div>
           <img
             src={BASE_URL + barretposrsche}
-            alt="canyon helicopter"
+            alt="barret posrsche"
             className="inline-block"
             loading="lazy"
+            width="497"
+            height="332"
           />
         </div>
         <p>
@@ -116,7 +121,7 @@ export default function Blog13() {
           title="Fbarrett jackson Widget"
           width="500"
           height="721"
-          style={{border: "none", overflow: "hidden"}}
+          style={{ border: "none", overflow: "hidden" }}
           loading="lazy"
           // onLoad={() => setLoading(false)}
           className="barrettjackson-widget mb-2"
@@ -161,7 +166,8 @@ export default function Blog13() {
             href="http://ticketliquidator.auhm.net/2aoMQ0"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             authorized ticket sellers
           </a>
           , which may also offer resale or flexible options.
@@ -175,7 +181,8 @@ export default function Blog13() {
             href="https://www.ticketliquidator.com/performers/barrett-jackson-tickets?kwds=Barrett-Jackson&clickId=XWQx3BWi7xycUy62I-yUlUTDUkpXnvy4vUof2s0&afsrc=1&xtor=AL-169-ir-6269754&utm_campaign=6269754&utm_medium=aff&utm_source=ir"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             View Barrett-Jackson Scottsdale Tickets & VIP Passes
           </a>{" "}
         </p>
@@ -232,9 +239,11 @@ export default function Blog13() {
         <div>
           <img
             src={BASE_URL + experiencesauction}
-            alt="canyon helicopter"
+            alt="experience sauction"
             className="inline-block"
             loading="lazy"
+            width="479"
+            height="383"
           />
         </div>
         <p>
@@ -263,9 +272,11 @@ export default function Blog13() {
         <div>
           <img
             src={BASE_URL + barrettjacksonweek}
-            alt="canyon helicopter"
+            alt="barrett jackson week"
             className="inline-block"
             loading="lazy"
+            width="479"
+            height="319"
           />
         </div>
         <p>
@@ -277,7 +288,8 @@ export default function Blog13() {
             href="https://expedia.com/affiliates/hotel-search-north-scottsdale-dateless.BFkGawL"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             North Scottsdale
           </a>
           - Closest to WestWorld and most convenient
@@ -286,7 +298,8 @@ export default function Blog13() {
             href="https://expedia.com/affiliates/hotel-search-old-town-dateless.Nbd5aRl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Old Town Scottsdale
           </a>
           - Dining, nightlife, and walkable attractions
@@ -295,7 +308,8 @@ export default function Blog13() {
             href="https://www.expedia.com/affiliates/hotel-search-paradise-valley-dateless.qqKB4OS"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Paradise Valley
           </a>
           &nbsp; / &nbsp;
@@ -303,7 +317,8 @@ export default function Blog13() {
             href="https://www.expedia.com/affiliates/hotel-search-phoenix-dateless.qaKqTnZ"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Phoenix
           </a>
           - Often better availability and pricing
@@ -319,7 +334,8 @@ export default function Blog13() {
             href="https://expedia.com/affiliates/hotel-search-north-scottsdale-dateless.RWcN64R"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Browse Available Scottsdale Hotels Near WestWorld
           </a>{" "}
           <br />
@@ -327,7 +343,8 @@ export default function Blog13() {
             href="https://expedia.com/affiliates/hotel-search-north-scottsdale-dateless.qKedO5X"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             View Scottsdale Vacation Rentals & Condos
           </a>{" "}
         </p>
@@ -339,9 +356,11 @@ export default function Blog13() {
         <div>
           <img
             src={BASE_URL + privateoptions}
-            alt="canyon helicopter"
+            alt="private options"
             className="inline-block"
             loading="lazy"
+            width="502"
+            height="335"
           />
         </div>
         <h3>Commercial Flights</h3>
@@ -370,7 +389,8 @@ export default function Blog13() {
             href="https://expedia.com/affiliates/flights.ru5V1fl"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Search Flights to Phoenix & Scottsdale Airports
           </a>{" "}
           <br />
@@ -378,7 +398,8 @@ export default function Blog13() {
             href="https://www.villiersjets.com/?id=10228"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Explore Private Jet & Charter Flight Options
           </a>{" "}
         </p>
@@ -390,9 +411,11 @@ export default function Blog13() {
         <div>
           <img
             src={BASE_URL + barrettroyalsroys}
-            alt="canyon helicopter"
+            alt="barrett royals roys"
             className="inline-block"
             loading="lazy"
+            width="474"
+            height="316"
           />
         </div>
         <p>
@@ -416,7 +439,8 @@ export default function Blog13() {
             href="https://expedia.com/affiliates/expedia-home.tf2d7TK"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Compare Rental Car Options in Scottsdale
           </a>
           <br />
@@ -424,7 +448,8 @@ export default function Blog13() {
             href="https://turoinc.sjv.io/2aoMdA"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             View Luxury & Exotic Car Rentals
           </a>
           <br />
@@ -432,7 +457,8 @@ export default function Blog13() {
             href="https://www.riders-share.com/welcome/vehiclevoyager"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Riders Share
           </a>{" "}
           and{" "}
@@ -440,7 +466,8 @@ export default function Blog13() {
             href="https://www.eaglerider.com/?&referral_code=fdc2ea5c-8d86-4558-887d-45675d1e910f"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Eaglerider
           </a>{" "}
           motorcycle rental options
@@ -462,7 +489,8 @@ export default function Blog13() {
             href="http://ticketliquidator.auhm.net/2aoMQ0"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Tickets
           </a>{" "}
           and{" "}
@@ -470,7 +498,8 @@ export default function Blog13() {
             href="https://expedia.com/affiliates/expedia-home.WrYeyyZ"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 hover:underline"
+          >
             Travel
           </a>{" "}
         </p>
