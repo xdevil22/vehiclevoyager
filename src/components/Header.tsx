@@ -70,7 +70,7 @@ export default function Header() {
     { name: "Home", path: "/" },
     { name: "Booking Tools", path: "/booking-tools" },
     { name: "About", path: "/about" },
-    { name: "Blog", path: "/blog" },
+    { name: "Blog", path: "/blogs" },
     { name: "Resources", path: "/resources" },
 
     // {
@@ -146,37 +146,7 @@ export default function Header() {
               </Link>
 
               {/* Search Icon */}
-              {/* <button
-              onClick={() => setSearchOpen((prev) => !prev)}
-              className="relative z-50">
-              {searchOpen ? (
-                <i className="ri-close-line text-2xl text-gray-700 hover:text-black"></i>
-              ) : (
-                <i className="ri-search-line text-2xl text-gray-700 hover:text-black"></i>
-              )}
-            </button> */}
 
-              {/* Floating Search Bar */}
-              {/* <div
-              className={`absolute right-0 top-full mt-3 w-64 bg-white shadow-md rounded-full px-4 py-2 flex items-center transition-all duration-300 overflow-hidden border 
-      ${
-        searchOpen
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 -translate-y-2 pointer-events-none"
-      }`}> */}
-              {/* <form onSubmit={handleSearch} className="flex w-full">
-                <input
-                  type="text"
-                  placeholder="Search blog..."
-                  value={searchInput}
-                  onChange={(e) => setSearchInput(e.target.value)}
-                  className="w-full text-sm outline-none"
-                />
-
-                <button type="submit">
-                  <i className="ri-search-line text-lg text-gray-600 hover:text-blue-600"></i>
-                </button>
-              </form> */}
               <BlogSearchDropdown
                 searchOpen={searchOpen}
                 setSearchOpen={setSearchOpen}
@@ -184,7 +154,6 @@ export default function Header() {
                 setSearchInput={setSearchInput}
                 handleSearch={handleSearch}
               />
-              {/* </div> */}
             </div>
 
             {/* Mobile Menu Button */}
@@ -212,21 +181,6 @@ export default function Header() {
           {/* Mobile Menu Dropdown */}
           {isMenuOpen && (
             <div className="md:hidden border-t py-2 space-y-2">
-              {/* Mobile Search */}
-              {/* <form onSubmit={handleSearch} className="relative px-4">
-              <input
-                type="text"
-                placeholder="Search blog..."
-                value={searchInput}
-                onChange={(e) => setSearchInput(e.target.value)}
-                className="border border-gray-300 rounded-lg px-4 py-2 text-sm w-full focus:ring-2 focus:ring-blue-500"
-              />
-              <button
-                type="submit"
-                className="absolute right-6 top-1.5 text-gray-500 hover:text-blue-600">
-                <i className="ri-search-line text-lg"></i>
-              </button>
-            </form> */}
               {navLinks.map((link) =>
                 link.name === "Create Landing Pages" ? (
                   <button

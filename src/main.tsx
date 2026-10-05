@@ -1,6 +1,12 @@
 import React, { JSX, useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import { trackAffiliateClick } from "./utils/affiliateTracking";
 
 import Home from "./pages/home";
@@ -60,7 +66,9 @@ function CanonicalUrl() {
   useEffect(() => {
     const canonicalUrl = new URL(location.pathname, "https://vechura.com");
     canonicalUrl.pathname = canonicalUrl.pathname.replace(/\/+$/, "") || "/";
-    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    let link = document.querySelector(
+      'link[rel="canonical"]',
+    ) as HTMLLinkElement | null;
     if (!link) {
       link = document.createElement("link");
       link.rel = "canonical";
@@ -80,14 +88,23 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <CanonicalUrl />
         <ScrollToTop />
         <Routes>
-          <Route path="/cookie-policy" element={<Navigate to="/cookiepolicy" replace />} />
-          <Route path="/terms-of-service" element={<Navigate to="/termsofuse" replace />} />
-          <Route path="/terms-of-use" element={<Navigate to="/termsofuse" replace />} />
+          <Route
+            path="/cookie-policy"
+            element={<Navigate to="/cookiepolicy" replace />}
+          />
+          <Route
+            path="/terms-of-service"
+            element={<Navigate to="/termsofuse" replace />}
+          />
+          <Route
+            path="/terms-of-use"
+            element={<Navigate to="/termsofuse" replace />}
+          />
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/booking-tools" element={<BookingTools />} />
             <Route path="About" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blogs" element={<Blog />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/cookiepolicy" element={<CookiePolicy />} />
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />

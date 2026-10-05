@@ -52,8 +52,8 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
                   decoding="async"
                   onError={() => setImgSrc(defaultImages.defaultVehicle2)}
                   className="w-full"
-                  height="282"
                   width="341"
+                  height="282"
                 />
               </a>
             </div>
@@ -68,8 +68,8 @@ const VehicleCard: React.FC<VehicleCardProps> = ({
               loading="lazy"
               onError={() => setImgSrc(defaultImages.defaultVehicle2)}
               className="w-full"
-              height="184"
               width="341"
+              height="184"
             />
             {price && (
               <div className="absolute top-4 right-4 bg-accent text-neutral-900 font-medium text-sm px-2 py-1 rounded">
