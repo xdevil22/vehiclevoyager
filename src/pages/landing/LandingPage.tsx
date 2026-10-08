@@ -17,6 +17,7 @@ import { getApiBaseUrl } from "../../utils/apiBaseUrl";
 const LANDING_PAGES_API_URL = `${getApiBaseUrl()}/api/create-landing-page`;
 
 const readDynamicLandingPages = () => {
+  if (typeof window === "undefined") return {};
   try {
     const stored = JSON.parse(localStorage.getItem("landingPages") || "{}");
     return stored && typeof stored === "object" && !Array.isArray(stored)
@@ -453,6 +454,9 @@ const LandingPage: React.FC = () => {
         )} */}
 
         <div className="max-w-7xl mx-auto px-4 py-12 space-y-14">
+          <h1 className="mx-auto max-w-4xl text-left text-4xl sm:text-5xl font-bold text-slate-900">
+            {page.title || page.hero?.headline || page.seoTitle}
+          </h1>
           {page.sections.map(renderSection)}
         </div>
       </div>

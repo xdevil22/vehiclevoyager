@@ -7,7 +7,7 @@ function AdvertiserDisclosure(props: Props) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold mb-6">Affiliate Disclosure</h2>
+      <h1 className="text-3xl font-bold mb-6">Affiliate Disclosure</h1>
       <p className="mb-4">
         Vechura participates in affiliate marketing programs designed to provide
         a means for websites to earn commissions by linking to partner products

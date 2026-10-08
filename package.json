@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.mjs && node scripts/generate-sitemap.mjs",
+    "build": "vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs && node scripts/generate-sitemap.mjs",
     "check-sitemap": "node scripts/check-sitemap.mjs",
     "preview": "vite preview"
   },

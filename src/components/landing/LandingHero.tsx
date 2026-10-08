@@ -19,9 +19,9 @@ const LandingHero: React.FC<Props> = ({
     <div className="relative max-w-7xl mx-auto px-4 py-20 sm:py-24 lg:px-8">
       <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] items-center">
         <div className="space-y-6">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
             {headline}
-          </h2>
+          </h1>
           <p className="max-w-3xl text-lg sm:text-xl text-cyan-100/90">
             {subheadline}
           </p>

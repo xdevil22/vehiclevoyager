@@ -1,8 +1,6 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 import { JSX } from "react";
-
-const Resource1 = lazy(() => import("./resoursepostdata/resource1"));
-const Resource2 = lazy(() => import("./resoursepostdata/resource2"));
+import { Resource1, Resource2 } from "./resourceComponents";
 
 export interface ResourcePost {
   resourceId: number;

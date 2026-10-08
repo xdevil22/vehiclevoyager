@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { pathToFileURL } from 'url';
 
 const root = process.cwd();
 const distDir = path.join(root, 'dist');
@@ -34,21 +35,19 @@ function sanitize(str) {
 
 async function parseBlogPosts() {
   const text = await fs.readFile(blogSource, 'utf8');
-  const arrMatch = text.match(/export const blogPosts[\s\S]*?=\s*\[/);
-  if (!arrMatch) return [];
   const body = text.slice(text.indexOf('export const blogPosts'));
-  const re = /\{[\s\S]*?slug:\s*"([^"]+)"[\s\S]*?seoTitle:\s*"([^"]*)"[\s\S]*?seoDescription:\s*"([^"]*)"[\s\S]*?image:\s*"([^"]*)"[\s\S]*?\}/gm;
-  const posts = [];
-  let m;
-  while ((m = re.exec(body))) {
-    posts.push({
-      slug: m[1],
-      seoTitle: m[2],
-      seoDescription: m[3],
-      image: m[4],
-    });
-  }
-  return posts;
+  const field = (chunk, name) => {
+    const m = chunk.match(new RegExp(name + String.raw`\s*:\s*"((?:[^"\\]|\\.)*)"`));
+    return m ? m[1] : '';
+  };
+  // One chunk per post: everything from one `slug:` to the next.
+  const chunks = body.split(/\n\s*slug:\s*(?=")/).slice(1);
+  return chunks.map((chunk) => ({
+    slug: field('slug: ' + chunk, 'slug'),
+    seoTitle: field(chunk, 'seoTitle'),
+    seoDescription: field(chunk, 'seoDescription'),
+    image: field(chunk, 'image'),
+  })).filter((p) => p.slug);
 }
 
 async function parseLandingPages() {
@@ -93,14 +92,51 @@ function makeHead(meta) {
   `;
 }
 
+const staticPages = [
+  { path: '/about', title: 'About Vechura | Compare Cars, RVs, Boats and More', description: 'Learn how Vechura helps travelers compare and book cars, RVs, boats, motorcycles and more from trusted rental partners in one place.' },
+  { path: '/blog', title: 'Vechura Blog | Travel Guides and Rental Tips', description: 'Travel guides, rental tips and destination ideas for cars, RVs, boats and motorcycles from the Vechura team.' },
+  { path: '/resources', title: 'Vechura Resources | Vehicle Rental Guides', description: 'Practical guides on vehicle rental insurance, age and license requirements, deposits and more.' },
+  { path: '/booking-tools', title: 'Booking Tools | Compare Cars, Hotels, Boats and Flights', description: 'Search and compare rentals, hotels, boats and flights with the Vechura booking tools.' },
+  { path: '/termsofuse', title: 'Terms of Use | Vechura', description: 'Read the Vechura Terms of Use covering informational purpose, affiliate links, user responsibilities and liability.' },
+  { path: '/privacypolicy', title: 'Privacy Policy | Vechura', description: 'How Vechura collects, uses and protects your information, including cookies, analytics and third-party links.' },
+  { path: '/cookiepolicy', title: 'Cookie Policy | Vechura', description: 'How Vechura uses cookies and similar technologies, and how you can manage your preferences.' },
+  { path: '/advertiser-disclosure', title: 'Advertiser and Affiliate Disclosure | Vechura', description: 'How Vechura earns commissions from affiliate links and how we keep our content independent.' },
+];
+
+async function parseResourcePosts() {
+  const text = await fs.readFile(path.join(root, 'src', 'utils', 'resourcePosts.tsx'), 'utf8');
+  const re = /slug:\s*"([^"]+)"[\s\S]*?seoTitle:\s*"([^"]*)"[\s\S]*?seoDescription:\s*"([^"]*)"/g;
+  const out = [];
+  let m;
+  while ((m = re.exec(text))) out.push({ slug: m[1], seoTitle: m[2], seoDescription: m[3] });
+  return out;
+}
+
+async function loadRenderer() {
+  const entry = path.join(root, 'dist-ssr', 'entry-server.mjs');
+  try {
+    await fs.access(entry);
+  } catch (e) {
+    console.error('dist-ssr/entry-server.mjs not found. Run `vite build --ssr src/entry-server.tsx --outDir dist-ssr` first.');
+    process.exit(1);
+  }
+  return (await import(pathToFileURL(entry).href)).render;
+}
+
 async function run() {
   await ensureDistIndex();
+  const render = await loadRenderer();
   const template = await fs.readFile(path.join(distDir, 'index.html'), 'utf8');
 
   const posts = await parseBlogPosts();
   const landing = await parseLandingPages();
+  const resources = await parseResourcePosts();
 
-  const pages = [];
+  const pages = [{ path: '/', home: true }];
+  for (const p of staticPages) pages.push(p);
+  for (const p of resources) {
+    pages.push({ path: `/resources/${p.slug}`, title: p.seoTitle, description: p.seoDescription });
+  }
   for (const p of posts) {
     pages.push({
       path: `/blog/${p.slug}`,
@@ -109,47 +145,54 @@ async function run() {
       image: p.image ? (defaultBase.replace(/\/$/, '') + '/' + p.image.replace(/^\//, '')) : undefined,
     });
   }
-
   for (const p of landing) {
-    pages.push({
-      path: `/${p.slug}`,
-      title: p.seoTitle || '',
-      description: p.seoDescription || '',
-    });
+    pages.push({ path: `/${p.slug}`, title: p.seoTitle || '', description: p.seoDescription || '' });
   }
 
+  let problems = 0;
   for (const page of pages) {
-    const outDir = path.join(distDir, page.path.replace(/(^\/|\/$)/g, ''));
-    const outIndex = path.join(outDir, 'index.html');
+    const body = render(page.path);
+    const h1Count = (body.match(/<h1[\s>]/g) || []).length;
+    if (h1Count !== 1 || /Loading\.\.\./.test(body)) {
+      console.warn(`WARN ${page.path}: h1=${h1Count}, loading-fallback=${/Loading\.\.\./.test(body)}`);
+      problems++;
+    }
+
+    let out = template.replace('<div id="root"></div>', () => `<div id="root">${body}</div>`);
+
+    if (!page.home) {
+      const canonicalFull = (defaultBase.replace(/\/$/, '') + page.path).replace(/([^:])\/\//g, '$1/');
+      // remove existing head title/description/canonical/og/twitter tags before injecting
+      out = out.replace(/<title>[\s\S]*?<\/title>/i, '');
+      out = out.replace(/<link[^>]+rel=["']canonical["'][^>]*>/i, '');
+      out = out.replace(/<meta[^>]+name=["']description["'][^>]*>/i, '');
+      out = out.replace(/<meta[^>]+property=["']og:title["'][^>]*>/i, '');
+      out = out.replace(/<meta[^>]+property=["']og:description["'][^>]*>/i, '');
+      out = out.replace(/<meta[^>]+property=["']og:url["'][^>]*>/i, '');
+      out = out.replace(/<meta[^>]+name=["']twitter:title["'][^>]*>/i, '');
+      out = out.replace(/<meta[^>]+name=["']twitter:description["'][^>]*>/i, '');
+
+      const headExtra = makeHead({
+        title: page.title,
+        description: page.description,
+        canonical: canonicalFull,
+        url: canonicalFull,
+        image: page.image,
+      });
+      out = out.replace(/<\/head>/i, `${headExtra}
+</head>`);
+    } else {
+      out = out.replace(/<\/head>/i, `<link rel="canonical" href="${defaultBase.replace(/\/$/, '')}/" />
+</head>`);
+    }
+
+    const outDir = page.home ? distDir : path.join(distDir, page.path.replace(/(^\/|\/$)/g, ''));
     await fs.mkdir(outDir, { recursive: true });
-
-    // remove existing head title/description/canonical/og/twitter tags before injecting
-    let out = template.replace(/<title>[\s\S]*?<\/title>/i, '');
-    out = out.replace(/<link[^>]+rel=["']canonical["'][^>]*>/i, '');
-    out = out.replace(/<meta[^>]+name=["']description["'][^>]*>/i, '');
-    out = out.replace(/<meta[^>]+property=["']og:title["'][^>]*>/i, '');
-    out = out.replace(/<meta[^>]+property=["']og:description["'][^>]*>/i, '');
-    out = out.replace(/<meta[^>]+property=["']og:url["'][^>]*>/i, '');
-    out = out.replace(/<meta[^>]+name=["']twitter:title["'][^>]*>/i, '');
-    out = out.replace(/<meta[^>]+name=["']twitter:description["'][^>]*>/i, '');
-
-    const canonicalFull = (defaultBase.replace(/\/$/, '') + page.path).replace(/([^:])\/\//g, '$1/');
-
-    const headExtra = makeHead({
-      title: page.title,
-      description: page.description,
-      canonical: canonicalFull,
-      url: canonicalFull,
-      image: page.image,
-    });
-
-    out = out.replace(/<\/head>/i, `${headExtra}\n</head>`);
-
-    await fs.writeFile(outIndex, out, 'utf8');
-    console.log('Wrote prerendered:', outIndex);
+    await fs.writeFile(path.join(outDir, 'index.html'), out, 'utf8');
+    console.log('Wrote prerendered:', path.join(outDir, 'index.html'));
   }
 
-  console.log('Prerender complete.');
+  console.log(`Prerender complete. ${pages.length} pages, ${problems} warnings.`);
 }
 
 run().catch((err) => {

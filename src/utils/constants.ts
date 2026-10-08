@@ -1,1 +1,2 @@
-export const BASE_URL = window.location.origin + "/";
+export const BASE_URL =
+  (typeof window !== "undefined" ? window.location.origin : "https://vechura.com") + "/";

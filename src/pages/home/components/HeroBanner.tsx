@@ -43,9 +43,9 @@ const HeroBanner: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-30 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-normal">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-normal">
           All Your Rides. One Site.
-        </h2>
+        </h1>
         <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl font-light leading-relaxed min-h-[100px]">
           Compare cars, RVs, boats, planes, motorcycles, and more — all in one
           place. Vechura helps you find, book, and save on every ride for your

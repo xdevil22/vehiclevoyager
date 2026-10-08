@@ -8,9 +8,9 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* About Vechura */}
             <div>
-              <h2 className="text-3xl font-bold text-neutral-900 mb-6">
+              <h1 className="text-3xl font-bold text-neutral-900 mb-6">
                 About Vechura
-              </h2>
+              </h1>
 
               <p className="text-neutral-800 mb-4">
                 At Vechura, we're passionate about helping travelers find the

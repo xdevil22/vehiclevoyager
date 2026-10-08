@@ -101,9 +101,9 @@ export default function Header() {
                 height="30"
                 width="42"
               />
-              <h1 className="text-3xl font-bold text-neutral-900 font-bold">
+              <div className="text-3xl font-bold text-neutral-900 font-bold">
                 Vechura
-              </h1>
+              </div>
             </div>
 
             {/* Desktop Navigation */}
