@@ -454,7 +454,7 @@ const LandingPage: React.FC = () => {
         )} */}
 
         <div className="max-w-7xl mx-auto px-4 py-12 space-y-14">
-          <h1 className="mx-auto max-w-4xl text-left text-4xl sm:text-5xl font-bold text-slate-900">
+          <h1 className="sr-only">
             {page.title || page.hero?.headline || page.seoTitle}
           </h1>
           {page.sections.map(renderSection)}
