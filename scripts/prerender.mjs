@@ -55,12 +55,12 @@ async function parseLandingPages() {
   const files = await fs.readdir(landingDir);
   const pages = [];
   for (const f of files) {
-    if (!f.endsWith('.ts')) continue;
+    if (!f.endsWith('.ts') || f.startsWith('_') || f === 'index.ts' || f === 'types.ts') continue;
     const content = await fs.readFile(path.join(landingDir, f), 'utf8');
     const mSlug = content.match(/slug:\s*"([^"]+)"/);
     const mSeoTitle = content.match(/seoTitle:\s*"([^"]*)"/);
     const mSeoDesc = content.match(/seoDescription:\s*"([^"]*)"/);
-    if (mSlug) {
+    if (mSlug && !/[\[\]]/.test(mSlug[1])) {
       pages.push({
         slug: mSlug[1],
         seoTitle: mSeoTitle ? mSeoTitle[1] : '',

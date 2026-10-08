@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { HeadProvider } from "react-head";
+import { HeadProvider, Meta } from "react-head";
 import Seo from "../../components/Seo";
 import {
   landingPagesBySlug,
@@ -190,8 +190,9 @@ const LandingPage: React.FC = () => {
 
     return (
       <div className="min-h-screen bg-neutral-100 flex items-center justify-center px-4 py-16">
+        <Meta name="robots" content="noindex,follow" />
         <div className="max-w-xl text-center bg-white rounded-3xl p-8 shadow-lg">
-          <h2 className="text-3xl font-bold mb-4">Page not found</h2>
+          <h1 className="text-3xl font-bold mb-4">Page not found</h1>
           <p className="text-gray-600 mb-6">
             The landing page you’re looking for doesn’t exist yet. Check the URL
             or return to the homepage.

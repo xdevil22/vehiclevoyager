@@ -4,13 +4,10 @@
     <loc>https://vechura.com</loc>
   </url>
   <url>
-    <loc>https://vechura.com/cars</loc>
-  </url>
-  <url>
     <loc>https://vechura.com/about</loc>
   </url>
   <url>
-    <loc>https://vechura.com/blogs</loc>
+    <loc>https://vechura.com/blog</loc>
   </url>
   <url>
     <loc>https://vechura.com/booking-tools</loc>
@@ -161,8 +158,5 @@
   </url>
   <url>
     <loc>https://vechura.com/rv-rental-miami</loc>
-  </url>
-  <url>
-    <loc>https://vechura.com/[category]-[location]</loc>
   </url>
 </urlset>

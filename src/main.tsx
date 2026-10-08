@@ -104,7 +104,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route index element={<Home />} />
             <Route path="/booking-tools" element={<BookingTools />} />
             <Route path="About" element={<About />} />
-            <Route path="/blogs" element={<Blog />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blogs" element={<Navigate to="/blog" replace />} />
+            <Route path="/cars" element={<Navigate to="/" replace />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/cookiepolicy" element={<CookiePolicy />} />
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />

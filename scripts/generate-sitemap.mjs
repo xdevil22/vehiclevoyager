@@ -11,7 +11,6 @@ const baseUrl = 'https://vechura.com';
 
 const staticRoutes = [
   '/',
-  '/cars',
   '/about',
   '/blog',
   '/booking-tools',
@@ -36,13 +35,13 @@ let landingSlugs = [];
 try {
   const files = readdirSync(landingDir);
   landingSlugs = files
-    .filter((f) => f.endsWith('.ts'))
+    .filter((f) => f.endsWith('.ts') && !f.startsWith('_') && f !== 'index.ts' && f !== 'types.ts')
     .map((f) => {
       const content = readFileSyncSync(path.join(landingDir, f), 'utf8');
       const m = content.match(/slug:\s*"([^"]+)"/);
       return m ? m[1] : null;
     })
-    .filter(Boolean);
+    .filter((slug) => slug && !/[\[\]]/.test(slug));
 } catch (e) {
   // ignore if folder missing
 }
