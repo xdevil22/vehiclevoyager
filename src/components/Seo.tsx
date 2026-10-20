@@ -8,6 +8,7 @@ type Props = {
   image?: string;
   canonical?: string;
   ogType?: string;
+  noindex?: boolean;
 };
 
 export default function Seo({
@@ -17,6 +18,7 @@ export default function Seo({
   image,
   canonical,
   ogType = "website",
+  noindex = false,
 }: Props) {
   useEffect(() => {
     const href =
@@ -53,7 +55,7 @@ export default function Seo({
         name="twitter:card"
         content={image ? "summary_large_image" : "summary"}
       />
-      <Meta name="robots" content="index,follow" />
+      <Meta name="robots" content={noindex ? "noindex,follow" : "index,follow"} />
     </>
   );
 }

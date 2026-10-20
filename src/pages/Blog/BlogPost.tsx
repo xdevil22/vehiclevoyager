@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { blogPosts } from "../../utils/blogPosts";
 import Sidebar from "./components/Sidebar";
 import CTABox from "./components/CTABox";
+import RelatedPosts from "./components/RelatedPosts";
 import { BASE_URL } from "../../utils/constants";
 
 import { HeadProvider } from "react-head";
@@ -96,6 +97,7 @@ const BlogPost: React.FC = () => {
               />
             </div>
           )}
+          <RelatedPosts currentSlug={post.slug} />
         </article>
         <Sidebar />
       </div>

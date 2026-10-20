@@ -13,6 +13,7 @@ import TermsofUse from "./pages/terms-of-use";
 import BookingTools from "./pages/booking-tools";
 import AdvertiserDisclosure from "./pages/advertiser-disclosure";
 import BrevoNewsletter from "./components/BrevoNewsletter";
+import Seo from "./components/Seo";
 import LandingPage from "./pages/landing/LandingPage";
 import CreateLandingPage from "./pages/admin/CreateLandingPage";
 import Resources from "./pages/Resources";
@@ -60,7 +61,15 @@ export default function AppRoutes() {
               path="advertiser-disclosure"
               element={<AdvertiserDisclosure />}
             />
-            <Route path="/email-signup" element={<BrevoNewsletter />} />
+            <Route
+              path="/email-signup"
+              element={
+                <>
+                  <Seo title="Email Signup | Vechura" noindex />
+                  <BrevoNewsletter />
+                </>
+              }
+            />
 
             <Route
               path="admin"

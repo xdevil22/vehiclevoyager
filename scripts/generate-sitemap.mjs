@@ -18,7 +18,6 @@ const staticRoutes = [
   '/privacypolicy',
   '/termsofuse',
   '/advertiser-disclosure',
-  '/email-signup',
   '/resources',
   '/resources/vehicle-rental-insurance-guide',
   '/resources/vehicle-rental-requirements',
