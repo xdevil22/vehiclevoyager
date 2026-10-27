@@ -874,7 +874,7 @@ export const blogPosts: BlogPost[] = [
     seoTitle:
       "Unforgettable Views from Above: The Best Helicopter Tours in Vegas, Maui, Catalina & the Grand Canyon",
     seoDescription:
-      "Discover 7 of the best luxury yachts to rent in Miami. See stunning photos, key features, and how to book your dream yacht through trusted partners.",
+      "Compare the best helicopter tours in Las Vegas, Maui, Catalina and the Grand Canyon, with what to expect, views to look for and how to book.",
     keywords:
       "road trip essentials, travel accessories for cars, best gear for car travel, road trip safety kits, travel gadgets, long drive must-haves, family car trip checklist",
 
@@ -1036,7 +1036,7 @@ export const blogPosts: BlogPost[] = [
     image: "assets/custom-images/lauderdale.webp",
     seoTitle: "Best Family-Friendly Boat Rentals in Fort Lauderdale",
     seoDescription:
-      "Discover 7 of the best luxury yachts to rent in Miami. See stunning photos, key features, and how to book your dream yacht through trusted partners.",
+      "Find family-friendly boat rentals in Fort Lauderdale, from pontoons to captained charters, for a safe and fun day on the canals and coastal waters.",
 
     keywords:
       "road trip essentials, travel accessories for cars, best gear for car travel, road trip safety kits, travel gadgets, long drive must-haves, family car trip checklist",

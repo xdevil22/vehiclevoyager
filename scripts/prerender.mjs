@@ -87,6 +87,7 @@ function makeHead(meta) {
     <meta property="og:url" content="${url}" />
     <meta property="og:image" content="${image}" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="${image}" />
     <meta name="twitter:title" content="${title}" />
     <meta name="twitter:description" content="${desc}" />
   `;
@@ -202,6 +203,8 @@ async function run() {
       out = out.replace(/<meta[^>]+property=["']og:url["'][^>]*>/i, '');
       out = out.replace(/<meta[^>]+name=["']twitter:title["'][^>]*>/i, '');
       out = out.replace(/<meta[^>]+name=["']twitter:description["'][^>]*>/i, '');
+      // the generic social tags from the template are replaced by makeHead()
+      out = out.replace(/<meta\s+(?:property="og:(?:type|image[^"]*)"|name="twitter:(?:card|image[^"]*)")[^>]*>/gi, '');
 
       const headExtra = makeHead({
         title: page.title,

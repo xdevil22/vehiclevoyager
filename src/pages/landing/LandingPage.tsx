@@ -17,11 +17,27 @@ import { getApiBaseUrl } from "../../utils/apiBaseUrl";
 
 const LANDING_PAGES_API_URL = `${getApiBaseUrl()}/api/create-landing-page`;
 
+// Admin-entered links sometimes carry trailing spaces; trim them everywhere.
+const trimUrls = <T,>(value: T): T => {
+  if (typeof value === "string") {
+    return (/^https?:\/\/\S+\s+$/.test(value) ? value.trim() : value) as T;
+  }
+  if (Array.isArray(value)) return value.map(trimUrls) as T;
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value).map(([k, v]) => [k, trimUrls(v)]),
+    ) as T;
+  }
+  return value;
+};
+
 const readDynamicLandingPages = () => {
   // During prerender the build script injects the pages fetched from the API.
   if (typeof window === "undefined") {
-    return (globalThis as {__LANDING_PAGES__?: Record<string, LandingPageData>})
-      .__LANDING_PAGES__ ?? {};
+    return trimUrls(
+      (globalThis as {__LANDING_PAGES__?: Record<string, LandingPageData>})
+        .__LANDING_PAGES__ ?? {},
+    );
   }
   try {
     const stored = JSON.parse(localStorage.getItem("landingPages") || "{}");
@@ -139,7 +155,7 @@ const LandingPage: React.FC = () => {
         if (!isMounted) return;
 
         if (pages && typeof pages === "object" && !Array.isArray(pages)) {
-          setDynamicPages(pages);
+          setDynamicPages(trimUrls(pages));
           setHasDynamicFetchError(false);
           localStorage.setItem("landingPages", JSON.stringify(pages));
           return;
@@ -443,7 +459,7 @@ const LandingPage: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-4 py-12 space-y-14">
           <h1 className="sr-only">
-            {page.title || page.hero?.headline || page.seoTitle}
+            {page.seoTitle || page.title || page.hero?.headline}
           </h1>
           {page.sections.map(renderSection)}
         </div>
