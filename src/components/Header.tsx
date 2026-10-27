@@ -70,7 +70,7 @@ export default function Header() {
     { name: "Home", path: "/" },
     { name: "Booking Tools", path: "/booking-tools" },
     { name: "About", path: "/about" },
-    { name: "Blog", path: "/blogs" },
+    { name: "Blog", path: "/blog" },
     { name: "Resources", path: "/resources" },
 
     // {

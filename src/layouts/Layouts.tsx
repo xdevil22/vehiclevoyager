@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import {Outlet} from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import {HeadProvider, Title, Meta} from "react-head";
 import NewsletterPopup from "../components/NewsletterPopup";
 const Layout = () => {
   useEffect(() => {
@@ -15,14 +14,6 @@ const Layout = () => {
   }, []);
   return (
     <>
-      <HeadProvider>
-        <Title>Vechura</Title>
-        <Meta
-          name="description"
-          content="Explore vehicles for every adventure."
-        />
-      </HeadProvider>
-
       <NewsletterPopup />
       <Header />
       <main className="min-h-screen bg-neutral-100">

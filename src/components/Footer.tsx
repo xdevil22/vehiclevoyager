@@ -126,7 +126,7 @@ const Footer = () => {
                 },
                 {
                   label: "Los Angeles, CA",
-                  href: "#",
+                  href: "/blog/motorcycle-rentals-in-los-angeles",
                 },
                 {
                   label: "Las Vegas, NV",
@@ -138,7 +138,7 @@ const Footer = () => {
                 },
                 {
                   label: "Fort Lauderdale, FL",
-                  href: "#",
+                  href: "/blog/10-best-family-friendly-boat-rentals-in-fort-lauderdale",
                 },
                 {
                   label: "San Diego, CA",
