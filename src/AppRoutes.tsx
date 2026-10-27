@@ -16,6 +16,7 @@ import BrevoNewsletter from "./components/BrevoNewsletter";
 import Seo from "./components/Seo";
 import LandingPage from "./pages/landing/LandingPage";
 import CreateLandingPage from "./pages/admin/CreateLandingPage";
+import NotFound from "./components/NotFound";
 import Resources from "./pages/Resources";
 import ResourcePost from "./pages/Resources/ResourcePost";
 
@@ -57,6 +58,7 @@ export default function AppRoutes() {
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/resources/:slug" element={<ResourcePost />} />
             <Route path="/:slug" element={<LandingPage />} />
+            <Route path="*" element={<NotFound />} />
             <Route
               path="advertiser-disclosure"
               element={<AdvertiserDisclosure />}

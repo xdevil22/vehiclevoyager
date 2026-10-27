@@ -192,6 +192,22 @@ async function run() {
     console.log('Wrote prerendered:', path.join(outDir, 'index.html'));
   }
 
+  // 404.html: served by the host (with a 404 status) for unknown URLs
+  {
+    const body = render('/__not-found__/404');
+    let out = template.replace('<div id="root"></div>', () => `<div id="root">${body}</div>`);
+    out = out.replace(/<title>[\s\S]*?<\/title>/i, '<title>Page not found | Vechura</title>');
+    for (const re of [
+      /<link[^>]+rel=["']canonical["'][^>]*>/i,
+      /<meta[^>]+name=["']description["'][^>]*>/i,
+      /<meta[^>]+property=["']og:(title|description|url)["'][^>]*>/i,
+      /<meta[^>]+name=["']twitter:(title|description)["'][^>]*>/i,
+    ]) out = out.replace(re, '');
+    out = out.replace(/<\/head>/i, '<meta name="robots" content="noindex,follow" />\n</head>');
+    await fs.writeFile(path.join(distDir, '404.html'), out, 'utf8');
+    console.log('Wrote prerendered: dist/404.html');
+  }
+
   console.log(`Prerender complete. ${pages.length} pages, ${problems} warnings.`);
 }
 

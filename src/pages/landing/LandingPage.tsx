@@ -12,6 +12,7 @@ import LandingHero from "../../components/landing/LandingHero";
 import LandingSection from "../../components/landing/LandingSection";
 import LandingFAQ from "../../components/landing/LandingFAQ";
 import LandingCTABanner from "../../components/landing/LandingCTABanner";
+import NotFound from "../../components/NotFound";
 import { getApiBaseUrl } from "../../utils/apiBaseUrl";
 
 const LANDING_PAGES_API_URL = `${getApiBaseUrl()}/api/create-landing-page`;
@@ -189,24 +190,7 @@ const LandingPage: React.FC = () => {
       );
     }
 
-    return (
-      <div className="min-h-screen bg-neutral-100 flex items-center justify-center px-4 py-16">
-        <Meta name="robots" content="noindex,follow" />
-        <div className="max-w-xl text-center bg-white rounded-3xl p-8 shadow-lg">
-          <h1 className="text-3xl font-bold mb-4">Page not found</h1>
-          <p className="text-gray-600 mb-6">
-            The landing page you’re looking for doesn’t exist yet. Check the URL
-            or return to the homepage.
-          </p>
-          <a
-            href="/"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
-          >
-            Return home
-          </a>
-        </div>
-      </div>
-    );
+    return <NotFound />;
   }
 
   const renderSection = (section: LandingPageSection, index: number) => {
