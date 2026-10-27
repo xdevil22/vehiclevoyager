@@ -123,8 +123,33 @@ async function loadRenderer() {
   return (await import(pathToFileURL(entry).href)).render;
 }
 
+const apiBase = (process.env.VITE_API_BASE_URL || 'https://vechura-backend.onrender.com').replace(/\/+$/, '');
+
+// Landing pages created through the admin live in the backend, not in the repo.
+// Fetch them so each gets its own prerendered HTML. Fail the build rather than
+// ship those URLs as 404s if the API cannot be reached.
+async function fetchDynamicLandingPages() {
+  let lastError;
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    try {
+      const res = await fetch(`${apiBase}/api/create-landing-page`, { signal: AbortSignal.timeout(90000) });
+      if (!res.ok) throw new Error(`API returned ${res.status}`);
+      const data = await res.json();
+      if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error('Unexpected API response');
+      return data;
+    } catch (e) {
+      lastError = e;
+      console.warn(`Landing pages fetch failed (attempt ${attempt}): ${e.message}`);
+    }
+  }
+  console.error(`Could not fetch landing pages from ${apiBase}: ${lastError?.message}`);
+  process.exit(1);
+}
+
 async function run() {
   await ensureDistIndex();
+  const dynamicLanding = await fetchDynamicLandingPages();
+  globalThis.__LANDING_PAGES__ = dynamicLanding;
   const render = await loadRenderer();
   const template = await fs.readFile(path.join(distDir, 'index.html'), 'utf8');
 
@@ -145,9 +170,15 @@ async function run() {
       image: p.image ? (defaultBase.replace(/\/$/, '') + '/' + p.image.replace(/^\//, '')) : undefined,
     });
   }
-  for (const p of landing) {
+  const landingBySlug = new Map(landing.map((p) => [p.slug, p]));
+  for (const [slug, p] of Object.entries(dynamicLanding)) {
+    landingBySlug.set(slug, { slug, seoTitle: p.seoTitle || '', seoDescription: p.seoDescription || '' });
+  }
+  for (const p of landingBySlug.values()) {
     pages.push({ path: `/${p.slug}`, title: p.seoTitle || '', description: p.seoDescription || '' });
   }
+  await fs.mkdir(path.join(root, 'dist-ssr'), { recursive: true });
+  await fs.writeFile(path.join(root, 'dist-ssr', 'landing-slugs.json'), JSON.stringify([...landingBySlug.keys()]), 'utf8');
 
   let problems = 0;
   for (const page of pages) {

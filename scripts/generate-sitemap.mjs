@@ -45,6 +45,14 @@ try {
   // ignore if folder missing
 }
 
+// Slugs of every prerendered landing page (repo content + API), written by prerender.mjs
+try {
+  const built = JSON.parse(readFileSync(path.join(rootDir, 'dist-ssr', 'landing-slugs.json'), 'utf8'));
+  landingSlugs = [...new Set([...landingSlugs, ...built])];
+} catch (e) {
+  // prerender not run; fall back to repo content only
+}
+
 const urls = [
   ...staticRoutes.map((route) => ({
     loc: `${baseUrl}${route === '/' ? '' : route}`,
@@ -66,4 +74,9 @@ ${urls
 `;
 
 writeFileSync(outputPath, xml, 'utf8');
+try {
+  writeFileSync(path.join(rootDir, 'dist', 'sitemap.xml'), xml, 'utf8');
+} catch (e) {
+  // dist missing
+}
 console.log(`Generated sitemap with ${urls.length} URLs at ${outputPath}`);

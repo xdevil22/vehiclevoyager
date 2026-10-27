@@ -18,7 +18,11 @@ import { getApiBaseUrl } from "../../utils/apiBaseUrl";
 const LANDING_PAGES_API_URL = `${getApiBaseUrl()}/api/create-landing-page`;
 
 const readDynamicLandingPages = () => {
-  if (typeof window === "undefined") return {};
+  // During prerender the build script injects the pages fetched from the API.
+  if (typeof window === "undefined") {
+    return (globalThis as {__LANDING_PAGES__?: Record<string, LandingPageData>})
+      .__LANDING_PAGES__ ?? {};
+  }
   try {
     const stored = JSON.parse(localStorage.getItem("landingPages") || "{}");
     return stored && typeof stored === "object" && !Array.isArray(stored)
